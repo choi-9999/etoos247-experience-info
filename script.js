@@ -1,6 +1,3 @@
-const ADMIN_PASSWORD = "etoos247";
-const STORAGE_KEY = "etoos247ExperienceBranches";
-
 const sampleBranches = [
   {
     branch: "강남점",
@@ -100,7 +97,7 @@ const sampleBranches = [
   }
 ];
 
-let branches = loadBranches();
+let branches = normalizeBranches(sampleBranches);
 
 const branchList = document.querySelector("#branchList");
 const branchSearch = document.querySelector("#branchSearch");
@@ -130,26 +127,73 @@ const cancelBranchPassword = document.querySelector("#cancelBranchPassword");
 
 let selectedBranch = "";
 let isAdmin = false;
+let adminSessionPassword = "";
 let pendingBranch = null;
 
 function loadBranches() {
-  const savedData = localStorage.getItem(STORAGE_KEY);
-
-  if (!savedData) {
-    return normalizeBranches(sampleBranches);
-  }
-
-  try {
-    const parsedData = JSON.parse(savedData);
-    return Array.isArray(parsedData) && parsedData.length > 0 ? normalizeBranches(parsedData) : normalizeBranches(sampleBranches);
-  } catch {
-    return normalizeBranches(sampleBranches);
-  }
+  return fetchBranches();
 }
 
-function saveBranches(nextBranches) {
-  branches = normalizeBranches(nextBranches);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(branches));
+async function saveBranches(nextBranches) {
+  const response = await fetch("/api/branches", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      adminPassword: adminSessionPassword,
+      branches: normalizeBranches(nextBranches)
+    })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || "서버 저장에 실패했습니다.");
+  }
+
+  branches = normalizeBranches(data.branches);
+  return branches;
+}
+
+async function fetchBranches() {
+  try {
+    const response = await fetch("/api/branches", {
+      cache: "no-store"
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "데이터를 불러오지 못했습니다.");
+    }
+
+    branches = normalizeBranches(data.branches);
+  } catch {
+    branches = normalizeBranches(sampleBranches);
+  }
+
+  clearSelectedBranch();
+  renderBranches(branchSearch.value);
+}
+
+async function verifyAdminPassword(password) {
+  const response = await fetch("/api/branches", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      action: "verify",
+      adminPassword: password
+    })
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || "비밀번호가 일치하지 않습니다.");
+  }
+
+  return true;
 }
 
 function normalizeBranches(branchData) {
@@ -344,7 +388,7 @@ function updateAdminState() {
   uploadBox.classList.toggle("hidden", !isAdmin);
 
   if (isAdmin) {
-    adminMessage.textContent = "관리자 모드입니다. 엑셀 파일을 업로드하면 기존 목록이 새 데이터로 교체됩니다.";
+    adminMessage.textContent = "관리자 모드입니다. 엑셀 파일을 업로드하면 서버 데이터가 새 목록으로 교체됩니다.";
     return;
   }
 
@@ -413,16 +457,19 @@ adminToggle.addEventListener("click", () => {
 
 adminLogin.addEventListener("submit", (event) => {
   event.preventDefault();
+  const password = adminPassword.value;
 
-  if (adminPassword.value !== ADMIN_PASSWORD) {
-    adminPasswordMessage.textContent = "비밀번호가 일치하지 않습니다.";
-    adminPassword.select();
-    return;
-  }
-
-  isAdmin = true;
-  closeAdminPasswordDialog();
-  updateAdminState();
+  verifyAdminPassword(password)
+    .then(() => {
+      isAdmin = true;
+      adminSessionPassword = password;
+      closeAdminPasswordDialog();
+      updateAdminState();
+    })
+    .catch((error) => {
+      adminPasswordMessage.textContent = error.message || "비밀번호가 일치하지 않습니다.";
+      adminPassword.select();
+    });
 });
 
 cancelAdminPassword.addEventListener("click", () => {
@@ -430,6 +477,10 @@ cancelAdminPassword.addEventListener("click", () => {
 });
 
 adminPasswordDialog.addEventListener("close", () => {
+  if (!isAdmin) {
+    adminSessionPassword = "";
+  }
+
   adminPassword.value = "";
   adminPasswordMessage.textContent = "";
 });
@@ -487,30 +538,36 @@ excelFile.addEventListener("change", async (event) => {
       return;
     }
 
-    saveBranches(nextBranches);
+    await saveBranches(nextBranches);
     clearSelectedBranch();
     renderBranches(branchSearch.value);
     uploadSummary.textContent = `업로드 요약: 총 ${nextBranches.length}개 지점 / ${getTotalPeople(nextBranches)}명`;
-    adminMessage.textContent = "체험단 정보를 업로드했습니다.";
-  } catch {
-    adminMessage.textContent = "엑셀 파일을 읽는 중 오류가 발생했습니다.";
+    adminMessage.textContent = "체험단 정보를 서버에 저장했습니다.";
+  } catch (error) {
+    adminMessage.textContent = error.message || "엑셀 파일을 읽는 중 오류가 발생했습니다.";
   }
 });
 
-resetData.addEventListener("click", () => {
-  localStorage.removeItem(STORAGE_KEY);
-  branches = normalizeBranches(sampleBranches);
+resetData.addEventListener("click", async () => {
+  try {
+    await saveBranches(sampleBranches);
+  } catch (error) {
+    adminMessage.textContent = error.message || "샘플 데이터 복구 중 오류가 발생했습니다.";
+    return;
+  }
+
   clearSelectedBranch();
   renderBranches(branchSearch.value);
   uploadSummary.textContent = `현재 데이터: 총 ${branches.length}개 지점 / ${getTotalPeople(branches)}명`;
-  adminMessage.textContent = "샘플 데이터로 복구했습니다.";
+  adminMessage.textContent = "서버 데이터를 샘플 데이터로 복구했습니다.";
 });
 
 adminLogout.addEventListener("click", () => {
   isAdmin = false;
+  adminSessionPassword = "";
   updateAdminState();
   adminBox.classList.add("hidden");
 });
 
 updateAdminState();
-renderBranches();
+loadBranches();
