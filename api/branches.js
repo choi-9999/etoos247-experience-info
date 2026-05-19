@@ -1,5 +1,103 @@
 const DATA_KEY = "etoos247:experience-branches";
-const { sampleBranches } = require("../branches-data");
+
+const sampleBranches = [
+  {
+    branch: "강남점",
+    password: "1234",
+    people: [
+      {
+        name: "홍길동",
+        phone: "010-0000-0000",
+        blog: "https://blog.naver.com/",
+        note: "오전 연락 가능"
+      },
+      {
+        name: "김하은",
+        phone: "010-0000-0001",
+        blog: "https://blog.naver.com/",
+        note: "문자 우선 요청"
+      }
+    ]
+  },
+  {
+    branch: "부산점",
+    password: "1234",
+    people: [
+      {
+        name: "김민지",
+        phone: "010-1111-1111",
+        blog: "https://blog.naver.com/",
+        note: "문자 우선 요청"
+      },
+      {
+        name: "정도윤",
+        phone: "010-1111-1112",
+        blog: "https://blog.naver.com/",
+        note: "오후 연락 가능"
+      },
+      {
+        name: "이서아",
+        phone: "010-1111-1113",
+        blog: "https://blog.naver.com/",
+        note: "특이사항 없음"
+      }
+    ]
+  },
+  {
+    branch: "대구점",
+    password: "1234",
+    people: [
+      {
+        name: "박서준",
+        phone: "010-2222-2222",
+        blog: "https://blog.naver.com/",
+        note: "신규 담당자"
+      },
+      {
+        name: "한지우",
+        phone: "010-2222-2223",
+        blog: "https://blog.naver.com/",
+        note: "통화 부재 시 문자"
+      }
+    ]
+  },
+  {
+    branch: "인천점",
+    password: "1234",
+    people: [
+      {
+        name: "이하늘",
+        phone: "010-3333-3333",
+        blog: "https://blog.naver.com/",
+        note: "오후 2시 이후 연락 가능"
+      },
+      {
+        name: "윤채원",
+        phone: "010-3333-3334",
+        blog: "https://blog.naver.com/",
+        note: "첫 방문 예정"
+      }
+    ]
+  },
+  {
+    branch: "광주점",
+    password: "1234",
+    people: [
+      {
+        name: "최유진",
+        phone: "010-4444-4444",
+        blog: "https://blog.naver.com/",
+        note: "특이사항 없음"
+      },
+      {
+        name: "문시우",
+        phone: "010-4444-4445",
+        blog: "https://blog.naver.com/",
+        note: "보호자 동행"
+      }
+    ]
+  }
+];
 
 module.exports = async function handler(request, response) {
   response.setHeader("Cache-Control", "no-store");
