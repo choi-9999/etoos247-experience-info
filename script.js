@@ -9,11 +9,13 @@ const sampleBranches = [
       {
         name: "홍길동",
         phone: "010-0000-0000",
+        blog: "https://blog.naver.com/",
         note: "오전 연락 가능"
       },
       {
         name: "김하은",
         phone: "010-0000-0001",
+        blog: "https://blog.naver.com/",
         note: "문자 우선 요청"
       }
     ]
@@ -25,16 +27,19 @@ const sampleBranches = [
       {
         name: "김민지",
         phone: "010-1111-1111",
+        blog: "https://blog.naver.com/",
         note: "문자 우선 요청"
       },
       {
         name: "정도윤",
         phone: "010-1111-1112",
+        blog: "https://blog.naver.com/",
         note: "오후 연락 가능"
       },
       {
         name: "이서아",
         phone: "010-1111-1113",
+        blog: "https://blog.naver.com/",
         note: "특이사항 없음"
       }
     ]
@@ -46,11 +51,13 @@ const sampleBranches = [
       {
         name: "박서준",
         phone: "010-2222-2222",
+        blog: "https://blog.naver.com/",
         note: "신규 담당자"
       },
       {
         name: "한지우",
         phone: "010-2222-2223",
+        blog: "https://blog.naver.com/",
         note: "통화 부재 시 문자"
       }
     ]
@@ -62,11 +69,13 @@ const sampleBranches = [
       {
         name: "이하늘",
         phone: "010-3333-3333",
+        blog: "https://blog.naver.com/",
         note: "오후 2시 이후 연락 가능"
       },
       {
         name: "윤채원",
         phone: "010-3333-3334",
+        blog: "https://blog.naver.com/",
         note: "첫 방문 예정"
       }
     ]
@@ -78,11 +87,13 @@ const sampleBranches = [
       {
         name: "최유진",
         phone: "010-4444-4444",
+        blog: "https://blog.naver.com/",
         note: "특이사항 없음"
       },
       {
         name: "문시우",
         phone: "010-4444-4445",
+        blog: "https://blog.naver.com/",
         note: "보호자 동행"
       }
     ]
@@ -221,6 +232,7 @@ function renderPeople(people) {
     const rows = [
       ["이름", person.name],
       ["연락처", person.phone],
+      ["블로그주소", person.blog],
       ["비고", person.note]
     ];
 
@@ -245,6 +257,13 @@ function renderPeople(people) {
 
         copyRow.append(phoneText, copyButton);
         description.append(copyRow);
+      } else if (label === "블로그주소" && value) {
+        const link = document.createElement("a");
+        link.href = normalizeUrl(value);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = value;
+        description.append(link);
       } else {
         description.textContent = value || "-";
       }
@@ -277,6 +296,11 @@ function getTotalPeople(branchData) {
   return branchData.reduce((total, item) => total + item.people.length, 0);
 }
 
+function normalizeUrl(url) {
+  const trimmedUrl = String(url).trim();
+  return /^https?:\/\//i.test(trimmedUrl) ? trimmedUrl : `https://${trimmedUrl}`;
+}
+
 function parseExcelRows(rows) {
   const groupedBranches = new Map();
 
@@ -285,6 +309,7 @@ function parseExcelRows(rows) {
     const password = String(row["비밀번호"] || row["password"] || "").trim();
     const name = String(row["이름"] || row["name"] || "").trim();
     const phone = String(row["연락처"] || row["phone"] || "").trim();
+    const blog = String(row["블로그주소"] || row["블로그"] || row["blog"] || "").trim();
     const note = String(row["비고"] || row["note"] || "").trim();
 
     if (!branch || !name) {
@@ -306,6 +331,7 @@ function parseExcelRows(rows) {
     groupedBranches.get(branch).people.push({
       name,
       phone,
+      blog,
       note
     });
   });
@@ -457,7 +483,7 @@ excelFile.addEventListener("change", async (event) => {
     const nextBranches = parseExcelRows(rows);
 
     if (nextBranches.length === 0) {
-      adminMessage.textContent = "업로드할 데이터가 없습니다. 첫 행에 지점명, 비밀번호, 이름, 연락처, 비고가 있는지 확인하세요.";
+      adminMessage.textContent = "업로드할 데이터가 없습니다. 첫 행에 지점명, 비밀번호, 이름, 연락처, 블로그주소, 비고가 있는지 확인하세요.";
       return;
     }
 

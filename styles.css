@@ -338,6 +338,16 @@ dd {
   overflow-wrap: anywhere;
 }
 
+dd a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+dd a:hover {
+  color: var(--accent-hover);
+}
+
 .copy-row {
   display: flex;
   flex-wrap: wrap;
