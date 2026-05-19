@@ -25,7 +25,7 @@ const sampleBranches = [
   },
   {
     "branch": "일산동구",
-    "password": "1234",
+    "password": "1324",
     "people": [
       {
         "name": "도민지",
@@ -49,7 +49,7 @@ const sampleBranches = [
   },
   {
     "branch": "인하대",
-    "password": "1234",
+    "password": "2847",
     "people": [
       {
         "name": "김수란",
@@ -73,7 +73,7 @@ const sampleBranches = [
   },
   {
     "branch": "광주수완",
-    "password": "1234",
+    "password": "5173",
     "people": [
       {
         "name": "김미희",
@@ -97,7 +97,7 @@ const sampleBranches = [
   },
   {
     "branch": "인천송도",
-    "password": "1234",
+    "password": "6408",
     "people": [
       {
         "name": "노지애",
@@ -121,7 +121,7 @@ const sampleBranches = [
   },
   {
     "branch": "진주",
-    "password": "1234",
+    "password": "2915",
     "people": [
       {
         "name": "김여진",
@@ -145,7 +145,7 @@ const sampleBranches = [
   },
   {
     "branch": "부산교대",
-    "password": "1234",
+    "password": "8731",
     "people": [
       {
         "name": "전재웅",
@@ -169,7 +169,7 @@ const sampleBranches = [
   },
   {
     "branch": "하남",
-    "password": "1234",
+    "password": "4629",
     "people": [
       {
         "name": "손현진",
@@ -193,7 +193,7 @@ const sampleBranches = [
   },
   {
     "branch": "의정부",
-    "password": "1234",
+    "password": "7052",
     "people": [
       {
         "name": "최복은",
@@ -217,7 +217,7 @@ const sampleBranches = [
   },
   {
     "branch": "독학기숙",
-    "password": "1234",
+    "password": "3186",
     "people": [
       {
         "name": "이중림",
@@ -247,7 +247,7 @@ const sampleBranches = [
   },
   {
     "branch": "천안",
-    "password": "1234",
+    "password": "5541",
     "people": [
       {
         "name": "안수지",
@@ -271,7 +271,7 @@ const sampleBranches = [
   },
   {
     "branch": "이천기숙",
-    "password": "1234",
+    "password": "9274",
     "people": [
       {
         "name": "황서영",
@@ -295,7 +295,7 @@ const sampleBranches = [
   },
   {
     "branch": "춘천",
-    "password": "1234",
+    "password": "1468",
     "people": [
       {
         "name": "권빈",
@@ -319,7 +319,7 @@ const sampleBranches = [
   },
   {
     "branch": "안산",
-    "password": "1234",
+    "password": "6835",
     "people": [
       {
         "name": "양현주",
@@ -343,7 +343,7 @@ const sampleBranches = [
   },
   {
     "branch": "분당정자",
-    "password": "1234",
+    "password": "2509",
     "people": [
       {
         "name": "이현지",
@@ -367,7 +367,7 @@ const sampleBranches = [
   },
   {
     "branch": "대치",
-    "password": "1234",
+    "password": "7942",
     "people": [
       {
         "name": "한하임",
@@ -391,7 +391,7 @@ const sampleBranches = [
   },
   {
     "branch": "수원시청",
-    "password": "1234",
+    "password": "4317",
     "people": [
       {
         "name": "윤은주",
@@ -410,6 +410,54 @@ const sampleBranches = [
         "phone": "010-7652-0753",
         "blog": "https://blog.naver.com/techno1213?fromRss=true&trackingCode=rss",
         "note": "5월 20일 10시"
+      }
+    ]
+  },
+  {
+    "branch": "서울광진",
+    "password": "8654",
+    "people": [
+      {
+        "name": "이기동",
+        "phone": "010-4811-2334",
+        "blog": "http://blog.naver.com/lkd8659",
+        "note": "5월 29일 금요일 오후 3시"
+      },
+      {
+        "name": "남희경",
+        "phone": "010-4100-3147",
+        "blog": "https://blog.naver.com/0331ska",
+        "note": "일정조율후방문"
+      },
+      {
+        "name": "조정윤",
+        "phone": "010-4090-0822",
+        "blog": "https://blog.naver.com/sabbeun?fromRss=true&trackingCode=rss",
+        "note": "5월 27일 수요일 오후 6시30분"
+      }
+    ]
+  },
+  {
+    "branch": "광주북구",
+    "password": "1096",
+    "people": [
+      {
+        "name": "박현숙",
+        "phone": "010-3612-0463",
+        "blog": "https://blog.naver.com/happy0463",
+        "note": "5.20 수요일 오후 5시 30분"
+      },
+      {
+        "name": "김지애",
+        "phone": "010-7743-7469",
+        "blog": "https://blog.naver.com/shrdnjs7469?fromRss=true&trackingCode=rss",
+        "note": "6월2일 12시"
+      },
+      {
+        "name": "김수경",
+        "phone": "010-9942-1004",
+        "blog": "https://blog.naver.com/wannabsoo?fromRss=true&trackingCode=rss",
+        "note": "5월 25일 2시방문이요"
       }
     ]
   }
