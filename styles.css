@@ -76,10 +76,16 @@ h1 {
   line-height: 1.7;
 }
 
-.notice-copy {
-  display: inline-block;
+.notice-list {
+  display: grid;
+  gap: 8px;
   max-width: 760px;
   margin: 0 0 18px;
+}
+
+.notice-copy {
+  position: relative;
+  margin: 0;
   padding: 10px 14px;
   border-left: 4px solid var(--accent);
   border-radius: 6px;
@@ -87,6 +93,53 @@ h1 {
   color: var(--accent-hover);
   font-weight: 800;
   line-height: 1.6;
+}
+
+.has-tooltip {
+  cursor: help;
+  outline: none;
+}
+
+.has-tooltip::after {
+  content: "자세히";
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-left: 8px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.78rem;
+  vertical-align: middle;
+}
+
+.notice-tooltip {
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 8px);
+  z-index: 10;
+  width: min(520px, calc(100vw - 48px));
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.6;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.has-tooltip:hover .notice-tooltip,
+.has-tooltip:focus .notice-tooltip,
+.has-tooltip:focus-within .notice-tooltip {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .admin-panel {
