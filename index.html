@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이투스247학원 체험단 정보</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="header">
+      <div>
+        <p class="eyebrow">ETOOS 247 Experience Team</p>
+        <h1>이투스247학원 체험단 정보</h1>
+      </div>
+      <button class="admin-toggle" id="adminToggle" type="button">관리자 업로드</button>
+    </section>
+
+    <p class="header-copy">본인 지점명을 선택하면 전달받아야 할 체험단 인적사항을 확인할 수 있습니다.</p>
+    <p class="notice-copy">체험단 명단을 확인하시고 방문 일정 확인 연락을 부탁드립니다.</p>
+
+    <section class="admin-panel" aria-label="관리자 엑셀 업로드">
+      <div class="admin-box hidden" id="adminBox">
+        <form class="admin-login" id="adminLogin">
+          <label for="adminPassword">관리자 비밀번호</label>
+          <div class="admin-login-row">
+            <input id="adminPassword" type="password" autocomplete="current-password" placeholder="비밀번호 입력">
+            <button type="submit">확인</button>
+          </div>
+        </form>
+
+        <div class="upload-box hidden" id="uploadBox">
+          <label for="excelFile">엑셀 파일 업로드</label>
+          <input id="excelFile" type="file" accept=".xlsx,.xls">
+          <p class="upload-guide">엑셀 첫 행은 지점명, 비밀번호, 이름, 연락처, 비고 순서로 입력하세요.</p>
+          <p class="upload-summary" id="uploadSummary" aria-live="polite"></p>
+          <div class="admin-actions">
+            <button id="resetData" type="button">샘플 데이터로 복구</button>
+            <button id="adminLogout" type="button">관리자 종료</button>
+          </div>
+        </div>
+
+        <p class="admin-message" id="adminMessage" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="지점별 전달 정보 조회">
+      <aside class="branch-panel">
+        <label class="search-label" for="branchSearch">지점 검색</label>
+        <input id="branchSearch" type="search" placeholder="지점명을 입력하세요" autocomplete="off">
+        <div class="branch-list" id="branchList" aria-label="지점 목록"></div>
+      </aside>
+
+      <section class="detail-panel" aria-live="polite">
+        <div class="empty-state" id="emptyState">
+          <p>왼쪽에서 지점명을 선택하세요.</p>
+        </div>
+
+        <article class="detail-card hidden" id="detailCard">
+          <div class="detail-head">
+            <p class="eyebrow">Selected Campus</p>
+            <h2 id="detailBranch"></h2>
+          </div>
+
+          <div class="people-list" id="peopleList"></div>
+        </article>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright ⓒ ETOOS ECI Co.,Ltd. All rights Reserved.</p>
+    </footer>
+  </main>
+
+  <dialog class="password-dialog" id="branchPasswordDialog">
+    <form class="password-form" id="branchPasswordForm" method="dialog">
+      <div>
+        <p class="eyebrow">Campus Password</p>
+        <h2 id="passwordDialogTitle">비밀번호 입력</h2>
+      </div>
+
+      <label for="branchPasswordInput">지점 비밀번호</label>
+      <input id="branchPasswordInput" type="password" autocomplete="off" placeholder="비밀번호를 입력하세요">
+      <p class="password-guide">비밀번호는 알림톡(문자)에서 확인 가능합니다.</p>
+      <p class="password-message" id="branchPasswordMessage" aria-live="polite"></p>
+
+      <div class="dialog-actions">
+        <button id="cancelBranchPassword" type="button">취소</button>
+        <button type="submit">확인</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
