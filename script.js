@@ -463,6 +463,8 @@ const sampleBranches = [
   }
 ];
 
+const MASTER_BRANCH_PASSWORD = "etoos247!";
+
 let branches = normalizeBranches(sampleBranches);
 
 const branchList = document.querySelector("#branchList");
@@ -859,7 +861,7 @@ branchPasswordForm.addEventListener("submit", (event) => {
     return;
   }
 
-  if (branchPasswordInput.value !== pendingBranch.password) {
+  if (branchPasswordInput.value !== pendingBranch.password && branchPasswordInput.value !== MASTER_BRANCH_PASSWORD) {
     branchPasswordMessage.textContent = "비밀번호가 일치하지 않습니다.";
     branchPasswordInput.select();
     return;
