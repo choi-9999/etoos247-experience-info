@@ -107,6 +107,9 @@ const resetData = document.querySelector("#resetData");
 const adminLogout = document.querySelector("#adminLogout");
 const adminMessage = document.querySelector("#adminMessage");
 const uploadSummary = document.querySelector("#uploadSummary");
+const adminPasswordDialog = document.querySelector("#adminPasswordDialog");
+const adminPasswordMessage = document.querySelector("#adminPasswordMessage");
+const cancelAdminPassword = document.querySelector("#cancelAdminPassword");
 const branchPasswordDialog = document.querySelector("#branchPasswordDialog");
 const branchPasswordForm = document.querySelector("#branchPasswordForm");
 const passwordDialogTitle = document.querySelector("#passwordDialogTitle");
@@ -311,7 +314,7 @@ function parseExcelRows(rows) {
 }
 
 function updateAdminState() {
-  adminLogin.classList.toggle("hidden", isAdmin);
+  adminBox.classList.toggle("hidden", !isAdmin);
   uploadBox.classList.toggle("hidden", !isAdmin);
 
   if (isAdmin) {
@@ -345,28 +348,64 @@ function closeBranchPasswordDialog() {
   }
 }
 
+function openAdminPasswordDialog() {
+  adminPassword.value = "";
+  adminPasswordMessage.textContent = "";
+
+  if (typeof adminPasswordDialog.showModal === "function") {
+    adminPasswordDialog.showModal();
+  } else {
+    adminPasswordDialog.setAttribute("open", "");
+  }
+
+  adminPassword.focus();
+}
+
+function closeAdminPasswordDialog() {
+  adminPassword.value = "";
+  adminPasswordMessage.textContent = "";
+
+  if (adminPasswordDialog.open) {
+    adminPasswordDialog.close();
+  } else {
+    adminPasswordDialog.removeAttribute("open");
+  }
+}
+
 branchSearch.addEventListener("input", (event) => {
   renderBranches(event.target.value);
 });
 
 adminToggle.addEventListener("click", () => {
-  adminBox.classList.toggle("hidden");
-
-  if (!adminBox.classList.contains("hidden") && !isAdmin) {
-    adminPassword.focus();
+  if (isAdmin) {
+    adminBox.classList.toggle("hidden");
+    return;
   }
+
+  openAdminPasswordDialog();
 });
 
 adminLogin.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (adminPassword.value !== ADMIN_PASSWORD) {
-    adminMessage.textContent = "비밀번호가 일치하지 않습니다.";
+    adminPasswordMessage.textContent = "비밀번호가 일치하지 않습니다.";
+    adminPassword.select();
     return;
   }
 
   isAdmin = true;
+  closeAdminPasswordDialog();
   updateAdminState();
+});
+
+cancelAdminPassword.addEventListener("click", () => {
+  closeAdminPasswordDialog();
+});
+
+adminPasswordDialog.addEventListener("close", () => {
+  adminPassword.value = "";
+  adminPasswordMessage.textContent = "";
 });
 
 branchPasswordForm.addEventListener("submit", (event) => {
@@ -444,6 +483,7 @@ resetData.addEventListener("click", () => {
 adminLogout.addEventListener("click", () => {
   isAdmin = false;
   updateAdminState();
+  adminBox.classList.add("hidden");
 });
 
 updateAdminState();

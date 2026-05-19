@@ -24,14 +24,6 @@
 
     <section class="admin-panel" aria-label="관리자 엑셀 업로드">
       <div class="admin-box hidden" id="adminBox">
-        <form class="admin-login" id="adminLogin">
-          <label for="adminPassword">관리자 비밀번호</label>
-          <div class="admin-login-row">
-            <input id="adminPassword" type="password" autocomplete="current-password" placeholder="비밀번호 입력">
-            <button type="submit">확인</button>
-          </div>
-        </form>
-
         <div class="upload-box hidden" id="uploadBox">
           <label for="excelFile">엑셀 파일 업로드</label>
           <input id="excelFile" type="file" accept=".xlsx,.xls">
@@ -89,6 +81,24 @@
 
       <div class="dialog-actions">
         <button id="cancelBranchPassword" type="button">취소</button>
+        <button type="submit">확인</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="password-dialog" id="adminPasswordDialog">
+    <form class="password-form" id="adminLogin" method="dialog">
+      <div>
+        <p class="eyebrow">Admin Password</p>
+        <h2>관리자 비밀번호 입력</h2>
+      </div>
+
+      <label for="adminPassword">관리자 비밀번호</label>
+      <input id="adminPassword" type="password" autocomplete="current-password" placeholder="비밀번호를 입력하세요">
+      <p class="password-message" id="adminPasswordMessage" aria-live="polite"></p>
+
+      <div class="dialog-actions">
+        <button id="cancelAdminPassword" type="button">취소</button>
         <button type="submit">확인</button>
       </div>
     </form>
