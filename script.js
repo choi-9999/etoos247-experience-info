@@ -153,7 +153,7 @@ function renderBranches(filterText = "") {
   const keyword = filterText.trim().toLowerCase();
   const filteredBranches = branches.filter((item) =>
     item.branch.toLowerCase().includes(keyword)
-  );
+  ).sort((first, second) => first.branch.localeCompare(second.branch, "ko"));
 
   branchList.innerHTML = "";
 
