@@ -1182,6 +1182,11 @@ dd a:hover {
   flex-direction: column;
   align-items: center;
   pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.donut-container:hover .donut-center-text {
+  opacity: 0;
 }
 
 .donut-center-text .pct {
