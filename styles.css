@@ -1170,14 +1170,14 @@ dd a:hover {
 }
 
 .donut-container {
-  height: 200px;
+  height: 170px;
 }
 
 .donut-center-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%); /* offset up slightly for donut alignment */
+  transform: translate(-50%, -50%); /* perfect mathematical center */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1197,6 +1197,37 @@ dd a:hover {
   color: var(--muted);
   text-transform: uppercase;
   margin-top: 2px;
+}
+
+/* Custom Donut Legend styling */
+.donut-legend {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-color.mobile {
+  background: #5f19e8;
+}
+
+.legend-color.pc {
+  background: #cbd5e1;
 }
 
 .full-width-chart-card {

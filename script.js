@@ -930,9 +930,7 @@ function renderCharts(report) {
       cutout: '76%',
       plugins: {
         legend: {
-          display: true,
-          position: 'bottom',
-          labels: { font: fontConfig, boxWidth: 8, usePointStyle: true }
+          display: false
         },
         tooltip: {
           callbacks: {
