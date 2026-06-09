@@ -492,6 +492,8 @@ const passwordDialogTitle = document.querySelector("#passwordDialogTitle");
 const branchPasswordInput = document.querySelector("#branchPasswordInput");
 const branchPasswordMessage = document.querySelector("#branchPasswordMessage");
 const cancelBranchPassword = document.querySelector("#cancelBranchPassword");
+const mobileBranchSelect = document.querySelector("#mobileBranchSelect");
+const reportMobileCards = document.querySelector("#reportMobileCards");
 
 let selectedBranch = "";
 let isAdmin = false;
@@ -624,6 +626,25 @@ function renderBranches(filterText = "") {
     button.addEventListener("click", () => requestBranchPassword(item));
     branchList.append(button);
   });
+
+  populateMobileSelect();
+}
+
+function populateMobileSelect() {
+  if (!mobileBranchSelect) return;
+  const prevValue = mobileBranchSelect.value || selectedBranch;
+  mobileBranchSelect.innerHTML = '<option value="">지점을 선택하세요</option>';
+
+  const sorted = [...branches].sort((first, second) => first.branch.localeCompare(second.branch, "ko"));
+  sorted.forEach((item) => {
+    const option = document.createElement("option");
+    option.value = item.branch;
+    option.textContent = item.branch;
+    if (item.branch === prevValue) {
+      option.selected = true;
+    }
+    mobileBranchSelect.append(option);
+  });
 }
 
 function requestBranchPassword(item) {
@@ -721,6 +742,10 @@ function renderReportDashboard(branchName) {
 
   // 2. Render Content Table
   reportTableBody.innerHTML = "";
+  if (reportMobileCards) {
+    reportMobileCards.innerHTML = "";
+  }
+
   report.contents.forEach((content, index) => {
     const tr = document.createElement("tr");
     
@@ -786,6 +811,58 @@ function renderReportDashboard(branchName) {
 
     tr.append(tdNum, tdTitle, tdLikes, tdComments);
     reportTableBody.append(tr);
+
+    // Render mobile card
+    if (reportMobileCards) {
+      const card = document.createElement("div");
+      card.className = "report-mobile-card";
+      
+      if (content.url) {
+        card.addEventListener("click", () => {
+          window.open(content.url, "_blank", "noopener,noreferrer");
+        });
+      } else {
+        card.style.cursor = "default";
+      }
+
+      const cardHead = document.createElement("div");
+      cardHead.className = "card-head";
+      cardHead.innerHTML = `
+        <span class="card-num">${index + 1}</span>
+        <span class="card-blogger">${content.blogger}</span>
+        <span class="card-date">${content.date.replace(/-/g, '.')}</span>
+      `;
+
+      const cardBody = document.createElement("div");
+      cardBody.className = "card-body";
+      cardBody.innerHTML = `<h4 class="card-title">${content.title}</h4>`;
+
+      const cardFoot = document.createElement("div");
+      cardFoot.className = "card-foot";
+
+      const stats = document.createElement("div");
+      stats.className = "card-stats";
+      stats.innerHTML = `
+        <span class="stat-item likes">좋아요 <strong>${content.likes}</strong></span>
+        <span class="stat-item comments">댓글 <strong>${content.comments}</strong></span>
+      `;
+      cardFoot.append(stats);
+
+      if (content.url) {
+        const visitBtn = document.createElement("span");
+        visitBtn.className = "card-visit-btn";
+        visitBtn.innerHTML = `
+          <span>블로그 방문</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        `;
+        cardFoot.append(visitBtn);
+      }
+
+      card.append(cardHead, cardBody, cardFoot);
+      reportMobileCards.append(card);
+    }
   });
 
   // 3. Render Charts
@@ -1182,6 +1259,9 @@ function updateAdminState() {
 
 function clearSelectedBranch() {
   selectedBranch = "";
+  if (mobileBranchSelect) {
+    mobileBranchSelect.value = "";
+  }
   detailCard.classList.add("hidden");
   emptyState.classList.remove("hidden");
   peopleList.innerHTML = "";
@@ -1192,6 +1272,9 @@ function closeBranchPasswordDialog() {
   pendingBranch = null;
   branchPasswordInput.value = "";
   branchPasswordMessage.textContent = "";
+  if (mobileBranchSelect) {
+    mobileBranchSelect.value = selectedBranch;
+  }
 
   if (branchPasswordDialog.open) {
     branchPasswordDialog.close();
@@ -1357,6 +1440,21 @@ document.querySelectorAll(".tab-btn").forEach(btn => {
     switchTab(btn.getAttribute("data-tab"));
   });
 });
+
+// Mobile dropdown selection event
+if (mobileBranchSelect) {
+  mobileBranchSelect.addEventListener("change", (event) => {
+    const branchName = event.target.value;
+    if (!branchName) {
+      clearSelectedBranch();
+      return;
+    }
+    const item = branches.find((b) => b.branch === branchName);
+    if (item) {
+      requestBranchPassword(item);
+    }
+  });
+}
 
 updateAdminState();
 loadBranches();
