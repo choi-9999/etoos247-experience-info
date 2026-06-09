@@ -634,6 +634,7 @@ function renderPeople(people) {
   people.forEach((person, index) => {
     const card = document.createElement("section");
     card.className = "person-card";
+    card.style.setProperty("--card-index", index);
 
     const title = document.createElement("h3");
     title.innerHTML = `<span class="num">${index + 1}</span> <span>${person.name}</span>`;

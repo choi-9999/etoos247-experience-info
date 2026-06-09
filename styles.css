@@ -1,26 +1,30 @@
 :root {
   color-scheme: light;
-  --bg: #f8fafc;
-  --surface: #ffffff;
+  --bg: #f5f7fa;
+  --surface: rgba(255, 255, 255, 0.65);
+  --surface-solid: #ffffff;
   --ink: #0f172a;
   --muted: #475569;
-  --line: #e2e8f0;
+  --line: rgba(226, 232, 240, 0.8);
   --line-accent: rgba(95, 25, 232, 0.08);
   --accent: #5f19e8;
   --accent-light: #7c3aed;
   --accent-hover: #4c12c9;
-  --accent-soft: #f5f3ff;
-  --accent-gradient: linear-gradient(135deg, #5f19e8 0%, #a855f7 100%);
+  --accent-soft: rgba(95, 25, 232, 0.05);
+  --accent-gradient: linear-gradient(135deg, #5f19e8 0%, #a855f7 50%, #6366f1 100%);
   --accent-glow: rgba(95, 25, 232, 0.15);
   --focus: #ef4444;
   --success: #10b981;
-  --shadow-sm: 0 2px 8px -1px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 12px 30px -10px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 40px -15px rgba(95, 25, 232, 0.08);
+  --shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 16px 36px -8px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 24px 48px -12px rgba(95, 25, 232, 0.06);
+  --glass-blur: blur(18px);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 8px 32px 0 rgba(31, 38, 135, 0.03);
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-lg: 18px;
+  --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
@@ -31,13 +35,75 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: var(--bg);
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(95, 25, 232, 0.03) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.03) 0px, transparent 50%);
+  position: relative;
+  overflow-x: hidden;
   color: var(--ink);
   font-family: 'Outfit', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Mesh Background Styling */
+.mesh-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--bg);
+  pointer-events: none;
+}
+
+.mesh-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  animation: float 25s infinite alternate ease-in-out;
+}
+
+.sphere-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(95, 25, 232, 0.25) 0%, rgba(168, 85, 247, 0) 70%);
+  top: -10%;
+  left: -10%;
+  animation-duration: 25s;
+}
+
+.sphere-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, rgba(244, 63, 94, 0) 70%);
+  bottom: -15%;
+  right: -5%;
+  animation-duration: 32s;
+  animation-delay: -7s;
+}
+
+.sphere-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+  top: 35%;
+  left: 45%;
+  animation-duration: 28s;
+  animation-delay: -12s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(80px, 40px) scale(1.1) rotate(180deg);
+  }
+  100% {
+    transform: translate(-30px, -50px) scale(0.95) rotate(360deg);
+  }
 }
 
 button,
@@ -97,23 +163,40 @@ h1 {
 /* Notice List */
 .notice-list {
   display: grid;
-  gap: 10px;
-  max-width: 820px;
-  margin: 0 0 32px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 0 36px;
+  animation: slideUpFade 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
 }
 
 .notice-copy {
   position: relative;
   margin: 0;
-  padding: 12px 18px;
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius-sm);
-  background: var(--accent-soft);
-  color: var(--accent-hover);
-  font-size: 0.94rem;
+  padding: 16px 20px;
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--ink);
+  font-size: 0.88rem;
   font-weight: 600;
-  line-height: 1.5;
-  box-shadow: var(--shadow-sm);
+  line-height: 1.6;
+  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notice-copy:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--glass-shadow), var(--shadow-md);
 }
 
 .has-tooltip {
@@ -126,12 +209,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   min-height: 20px;
-  margin-left: 10px;
-  padding: 0 10px;
+  margin-left: 8px;
+  padding: 0 8px;
   border-radius: 999px;
   background: var(--accent-gradient);
   color: #ffffff;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   vertical-align: middle;
   transition: var(--transition);
@@ -139,35 +222,37 @@ h1 {
 
 .has-tooltip:hover::after {
   transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(95, 25, 232, 0.3);
+  box-shadow: 0 2px 10px rgba(95, 25, 232, 0.35);
 }
 
 .notice-tooltip {
   position: absolute;
-  left: 0;
-  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  bottom: calc(100% + 14px);
+  top: auto;
   z-index: 50;
-  width: min(450px, calc(100vw - 32px));
+  width: 280px;
   padding: 14px 16px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
-  background: var(--surface);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
   color: var(--ink);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-8px);
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.25s cubic-bezier(0.25, 1, 0.5, 1), transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .has-tooltip:hover .notice-tooltip,
 .has-tooltip:focus .notice-tooltip,
 .has-tooltip:focus-within .notice-tooltip {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Admin Toggle & Panels */
@@ -314,17 +399,20 @@ h1 {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   background: var(--surface);
-  border: 1px solid var(--line-accent);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--glass-shadow), var(--shadow-lg);
   overflow: hidden;
+  animation: slideUpFade 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.2s both;
 }
 
 /* Left Sidebar (Branch Panel) */
 .branch-panel {
   padding: 28px 24px;
   border-right: 1px solid var(--line);
-  background: #fafbfe;
+  background: rgba(250, 251, 254, 0.35);
   display: flex;
   flex-direction: column;
   max-height: 700px;
@@ -412,8 +500,8 @@ h1 {
   border-radius: var(--radius-md);
   background: transparent;
   color: var(--muted);
-  font-size: 0.98rem;
-  font-weight: 600;
+  font-size: 0.96rem;
+  font-weight: 700;
   text-align: left;
   cursor: pointer;
   transition: var(--transition);
@@ -427,13 +515,13 @@ h1 {
   opacity: 0;
   transform: translateX(-8px);
   transition: var(--transition);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .branch-button:hover {
-  background: rgba(95, 25, 232, 0.04);
+  background: rgba(95, 25, 232, 0.06);
   color: var(--accent);
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .branch-button:hover::after {
@@ -445,7 +533,7 @@ h1 {
   background: var(--accent-gradient);
   color: #ffffff;
   font-weight: 800;
-  box-shadow: 0 8px 20px -6px var(--accent);
+  box-shadow: 0 8px 24px -6px rgba(95, 25, 232, 0.3);
 }
 
 .branch-button.active::after {
@@ -461,16 +549,16 @@ h1 {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 560px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.25);
   overflow-y: auto;
 }
 
 .empty-state {
   margin: auto;
   width: 100%;
-  max-width: 480px;
-  padding: 60px 40px;
-  border: 2px dashed var(--line);
+  max-width: 440px;
+  padding: 50px 30px;
+  border: 2px dashed rgba(95, 25, 232, 0.15);
   border-radius: var(--radius-lg);
   color: var(--muted);
   text-align: center;
@@ -478,39 +566,44 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .empty-state::before {
   content: "💡";
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+  filter: drop-shadow(0 4px 10px rgba(95, 25, 232, 0.2));
 }
 
 .empty-state p {
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.05rem;
+  color: var(--accent);
 }
 
 .detail-card {
   width: 100%;
-  animation: slideUpFade 0.45s cubic-bezier(0.21, 1.02, 0.43, 1.01) both;
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .detail-head {
-  margin-bottom: 30px;
-  padding-bottom: 18px;
-  border-bottom: 2px solid var(--line);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
   position: relative;
 }
 
 .detail-head::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
-  width: 80px;
-  height: 2px;
+  width: 100px;
+  height: 3px;
   background: var(--accent-gradient);
+  border-radius: 99px;
 }
 
 h2 {
@@ -530,15 +623,19 @@ h2 {
 
 .person-card {
   padding: 24px;
-  border: 1.5px solid var(--line);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--glass-shadow), var(--shadow-sm);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--card-index, 0) * 0.08s);
 }
 
 .person-card::before {
@@ -549,18 +646,20 @@ h2 {
   width: 100%;
   height: 4px;
   background: var(--accent-gradient);
-  opacity: 0;
+  opacity: 0.15;
   transition: var(--transition);
 }
 
 .person-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(95, 25, 232, 0.2);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+  border-color: rgba(95, 25, 232, 0.3);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--glass-shadow), 0 20px 38px -10px rgba(95, 25, 232, 0.12);
 }
 
 .person-card:hover::before {
   opacity: 1;
+  height: 6px;
 }
 
 .person-card h3 {
@@ -685,21 +784,24 @@ dd a:hover {
 
 /* Dialog Modals */
 .password-dialog {
-  width: min(400px, calc(100% - 32px));
+  width: min(420px, calc(100% - 32px));
   padding: 0;
-  border: 0;
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: var(--ink);
-  box-shadow: 0 24px 60px -10px rgba(15, 23, 42, 0.15);
+  box-shadow: var(--glass-shadow), 0 32px 64px -16px rgba(15, 23, 42, 0.18);
   overflow: hidden;
-  animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation: scaleIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .password-dialog::backdrop {
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(6px);
-  animation: fadeIn 0.3s ease both;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .password-form {
