@@ -498,6 +498,28 @@ let isAdmin = false;
 let adminSessionPassword = "";
 let pendingBranch = null;
 
+// Report UI selectors
+const detailTabs = document.querySelector("#detailTabs");
+const tabContentPeople = document.querySelector("#tabContentPeople");
+const tabContentReport = document.querySelector("#tabContentReport");
+const reportTableBody = document.querySelector("#reportTableBody");
+
+const kpiContents = document.querySelector("#kpiContents");
+const kpiViews = document.querySelector("#kpiViews");
+const kpiViewsAvg = document.querySelector("#kpiViewsAvg");
+const kpiMobile = document.querySelector("#kpiMobile");
+const kpiMobileAvg = document.querySelector("#kpiMobileAvg");
+const kpiPc = document.querySelector("#kpiPc");
+const kpiPcAvg = document.querySelector("#kpiPcAvg");
+const donutPct = document.querySelector("#donutPct");
+const lineChartSubtitle = document.querySelector("#lineChartSubtitle");
+const reportDateBasis = document.querySelector("#reportDateBasis");
+
+// Chart.js instances
+let cumulativeLineChartInstance = null;
+let deviceDonutChartInstance = null;
+let dailyLineChartInstance = null;
+
 function loadBranches() {
   return fetchBranches();
 }
@@ -626,6 +648,372 @@ function selectBranch(item) {
   emptyState.classList.add("hidden");
   detailCard.classList.remove("hidden");
   renderBranches(branchSearch.value);
+
+  // Check if report data exists for this branch
+  const hasReport = window.reportsData && window.reportsData[item.branch];
+  if (hasReport) {
+    detailTabs.classList.remove("hidden");
+    // Switch to people tab by default
+    switchTab("people");
+    renderReportDashboard(item.branch);
+  } else {
+    detailTabs.classList.add("hidden");
+    switchTab("people");
+  }
+}
+
+function switchTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-btn");
+
+  tabs.forEach(tab => {
+    if (tab.getAttribute("data-tab") === tabId) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
+    }
+  });
+
+  if (tabId === "people") {
+    tabContentPeople.classList.add("active");
+    tabContentPeople.classList.remove("hidden");
+    tabContentReport.classList.remove("active");
+    tabContentReport.classList.add("hidden");
+  } else {
+    tabContentPeople.classList.remove("active");
+    tabContentPeople.classList.add("hidden");
+    tabContentReport.classList.add("active");
+    tabContentReport.classList.remove("hidden");
+    
+    // Trigger charts update/resize when report tab is unhidden
+    setTimeout(() => {
+      if (cumulativeLineChartInstance) cumulativeLineChartInstance.resize();
+      if (deviceDonutChartInstance) deviceDonutChartInstance.resize();
+      if (dailyLineChartInstance) dailyLineChartInstance.resize();
+    }, 50);
+  }
+}
+
+function renderReportDashboard(branchName) {
+  const report = window.reportsData[branchName];
+  if (!report) return;
+
+  // 1. Set KPI values
+  kpiContents.textContent = `${report.totalContents}개`;
+  kpiViews.textContent = report.totalViews.toLocaleString();
+  kpiViewsAvg.textContent = report.averageViews.toLocaleString();
+  kpiMobile.textContent = report.mobileViews.toLocaleString();
+  kpiMobileAvg.textContent = report.averageMobileViews.toLocaleString();
+  kpiPc.textContent = report.pcViews.toLocaleString();
+  kpiPcAvg.textContent = report.averagePcViews.toLocaleString();
+  
+  donutPct.textContent = `${report.mobileRatio}%`;
+
+  // Set subtitles/basis text based on date range
+  if (report.dailyData && report.dailyData.length > 0) {
+    const startDate = report.dailyData[0].date.replace(/-/g, '.');
+    const endDate = report.dailyData[report.dailyData.length - 1].date.replace(/-/g, '.');
+    reportDateBasis.textContent = `누적 성과 및 콘텐츠 평균 성과 (기준일: ${endDate})`;
+    lineChartSubtitle.textContent = `(${startDate} ~ ${endDate})`;
+  } else {
+    reportDateBasis.textContent = `누적 성과 및 콘텐츠 평균 성과`;
+    lineChartSubtitle.textContent = '';
+  }
+
+  // 2. Render Content Table
+  reportTableBody.innerHTML = "";
+  report.contents.forEach((content, index) => {
+    const tr = document.createElement("tr");
+    
+    // When clicking a row, open the URL in a new tab if present
+    if (content.url) {
+      tr.addEventListener("click", () => {
+        window.open(content.url, "_blank", "noopener,noreferrer");
+      });
+    } else {
+      tr.style.cursor = "default";
+    }
+
+    const tdNum = document.createElement("td");
+    tdNum.className = "col-num";
+    tdNum.textContent = index + 1;
+
+    const tdTitle = document.createElement("td");
+    tdTitle.className = "col-title";
+    
+    const infoCell = document.createElement("div");
+    infoCell.className = "content-info-cell";
+    
+    const titleSpan = document.createElement("span");
+    titleSpan.className = "content-main-title";
+    titleSpan.textContent = content.title;
+    
+    const metaDiv = document.createElement("div");
+    metaDiv.className = "content-meta";
+    
+    const bloggerSpan = document.createElement("span");
+    bloggerSpan.textContent = content.blogger;
+    
+    const dateSpan = document.createElement("span");
+    dateSpan.textContent = content.date.replace(/-/g, '.');
+    
+    metaDiv.append(bloggerSpan);
+    metaDiv.append(createMetaDivider());
+    metaDiv.append(dateSpan);
+    
+    if (content.url) {
+      metaDiv.append(createMetaDivider());
+      const badge = document.createElement("span");
+      badge.className = "visit-badge";
+      badge.innerHTML = `
+        <span>블로그 방문</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      `;
+      metaDiv.append(badge);
+    }
+    
+    infoCell.append(titleSpan, metaDiv);
+    tdTitle.append(infoCell);
+
+    const tdLikes = document.createElement("td");
+    tdLikes.className = "col-likes";
+    tdLikes.textContent = content.likes;
+
+    const tdComments = document.createElement("td");
+    tdComments.className = "col-comments";
+    tdComments.textContent = content.comments;
+
+    tr.append(tdNum, tdTitle, tdLikes, tdComments);
+    reportTableBody.append(tr);
+  });
+
+  // 3. Render Charts
+  renderCharts(report);
+}
+
+function createMetaDivider() {
+  const span = document.createElement("span");
+  span.className = "meta-divider";
+  span.textContent = "|";
+  return span;
+}
+
+function renderCharts(report) {
+  // Destroy previous instances if they exist
+  if (cumulativeLineChartInstance) {
+    cumulativeLineChartInstance.destroy();
+  }
+  if (deviceDonutChartInstance) {
+    deviceDonutChartInstance.destroy();
+  }
+  if (dailyLineChartInstance) {
+    dailyLineChartInstance.destroy();
+  }
+
+  // Common font styling
+  const fontConfig = {
+    family: "'Outfit', 'Noto Sans KR', sans-serif",
+    size: 11,
+    weight: '600'
+  };
+
+  // Extract chart data
+  const dates = report.dailyData.map(d => d.date.substring(5).replace('-', '.'));
+  const pcViews = report.dailyData.map(d => d.pc);
+  const mobileViews = report.dailyData.map(d => d.mobile);
+  const totalViews = report.dailyData.map(d => d.total);
+
+  // Cumulative views arrays
+  let cumTotal = 0;
+  let cumMobile = 0;
+  let cumPc = 0;
+  const cumulativeTotals = [];
+  const cumulativeMobiles = [];
+  const cumulativePcs = [];
+
+  report.dailyData.forEach(d => {
+    cumTotal += d.total;
+    cumMobile += d.mobile;
+    cumPc += d.pc;
+    cumulativeTotals.push(cumTotal);
+    cumulativeMobiles.push(cumMobile);
+    cumulativePcs.push(cumPc);
+  });
+
+  // A. Cumulative Line Chart
+  const ctxCum = document.getElementById('cumulativeLineChart').getContext('2d');
+  cumulativeLineChartInstance = new Chart(ctxCum, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        {
+          label: '총조회수',
+          data: cumulativeTotals,
+          borderColor: '#5f19e8',
+          backgroundColor: 'transparent',
+          borderWidth: 3,
+          pointRadius: 0,
+          pointHoverRadius: 6,
+          tension: 0.3
+        },
+        {
+          label: '모바일조회수',
+          data: cumulativeMobiles,
+          borderColor: '#a855f7',
+          backgroundColor: 'transparent',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          tension: 0.3
+        },
+        {
+          label: 'PC조회수',
+          data: cumulativePcs,
+          borderColor: '#6366f1',
+          backgroundColor: 'transparent',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'end',
+          labels: { font: fontConfig, boxWidth: 8, usePointStyle: true, padding: 15 }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          titleFont: { family: fontConfig.family, weight: '700' },
+          bodyFont: { family: fontConfig.family }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: fontConfig, color: '#94a3b8', maxTicksLimit: 10 }
+        },
+        y: {
+          border: { dash: [4, 4] },
+          grid: { color: '#e2e8f0' },
+          ticks: { font: fontConfig, color: '#94a3b8' }
+        }
+      }
+    }
+  });
+
+  // B. Device Donut Chart
+  const ctxDonut = document.getElementById('deviceDonutChart').getContext('2d');
+  deviceDonutChartInstance = new Chart(ctxDonut, {
+    type: 'doughnut',
+    data: {
+      labels: ['모바일', 'PC'],
+      datasets: [{
+        data: [report.mobileRatio, report.pcRatio],
+        backgroundColor: ['#5f19e8', '#cbd5e1'],
+        borderWidth: 0,
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '76%',
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { font: fontConfig, boxWidth: 8, usePointStyle: true }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return ` ${context.label}: ${context.raw}%`;
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // C. Daily Line Chart
+  const ctxDaily = document.getElementById('dailyLineChart').getContext('2d');
+  dailyLineChartInstance = new Chart(ctxDaily, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        {
+          label: '총조회수',
+          data: totalViews,
+          borderColor: '#10b981',
+          backgroundColor: 'transparent',
+          borderWidth: 2.5,
+          pointRadius: 2,
+          pointHoverRadius: 6,
+          tension: 0.3
+        },
+        {
+          label: '모바일조회수',
+          data: mobileViews,
+          borderColor: '#a855f7',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          tension: 0.3
+        },
+        {
+          label: 'PC조회수',
+          data: pcViews,
+          borderColor: '#6366f1',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'end',
+          labels: { font: fontConfig, boxWidth: 8, usePointStyle: true, padding: 15 }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          titleFont: { family: fontConfig.family, weight: '700' },
+          bodyFont: { family: fontConfig.family }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: fontConfig, color: '#94a3b8', maxTicksLimit: 12 }
+        },
+        y: {
+          border: { dash: [4, 4] },
+          grid: { color: '#e2e8f0' },
+          ticks: { font: fontConfig, color: '#94a3b8' }
+        }
+      }
+    }
+  });
 }
 
 function renderPeople(people) {
@@ -963,6 +1351,13 @@ adminLogout.addEventListener("click", () => {
   adminSessionPassword = "";
   updateAdminState();
   adminBox.classList.add("hidden");
+});
+
+// Add event listeners for tab buttons
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    switchTab(btn.getAttribute("data-tab"));
+  });
 });
 
 updateAdminState();

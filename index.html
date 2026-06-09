@@ -81,11 +81,116 @@
 
         <article class="detail-card hidden" id="detailCard">
           <div class="detail-head">
-            <p class="eyebrow">Selected Campus</p>
-            <h2 id="detailBranch"></h2>
+            <div class="detail-title-row">
+              <div>
+                <p class="eyebrow">Selected Campus</p>
+                <h2 id="detailBranch"></h2>
+              </div>
+              <div class="detail-tabs hidden" id="detailTabs">
+                <button class="tab-btn active" data-tab="people" type="button">전달 인적사항</button>
+                <button class="tab-btn" data-tab="report" type="button">결과보고서</button>
+              </div>
+            </div>
           </div>
 
-          <div class="people-list" id="peopleList"></div>
+          <div class="tab-content active" id="tabContentPeople">
+            <div class="people-list" id="peopleList"></div>
+          </div>
+
+          <div class="tab-content hidden" id="tabContentReport">
+            <div class="report-dashboard">
+              <div class="report-section-title">
+                <h3>누적 성과</h3>
+                <p class="report-date-basis" id="reportDateBasis">누적 성과 및 콘텐츠 평균 성과</p>
+              </div>
+              <div class="kpi-grid">
+                <div class="kpi-card">
+                  <div class="kpi-icon">📝</div>
+                  <div class="kpi-info">
+                    <dt>콘텐츠 수</dt>
+                    <dd id="kpiContents">-</dd>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon">📊</div>
+                  <div class="kpi-info">
+                    <dt>총 조회수</dt>
+                    <dd>
+                      <span class="val-num" id="kpiViews">-</span>
+                      <span class="val-sub">콘텐츠 평균 <span id="kpiViewsAvg">-</span></span>
+                    </dd>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon">📱</div>
+                  <div class="kpi-info">
+                    <dt>모바일 조회수</dt>
+                    <dd>
+                      <span class="val-num" id="kpiMobile">-</span>
+                      <span class="val-sub">콘텐츠 평균 <span id="kpiMobileAvg">-</span></span>
+                    </dd>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon">💻</div>
+                  <div class="kpi-info">
+                    <dt>PC 조회수</dt>
+                    <dd>
+                      <span class="val-num" id="kpiPc">-</span>
+                      <span class="val-sub">콘텐츠 평균 <span id="kpiPcAvg">-</span></span>
+                    </dd>
+                  </div>
+                </div>
+              </div>
+
+              <div class="charts-row">
+                <div class="chart-card line-chart-card">
+                  <h4>누적 성과 추이 <span class="chart-subtitle" id="lineChartSubtitle"></span></h4>
+                  <div class="chart-container">
+                    <canvas id="cumulativeLineChart"></canvas>
+                  </div>
+                </div>
+                <div class="chart-card donut-chart-card">
+                  <h4>기기별 조회 수 (%)</h4>
+                  <div class="chart-container donut-container">
+                    <canvas id="deviceDonutChart"></canvas>
+                    <div class="donut-center-text">
+                      <span class="pct" id="donutPct">-</span>
+                      <span class="lbl">모바일</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-section-title">
+                <h3>기간별 성과</h3>
+              </div>
+              <div class="chart-card full-width-chart-card">
+                <h4>일별 성과</h4>
+                <div class="chart-container">
+                  <canvas id="dailyLineChart"></canvas>
+                </div>
+              </div>
+
+              <div class="report-section-title">
+                <h3>등록 콘텐츠</h3>
+              </div>
+              <div class="table-card">
+                <table class="report-table">
+                  <thead>
+                    <tr>
+                      <th class="col-num">번호</th>
+                      <th class="col-title">콘텐츠</th>
+                      <th class="col-likes">좋아요</th>
+                      <th class="col-comments">댓글</th>
+                    </tr>
+                  </thead>
+                  <tbody id="reportTableBody">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </section>
@@ -133,6 +238,8 @@
   </dialog>
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="reports-data.js?v=20260609"></script>
   <script src="script.js?v=20260519-2"></script>
 </body>
 </html>
