@@ -282,50 +282,47 @@
         </div>
       </div>
 
-      <!-- 리더보드 & 사이드 컬럼 2열 그리드 -->
+      <!-- 1. 지점별 성과 리더보드 (Full Width) -->
+      <div class="chart-card leaderboard-card" style="margin-bottom: 24px;">
+        <h4>지점별 성과 순위 (리더보드)</h4>
+        <div class="table-card">
+          <table class="report-table leaderboard-table">
+            <thead>
+              <tr>
+                <th class="col-rank">순위</th>
+                <th class="col-branch">지점명</th>
+                <th class="col-views">총 조회수</th>
+                <th class="col-count">콘텐츠수</th>
+                <th class="col-avg">평균 조회수</th>
+                <th class="col-ratio">모바일비율</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardTableBody">
+              <!-- dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. 하단 2열 그리드: 최우수 콘텐츠 & 통합 키워드 -->
       <div class="admin-grid-row">
-        <!-- 1. 지점별 성과 리더보드 -->
-        <div class="chart-card leaderboard-card">
-          <h4>지점별 성과 순위 (리더보드)</h4>
-          <div class="table-card">
-            <table class="report-table leaderboard-table">
-              <thead>
-                <tr>
-                  <th class="col-rank">순위</th>
-                  <th class="col-branch">지점명</th>
-                  <th class="col-views">총 조회수</th>
-                  <th class="col-count">콘텐츠수</th>
-                  <th class="col-avg">평균 조회수</th>
-                  <th class="col-ratio">모바일비율</th>
-                </tr>
-              </thead>
-              <tbody id="leaderboardTableBody">
-                <!-- dynamically populated -->
-              </tbody>
-            </table>
+        <!-- 명예의 전당 (최우수 콘텐츠 TOP 3) -->
+        <div class="chart-card hall-of-fame-card">
+          <h4>최우수 콘텐츠 (조회수 TOP 3)</h4>
+          <div class="fame-list" id="hallOfFameList">
+            <!-- dynamically populated -->
           </div>
         </div>
 
-        <!-- 2. 베스트 콘텐츠 및 통합 키워드 -->
-        <div class="admin-side-column">
-          <!-- 명예의 전당 (최우수 콘텐츠 TOP 3) -->
-          <div class="chart-card hall-of-fame-card">
-            <h4>최우수 콘텐츠 (조회수 TOP 3)</h4>
-            <div class="fame-list" id="hallOfFameList">
-              <!-- dynamically populated -->
-            </div>
+        <!-- 통합 상위 노출 키워드 TOP 10 -->
+        <div class="chart-card keyword-card">
+          <h4>통합 상위 노출 키워드 (TOP 10)</h4>
+          <div class="keyword-header">
+            <span class="hdr-campaign">키워드</span>
+            <span class="hdr-views">누적 노출수</span>
           </div>
-
-          <!-- 통합 상위 노출 키워드 TOP 10 -->
-          <div class="chart-card keyword-card">
-            <h4>통합 상위 노출 키워드 (TOP 10)</h4>
-            <div class="keyword-header">
-              <span class="hdr-campaign">키워드</span>
-              <span class="hdr-views">누적 노출수</span>
-            </div>
-            <div class="keyword-list" id="globalKeywordList">
-              <!-- dynamically populated -->
-            </div>
+          <div class="keyword-list" id="globalKeywordList">
+            <!-- dynamically populated -->
           </div>
         </div>
       </div>
