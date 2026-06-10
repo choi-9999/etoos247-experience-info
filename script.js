@@ -474,15 +474,8 @@ const detailCard = document.querySelector("#detailCard");
 const detailBranch = document.querySelector("#detailBranch");
 const peopleList = document.querySelector("#peopleList");
 const adminToggle = document.querySelector("#adminToggle");
-const adminBox = document.querySelector("#adminBox");
 const adminLogin = document.querySelector("#adminLogin");
 const adminPassword = document.querySelector("#adminPassword");
-const uploadBox = document.querySelector("#uploadBox");
-const excelFile = document.querySelector("#excelFile");
-const resetData = document.querySelector("#resetData");
-const adminLogout = document.querySelector("#adminLogout");
-const adminMessage = document.querySelector("#adminMessage");
-const uploadSummary = document.querySelector("#uploadSummary");
 const adminPasswordDialog = document.querySelector("#adminPasswordDialog");
 const adminPasswordMessage = document.querySelector("#adminPasswordMessage");
 const cancelAdminPassword = document.querySelector("#cancelAdminPassword");
@@ -1362,9 +1355,6 @@ function parseExcelRows(rows) {
 }
 
 function updateAdminState() {
-  adminBox.classList.toggle("hidden", !isAdmin);
-  uploadBox.classList.toggle("hidden", !isAdmin);
-
   if (adminDashboardPanel) {
     adminDashboardPanel.classList.toggle("hidden", !isAdmin);
   }
@@ -1373,15 +1363,11 @@ function updateAdminState() {
   }
 
   if (isAdmin) {
-    adminMessage.textContent = "관리자 모드입니다. 엑셀 파일을 업로드하면 서버 데이터가 새 목록으로 교체됩니다.";
     renderGlobalDashboard();
     return;
   }
 
   adminPassword.value = "";
-  excelFile.value = "";
-  uploadSummary.textContent = "";
-  adminMessage.textContent = "";
 }
 
 function clearSelectedBranch() {
@@ -1440,7 +1426,9 @@ branchSearch.addEventListener("input", (event) => {
 
 adminToggle.addEventListener("click", () => {
   if (isAdmin) {
-    adminBox.classList.toggle("hidden");
+    isAdmin = false;
+    adminSessionPassword = "";
+    updateAdminState();
     return;
   }
 
@@ -1506,60 +1494,7 @@ branchPasswordDialog.addEventListener("close", () => {
   branchPasswordMessage.textContent = "";
 });
 
-excelFile.addEventListener("change", async (event) => {
-  const file = event.target.files[0];
-
-  if (!file) {
-    return;
-  }
-
-  if (!window.XLSX) {
-    adminMessage.textContent = "엑셀 업로드 라이브러리를 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 열어주세요.";
-    return;
-  }
-
-  try {
-    const fileBuffer = await file.arrayBuffer();
-    const workbook = XLSX.read(fileBuffer, { type: "array" });
-    const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-    const rows = XLSX.utils.sheet_to_json(firstSheet, { defval: "" });
-    const nextBranches = parseExcelRows(rows);
-
-    if (nextBranches.length === 0) {
-      adminMessage.textContent = "업로드할 데이터가 없습니다. 첫 행에 지점명, 비밀번호, 이름, 연락처, 블로그주소, 비고가 있는지 확인하세요.";
-      return;
-    }
-
-    await saveBranches(nextBranches);
-    clearSelectedBranch();
-    renderBranches(branchSearch.value);
-    uploadSummary.textContent = `업로드 요약: 총 ${nextBranches.length}개 지점 / ${getTotalPeople(nextBranches)}명`;
-    adminMessage.textContent = "체험단 정보를 서버에 저장했습니다.";
-  } catch (error) {
-    adminMessage.textContent = error.message || "엑셀 파일을 읽는 중 오류가 발생했습니다.";
-  }
-});
-
-resetData.addEventListener("click", async () => {
-  try {
-    await saveBranches(sampleBranches);
-  } catch (error) {
-    adminMessage.textContent = error.message || "샘플 데이터 복구 중 오류가 발생했습니다.";
-    return;
-  }
-
-  clearSelectedBranch();
-  renderBranches(branchSearch.value);
-  uploadSummary.textContent = `현재 데이터: 총 ${branches.length}개 지점 / ${getTotalPeople(branches)}명`;
-  adminMessage.textContent = "서버 데이터를 샘플 데이터로 복구했습니다.";
-});
-
-adminLogout.addEventListener("click", () => {
-  isAdmin = false;
-  adminSessionPassword = "";
-  updateAdminState();
-  adminBox.classList.add("hidden");
-});
+// Excel upload event handlers removed as requested
 
 // Add event listeners for tab buttons
 document.querySelectorAll(".tab-btn").forEach(btn => {
