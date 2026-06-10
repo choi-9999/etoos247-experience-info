@@ -235,6 +235,102 @@
       </section>
     </section>
 
+    <!-- 종합 결과 보고서 대시보드 판넬 -->
+    <section class="admin-dashboard-panel hidden" id="adminDashboardPanel" aria-label="종합 결과 보고서">
+      <div class="admin-dashboard-head">
+        <div>
+          <p class="eyebrow">Project Comprehensive Report</p>
+          <h2>전체 지점 종합 결과 보고서</h2>
+        </div>
+        <button class="close-dashboard-btn" id="closeAdminDashboard" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="btn-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <span>종합 보고서 닫기</span>
+        </button>
+      </div>
+
+      <!-- 종합 KPI 요약 그리드 -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon">📝</div>
+          <div class="kpi-info">
+            <dt>총 콘텐츠 수</dt>
+            <dd id="globalKpiContents">-</dd>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">📊</div>
+          <div class="kpi-info">
+            <dt>총 누적 조회수</dt>
+            <dd id="globalKpiViews">-</dd>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">📈</div>
+          <div class="kpi-info">
+            <dt>평균 콘텐츠당 조회수</dt>
+            <dd id="globalKpiViewsAvg">-</dd>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">📱</div>
+          <div class="kpi-info">
+            <dt>통합 모바일 유입률</dt>
+            <dd id="globalKpiMobileRatio">-</dd>
+          </div>
+        </div>
+      </div>
+
+      <!-- 리더보드 & 사이드 컬럼 2열 그리드 -->
+      <div class="admin-grid-row">
+        <!-- 1. 지점별 성과 리더보드 -->
+        <div class="chart-card leaderboard-card">
+          <h4>지점별 성과 순위 (리더보드)</h4>
+          <div class="table-card">
+            <table class="report-table leaderboard-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">순위</th>
+                  <th class="col-branch">지점명</th>
+                  <th class="col-views">총 조회수</th>
+                  <th class="col-count">콘텐츠수</th>
+                  <th class="col-avg">평균 조회수</th>
+                  <th class="col-ratio">모바일비율</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboardTableBody">
+                <!-- dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2. 베스트 콘텐츠 및 통합 키워드 -->
+        <div class="admin-side-column">
+          <!-- 명예의 전당 (최우수 콘텐츠 TOP 3) -->
+          <div class="chart-card hall-of-fame-card">
+            <h4>최우수 콘텐츠 (조회수 TOP 3)</h4>
+            <div class="fame-list" id="hallOfFameList">
+              <!-- dynamically populated -->
+            </div>
+          </div>
+
+          <!-- 통합 유입 키워드 TOP 5 -->
+          <div class="chart-card keyword-card">
+            <h4>통합 최다 유입 키워드 (TOP 5)</h4>
+            <div class="keyword-header">
+              <span class="hdr-campaign">키워드</span>
+              <span class="hdr-views">검색 유입 누적 비율</span>
+            </div>
+            <div class="keyword-list" id="globalKeywordList">
+              <!-- dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <p>Copyright ⓒ ETOOS ECI Co.,Ltd. All rights Reserved.</p>
     </footer>

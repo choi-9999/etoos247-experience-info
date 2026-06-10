@@ -522,6 +522,20 @@ let cumulativeLineChartInstance = null;
 let deviceDonutChartInstance = null;
 let dailyLineChartInstance = null;
 
+// Admin Dashboard selectors
+const adminDashboardPanel = document.querySelector("#adminDashboardPanel");
+const workspace = document.querySelector(".workspace");
+const closeAdminDashboard = document.querySelector("#closeAdminDashboard");
+
+const globalKpiContents = document.querySelector("#globalKpiContents");
+const globalKpiViews = document.querySelector("#globalKpiViews");
+const globalKpiViewsAvg = document.querySelector("#globalKpiViewsAvg");
+const globalKpiMobileRatio = document.querySelector("#globalKpiMobileRatio");
+
+const leaderboardTableBody = document.querySelector("#leaderboardTableBody");
+const hallOfFameList = document.querySelector("#hallOfFameList");
+const globalKeywordList = document.querySelector("#globalKeywordList");
+
 function loadBranches() {
   return fetchBranches();
 }
@@ -1351,8 +1365,16 @@ function updateAdminState() {
   adminBox.classList.toggle("hidden", !isAdmin);
   uploadBox.classList.toggle("hidden", !isAdmin);
 
+  if (adminDashboardPanel) {
+    adminDashboardPanel.classList.toggle("hidden", !isAdmin);
+  }
+  if (workspace) {
+    workspace.classList.toggle("hidden", isAdmin);
+  }
+
   if (isAdmin) {
     adminMessage.textContent = "관리자 모드입니다. 엑셀 파일을 업로드하면 서버 데이터가 새 목록으로 교체됩니다.";
+    renderGlobalDashboard();
     return;
   }
 
@@ -1559,6 +1581,197 @@ if (mobileBranchSelect) {
       requestBranchPassword(item);
     }
   });
+}
+
+// Close admin dashboard button
+if (closeAdminDashboard) {
+  closeAdminDashboard.addEventListener("click", () => {
+    isAdmin = false;
+    adminSessionPassword = "";
+    updateAdminState();
+  });
+}
+
+// Helper function to escape HTML
+function escapeHtml(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+// Admin Dashboard data calculations
+function calculateGlobalMetrics() {
+  if (!window.reportsData) return null;
+
+  let totalContents = 0;
+  let totalViews = 0;
+  let totalMobileViews = 0;
+
+  const branchLeaderboard = [];
+  const allContents = [];
+  const keywordMap = {};
+
+  for (const [branchName, report] of Object.entries(window.reportsData)) {
+    totalContents += report.totalContents || 0;
+    totalViews += report.totalViews || 0;
+    totalMobileViews += report.mobileViews || 0;
+
+    branchLeaderboard.push({
+      name: branchName,
+      totalViews: report.totalViews || 0,
+      totalContents: report.totalContents || 0,
+      averageViews: report.averageViews || 0,
+      mobileRatio: report.mobileRatio || 0
+    });
+
+    if (Array.isArray(report.contents)) {
+      report.contents.forEach(content => {
+        allContents.push({
+          ...content,
+          branch: branchName
+        });
+      });
+    }
+
+    if (Array.isArray(report.inflowKeywords)) {
+      report.inflowKeywords.forEach(kw => {
+        if (kw.keyword) {
+          const name = kw.keyword.trim();
+          const pct = parseFloat(String(kw.value).replace('%', '')) || 0;
+          keywordMap[name] = (keywordMap[name] || 0) + pct;
+        }
+      });
+    }
+  }
+
+  branchLeaderboard.sort((a, b) => b.totalViews - a.totalViews);
+
+  allContents.sort((a, b) => {
+    if (b.likes !== a.likes) {
+      return b.likes - a.likes;
+    }
+    return b.comments - a.comments;
+  });
+
+  const topContents = allContents.slice(0, 3);
+
+  const sortedKeywords = Object.entries(keywordMap)
+    .map(([keyword, value]) => ({ keyword, value }))
+    .sort((a, b) => b.value - a.value);
+
+  const topKeywords = sortedKeywords.slice(0, 5);
+
+  const averageViews = totalContents > 0 ? Math.round(totalViews / totalContents) : 0;
+  const globalMobileRatio = totalViews > 0 ? Math.round((totalMobileViews / totalViews) * 100) : 0;
+
+  return {
+    totalContents,
+    totalViews,
+    averageViews,
+    globalMobileRatio,
+    leaderboard: branchLeaderboard,
+    topContents,
+    topKeywords
+  };
+}
+
+function renderGlobalDashboard() {
+  const metrics = calculateGlobalMetrics();
+  if (!metrics) return;
+
+  if (globalKpiContents) globalKpiContents.textContent = `${metrics.totalContents}개`;
+  if (globalKpiViews) globalKpiViews.textContent = metrics.totalViews.toLocaleString();
+  if (globalKpiViewsAvg) globalKpiViewsAvg.textContent = metrics.averageViews.toLocaleString();
+  if (globalKpiMobileRatio) globalKpiMobileRatio.textContent = `${metrics.globalMobileRatio}%`;
+
+  if (leaderboardTableBody) {
+    leaderboardTableBody.innerHTML = "";
+    metrics.leaderboard.forEach((item, index) => {
+      const tr = document.createElement("tr");
+      
+      tr.addEventListener("click", () => {
+        const branchItem = branches.find(b => b.branch === item.name);
+        if (branchItem) {
+          isAdmin = false;
+          updateAdminState();
+          selectBranch(branchItem);
+        }
+      });
+
+      const tdRank = document.createElement("td");
+      tdRank.className = "col-rank";
+      tdRank.textContent = index + 1;
+
+      const tdBranch = document.createElement("td");
+      tdBranch.className = "col-branch";
+      tdBranch.textContent = item.name;
+
+      const tdViews = document.createElement("td");
+      tdViews.className = "col-views";
+      tdViews.textContent = item.totalViews.toLocaleString();
+
+      const tdCount = document.createElement("td");
+      tdCount.className = "col-count";
+      tdCount.textContent = `${item.totalContents}개`;
+
+      const tdAvg = document.createElement("td");
+      tdAvg.className = "col-avg";
+      tdAvg.textContent = item.averageViews.toLocaleString();
+
+      const tdRatio = document.createElement("td");
+      tdRatio.className = "col-ratio";
+      tdRatio.textContent = `${item.mobileRatio}%`;
+
+      tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg, tdRatio);
+      leaderboardTableBody.append(tr);
+    });
+  }
+
+  if (hallOfFameList) {
+    hallOfFameList.innerHTML = "";
+    metrics.topContents.forEach((content, index) => {
+      const fameItem = document.createElement("div");
+      fameItem.className = "fame-item";
+      
+      if (content.url) {
+        fameItem.addEventListener("click", () => {
+          window.open(content.url, "_blank", "noopener,noreferrer");
+        });
+      } else {
+        fameItem.style.cursor = "default";
+      }
+
+      const rankClass = `rank-${index + 1}`;
+      fameItem.innerHTML = `
+        <div class="fame-badge ${rankClass}">${index + 1}</div>
+        <div class="fame-info">
+          <h5 class="fame-title">${escapeHtml(content.title)}</h5>
+          <div class="fame-meta">
+            <span class="campus">${escapeHtml(content.branch)}</span>
+            <span class="meta-divider">|</span>
+            <span>${escapeHtml(content.blogger)}</span>
+            <span class="meta-divider">|</span>
+            <span>${content.date.replace(/-/g, '.')}</span>
+          </div>
+        </div>
+        <div class="fame-value">${content.likes}<span>공감</span></div>
+      `;
+      hallOfFameList.append(fameItem);
+    });
+  }
+
+  if (globalKeywordList) {
+    const formattedKeywords = metrics.topKeywords.map((kw, index) => ({
+      rank: index + 1,
+      keyword: kw.keyword,
+      value: `${kw.value}%`
+    }));
+    renderKeywordListHelper(globalKeywordList, formattedKeywords);
+  }
 }
 
 updateAdminState();
