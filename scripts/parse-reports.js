@@ -101,6 +101,72 @@ function parseReportFile(filePath) {
     contents.push({ title, blogger, date, likes, comments, url });
   }
 
+  // 4. Parse Keywords
+  const keywords = [];
+  let keywordStarted = false;
+  let valueColIndex = -1;
+  let keywordColIndex = -1;
+  let isPercentage = false;
+
+  campaignData.forEach(row => {
+    if (!Array.isArray(row)) return;
+    
+    // Stop keyword parsing if applicant stats or general info starts
+    if (row.some(cell => String(cell || '').includes('신청자 통계') || String(cell || '').includes('성별') || String(cell || '').includes('구분'))) {
+      keywordStarted = false;
+    }
+
+    if (row.some(cell => String(cell || '').includes('유입 키워드') || String(cell || '').includes('키워드 성과'))) {
+      keywordStarted = true;
+      return;
+    }
+    
+    if (keywordStarted) {
+      if (keywordColIndex === -1) {
+        row.forEach((cell, idx) => {
+          const cellStr = String(cell || '').trim();
+          if (cellStr.includes('키워드')) {
+            keywordColIndex = idx;
+          } else if (cellStr.includes('비율') || cellStr.includes('노출') || cellStr.includes('건수') || cellStr.includes('건')) {
+            valueColIndex = idx;
+            if (cellStr.includes('비율')) {
+              isPercentage = true;
+            }
+          }
+        });
+        return;
+      }
+      
+      const rank = parseInt(row[1], 10);
+      const keyword = row[keywordColIndex];
+      const val = row[valueColIndex];
+      
+      if (keyword && val !== undefined && val !== null && String(val).trim() !== '') {
+        let formattedValue = '';
+        if (isPercentage && typeof val === 'number') {
+          formattedValue = `${Math.round(val * 100)}%`;
+        } else if (typeof val === 'number') {
+          if (val < 1 && val > 0) {
+            formattedValue = `${Math.round(val * 100)}%`;
+          } else {
+            formattedValue = `${val}건`;
+          }
+        } else {
+          formattedValue = String(val).trim();
+          if (formattedValue && !formattedValue.endsWith('%') && !formattedValue.endsWith('건') && !isNaN(formattedValue)) {
+            formattedValue = `${formattedValue}건`;
+          }
+        }
+        
+        keywords.push({
+          rank: keywords.length + 1,
+          keyword: String(keyword).trim(),
+          value: formattedValue
+        });
+      }
+    }
+  });
+
   // Calculate percentages and averages
   const actualTotalViews = sumPc + sumMobile;
   const mobileRatio = actualTotalViews > 0 ? Math.round((sumMobile / actualTotalViews) * 100) : 0;
@@ -123,7 +189,8 @@ function parseReportFile(filePath) {
     averageMobileViews,
     averagePcViews,
     dailyData,
-    contents
+    contents,
+    keywords
   };
 }
 

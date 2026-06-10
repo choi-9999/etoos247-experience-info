@@ -867,6 +867,61 @@ function renderReportDashboard(branchName) {
 
   // 3. Render Charts
   renderCharts(report);
+
+  // 4. Render Keywords
+  const reportKeywordCard = document.querySelector("#reportKeywordCard");
+  const reportKeywordList = document.querySelector("#reportKeywordList");
+  
+  if (reportKeywordCard && reportKeywordList) {
+    if (report.keywords && report.keywords.length > 0) {
+      reportKeywordCard.classList.remove("hidden");
+      reportKeywordList.innerHTML = "";
+      
+      report.keywords.forEach((kw) => {
+        const item = document.createElement("div");
+        item.className = "keyword-item";
+        
+        const rankName = document.createElement("div");
+        rankName.className = "keyword-rank-name";
+        
+        const rankSpan = document.createElement("span");
+        let rankClass = "rank-other";
+        if (kw.rank === 1) rankClass = "rank-1";
+        else if (kw.rank === 2) rankClass = "rank-2";
+        else if (kw.rank === 3) rankClass = "rank-3";
+        
+        rankSpan.className = `keyword-rank ${rankClass}`;
+        rankSpan.textContent = kw.rank;
+        
+        const nameSpan = document.createElement("span");
+        nameSpan.className = "keyword-name";
+        nameSpan.textContent = kw.keyword;
+        
+        rankName.append(rankSpan, nameSpan);
+        
+        const valueSpan = document.createElement("span");
+        const match = kw.value.match(/^([\d.,]+)(.*)$/);
+        if (match) {
+          let rankValClass = "val-other";
+          if (kw.rank === 1) rankValClass = "val-1";
+          else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
+          valueSpan.className = `keyword-value ${rankValClass}`;
+          valueSpan.innerHTML = `<span class="val-num">${match[1]}</span><span class="val-unit">${match[2]}</span>`;
+        } else {
+          let rankValClass = "val-other";
+          if (kw.rank === 1) rankValClass = "val-1";
+          else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
+          valueSpan.className = `keyword-value ${rankValClass}`;
+          valueSpan.textContent = kw.value;
+        }
+        
+        item.append(rankName, valueSpan);
+        reportKeywordList.append(item);
+      });
+    } else {
+      reportKeywordCard.classList.add("hidden");
+    }
+  }
 }
 
 function createMetaDivider() {

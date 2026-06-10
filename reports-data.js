@@ -171,6 +171,38 @@ window.reportsData = {
         "comments": 3,
         "url": "https://blog.naver.com/jshj9244/224292319326?fromRss=true&trackingCode=rss"
       }
+    ],
+    "keywords": [
+      {
+        "rank": 1,
+        "keyword": "이투스247",
+        "value": "29%"
+      },
+      {
+        "rank": 2,
+        "keyword": "하남재수학원",
+        "value": "14%"
+      },
+      {
+        "rank": 3,
+        "keyword": "에코나우",
+        "value": "14%"
+      },
+      {
+        "rank": 4,
+        "keyword": "오다이바 하루 여행",
+        "value": "14%"
+      },
+      {
+        "rank": 5,
+        "keyword": "하남 학원 오픈",
+        "value": "14%"
+      },
+      {
+        "rank": 6,
+        "keyword": "미사 재수독학학원",
+        "value": "14%"
+      }
     ]
   }
 };
