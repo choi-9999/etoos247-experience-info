@@ -107,7 +107,7 @@ function getBodyValue(body, key) {
 }
 
 function getAdminPassword() {
-  return process.env.ADMIN_PASSWORD || "etoos247";
+  return process.env.ADMIN_PASSWORD || "etoos247!";
 }
 
 function hasRedisEnv() {
