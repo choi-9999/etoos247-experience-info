@@ -1904,6 +1904,8 @@ dd a:hover {
   justify-content: center;
   border-radius: 50%;
   flex-shrink: 0;
+  background: #f1f5f9;
+  color: #64748b;
 }
 
 .fame-badge.rank-1 {

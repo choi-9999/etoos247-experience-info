@@ -1657,7 +1657,7 @@ function calculateGlobalMetrics() {
     return b.comments - a.comments;
   });
 
-  const topContents = allContents.slice(0, 3);
+  const topContents = allContents.slice(0, 5);
 
   const sortedKeywords = Object.entries(keywordMap)
     .map(([keyword, value]) => ({ keyword, value }))
