@@ -674,8 +674,8 @@ function selectBranch(item) {
   const hasReport = window.reportsData && window.reportsData[item.branch];
   if (hasReport) {
     detailTabs.classList.remove("hidden");
-    // Switch to people tab by default
-    switchTab("people");
+    // Switch to report tab first
+    switchTab("report");
     renderReportDashboard(item.branch);
   } else {
     detailTabs.classList.add("hidden");
