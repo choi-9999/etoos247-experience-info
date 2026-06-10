@@ -71,6 +71,10 @@ function parseReportFile(filePath) {
   // Sort chronologically (earliest to latest)
   dailyData.sort((a, b) => new Date(a.date) - new Date(b.date));
 
+  // Filter out leading zero-data dates
+  const firstNonZeroIdx = dailyData.findIndex(d => d.total > 0 || d.pc > 0 || d.mobile > 0);
+  const filteredDailyData = firstNonZeroIdx !== -1 ? dailyData.slice(firstNonZeroIdx) : dailyData;
+
   // 3. Parse Content List
   const contentsDataRaw = XLSX.utils.sheet_to_json(workbook.Sheets[contentsSheetName], { header: 1 });
   const contents = [];
@@ -236,7 +240,7 @@ function parseReportFile(filePath) {
     pcRatio,
     averageMobileViews,
     averagePcViews,
-    dailyData,
+    dailyData: filteredDailyData,
     contents,
     inflowKeywords,
     exposedKeywords
