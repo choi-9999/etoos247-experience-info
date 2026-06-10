@@ -1637,12 +1637,12 @@ function calculateGlobalMetrics() {
       });
     }
 
-    if (Array.isArray(report.inflowKeywords)) {
-      report.inflowKeywords.forEach(kw => {
+    if (Array.isArray(report.exposedKeywords)) {
+      report.exposedKeywords.forEach(kw => {
         if (kw.keyword) {
           const name = kw.keyword.trim();
-          const pct = parseFloat(String(kw.value).replace('%', '')) || 0;
-          keywordMap[name] = (keywordMap[name] || 0) + pct;
+          const count = parseFloat(String(kw.value).replace(/[^0-9.]/g, '')) || 0;
+          keywordMap[name] = (keywordMap[name] || 0) + count;
         }
       });
     }
@@ -1663,7 +1663,7 @@ function calculateGlobalMetrics() {
     .map(([keyword, value]) => ({ keyword, value }))
     .sort((a, b) => b.value - a.value);
 
-  const topKeywords = sortedKeywords.slice(0, 5);
+  const topKeywords = sortedKeywords.slice(0, 10);
 
   const averageViews = totalContents > 0 ? Math.round(totalViews / totalContents) : 0;
   const globalMobileRatio = totalViews > 0 ? Math.round((totalMobileViews / totalViews) * 100) : 0;
@@ -1768,7 +1768,7 @@ function renderGlobalDashboard() {
     const formattedKeywords = metrics.topKeywords.map((kw, index) => ({
       rank: index + 1,
       keyword: kw.keyword,
-      value: `${kw.value}%`
+      value: `${kw.value}건`
     }));
     renderKeywordListHelper(globalKeywordList, formattedKeywords);
   }
