@@ -1616,6 +1616,12 @@ dd a:hover {
 }
 
 /* --- Keyword Performance Styles --- */
+.keywords-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .keyword-card {
   width: 100%;
 }
@@ -1733,6 +1739,10 @@ dd a:hover {
 }
 
 @media (max-width: 820px) {
+  .keywords-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
   .keyword-item {
     padding: 12px 8px;
   }

@@ -869,59 +869,109 @@ function renderReportDashboard(branchName) {
   renderCharts(report);
 
   // 4. Render Keywords
-  const reportKeywordCard = document.querySelector("#reportKeywordCard");
-  const reportKeywordList = document.querySelector("#reportKeywordList");
+  const reportExposedCard = document.querySelector("#reportExposedCard");
+  const reportExposedList = document.querySelector("#reportExposedList");
+  const reportInflowCard = document.querySelector("#reportInflowCard");
+  const reportInflowList = document.querySelector("#reportInflowList");
   
-  if (reportKeywordCard && reportKeywordList) {
-    if (report.keywords && report.keywords.length > 0) {
-      reportKeywordCard.classList.remove("hidden");
-      reportKeywordList.innerHTML = "";
-      
-      report.keywords.forEach((kw) => {
-        const item = document.createElement("div");
-        item.className = "keyword-item";
-        
-        const rankName = document.createElement("div");
-        rankName.className = "keyword-rank-name";
-        
-        const rankSpan = document.createElement("span");
-        let rankClass = "rank-other";
-        if (kw.rank === 1) rankClass = "rank-1";
-        else if (kw.rank === 2) rankClass = "rank-2";
-        else if (kw.rank === 3) rankClass = "rank-3";
-        
-        rankSpan.className = `keyword-rank ${rankClass}`;
-        rankSpan.textContent = kw.rank;
-        
-        const nameSpan = document.createElement("span");
-        nameSpan.className = "keyword-name";
-        nameSpan.textContent = kw.keyword;
-        
-        rankName.append(rankSpan, nameSpan);
-        
-        const valueSpan = document.createElement("span");
-        const match = kw.value.match(/^([\d.,]+)(.*)$/);
-        if (match) {
-          let rankValClass = "val-other";
-          if (kw.rank === 1) rankValClass = "val-1";
-          else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
-          valueSpan.className = `keyword-value ${rankValClass}`;
-          valueSpan.innerHTML = `<span class="val-num">${match[1]}</span><span class="val-unit">${match[2]}</span>`;
-        } else {
-          let rankValClass = "val-other";
-          if (kw.rank === 1) rankValClass = "val-1";
-          else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
-          valueSpan.className = `keyword-value ${rankValClass}`;
-          valueSpan.textContent = kw.value;
-        }
-        
-        item.append(rankName, valueSpan);
-        reportKeywordList.append(item);
-      });
+  if (reportExposedCard && reportExposedList) {
+    if (report.exposedKeywords && report.exposedKeywords.length > 0) {
+      reportExposedCard.classList.remove("hidden");
+      renderKeywordListHelper(reportExposedList, report.exposedKeywords);
     } else {
-      reportKeywordCard.classList.add("hidden");
+      reportExposedCard.classList.add("hidden");
     }
   }
+  
+  if (reportInflowCard && reportInflowList) {
+    if (report.inflowKeywords && report.inflowKeywords.length > 0) {
+      reportInflowCard.classList.remove("hidden");
+      renderKeywordListHelper(reportInflowList, report.inflowKeywords);
+    } else {
+      reportInflowCard.classList.add("hidden");
+    }
+  }
+  
+  // Hide parent keywords-row container if both are empty/hidden
+  const keywordsRow = document.querySelector(".keywords-row");
+  if (keywordsRow) {
+    const hasExposed = report.exposedKeywords && report.exposedKeywords.length > 0;
+    const hasInflow = report.inflowKeywords && report.inflowKeywords.length > 0;
+    if (!hasExposed && !hasInflow) {
+      keywordsRow.classList.add("hidden");
+    } else {
+      keywordsRow.classList.remove("hidden");
+      
+      // If one of them is empty, let the other take full width on desktop
+      if (reportExposedCard) {
+        if (!hasInflow) {
+          reportExposedCard.style.gridColumn = "1 / span 2";
+        } else {
+          reportExposedCard.style.gridColumn = "";
+        }
+      }
+      if (reportInflowCard) {
+        if (!hasExposed) {
+          reportInflowCard.style.gridColumn = "1 / span 2";
+        } else {
+          reportInflowCard.style.gridColumn = "";
+        }
+      }
+    }
+  }
+}
+
+function renderKeywordListHelper(listContainer, keywords) {
+  listContainer.innerHTML = "";
+  if (!keywords || keywords.length === 0) {
+    const emptyRow = document.createElement("div");
+    emptyRow.className = "no-result";
+    emptyRow.textContent = "데이터가 없습니다.";
+    listContainer.append(emptyRow);
+    return;
+  }
+
+  keywords.forEach((kw) => {
+    const item = document.createElement("div");
+    item.className = "keyword-item";
+    
+    const rankName = document.createElement("div");
+    rankName.className = "keyword-rank-name";
+    
+    const rankSpan = document.createElement("span");
+    let rankClass = "rank-other";
+    if (kw.rank === 1) rankClass = "rank-1";
+    else if (kw.rank === 2) rankClass = "rank-2";
+    else if (kw.rank === 3) rankClass = "rank-3";
+    
+    rankSpan.className = `keyword-rank ${rankClass}`;
+    rankSpan.textContent = kw.rank;
+    
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "keyword-name";
+    nameSpan.textContent = kw.keyword;
+    
+    rankName.append(rankSpan, nameSpan);
+    
+    const valueSpan = document.createElement("span");
+    const match = kw.value.match(/^([\d.,]+)(.*)$/);
+    if (match) {
+      let rankValClass = "val-other";
+      if (kw.rank === 1) rankValClass = "val-1";
+      else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
+      valueSpan.className = `keyword-value ${rankValClass}`;
+      valueSpan.innerHTML = `<span class="val-num">${match[1]}</span><span class="val-unit">${match[2]}</span>`;
+    } else {
+      let rankValClass = "val-other";
+      if (kw.rank === 1) rankValClass = "val-1";
+      else if (kw.rank === 2 || kw.rank === 3) rankValClass = "val-2";
+      valueSpan.className = `keyword-value ${rankValClass}`;
+      valueSpan.textContent = kw.value;
+    }
+    
+    item.append(rankName, valueSpan);
+    listContainer.append(item);
+  });
 }
 
 function createMetaDivider() {

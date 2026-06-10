@@ -101,8 +101,8 @@ function parseReportFile(filePath) {
     contents.push({ title, blogger, date, likes, comments, url });
   }
 
-  // 4. Parse Keywords
-  const keywords = [];
+  // 4. Parse Inflow Keywords (유입 키워드)
+  const inflowKeywords = [];
   let keywordStarted = false;
   let valueColIndex = -1;
   let keywordColIndex = -1;
@@ -158,14 +158,62 @@ function parseReportFile(filePath) {
           }
         }
         
-        keywords.push({
-          rank: keywords.length + 1,
+        inflowKeywords.push({
+          rank: inflowKeywords.length + 1,
           keyword: String(keyword).trim(),
           value: formattedValue
         });
       }
     }
   });
+
+  // 5. Parse Exposed Keywords (상위 노출 키워드) from '키워드 검색결과' sheet if exists
+  const exposedKeywords = [];
+  let exposedSheetName = workbook.SheetNames.find(name => name.includes('키워드 검색결과') || name.includes('노출 키워드'));
+  
+  if (exposedSheetName) {
+    try {
+      const exposedSheet = workbook.Sheets[exposedSheetName];
+      const rawExposed = XLSX.utils.sheet_to_json(exposedSheet, { header: 1 });
+      
+      let totalColIndex = -1;
+      let keywordColIndex = 0;
+      
+      if (rawExposed[1]) {
+        rawExposed[1].forEach((cell, idx) => {
+          if (String(cell || '').trim() === '총합') {
+            totalColIndex = idx;
+          }
+        });
+      }
+      
+      const tempKeywords = [];
+      for (let i = 3; i < rawExposed.length; i++) {
+        const row = rawExposed[i];
+        if (!row || !Array.isArray(row) || row.length === 0) continue;
+        
+        const keyword = String(row[keywordColIndex] || '').trim();
+        if (!keyword || keyword === '총합' || keyword === '키워드') continue;
+        
+        const totalVal = totalColIndex !== -1 ? row[totalColIndex] : row[row.length - 1];
+        const total = parseInt(totalVal, 10) || 0;
+        
+        tempKeywords.push({ keyword, total });
+      }
+      
+      tempKeywords.sort((a, b) => b.total - a.total);
+      
+      tempKeywords.forEach((k, idx) => {
+        exposedKeywords.push({
+          rank: idx + 1,
+          keyword: k.keyword,
+          value: `${k.total}건`
+        });
+      });
+    } catch (e) {
+      console.warn(`Failed to parse exposed keywords: ${e.message}`);
+    }
+  }
 
   // Calculate percentages and averages
   const actualTotalViews = sumPc + sumMobile;
@@ -190,7 +238,8 @@ function parseReportFile(filePath) {
     averagePcViews,
     dailyData,
     contents,
-    keywords
+    inflowKeywords,
+    exposedKeywords
   };
 }
 
