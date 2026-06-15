@@ -684,25 +684,18 @@ h2 {
 /* People Marquee Track & Cards */
 .people-list {
   display: block;
-  overflow: hidden;
   width: 100%;
-  position: relative;
   padding: 10px 0;
 }
 
 .people-marquee-track {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  width: max-content;
 }
 
-.people-marquee-track.rolling {
-  animation: scrollMarquee 35s linear infinite;
-}
+/* .rolling 클래스는 더 이상 사용하지 않음 */
 
-.people-marquee-track.rolling:hover {
-  animation-play-state: paused;
-}
 
 .person-card {
   width: 320px;

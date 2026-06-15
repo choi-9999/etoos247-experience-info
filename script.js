@@ -1293,18 +1293,6 @@ function renderPeople(people) {
     track.append(card);
   });
 
-  if (people.length > 1) {
-    track.classList.add("rolling");
-    // Duplicate cards twice (to get 3 sets of cards total for seamless scrolling)
-    const cards = Array.from(track.children);
-    for (let i = 0; i < 2; i++) {
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
-      });
-    }
-  }
-
   peopleList.append(track);
 }
 
