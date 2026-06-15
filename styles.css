@@ -2101,33 +2101,10 @@ dd a:hover {
   gap: 12px;
 }
 
-.logo-etoos {
-  font-size: 1.15rem;
-  font-weight: 950;
-  color: #ffffff;
-  letter-spacing: -0.01em;
-}
-
-.logo-badge {
-  background: #10b981;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 850;
-  padding: 2px 6px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-left: 2px;
-}
-
-.logo-academy {
-  font-size: 0.98rem;
-  font-weight: 800;
-  color: #10b981;
-  margin-left: 4px;
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 .logo-divider {
@@ -2842,29 +2819,6 @@ dd a:hover {
 .footer-logo {
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
-  font-weight: 950;
-  color: #ffffff;
-  letter-spacing: -0.01em;
-}
-
-.footer-logo .logo-badge {
-  background: #10b981;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 850;
-  padding: 2px 6px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin: 0 4px;
-}
-
-.footer-logo .logo-academy {
-  color: #10b981;
 }
 
 .footer-address {
