@@ -1387,6 +1387,21 @@ function updateAdminState() {
     landingPageContent.classList.toggle("hidden", isAdmin);
   }
 
+  const adminToggleSpan = adminToggle.querySelector("span");
+  if (adminToggleSpan) {
+    adminToggleSpan.textContent = isAdmin ? "[+ 지점 모드 전환]" : "[+ 관리자 모드]";
+  }
+
+  const userBadge = document.querySelector("#userBadge");
+  if (userBadge) {
+    const avatar = userBadge.querySelector(".avatar-circle");
+    const name = userBadge.querySelector(".user-name");
+    if (avatar && name) {
+      avatar.textContent = isAdmin ? "HQ" : "G";
+      name.textContent = isAdmin ? "HQ 본사 관리자" : "GUEST 지점 사용자";
+    }
+  }
+
   if (isAdmin) {
     renderGlobalDashboard();
     return;
@@ -1750,6 +1765,7 @@ initNoticeMarquee();
 initGlobalHeroStats();
 initFameMarquee();
 initCtaButtons();
+initNavScroll();
 
 function initNoticeMarquee() {
   const track = document.getElementById("noticeMarqueeTrack");
@@ -1847,6 +1863,27 @@ function initCtaButtons() {
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
+    });
+  }
+}
+
+function initNavScroll() {
+  const navMenuLinks = document.querySelectorAll(".nav-menu-link");
+  navMenuLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  const btnScrollTop = document.querySelector("#btnScrollTop");
+  if (btnScrollTop) {
+    btnScrollTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 }
