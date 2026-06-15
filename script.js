@@ -527,6 +527,7 @@ let dailyLineChartInstance = null;
 const adminDashboardPanel = document.querySelector("#adminDashboardPanel");
 const workspace = document.querySelector(".workspace");
 const closeAdminDashboard = document.querySelector("#closeAdminDashboard");
+const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
 
 const globalKpiContents = document.querySelector("#globalKpiContents");
 const globalKpiViews = document.querySelector("#globalKpiViews");
@@ -663,6 +664,13 @@ function populateMobileSelect() {
 }
 
 function requestBranchPassword(item) {
+  // 관리자 모드: 비밀번호 입력 없이 즉시 지점 정보 열람
+  if (isAdmin) {
+    showLandingView();
+    selectBranch(item);
+    return;
+  }
+
   pendingBranch = item;
   passwordDialogTitle.textContent = `${item.branch} 비밀번호 입력`;
   branchPasswordInput.value = "";
@@ -1379,12 +1387,32 @@ function parseExcelRows(rows) {
   return Array.from(groupedBranches.values()).filter((item) => item.password);
 }
 
+// ── 뷰 전환 헬퍼 함수 ─────────────────────────────────────────
+// 종합보고서 패널을 표시하고 일반 랜딩 콘텐츠를 숨깁니다.
+function showGlobalReportView() {
+  if (adminDashboardPanel) adminDashboardPanel.classList.remove("hidden");
+  if (landingPageContent) landingPageContent.classList.add("hidden");
+  renderGlobalDashboard();
+}
+
+// 일반 랜딩 콘텐츠를 표시하고 종합보고서 패널을 숨깁니다.
+function showLandingView() {
+  if (adminDashboardPanel) adminDashboardPanel.classList.add("hidden");
+  if (landingPageContent) landingPageContent.classList.remove("hidden");
+}
+// ──────────────────────────────────────────────────────────────
+
 function updateAdminState() {
-  if (adminDashboardPanel) {
-    adminDashboardPanel.classList.toggle("hidden", !isAdmin);
+  // 종합보고서 네비게이션 링크 노출 제어
+  if (navGlobalReportLink) {
+    navGlobalReportLink.classList.toggle("hidden", !isAdmin);
   }
-  if (landingPageContent) {
-    landingPageContent.classList.toggle("hidden", isAdmin);
+
+  // 뷰 전환: 관리자 로그인 시 종합보고서 뷰, 로그아웃 시 랜딩 뷰
+  if (isAdmin) {
+    showGlobalReportView();
+  } else {
+    showLandingView();
   }
 
   const adminToggleSpan = adminToggle.querySelector("span:last-child");
@@ -1411,11 +1439,6 @@ function updateAdminState() {
       avatar.textContent = isAdmin ? "HQ" : "G";
       name.textContent = isAdmin ? "HQ 본사 관리자" : "GUEST 지점 사용자";
     }
-  }
-
-  if (isAdmin) {
-    renderGlobalDashboard();
-    return;
   }
 
   adminPassword.value = "";
@@ -1579,14 +1602,29 @@ if (mobileBranchSelect) {
   });
 }
 
-// Close admin dashboard button
+// Close admin dashboard button (로그아웃 없이 단순 뷰 전환)
 if (closeAdminDashboard) {
   closeAdminDashboard.addEventListener("click", () => {
-    isAdmin = false;
-    adminSessionPassword = "";
-    updateAdminState();
+    showLandingView();
   });
 }
+
+// 종합보고서 네비게이션 링크: 클릭 시 종합보고서 뷰로 전환
+if (navGlobalReportLink) {
+  navGlobalReportLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    showGlobalReportView();
+  });
+}
+
+// 일반 네비게이션 링크: 관리자 모드 중 클릭 시 랜딩 뷰로 전환
+document.querySelectorAll(".nav-center .nav-menu-link:not(#navGlobalReportLink)").forEach(link => {
+  link.addEventListener("click", () => {
+    if (isAdmin) {
+      showLandingView();
+    }
+  });
+});
 
 // Helper function to escape HTML
 function escapeHtml(str) {
