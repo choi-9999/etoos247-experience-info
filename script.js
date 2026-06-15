@@ -1642,7 +1642,7 @@ function calculateGlobalMetrics() {
     return b.comments - a.comments;
   });
 
-  const topContents = allContents.slice(0, 7);
+  const topContents = allContents.slice(0, 30);
 
   const sortedKeywords = Object.entries(keywordMap)
     .map(([keyword, value]) => ({ keyword, value }))
@@ -1718,7 +1718,7 @@ function renderGlobalDashboard() {
 
   if (hallOfFameList) {
     hallOfFameList.innerHTML = "";
-    metrics.topContents.forEach((content, index) => {
+    metrics.topContents.slice(0, 7).forEach((content, index) => {
       const fameItem = document.createElement("div");
       fameItem.className = "fame-item";
       
@@ -1819,14 +1819,24 @@ function initFameMarquee() {
   const metrics = calculateGlobalMetrics();
   if (!metrics || !Array.isArray(metrics.topContents) || metrics.topContents.length === 0) return;
 
-  function getShiftedArray(arr, shift) {
-    const n = shift % arr.length;
-    return [...arr.slice(n), ...arr.slice(0, n)];
+  function getTrackList(arr, startIdx, count) {
+    const list = arr.slice(startIdx, startIdx + count);
+    if (list.length === count) return list;
+
+    const mainList = arr.slice(0, count);
+    if (mainList.length === 0) return [];
+
+    const needed = count - list.length;
+    const padding = [];
+    for (let i = 0; i < needed; i++) {
+      padding.push(mainList[i % mainList.length]);
+    }
+    return [...list, ...padding];
   }
 
-  const list1 = getShiftedArray(metrics.topContents, 0);
-  const list2 = getShiftedArray(metrics.topContents, 2);
-  const list3 = getShiftedArray(metrics.topContents, 4);
+  const list1 = getTrackList(metrics.topContents, 0, 7);
+  const list2 = getTrackList(metrics.topContents, 7, 7);
+  const list3 = getTrackList(metrics.topContents, 14, 7);
 
   const populateTrack = (track, contentsList) => {
     contentsList.forEach((content) => {
