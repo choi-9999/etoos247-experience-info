@@ -1866,7 +1866,7 @@ function initFameMarquee() {
         </div>
         <p class="fame-card-content">${escapeHtml(titleText)}</p>
         <div class="fame-card-footer">
-          <span class="fame-card-branch">${escapeHtml(branchText)}지점</span>
+          <span class="fame-card-branch">${escapeHtml(branchText)}점</span>
           <span class="fame-card-likes">공감 <span>${likesCount}</span></span>
         </div>
       `;
