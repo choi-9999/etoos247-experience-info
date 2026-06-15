@@ -2198,11 +2198,11 @@ dd a:hover {
 }
 
 .nav-bar .admin-toggle {
-  background: transparent;
-  border: 1px solid #f97316;
-  color: #f97316;
+  background: rgba(139, 92, 246, 0.06);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #a78bfa;
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 0.78rem;
   font-weight: 800;
   cursor: pointer;
@@ -2211,40 +2211,48 @@ dd a:hover {
 }
 
 .nav-bar .admin-toggle:hover {
-  background: rgba(249, 115, 22, 0.1);
-  transform: none;
-  box-shadow: none;
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
 }
 
 .user-badge {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #1e1b4b;
-  border: 1px solid #312e81;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 4px 12px 4px 6px;
   border-radius: 99px;
   height: 32px;
   box-sizing: border-box;
+  transition: var(--transition);
+}
+
+.user-badge:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .avatar-circle {
   width: 20px;
   height: 20px;
-  background: #f59e0b;
-  color: #000000;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  color: #ffffff;
   font-size: 0.68rem;
   font-weight: 850;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 5px rgba(139, 92, 246, 0.2);
 }
 
 .user-name {
   font-size: 0.75rem;
   font-weight: 800;
-  color: #c7d2fe;
+  color: #e2e8f0;
 }
 
 /* Page Shell & Section Base */
