@@ -491,7 +491,8 @@ const reportMobileCards = document.querySelector("#reportMobileCards");
 const landingPageContent = document.querySelector("#landingPageContent");
 const heroTotalContents = document.querySelector("#heroTotalContents");
 const heroTotalViews = document.querySelector("#heroTotalViews");
-const heroAverageViews = document.querySelector("#heroAverageViews");
+const heroTotalLikes = document.querySelector("#heroTotalLikes");
+const heroTotalComments = document.querySelector("#heroTotalComments");
 const btnGoToSearch = document.querySelector("#btnGoToSearch");
 const btnGoToSearch2 = document.querySelector("#btnGoToSearch2");
 
@@ -1782,12 +1783,10 @@ function initNoticeMarquee() {
 }
 
 function initGlobalHeroStats() {
-  const metrics = calculateGlobalMetrics();
-  if (!metrics) return;
-
-  if (heroTotalContents) heroTotalContents.textContent = `${metrics.totalContents}개`;
-  if (heroTotalViews) heroTotalViews.textContent = `${metrics.totalViews.toLocaleString()}회`;
-  if (heroAverageViews) heroAverageViews.textContent = `${metrics.averageViews.toLocaleString()}회`;
+  if (heroTotalContents) heroTotalContents.textContent = "668";
+  if (heroTotalViews) heroTotalViews.textContent = "876.4K";
+  if (heroTotalLikes) heroTotalLikes.textContent = "8.6K";
+  if (heroTotalComments) heroTotalComments.textContent = "1.4K";
 }
 
 function initFameMarquee() {
