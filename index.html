@@ -19,10 +19,10 @@
     <div class="mesh-sphere sphere-3"></div>
   </div>
   <main class="page-shell">
-    <section class="header">
-      <div>
-        <p class="eyebrow">ETOOS 247 Experience Team</p>
-        <h1>이투스247학원 체험단</h1>
+    <nav class="nav-bar">
+      <div class="nav-logo">
+        <span class="logo-text">ETOOS 247</span>
+        <span class="logo-sub">Experience</span>
       </div>
       <button class="admin-toggle" id="adminToggle" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="btn-icon">
@@ -30,197 +30,343 @@
         </svg>
         <span>관리자 모드</span>
       </button>
-    </section>
+    </nav>
 
-    <p class="header-copy">본인 지점명을 선택하면 체험단 인적사항 및 결과보고서를 확인할 수 있습니다.</p>
-    <section class="notice-marquee-container" aria-label="공지사항">
-      <div class="notice-marquee-track" id="noticeMarqueeTrack">
-        <div class="notice-card has-tooltip" tabindex="0">
-          체험단은 방문 전 반드시 지점과 사전 협의 후 방문 예정입니다.
-          <span class="notice-tooltip" role="tooltip">
-            사전 협의 없이 지점에 방문한 경우에는 반드시 별도 연락 부탁드리며,<br>
-            해당 사항 확인 시 인플루언서에게 패널티가 적용될 수 있습니다.
-          </span>
+    <div id="landingPageContent">
+      <!-- 1. Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <p class="section-eyebrow">ETOOS 247 Academy Blog Experience Team</p>
+          <h1 class="hero-title">믿을 수 있는 학원 마케팅,<br>체험단 성과보고서 & 인적사항</h1>
+          <p class="hero-desc">전국 지점의 블로그 마케팅 트래픽 지표와 체험단 인플루언서 상세 인적사항을 실시간으로 관리하고 보고합니다.</p>
+          <button class="cta-button" id="btnGoToSearch" type="button">지점별 성과 조회하기</button>
         </div>
-        <div class="notice-card">체험단 연락처가 마스킹 처리되어 있는 경우,<br>개인정보보호법에 따라 별도 공개가 어려운 점 양해 부탁드립니다.</div>
-        <div class="notice-card">지점 비밀번호는 알림톡(문자)에서 확인 가능합니다.</div>
-      </div>
-    </section>
-
-
-
-    <section class="workspace" aria-label="지점별 전달 정보 조회">
-      <aside class="branch-panel">
-        <label class="search-label" for="branchSearch">지점 검색</label>
-        <div class="search-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" class="search-icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-          <input id="branchSearch" type="search" placeholder="지점명을 입력하세요" autocomplete="off">
+        
+        <!-- Notice Marquee under hero -->
+        <div class="notice-marquee-container" aria-label="공지사항">
+          <div class="notice-marquee-track" id="noticeMarqueeTrack">
+            <div class="notice-card has-tooltip" tabindex="0">
+              체험단은 방문 전 반드시 지점과 사전 협의 후 방문 예정입니다.
+              <span class="notice-tooltip" role="tooltip">
+                사전 협의 없이 지점에 방문한 경우에는 반드시 별도 연락 부탁드리며,<br>
+                해당 사항 확인 시 인플루언서에게 패널티가 적용될 수 있습니다.
+              </span>
+            </div>
+            <div class="notice-card">체험단 연락처가 마스킹 처리되어 있는 경우,<br>개인정보보호법에 따라 별도 공개가 어려운 점 양해 부탁드립니다.</div>
+            <div class="notice-card">지점 비밀번호는 알림톡(문자)에서 확인 가능합니다.</div>
+          </div>
         </div>
-        <!-- Mobile Dropdown Selector -->
-        <div class="mobile-branch-selector-wrapper">
-          <select id="mobileBranchSelect">
-            <option value="">지점을 선택하세요</option>
-          </select>
-        </div>
-        <div class="branch-list" id="branchList" aria-label="지점 목록"></div>
-      </aside>
+      </section>
 
-      <section class="detail-panel" aria-live="polite">
-        <div class="empty-state" id="emptyState">
-          <p>지점명을 선택하세요.</p>
-        </div>
-
-        <article class="detail-card hidden" id="detailCard">
-          <div class="detail-head">
-            <div class="detail-title-row">
-              <div>
-                <p class="eyebrow">Selected Campus</p>
-                <h2 id="detailBranch"></h2>
+      <!-- 2. Highlights Section -->
+      <section class="highlights-section" id="highlights">
+        <div class="section-container">
+          <p class="section-eyebrow">ETOOS 247 MARKETING</p>
+          <h2 class="section-title">전국 지점의 체험단 마케팅 누적 성과</h2>
+          
+          <div class="highlights-box">
+            <div class="highlight-item">
+              <span class="item-num">01</span>
+              <div class="item-info">
+                <dt>누적 콘텐츠</dt>
+                <dd id="heroTotalContents">-</dd>
               </div>
-              <div class="detail-tabs hidden" id="detailTabs">
-                <button class="tab-btn active" data-tab="people" type="button">전달 인적사항</button>
-                <button class="tab-btn" data-tab="report" type="button">결과보고서</button>
+            </div>
+            <div class="highlight-item">
+              <span class="item-num">02</span>
+              <div class="item-info">
+                <dt>누적 조회수</dt>
+                <dd id="heroTotalViews">-</dd>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="item-num">03</span>
+              <div class="item-info">
+                <dt>평균 조회수</dt>
+                <dd id="heroAverageViews">-</dd>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="tab-content active" id="tabContentPeople">
-            <div class="people-list" id="peopleList"></div>
+      <!-- 3. Hall of Fame Marquee Section -->
+      <section class="fame-marquee-section" id="hall-of-fame-marquee">
+        <div class="section-container">
+          <p class="section-eyebrow">REAL SUCCESS</p>
+          <h2 class="section-title">조회수와 공감으로 검증된 최우수 콘텐츠 명예의 전당</h2>
+        </div>
+        
+        <div class="fame-marquee-container" id="fameMarqueeContainer">
+          <div class="fame-marquee-track" id="fameMarqueeTrack">
+            <!-- Dynamically populated cards via JS -->
           </div>
+        </div>
+      </section>
 
-          <div class="tab-content hidden" id="tabContentReport">
-            <div class="report-dashboard">
-              <div class="report-section-title">
-                <h3>누적 성과</h3>
-                <p class="report-date-basis" id="reportDateBasis">누적 성과 및 콘텐츠 평균 성과</p>
+      <!-- 4. Features Section -->
+      <section class="features-section" id="features">
+        <div class="section-container">
+          <p class="section-eyebrow">SAFE & ACCURATE</p>
+          <h2 class="section-title">체계적인 관리와 투명한 대시보드로 걱정하실 필요 없어요</h2>
+          
+          <div class="features-grid">
+            <div class="feature-card dark">
+              <h3>실시간 데이터 트래픽 추적</h3>
+              <p>Chart.js 기반 대시보드로 기기별 누적 성과와 일별 트래픽 변동을 투명하게 시각화합니다.</p>
+            </div>
+            <div class="feature-card text-card">
+              <h3>지점별 보안 암호 시스템</h3>
+              <p>각 지점별 고유 비밀번호를 통해서만 안전하게 대시보드 및 상세 인적사항에 접근할 수 있습니다.</p>
+            </div>
+            <div class="feature-card accent-card">
+              <h3>신속한 인적사항 복사</h3>
+              <p>방문 일정 조율 및 긴급 소통을 위해 연락처와 일정 비고 정보를 단 한 번의 클릭으로 클립보드 복사 가능합니다.</p>
+            </div>
+            <div class="feature-card text-card">
+              <h3>검색 노출 키워드 추적</h3>
+              <p>체험단 유입에 크게 기여한 핵심 상위 노출 키워드와 검색 유입 순위를 실시간 자동 분석합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Slogan Section -->
+      <section class="slogan-section" id="slogan-banner">
+        <div class="slogan-content">
+          <p>이투스247 체험단은 일회성 노출에 그치지 않습니다.<br>
+          단순 수치 상승을 넘어 학부모와 학생의 마음을 움직이는<br>
+          <strong>신뢰받는 마케팅 파트너</strong>가 되어드릴게요.</p>
+        </div>
+      </section>
+
+      <!-- 6. Branch Selector & Workspace Section -->
+      <section class="reports-workspace-section" id="branch-reports">
+        <div class="section-container">
+          <p class="section-eyebrow">OUTSOURCING WORK</p>
+          <h2 class="section-title">지금 소속 지점의 성과 보고서를 확인해보세요.</h2>
+          
+          <section class="workspace" aria-label="지점별 전달 정보 조회">
+            <aside class="branch-panel">
+              <label class="search-label" for="branchSearch">지점 검색</label>
+              <div class="search-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" class="search-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input id="branchSearch" type="search" placeholder="지점명을 입력하세요" autocomplete="off">
               </div>
-              <div class="kpi-grid">
-                <div class="kpi-card">
-                  <div class="kpi-icon">📝</div>
-                  <div class="kpi-info">
-                    <dt>콘텐츠 수</dt>
-                    <dd id="kpiContents">-</dd>
-                  </div>
-                </div>
-                <div class="kpi-card">
-                  <div class="kpi-icon">📊</div>
-                  <div class="kpi-info">
-                    <dt>총 조회수</dt>
-                    <dd>
-                      <span class="val-num" id="kpiViews">-</span>
-                      <span class="val-sub">콘텐츠 평균 <span id="kpiViewsAvg">-</span></span>
-                    </dd>
-                  </div>
-                </div>
-                <div class="kpi-card">
-                  <div class="kpi-icon">📱</div>
-                  <div class="kpi-info">
-                    <dt>모바일 조회수</dt>
-                    <dd>
-                      <span class="val-num" id="kpiMobile">-</span>
-                      <span class="val-sub">콘텐츠 평균 <span id="kpiMobileAvg">-</span></span>
-                    </dd>
-                  </div>
-                </div>
-                <div class="kpi-card">
-                  <div class="kpi-icon">💻</div>
-                  <div class="kpi-info">
-                    <dt>PC 조회수</dt>
-                    <dd>
-                      <span class="val-num" id="kpiPc">-</span>
-                      <span class="val-sub">콘텐츠 평균 <span id="kpiPcAvg">-</span></span>
-                    </dd>
-                  </div>
-                </div>
+              <!-- Mobile Dropdown Selector -->
+              <div class="mobile-branch-selector-wrapper">
+                <select id="mobileBranchSelect">
+                  <option value="">지점을 선택하세요</option>
+                </select>
+              </div>
+              <div class="branch-list" id="branchList" aria-label="지점 목록"></div>
+            </aside>
+
+            <section class="detail-panel" aria-live="polite">
+              <div class="empty-state" id="emptyState">
+                <p>지점명을 선택하세요.</p>
               </div>
 
-              <div class="charts-row">
-                <div class="chart-card line-chart-card">
-                  <h4>누적 성과 추이 <span class="chart-subtitle" id="lineChartSubtitle"></span></h4>
-                  <div class="chart-container">
-                    <canvas id="cumulativeLineChart"></canvas>
-                  </div>
-                </div>
-                <div class="chart-card donut-chart-card">
-                  <h4>기기별 조회 수 (%)</h4>
-                  <div class="chart-container donut-container">
-                    <canvas id="deviceDonutChart"></canvas>
-                    <div class="donut-center-text">
-                      <span class="pct" id="donutPct">-</span>
-                      <span class="lbl">모바일</span>
+              <article class="detail-card hidden" id="detailCard">
+                <div class="detail-head">
+                  <div class="detail-title-row">
+                    <div>
+                      <p class="eyebrow">Selected Campus</p>
+                      <h2 id="detailBranch"></h2>
+                    </div>
+                    <div class="detail-tabs hidden" id="detailTabs">
+                      <button class="tab-btn active" data-tab="people" type="button">전달 인적사항</button>
+                      <button class="tab-btn" data-tab="report" type="button">결과보고서</button>
                     </div>
                   </div>
-                  <div class="donut-legend">
-                    <span class="legend-item"><span class="legend-color mobile"></span>모바일</span>
-                    <span class="legend-item"><span class="legend-color pc"></span>PC</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="report-section-title">
-                <h3>기간별 성과</h3>
-              </div>
-              <div class="chart-card full-width-chart-card">
-                <h4>일별 성과</h4>
-                <div class="chart-container">
-                  <canvas id="dailyLineChart"></canvas>
-                </div>
-              </div>
-
-              <div class="report-section-title">
-                <h3>등록 콘텐츠</h3>
-              </div>
-              <div class="table-card desktop-only-table">
-                <table class="report-table">
-                  <thead>
-                    <tr>
-                      <th class="col-num">번호</th>
-                      <th class="col-title">콘텐츠</th>
-                      <th class="col-likes">좋아요</th>
-                      <th class="col-comments">댓글</th>
-                    </tr>
-                  </thead>
-                  <tbody id="reportTableBody">
-                  </tbody>
-                </table>
-              </div>
-              <div class="mobile-only-cards" id="reportMobileCards"></div>
-
-              <div class="report-section-title">
-                <h3>키워드 성과 비교</h3>
-              </div>
-              <div class="keywords-row">
-                <!-- 1. 상위 노출 키워드 -->
-                <div class="chart-card keyword-card" id="reportExposedCard">
-                  <h4>상위 노출 키워드</h4>
-                  <div class="keyword-header">
-                    <span class="hdr-campaign">키워드</span>
-                    <span class="hdr-views">누적 노출수</span>
-                  </div>
-                  <div class="keyword-list" id="reportExposedList">
-                    <!-- dynamically populated -->
-                  </div>
                 </div>
 
-                <!-- 2. 유입 키워드 -->
-                <div class="chart-card keyword-card" id="reportInflowCard">
-                  <h4>유입 키워드 (TOP 10)</h4>
-                  <div class="keyword-header">
-                    <span class="hdr-campaign">유입 키워드</span>
-                    <span class="hdr-views">검색 유입 비율</span>
-                  </div>
-                  <div class="keyword-list" id="reportInflowList">
-                    <!-- dynamically populated -->
+                <div class="tab-content active" id="tabContentPeople">
+                  <div class="people-list" id="peopleList"></div>
+                </div>
+
+                <div class="tab-content hidden" id="tabContentReport">
+                  <div class="report-dashboard">
+                    <div class="report-section-title">
+                      <h3>누적 성과</h3>
+                      <p class="report-date-basis" id="reportDateBasis">누적 성과 및 콘텐츠 평균 성과</p>
+                    </div>
+                    <div class="kpi-grid">
+                      <div class="kpi-card">
+                        <div class="kpi-icon">📝</div>
+                        <div class="kpi-info">
+                          <dt>콘텐츠 수</dt>
+                          <dd id="kpiContents">-</dd>
+                        </div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-icon">📊</div>
+                        <div class="kpi-info">
+                          <dt>총 조회수</dt>
+                          <dd>
+                            <span class="val-num" id="kpiViews">-</span>
+                            <span class="val-sub">콘텐츠 평균 <span id="kpiViewsAvg">-</span></span>
+                          </dd>
+                        </div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-icon">📱</div>
+                        <div class="kpi-info">
+                          <dt>모바일 조회수</dt>
+                          <dd>
+                            <span class="val-num" id="kpiMobile">-</span>
+                            <span class="val-sub">콘텐츠 평균 <span id="kpiMobileAvg">-</span></span>
+                          </dd>
+                        </div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-icon">💻</div>
+                        <div class="kpi-info">
+                          <dt>PC 조회수</dt>
+                          <dd>
+                            <span class="val-num" id="kpiPc">-</span>
+                            <span class="val-sub">콘텐츠 평균 <span id="kpiPcAvg">-</span></span>
+                          </dd>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="charts-row">
+                      <div class="chart-card line-chart-card">
+                        <h4>누적 성과 추이 <span class="chart-subtitle" id="lineChartSubtitle"></span></h4>
+                        <div class="chart-container">
+                          <canvas id="cumulativeLineChart"></canvas>
+                        </div>
+                      </div>
+                      <div class="chart-card donut-chart-card">
+                        <h4>기기별 조회 수 (%)</h4>
+                        <div class="chart-container donut-container">
+                          <canvas id="deviceDonutChart"></canvas>
+                          <div class="donut-center-text">
+                            <span class="pct" id="donutPct">-</span>
+                            <span class="lbl">모바일</span>
+                          </div>
+                        </div>
+                        <div class="donut-legend">
+                          <span class="legend-item"><span class="legend-color mobile"></span>모바일</span>
+                          <span class="legend-item"><span class="legend-color pc"></span>PC</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="report-section-title">
+                      <h3>기간별 성과</h3>
+                    </div>
+                    <div class="chart-card full-width-chart-card">
+                      <h4>일별 성과</h4>
+                      <div class="chart-container">
+                        <canvas id="dailyLineChart"></canvas>
+                      </div>
+                    </div>
+
+                    <div class="report-section-title">
+                      <h3>등록 콘텐츠</h3>
+                    </div>
+                    <div class="table-card desktop-only-table">
+                      <table class="report-table">
+                        <thead>
+                          <tr>
+                            <th class="col-num">번호</th>
+                            <th class="col-title">콘텐츠</th>
+                            <th class="col-likes">좋아요</th>
+                            <th class="col-comments">댓글</th>
+                          </tr>
+                        </thead>
+                        <tbody id="reportTableBody">
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="mobile-only-cards" id="reportMobileCards"></div>
+
+                    <div class="report-section-title">
+                      <h3>키워드 성과 비교</h3>
+                    </div>
+                    <div class="keywords-row">
+                      <div class="chart-card keyword-card" id="reportExposedCard">
+                        <h4>상위 노출 키워드</h4>
+                        <div class="keyword-header">
+                          <span class="hdr-campaign">키워드</span>
+                          <span class="hdr-views">누적 노출수</span>
+                        </div>
+                        <div class="keyword-list" id="reportExposedList">
+                        </div>
+                      </div>
+
+                      <div class="chart-card keyword-card" id="reportInflowCard">
+                        <h4>유입 키워드 (TOP 10)</h4>
+                        <div class="keyword-header">
+                          <span class="hdr-campaign">유입 키워드</span>
+                          <span class="hdr-views">검색 유입 비율</span>
+                        </div>
+                        <div class="keyword-list" id="reportInflowList">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </article>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <!-- 7. Benefits Section -->
+      <section class="benefits-section" id="benefits">
+        <div class="section-container">
+          <p class="section-eyebrow">ETOOS 247 ADVANTAGES</p>
+          <h2 class="section-title">웰스튜디오와 협업하여 체험단 대시보드가 드리는 혜택</h2>
+          
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="icon">📊</div>
+              <h3>실시간 모바일/PC 유입률</h3>
+              <p>도넛 차트로 모바일 기기와 PC 기기의 실시간 검색 유입 비율 데이터를 확인하고 최적화할 수 있습니다.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="icon">🔑</div>
+              <h3>키워드 상위 노출 추적</h3>
+              <p>지점별 가장 반응이 좋은 검색 키워드 TOP 10을 자동 추출하여 성과 효율을 모니터링합니다.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="icon">📋</div>
+              <h3>편리한 복사 단축 버튼</h3>
+              <p>연락처 등 텍스트를 마우스를 긁을 필요 없이 한 번의 클릭으로 편리하게 클립보드에 복사할 수 있습니다.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="icon">🏆</div>
+              <h3>최우수 명예의 전당 연동</h3>
+              <p>조회수와 공감(좋아요) 수가 가장 높은 우수 블로그 콘텐츠를 상시 벤치마킹할 수 있습니다.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="icon">🔒</div>
+              <h3>비밀번호 암호 인증</h3>
+              <p>체험단 인적사항의 무분별한 노출을 막기 위해 각 지점에 부여된 알림톡 번호를 인증하여 보안을 유지합니다.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="icon">👑</div>
+              <h3>통합 대시보드 리더보드</h3>
+              <p>관리자 로그인 시 10개 지점 전체 성과 순위 리더보드와 핵심 유입 키워드 순위를 확인하여 마케팅 계획을 수립합니다.</p>
             </div>
           </div>
-        </article>
+        </div>
       </section>
-    </section>
+
+      <!-- 8. CTA Footer Section -->
+      <section class="cta-footer-section" id="cta-footer">
+        <div class="cta-footer-content">
+          <h2>막연한 마케팅 걱정을 확실한 성과로!<br>이투스247 블로그 체험단과 시작하세요.</h2>
+          <button class="cta-button" id="btnGoToSearch2" type="button">지점 성과 조회하기</button>
+        </div>
+      </section>
+    </div>
+
 
     <!-- 종합 결과 보고서 대시보드 판넬 -->
     <section class="admin-dashboard-panel hidden" id="adminDashboardPanel" aria-label="종합 결과 보고서">

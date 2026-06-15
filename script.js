@@ -488,6 +488,14 @@ const cancelBranchPassword = document.querySelector("#cancelBranchPassword");
 const mobileBranchSelect = document.querySelector("#mobileBranchSelect");
 const reportMobileCards = document.querySelector("#reportMobileCards");
 
+const landingPageContent = document.querySelector("#landingPageContent");
+const heroTotalContents = document.querySelector("#heroTotalContents");
+const heroTotalViews = document.querySelector("#heroTotalViews");
+const heroAverageViews = document.querySelector("#heroAverageViews");
+const fameMarqueeTrack = document.querySelector("#fameMarqueeTrack");
+const btnGoToSearch = document.querySelector("#btnGoToSearch");
+const btnGoToSearch2 = document.querySelector("#btnGoToSearch2");
+
 let selectedBranch = "";
 let isAdmin = false;
 let adminSessionPassword = "";
@@ -1375,8 +1383,8 @@ function updateAdminState() {
   if (adminDashboardPanel) {
     adminDashboardPanel.classList.toggle("hidden", !isAdmin);
   }
-  if (workspace) {
-    workspace.classList.toggle("hidden", isAdmin);
+  if (landingPageContent) {
+    landingPageContent.classList.toggle("hidden", isAdmin);
   }
 
   if (isAdmin) {
@@ -1739,6 +1747,9 @@ function renderGlobalDashboard() {
 updateAdminState();
 loadBranches();
 initNoticeMarquee();
+initGlobalHeroStats();
+initFameMarquee();
+initCtaButtons();
 
 function initNoticeMarquee() {
   const track = document.getElementById("noticeMarqueeTrack");
@@ -1751,6 +1762,91 @@ function initNoticeMarquee() {
     cards.forEach(card => {
       const clone = card.cloneNode(true);
       track.appendChild(clone);
+    });
+  }
+}
+
+function initGlobalHeroStats() {
+  const metrics = calculateGlobalMetrics();
+  if (!metrics) return;
+
+  if (heroTotalContents) heroTotalContents.textContent = `${metrics.totalContents}개`;
+  if (heroTotalViews) heroTotalViews.textContent = `${metrics.totalViews.toLocaleString()}회`;
+  if (heroAverageViews) heroAverageViews.textContent = `${metrics.averageViews.toLocaleString()}회`;
+}
+
+function initFameMarquee() {
+  if (!fameMarqueeTrack) return;
+  fameMarqueeTrack.innerHTML = "";
+
+  const metrics = calculateGlobalMetrics();
+  if (!metrics || !Array.isArray(metrics.topContents)) return;
+
+  metrics.topContents.forEach((content, index) => {
+    const card = document.createElement("div");
+    card.className = "fame-card";
+    
+    if (content.url) {
+      card.onclick = () => {
+        window.open(content.url, "_blank", "noopener,noreferrer");
+      };
+    }
+
+    const titleText = content.title || "체험단 리뷰";
+    const bloggerText = content.blogger || "인플루언서";
+    const branchText = content.branch || "이투스247";
+    const likesCount = content.likes || 0;
+
+    const stars = "★".repeat(5);
+
+    card.innerHTML = `
+      <div class="fame-card-header">
+        <div class="fame-card-profile">
+          <div class="fame-card-avatar">${bloggerText.slice(0, 1)}</div>
+          <span class="fame-card-name">${escapeHtml(bloggerText)}</span>
+        </div>
+        <span class="fame-card-stars">${stars}</span>
+      </div>
+      <p class="fame-card-content">${escapeHtml(titleText)}</p>
+      <div class="fame-card-footer">
+        <span class="fame-card-branch">${escapeHtml(branchText)}지점</span>
+        <span class="fame-card-likes">공감 <span>${likesCount}</span></span>
+      </div>
+    `;
+
+    fameMarqueeTrack.appendChild(card);
+  });
+
+  const cards = Array.from(fameMarqueeTrack.children);
+  if (cards.length > 0) {
+    for (let i = 0; i < 2; i++) {
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        if (card.onclick) {
+          clone.onclick = card.onclick;
+        }
+        fameMarqueeTrack.appendChild(clone);
+      });
+    }
+  }
+}
+
+function initCtaButtons() {
+  if (btnGoToSearch) {
+    btnGoToSearch.addEventListener("click", () => {
+      const target = document.querySelector("#branch-reports");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
+  if (btnGoToSearch2) {
+    btnGoToSearch2.addEventListener("click", () => {
+      const target = document.querySelector("#branch-reports");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   }
 }
