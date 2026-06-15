@@ -492,7 +492,6 @@ const landingPageContent = document.querySelector("#landingPageContent");
 const heroTotalContents = document.querySelector("#heroTotalContents");
 const heroTotalViews = document.querySelector("#heroTotalViews");
 const heroAverageViews = document.querySelector("#heroAverageViews");
-const fameMarqueeTrack = document.querySelector("#fameMarqueeTrack");
 const btnGoToSearch = document.querySelector("#btnGoToSearch");
 const btnGoToSearch2 = document.querySelector("#btnGoToSearch2");
 
@@ -1792,59 +1791,80 @@ function initGlobalHeroStats() {
 }
 
 function initFameMarquee() {
-  if (!fameMarqueeTrack) return;
-  fameMarqueeTrack.innerHTML = "";
+  const track1 = document.querySelector("#fameMarqueeTrack1");
+  const track2 = document.querySelector("#fameMarqueeTrack2");
+  const track3 = document.querySelector("#fameMarqueeTrack3");
+  if (!track1 || !track2 || !track3) return;
+
+  track1.innerHTML = "";
+  track2.innerHTML = "";
+  track3.innerHTML = "";
 
   const metrics = calculateGlobalMetrics();
-  if (!metrics || !Array.isArray(metrics.topContents)) return;
+  if (!metrics || !Array.isArray(metrics.topContents) || metrics.topContents.length === 0) return;
 
-  metrics.topContents.forEach((content, index) => {
-    const card = document.createElement("div");
-    card.className = "fame-card";
-    
-    if (content.url) {
-      card.onclick = () => {
-        window.open(content.url, "_blank", "noopener,noreferrer");
-      };
-    }
-
-    const titleText = content.title || "체험단 리뷰";
-    const bloggerText = content.blogger || "인플루언서";
-    const branchText = content.branch || "이투스247";
-    const likesCount = content.likes || 0;
-
-    const stars = "★".repeat(5);
-
-    card.innerHTML = `
-      <div class="fame-card-header">
-        <div class="fame-card-profile">
-          <div class="fame-card-avatar">${bloggerText.slice(0, 1)}</div>
-          <span class="fame-card-name">${escapeHtml(bloggerText)}</span>
-        </div>
-        <span class="fame-card-stars">${stars}</span>
-      </div>
-      <p class="fame-card-content">${escapeHtml(titleText)}</p>
-      <div class="fame-card-footer">
-        <span class="fame-card-branch">${escapeHtml(branchText)}지점</span>
-        <span class="fame-card-likes">공감 <span>${likesCount}</span></span>
-      </div>
-    `;
-
-    fameMarqueeTrack.appendChild(card);
-  });
-
-  const cards = Array.from(fameMarqueeTrack.children);
-  if (cards.length > 0) {
-    for (let i = 0; i < 2; i++) {
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        if (card.onclick) {
-          clone.onclick = card.onclick;
-        }
-        fameMarqueeTrack.appendChild(clone);
-      });
-    }
+  function getShiftedArray(arr, shift) {
+    const n = shift % arr.length;
+    return [...arr.slice(n), ...arr.slice(0, n)];
   }
+
+  const list1 = getShiftedArray(metrics.topContents, 0);
+  const list2 = getShiftedArray(metrics.topContents, 2);
+  const list3 = getShiftedArray(metrics.topContents, 4);
+
+  const populateTrack = (track, contentsList) => {
+    contentsList.forEach((content) => {
+      const card = document.createElement("div");
+      card.className = "fame-card";
+      
+      if (content.url) {
+        card.onclick = () => {
+          window.open(content.url, "_blank", "noopener,noreferrer");
+        };
+      }
+
+      const titleText = content.title || "체험단 리뷰";
+      const bloggerText = content.blogger || "인플루언서";
+      const branchText = content.branch || "이투스247";
+      const likesCount = content.likes || 0;
+
+      const stars = "★".repeat(5);
+
+      card.innerHTML = `
+        <div class="fame-card-header">
+          <div class="fame-card-profile">
+            <div class="fame-card-avatar">${bloggerText.slice(0, 1)}</div>
+            <span class="fame-card-name">${escapeHtml(bloggerText)}</span>
+          </div>
+          <span class="fame-card-stars">${stars}</span>
+        </div>
+        <p class="fame-card-content">${escapeHtml(titleText)}</p>
+        <div class="fame-card-footer">
+          <span class="fame-card-branch">${escapeHtml(branchText)}지점</span>
+          <span class="fame-card-likes">공감 <span>${likesCount}</span></span>
+        </div>
+      `;
+
+      track.appendChild(card);
+    });
+
+    const cards = Array.from(track.children);
+    if (cards.length > 0) {
+      for (let i = 0; i < 2; i++) {
+        cards.forEach(card => {
+          const clone = card.cloneNode(true);
+          if (card.onclick) {
+            clone.onclick = card.onclick;
+          }
+          track.appendChild(clone);
+        });
+      }
+    }
+  };
+
+  populateTrack(track1, list1);
+  populateTrack(track2, list2);
+  populateTrack(track3, list3);
 }
 
 function initCtaButtons() {

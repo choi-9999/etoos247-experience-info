@@ -2074,6 +2074,15 @@ dd a:hover {
   }
 }
 
+@keyframes scrollMarqueeReverse {
+  0% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* ==========================================================================
    New Landing Page Sections Styling (Well Studio Theme)
    ========================================================================== */
@@ -2392,6 +2401,9 @@ dd a:hover {
   width: 100%;
   padding: 20px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Gradient edge fades for the fame marquee */
@@ -2421,6 +2433,10 @@ dd a:hover {
   width: max-content;
   gap: 24px;
   animation: scrollMarquee 35s linear infinite;
+}
+
+.fame-marquee-track.reverse {
+  animation-name: scrollMarqueeReverse;
 }
 
 .fame-marquee-track:hover {
