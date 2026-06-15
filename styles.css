@@ -2208,6 +2208,9 @@ dd a:hover {
   cursor: pointer;
   transition: var(--transition);
   box-shadow: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-bar .admin-toggle:hover {
@@ -2215,6 +2218,39 @@ dd a:hover {
   border-color: rgba(139, 92, 246, 0.6);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+.lock-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-icon {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.nav-bar .admin-toggle:hover .lock-icon {
+  animation: lockWiggle 0.6s ease;
+}
+
+.nav-bar .admin-toggle:hover .lock-icon.open {
+  animation: lockBounce 0.6s ease;
+}
+
+@keyframes lockWiggle {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-12deg); }
+  40% { transform: rotate(12deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes lockBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2.5px); }
 }
 
 .user-badge {
