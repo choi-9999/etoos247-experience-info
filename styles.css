@@ -294,6 +294,32 @@ h1 {
   transform: translateX(-50%) translateY(0);
 }
 
+/* Static Notice Cards Above Workspace */
+.static-notice-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.static-notice-container .notice-card {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.static-notice-container .notice-card:nth-child(2) {
+  border-left-color: var(--success);
+}
+
+@media (max-width: 900px) {
+  .static-notice-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+}
+
 /* Admin Toggle & Panels */
 .admin-toggle {
   display: inline-flex;

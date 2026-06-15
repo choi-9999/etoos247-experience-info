@@ -1761,26 +1761,10 @@ function renderGlobalDashboard() {
 
 updateAdminState();
 loadBranches();
-initNoticeMarquee();
 initGlobalHeroStats();
 initFameMarquee();
 initCtaButtons();
 initNavScroll();
-
-function initNoticeMarquee() {
-  const track = document.getElementById("noticeMarqueeTrack");
-  if (!track) return;
-  const cards = Array.from(track.children);
-  if (cards.length === 0) return;
-  
-  // Clone twice to get 3 copies total for seamless scrolling
-  for (let i = 0; i < 2; i++) {
-    cards.forEach(card => {
-      const clone = card.cloneNode(true);
-      track.appendChild(clone);
-    });
-  }
-}
 
 function initGlobalHeroStats() {
   if (heroTotalContents) heroTotalContents.textContent = "668";
