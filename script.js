@@ -1787,6 +1787,23 @@ function initGlobalHeroStats() {
   if (heroTotalViews) heroTotalViews.textContent = "876.4K";
   if (heroTotalLikes) heroTotalLikes.textContent = "8.6K";
   if (heroTotalComments) heroTotalComments.textContent = "1.4K";
+
+  const setupHoverDetail = (elem, abbreviatedVal, detailedVal) => {
+    if (!elem) return;
+    const parentCard = elem.closest(".highlight-card");
+    if (!parentCard) return;
+
+    parentCard.addEventListener("mouseenter", () => {
+      elem.textContent = detailedVal;
+    });
+    parentCard.addEventListener("mouseleave", () => {
+      elem.textContent = abbreviatedVal;
+    });
+  };
+
+  setupHoverDetail(heroTotalViews, "876.4K", "876,433");
+  setupHoverDetail(heroTotalLikes, "8.6K", "8,634");
+  setupHoverDetail(heroTotalComments, "1.4K", "1,433");
 }
 
 function initFameMarquee() {

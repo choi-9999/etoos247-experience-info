@@ -2358,6 +2358,7 @@ dd a:hover {
   justify-content: space-between;
   gap: 24px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .highlight-card:hover {
