@@ -1,30 +1,30 @@
 :root {
   color-scheme: light;
-  --bg: #f5f7fa;
-  --surface: rgba(255, 255, 255, 0.65);
+  --bg: #F8F9FD; /* Soft lavender-tinted background */
+  --surface: #ffffff; /* Solid white card surface */
   --surface-solid: #ffffff;
-  --ink: #0f172a;
-  --muted: #475569;
-  --line: rgba(226, 232, 240, 0.8);
-  --line-accent: rgba(95, 25, 232, 0.08);
-  --accent: #5f19e8;
-  --accent-light: #7c3aed;
+  --ink: #0f0d36; /* Deep navy-indigo ink */
+  --muted: #64748b; /* Slate gray */
+  --line: #eef2f6; /* Very thin border */
+  --line-accent: rgba(95, 25, 232, 0.05);
+  --accent: #5F19E8; /* Electric Purple */
+  --accent-light: #6366f1; /* Indigo light */
   --accent-hover: #4c12c9;
   --accent-soft: rgba(95, 25, 232, 0.05);
-  --accent-gradient: linear-gradient(135deg, #5f19e8 0%, #a855f7 50%, #6366f1 100%);
-  --accent-glow: rgba(95, 25, 232, 0.15);
+  --accent-gradient: linear-gradient(135deg, #5f19e8 0%, #8b5cf6 50%, #6366f1 100%);
+  --accent-glow: rgba(95, 25, 232, 0.06);
   --focus: #ef4444;
-  --success: #10b981;
-  --shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.03);
-  --shadow-md: 0 16px 36px -8px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 24px 48px -12px rgba(95, 25, 232, 0.06);
-  --glass-blur: blur(18px);
-  --glass-border: rgba(255, 255, 255, 0.45);
-  --glass-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 8px 32px 0 rgba(31, 38, 135, 0.03);
+  --success: #10b981; /* Emerald green point */
+  --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.015), 0 2px 4px rgba(0, 0, 0, 0.005);
+  --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.035);
+  --shadow-lg: 0 20px 48px rgba(95, 25, 232, 0.04);
+  --glass-blur: none;
+  --glass-border: #eef2f6;
+  --glass-shadow: none;
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 18px;
-  --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --radius-lg: 16px;
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -60,7 +60,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.5;
+  opacity: 0.3;
   mix-blend-mode: multiply;
   animation: float 25s infinite alternate ease-in-out;
 }
@@ -68,7 +68,7 @@ body {
 .sphere-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(95, 25, 232, 0.25) 0%, rgba(168, 85, 247, 0) 70%);
+  background: radial-gradient(circle, rgba(95, 25, 232, 0.12) 0%, rgba(168, 85, 247, 0) 70%);
   top: -10%;
   left: -10%;
   animation-duration: 25s;
@@ -77,7 +77,7 @@ body {
 .sphere-2 {
   width: 550px;
   height: 550px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, rgba(244, 63, 94, 0) 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, rgba(244, 63, 94, 0) 70%);
   bottom: -15%;
   right: -5%;
   animation-duration: 32s;
@@ -87,7 +87,7 @@ body {
 .sphere-3 {
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(59, 130, 246, 0) 70%);
   top: 35%;
   left: 45%;
   animation-duration: 28s;
@@ -160,43 +160,81 @@ h1 {
   line-height: 1.6;
 }
 
-/* Notice List */
-.notice-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  max-width: 1200px;
+/* Notice Marquee Container */
+.notice-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
   margin: 0 0 36px;
-  animation: slideUpFade 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
+  position: relative;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
-.notice-copy {
+/* Gradient edge fades for the marquee list */
+.notice-marquee-container::before,
+.notice-marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.notice-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, rgba(248, 249, 253, 0) 100%);
+}
+
+.notice-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, rgba(248, 249, 253, 0) 100%);
+}
+
+.notice-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: scrollMarquee 35s linear infinite;
+}
+
+.notice-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.notice-card {
   position: relative;
+  width: 330px;
   margin: 0;
-  padding: 16px 20px;
-  border-top: 3px solid var(--accent);
+  padding: 18px 22px;
+  border-left: 4px solid var(--accent);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-left: 1px solid var(--glass-border);
+  background: var(--surface-solid);
+  border-top: 1px solid var(--glass-border);
   border-right: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
   color: var(--ink);
   font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.6;
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.notice-copy:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: var(--glass-shadow), var(--shadow-md);
+/* Highlight the first card with green pointing boundary line */
+.notice-marquee-track > .notice-card:nth-child(3n+1) {
+  border-left-color: var(--success);
+}
+
+.notice-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-md), 0 12px 24px -10px rgba(95, 25, 232, 0.08);
+  border-color: rgba(95, 25, 232, 0.2);
 }
 
 .has-tooltip {
@@ -208,21 +246,22 @@ h1 {
   content: "자세히 보기";
   display: inline-flex;
   align-items: center;
-  min-height: 20px;
-  margin-left: 8px;
+  min-height: 18px;
+  margin-top: 6px;
   padding: 0 8px;
   border-radius: 999px;
-  background: var(--accent-gradient);
-  color: #ffffff;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 0.68rem;
-  font-weight: 700;
-  vertical-align: middle;
+  font-weight: 800;
+  width: max-content;
   transition: var(--transition);
 }
 
 .has-tooltip:hover::after {
-  transform: scale(1.05);
-  box-shadow: 0 2px 10px rgba(95, 25, 232, 0.35);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(95, 25, 232, 0.15);
 }
 
 .notice-tooltip {
@@ -236,9 +275,8 @@ h1 {
   padding: 14px 16px;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-md);
   color: var(--ink);
   font-size: 0.8rem;
   font-weight: 500;
@@ -399,13 +437,11 @@ h1 {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   background: var(--surface);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  box-shadow: var(--glass-shadow), var(--shadow-lg);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
-  animation: slideUpFade 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.2s both;
+  animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 /* Left Sidebar (Branch Panel) */
@@ -530,16 +566,19 @@ h1 {
 }
 
 .branch-button.active {
-  background: var(--accent-gradient);
-  color: #ffffff;
+  background: rgba(95, 25, 232, 0.05);
+  color: var(--accent);
   font-weight: 800;
-  box-shadow: 0 8px 24px -6px rgba(95, 25, 232, 0.3);
+  border-left: 3px solid var(--accent);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: none;
 }
 
 .branch-button.active::after {
   opacity: 1;
   transform: translateX(0);
-  color: #ffffff;
+  color: var(--accent);
 }
 
 /* Right Detail Panel */
@@ -549,7 +588,7 @@ h1 {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 560px;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--surface);
   overflow-y: auto;
 }
 
@@ -614,21 +653,37 @@ h2 {
   letter-spacing: -0.02em;
 }
 
-/* People Grid Cards */
+/* People Marquee Track & Cards */
 .people-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+
+.people-marquee-track {
+  display: flex;
   gap: 20px;
+  width: max-content;
+}
+
+.people-marquee-track.rolling {
+  animation: scrollMarquee 35s linear infinite;
+}
+
+.people-marquee-track.rolling:hover {
+  animation-play-state: paused;
 }
 
 .person-card {
+  width: 320px;
+  flex-shrink: 0;
   padding: 24px;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -651,10 +706,9 @@ h2 {
 }
 
 .person-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.01);
   border-color: rgba(95, 25, 232, 0.3);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: var(--glass-shadow), 0 20px 38px -10px rgba(95, 25, 232, 0.12);
+  box-shadow: 0 20px 40px -10px rgba(95, 25, 232, 0.08);
 }
 
 .person-card:hover::before {
@@ -1331,17 +1385,18 @@ dd a:hover {
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--surface-solid);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
 .kpi-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: var(--glass-shadow), var(--shadow-md);
+  transform: translateY(-4px) scale(1.01);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-md), 0 12px 24px -10px rgba(95, 25, 232, 0.08);
+  border-color: rgba(95, 25, 232, 0.2);
 }
 
 .kpi-icon {
@@ -1398,13 +1453,20 @@ dd a:hover {
 
 .chart-card {
   padding: 24px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--surface-solid);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: var(--transition);
+}
+
+.chart-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-md), 0 12px 24px -10px rgba(95, 25, 232, 0.04);
+  border-color: rgba(95, 25, 232, 0.15);
 }
 
 .chart-card h4 {
@@ -1502,11 +1564,17 @@ dd a:hover {
 
 /* Reports Table Section */
 .table-card {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--surface-solid);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
+  transition: var(--transition);
+}
+
+.table-card:hover {
+  box-shadow: var(--shadow-md), 0 12px 24px -10px rgba(95, 25, 232, 0.04);
+  border-color: rgba(95, 25, 232, 0.15);
 }
 
 .report-table {
@@ -1523,7 +1591,7 @@ dd a:hover {
 }
 
 .report-table th {
-  background: rgba(15, 23, 42, 0.03);
+  background: #f8fafc;
   font-weight: 800;
   color: var(--muted);
   text-transform: uppercase;
@@ -1537,7 +1605,7 @@ dd a:hover {
 }
 
 .report-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--accent-soft);
 }
 
 .report-table tbody tr:last-child td {
@@ -1866,9 +1934,9 @@ dd a:hover {
   gap: 16px;
   padding: 14px 16px;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--surface-solid);
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow), var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
   cursor: pointer;
   position: relative;
@@ -1887,9 +1955,9 @@ dd a:hover {
 }
 
 .fame-item:hover {
-  transform: translateY(-2px) translateX(2px);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 20px -8px rgba(95, 25, 232, 0.12);
+  transform: translateY(-4px) scale(1.01);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-md), 0 10px 20px -8px rgba(95, 25, 232, 0.08);
   border-color: rgba(95, 25, 232, 0.2);
 }
 
@@ -1992,5 +2060,15 @@ dd a:hover {
   .admin-grid-row {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+/* Infinite Marquee Scroll Keyframes */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
   }
 }

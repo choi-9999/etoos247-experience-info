@@ -1206,6 +1206,9 @@ function renderCharts(report) {
 function renderPeople(people) {
   peopleList.innerHTML = "";
 
+  const track = document.createElement("div");
+  track.className = "people-marquee-track";
+
   people.forEach((person, index) => {
     const card = document.createElement("section");
     card.className = "person-card";
@@ -1240,13 +1243,13 @@ function renderPeople(people) {
         phoneText.textContent = value;
         copyButton.className = "copy-button";
         copyButton.type = "button";
+        copyButton.setAttribute("data-phone", value);
         copyButton.innerHTML = `
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="copy-icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4H10" />
           </svg>
           <span>복사</span>
         `;
-        copyButton.addEventListener("click", () => copyPhone(value, copyButton));
 
         copyRow.append(phoneText, copyButton);
         description.append(copyRow);
@@ -1271,8 +1274,22 @@ function renderPeople(people) {
     });
 
     card.append(title, infoList);
-    peopleList.append(card);
+    track.append(card);
   });
+
+  if (people.length > 1) {
+    track.classList.add("rolling");
+    // Duplicate cards twice (to get 3 sets of cards total for seamless scrolling)
+    const cards = Array.from(track.children);
+    for (let i = 0; i < 2; i++) {
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
+      });
+    }
+  }
+
+  peopleList.append(track);
 }
 
 async function copyPhone(phone, button) {
@@ -1422,6 +1439,16 @@ function closeAdminPasswordDialog() {
 
 branchSearch.addEventListener("input", (event) => {
   renderBranches(event.target.value);
+});
+
+peopleList.addEventListener("click", (event) => {
+  const copyButton = event.target.closest(".copy-button");
+  if (copyButton) {
+    const phone = copyButton.getAttribute("data-phone");
+    if (phone) {
+      copyPhone(phone, copyButton);
+    }
+  }
 });
 
 adminToggle.addEventListener("click", () => {
@@ -1711,3 +1738,19 @@ function renderGlobalDashboard() {
 
 updateAdminState();
 loadBranches();
+initNoticeMarquee();
+
+function initNoticeMarquee() {
+  const track = document.getElementById("noticeMarqueeTrack");
+  if (!track) return;
+  const cards = Array.from(track.children);
+  if (cards.length === 0) return;
+  
+  // Clone twice to get 3 copies total for seamless scrolling
+  for (let i = 0; i < 2; i++) {
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
+}
