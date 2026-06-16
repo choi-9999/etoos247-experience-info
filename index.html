@@ -361,22 +361,37 @@
           <p class="section-eyebrow">APPLICATION FORM</p>
           <h2 class="section-title" id="applySectionTitle">2027 반수성공반 블로그 체험단 신청</h2>
           
-          <!-- D-Day Countdown Timer -->
-          <div class="apply-countdown-card" id="applyCountdownCard">
-            <div class="countdown-header">
-              <span class="countdown-title" id="countdownTitle">체험단 신청 마감까지</span>
-              <span class="countdown-target" id="countdownTargetText">2026.05.05 / D-7</span>
+          <!-- D-Day Timer & Quota Status Area -->
+          <div class="apply-status-grid">
+            <!-- D-Day Countdown Timer -->
+            <div class="apply-countdown-card" id="applyCountdownCard">
+              <div class="countdown-header">
+                <span class="countdown-title" id="countdownTitle">체험단 신청 마감까지</span>
+                <span class="countdown-target" id="countdownTargetText">2026.05.05 / D-7</span>
+              </div>
+              <div class="countdown-timer">
+                <span id="timerDays">00</span>
+                <span class="timer-colon">:</span>
+                <span id="timerHours">00</span>
+                <span class="timer-colon">:</span>
+                <span id="timerMinutes">00</span>
+                <span class="timer-colon">:</span>
+                <span id="timerSeconds">00</span>
+                <span class="timer-colon">:</span>
+                <span id="timerCentiseconds">00</span>
+              </div>
             </div>
-            <div class="countdown-timer">
-              <span id="timerDays">00</span>
-              <span class="timer-colon">:</span>
-              <span id="timerHours">00</span>
-              <span class="timer-colon">:</span>
-              <span id="timerMinutes">00</span>
-              <span class="timer-colon">:</span>
-              <span id="timerSeconds">00</span>
-              <span class="timer-colon">:</span>
-              <span id="timerCentiseconds">00</span>
+
+            <!-- Real-time Quota Progress Card -->
+            <div class="apply-quota-card" id="applyQuotaCard">
+              <div class="quota-header">
+                <span class="quota-title">실시간 선착순 신청 현황</span>
+                <span class="quota-status-text" id="quotaStatusText">0 / 70명</span>
+              </div>
+              <div class="quota-progress-container">
+                <div class="quota-progress-bar" id="quotaProgressBar" style="width: 0%;"></div>
+                <span class="quota-percent" id="quotaPercentText">0%</span>
+              </div>
             </div>
           </div>
           
@@ -458,18 +473,6 @@
 
                 <button type="submit" class="apply-submit-btn" id="btnSubmitApply">신청 접수하기</button>
               </form>
-            </div>
-
-            <!-- Real-time Quota Progress Card -->
-            <div class="apply-quota-card" id="applyQuotaCard">
-              <div class="quota-header">
-                <span class="quota-title">실시간 선착순 신청 현황</span>
-                <span class="quota-status-text" id="quotaStatusText">0 / 70명</span>
-              </div>
-              <div class="quota-progress-container">
-                <div class="quota-progress-bar" id="quotaProgressBar" style="width: 0%;"></div>
-                <span class="quota-percent" id="quotaPercentText">0%</span>
-              </div>
             </div>
           </div>
         </div>

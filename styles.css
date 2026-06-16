@@ -3425,14 +3425,15 @@ dd a:hover {
 
 /* D-Day Countdown Timer Card */
 .apply-countdown-card {
-  max-width: 650px;
-  margin: 0 auto 40px;
+  width: 100%;
+  margin: 0;
   background: var(--surface-solid);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 24px 32px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  box-sizing: border-box;
 }
 
 .apply-countdown-card:hover {
@@ -3584,15 +3585,33 @@ dd a:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
+/* D-Day Timer & Quota Status Area Grid */
+.apply-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 auto 32px;
+  width: 100%;
+}
+
 /* Real-time Quota Progress Card Styling */
 .apply-quota-card {
-  background: var(--surface-light);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  width: 100%;
+  margin: 0;
+  background: var(--surface-solid);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
   padding: 24px 32px;
-  margin-top: 24px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   backdrop-filter: blur(20px);
+  box-sizing: border-box;
+}
+
+.apply-quota-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(95, 25, 232, 0.15);
 }
 
 .apply-quota-card.hidden {
@@ -3650,9 +3669,16 @@ dd a:hover {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
+@media (max-width: 900px) {
+  .apply-status-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}
+
 @media (max-width: 576px) {
   .apply-quota-card {
     padding: 16px 20px;
-    margin-top: 16px;
   }
 }
