@@ -2251,6 +2251,11 @@ function renderExperienceUI() {
   } else {
     if (adminExperienceManagement) adminExperienceManagement.classList.add("hidden");
   }
+
+  // 설정 날짜 변경 시 타이머를 즉각 리셋 및 재시작하도록 조치
+  if (typeof startCountdown === "function") {
+    startCountdown();
+  }
 }
 
 async function handleApplySubmit(e) {
