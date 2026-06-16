@@ -541,6 +541,7 @@ let countdownInterval = null;
 
 const navExperienceApplyLink = document.querySelector("#navExperienceApplyLink");
 const btnGoToApply = document.querySelector("#btnGoToApply");
+const btnGoToApply2 = document.querySelector("#btnGoToApply2");
 const experienceApplySection = document.querySelector("#experience-apply-section");
 const applySectionTitle = document.querySelector("#applySectionTitle");
 const infoApplyPeriod = document.querySelector("#infoApplyPeriod");
@@ -2108,6 +2109,16 @@ async function initExperience() {
     });
   }
 
+  // Bottom Section Button Click
+  if (btnGoToApply2) {
+    btnGoToApply2.addEventListener("click", () => {
+      const target = document.querySelector("#experience-apply-section");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
   populateApplyBranchDropdown();
   renderExperienceUI();
   
@@ -2132,6 +2143,9 @@ function renderExperienceUI() {
   }
   if (btnGoToApply) {
     btnGoToApply.classList.toggle("hidden", !visible);
+  }
+  if (btnGoToApply2) {
+    btnGoToApply2.classList.toggle("hidden", !visible);
   }
   if (experienceApplySection) {
     experienceApplySection.classList.toggle("hidden", !visible);
