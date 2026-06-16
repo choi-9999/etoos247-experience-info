@@ -386,11 +386,16 @@
             <div class="apply-quota-card" id="applyQuotaCard">
               <div class="quota-header">
                 <span class="quota-title">실시간 선착순 신청 현황</span>
-                <span class="quota-status-text" id="quotaStatusText">0 / 70명</span>
+                <span class="quota-status-text">
+                  <span id="quotaStatusText">0 / 70명</span>
+                  <span class="quota-status-percent" id="quotaPercentText">(0%)</span>
+                </span>
               </div>
-              <div class="quota-progress-container">
-                <div class="quota-progress-bar" id="quotaProgressBar" style="width: 0%;"></div>
-                <span class="quota-percent" id="quotaPercentText">0%</span>
+              <div class="quota-body">
+                <div class="quota-progress-container">
+                  <div class="quota-progress-bar" id="quotaProgressBar" style="width: 0%;"></div>
+                </div>
+                <p class="quota-notice-text">⚠️ 모집 인원 도달 시 신청 접수가 조기 마감됩니다.</p>
               </div>
             </div>
           </div>

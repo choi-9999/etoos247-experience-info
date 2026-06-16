@@ -2243,7 +2243,7 @@ function renderExperienceUI() {
       quotaProgressBar.style.width = `${percent}%`;
     }
     if (quotaPercentText) {
-      quotaPercentText.textContent = `${percent}%`;
+      quotaPercentText.textContent = `(${percent}%)`;
     }
   }
 

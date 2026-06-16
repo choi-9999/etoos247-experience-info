@@ -3594,6 +3594,15 @@ dd a:hover {
   width: 100%;
 }
 
+.apply-countdown-card,
+.apply-quota-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
 /* Real-time Quota Progress Card Styling */
 .apply-quota-card {
   width: 100%;
@@ -3605,7 +3614,6 @@ dd a:hover {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   backdrop-filter: blur(20px);
-  box-sizing: border-box;
 }
 
 .apply-quota-card:hover {
@@ -3633,40 +3641,52 @@ dd a:hover {
 }
 
 .quota-status-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#quotaStatusText {
   font-size: 1rem;
   color: var(--accent);
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
 }
 
+.quota-status-percent {
+  font-size: 0.95rem;
+  color: #ef4444; /* 명시성을 극대화한 핑크레드 포인트 컬러 */
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+}
+
 .quota-progress-container {
-  position: relative;
   width: 100%;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  height: 16px;
+  background: rgba(12, 10, 33, 0.08); /* 밝은 카드 배경에서도 영역 구분이 뚜렷하게 어두운 반투명 그레이 지정 */
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(12, 10, 33, 0.05);
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .quota-progress-bar {
   height: 100%;
   background: linear-gradient(90deg, #ef4444 0%, #ec4899 50%, #8b5cf6 100%);
-  border-radius: 12px;
+  border-radius: 8px;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
 }
 
-.quota-percent {
-  position: absolute;
-  right: 12px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #ffffff;
-  font-family: 'Outfit', sans-serif;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+.quota-notice-text {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 900px) {
