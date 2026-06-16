@@ -2848,6 +2848,39 @@ dd a:hover {
   box-shadow: 0 14px 40px rgba(255, 255, 255, 0.25);
 }
 
+.cta-footer-content .cta-button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-footer-content .cta-button.cta-secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.cta-footer-content .cta-button.cta-secondary:hover {
+  background: #ffffff;
+  color: var(--accent);
+  border-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 576px) {
+  .cta-footer-content .cta-button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .cta-footer-content .cta-button-group .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 /* Nav bar admin panel adjustments */
 .admin-dashboard-panel {
   padding-top: 120px;
