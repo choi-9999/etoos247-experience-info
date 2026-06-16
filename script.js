@@ -2000,11 +2000,9 @@ function initNavScroll() {
   if (navLogo) {
     navLogo.style.cursor = "pointer";
     navLogo.addEventListener("click", () => {
-      const target = document.querySelector(".static-notice-container");
+      const target = document.querySelector("#hero");
       if (target) {
-        const yOffset = -80; // 네비 바 높이 64px + 여유 마진 16px
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
+        target.scrollIntoView({ behavior: "smooth" });
       } else {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
