@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 const DATA_KEY_CONFIG = "etoos247:experience-config";
 const DATA_KEY_APPLICATIONS = "etoos247:experience-applications";
 const DATA_KEY_BRANCHES = "etoos247:experience-branches";
@@ -80,6 +83,7 @@ module.exports = async function handler(request, response) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(applications)]);
         } else {
           localMemoryApplications = applications;
+          saveLocalApps(applications);
         }
 
         return response.status(200).json({ success: true, config, applications });
@@ -113,6 +117,7 @@ module.exports = async function handler(request, response) {
           await redisCommand(["SET", DATA_KEY_CONFIG, JSON.stringify(normalizedConfig)]);
         } else {
           localMemoryConfig = normalizedConfig;
+          saveLocalConfig(normalizedConfig);
         }
 
         const applications = await getApplications();
@@ -136,6 +141,7 @@ module.exports = async function handler(request, response) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(normalized)]);
         } else {
           localMemoryApplications = normalized;
+          saveLocalApps(normalized);
         }
 
         const config = await getConfig();
@@ -156,6 +162,7 @@ module.exports = async function handler(request, response) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(filtered)]);
         } else {
           localMemoryApplications = filtered;
+          saveLocalApps(filtered);
         }
 
         const config = await getConfig();
@@ -173,6 +180,15 @@ module.exports = async function handler(request, response) {
 
 async function getConfig() {
   if (!hasRedisEnv()) {
+    try {
+      const filePath = getLocalConfigPath();
+      if (fs.existsSync(filePath)) {
+        const fileContent = fs.readFileSync(filePath, "utf8");
+        return JSON.parse(fileContent);
+      }
+    } catch (e) {
+      // ignore (Vercel read-only filesystem)
+    }
     return localMemoryConfig || DEFAULT_CONFIG;
   }
   try {
@@ -186,6 +202,15 @@ async function getConfig() {
 
 async function getApplications() {
   if (!hasRedisEnv()) {
+    try {
+      const filePath = getLocalAppsPath();
+      if (fs.existsSync(filePath)) {
+        const fileContent = fs.readFileSync(filePath, "utf8");
+        return JSON.parse(fileContent);
+      }
+    } catch (e) {
+      // ignore
+    }
     return localMemoryApplications;
   }
   try {
@@ -240,4 +265,30 @@ async function redisCommand(command) {
     throw new Error(result.error);
   }
   return result.result;
+}
+
+// ── 로컬 파일 저장소 헬퍼 함수 ────────────────────────────────────
+
+function getLocalConfigPath() {
+  return path.join(process.cwd(), "experience-config.json");
+}
+
+function getLocalAppsPath() {
+  return path.join(process.cwd(), "experience-apps.json");
+}
+
+function saveLocalConfig(config) {
+  try {
+    fs.writeFileSync(getLocalConfigPath(), JSON.stringify(config, null, 2), "utf8");
+  } catch (e) {
+    // ignore
+  }
+}
+
+function saveLocalApps(apps) {
+  try {
+    fs.writeFileSync(getLocalAppsPath(), JSON.stringify(apps, null, 2), "utf8");
+  } catch (e) {
+    // ignore
+  }
 }
