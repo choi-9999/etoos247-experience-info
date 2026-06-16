@@ -534,6 +534,49 @@ const globalKpiViews = document.querySelector("#globalKpiViews");
 const globalKpiViewsAvg = document.querySelector("#globalKpiViewsAvg");
 const globalKpiMobileRatio = document.querySelector("#globalKpiMobileRatio");
 
+// ── 체험단 신청 전역 변수 및 셀렉터 ──────────────────────────────
+let experienceConfig = null;
+let experienceApplications = [];
+
+const navExperienceApplyLink = document.querySelector("#navExperienceApplyLink");
+const btnGoToApply = document.querySelector("#btnGoToApply");
+const experienceApplySection = document.querySelector("#experience-apply-section");
+const applySectionTitle = document.querySelector("#applySectionTitle");
+const infoApplyPeriod = document.querySelector("#infoApplyPeriod");
+const infoRunPeriod = document.querySelector("#infoRunPeriod");
+const infoBillingMonthText = document.querySelector("#infoBillingMonthText");
+const infoMaxQuota = document.querySelector("#infoMaxQuota");
+const currentApplyStatus = document.querySelector("#currentApplyStatus");
+const calcNum = document.querySelector("#calcNum");
+const calcPrice = document.querySelector("#calcPrice");
+const calcBillingBasis = document.querySelector("#calcBillingBasis");
+
+const experienceApplyForm = document.querySelector("#experienceApplyForm");
+const applyBranchSelect = document.querySelector("#applyBranchSelect");
+const applyBranchPasswordGroup = document.querySelector("#applyBranchPasswordGroup");
+const applyBranchPassword = document.querySelector("#applyBranchPassword");
+const applyCount = document.querySelector("#applyCount");
+const applyAgree = document.querySelector("#applyAgree");
+const applyErrorMessage = document.querySelector("#applyErrorMessage");
+const applySuccessMessage = document.querySelector("#applySuccessMessage");
+const btnSubmitApply = document.querySelector("#btnSubmitApply");
+
+const adminExperienceManagement = document.querySelector("#adminExperienceManagement");
+const adminExperienceTableBody = document.querySelector("#adminExperienceTableBody");
+const adminExperienceEmpty = document.querySelector("#adminExperienceEmpty");
+const adminExperienceConfigForm = document.querySelector("#adminExperienceConfigForm");
+const configVisible = document.querySelector("#configVisible");
+const configName = document.querySelector("#configName");
+const configApplyStart = document.querySelector("#configApplyStart");
+const configApplyEnd = document.querySelector("#configApplyEnd");
+const configRunStart = document.querySelector("#configRunStart");
+const configRunEnd = document.querySelector("#configRunEnd");
+const configMaxQuota = document.querySelector("#configMaxQuota");
+const configBillingMonth = document.querySelector("#configBillingMonth");
+const adminConfigMessage = document.querySelector("#adminConfigMessage");
+const btnExportExperienceExcel = document.querySelector("#btnExportExperienceExcel");
+// ──────────────────────────────────────────────────────────────
+
 const leaderboardTableBody = document.querySelector("#leaderboardTableBody");
 const hallOfFameList = document.querySelector("#hallOfFameList");
 const globalKeywordList = document.querySelector("#globalKeywordList");
@@ -582,6 +625,9 @@ async function fetchBranches() {
 
   clearSelectedBranch();
   renderBranches(branchSearch.value);
+  if (typeof populateApplyBranchDropdown === "function") {
+    populateApplyBranchDropdown();
+  }
 }
 
 async function verifyAdminPassword(password) {
@@ -1430,6 +1476,10 @@ function updateAdminState() {
   }
 
   adminPassword.value = "";
+  
+  if (typeof renderExperienceUI === "function") {
+    renderExperienceUI();
+  }
 }
 
 function clearSelectedBranch() {
@@ -1802,6 +1852,9 @@ initGlobalHeroStats();
 initFameMarquee();
 initCtaButtons();
 initNavScroll();
+if (typeof initExperience === "function") {
+  initExperience();
+}
 
 function initGlobalHeroStats() {
   if (heroTotalContents) heroTotalContents.textContent = "668";
@@ -1935,7 +1988,7 @@ function initCtaButtons() {
 }
 
 function initNavScroll() {
-  const navMenuLinks = document.querySelectorAll(".nav-menu-link");
+  const navMenuLinks = document.querySelectorAll(".nav-menu-link:not(#navGlobalReportLink)");
   navMenuLinks.forEach(link => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
@@ -1952,5 +2005,433 @@ function initNavScroll() {
     btnScrollTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+}
+
+// ── 체험단 신청 비즈니스 로직 ──────────────────────────────────────
+
+function populateApplyBranchDropdown() {
+  if (!applyBranchSelect) return;
+  applyBranchSelect.innerHTML = '<option value="">지점을 선택하세요</option>';
+  branches.forEach(b => {
+    const opt = document.createElement("option");
+    opt.value = b.branch;
+    opt.textContent = `${b.branch}점`;
+    applyBranchSelect.appendChild(opt);
+  });
+}
+
+function formatDateString(dateStr) {
+  if (!dateStr) return "";
+  const parts = dateStr.split("-");
+  if (parts.length !== 3) return dateStr;
+  const d = new Date(parts[0], parts[1] - 1, parts[2]);
+  const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+  return `${parseInt(parts[1], 10)}월 ${parseInt(parts[2], 10)}일(${weekdays[d.getDay()]})`;
+}
+
+async function initExperience() {
+  try {
+    const response = await fetch("/api/experience", { cache: "no-store" });
+    if (!response.ok) throw new Error("API load failed");
+    const data = await response.json();
+    experienceConfig = data.config;
+    experienceApplications = data.applications || [];
+  } catch (err) {
+    // LocalStorage Fallback
+    const localConfig = localStorage.getItem("etoos247:experience-config");
+    const localApps = localStorage.getItem("etoos247:experience-applications");
+    
+    experienceConfig = localConfig ? JSON.parse(localConfig) : {
+      visible: true,
+      name: "2027 반수성공반 블로그 체험단",
+      applyStart: "2026-04-28",
+      applyEnd: "2026-05-05",
+      runStart: "2026-05-18",
+      runEnd: "2026-05-31",
+      feePerPerson: 44000,
+      billingMonth: "2026년 6월분",
+      maxQuota: 70
+    };
+    experienceApplications = localApps ? JSON.parse(localApps) : [];
+  }
+
+  // Event Listeners for Experience Apply
+  if (applyCount) {
+    applyCount.addEventListener("input", () => {
+      const count = parseInt(applyCount.value, 10) || 0;
+      calcNum.textContent = count;
+      calcPrice.textContent = (count * (experienceConfig ? experienceConfig.feePerPerson : 44000)).toLocaleString();
+    });
+  }
+
+  if (experienceApplyForm) {
+    experienceApplyForm.addEventListener("submit", handleApplySubmit);
+  }
+
+  if (adminExperienceConfigForm) {
+    adminExperienceConfigForm.addEventListener("submit", handleSaveConfig);
+  }
+
+  if (btnExportExperienceExcel) {
+    btnExportExperienceExcel.addEventListener("click", exportExperienceToExcel);
+  }
+
+  // Hero Section Button Click
+  if (btnGoToApply) {
+    btnGoToApply.addEventListener("click", () => {
+      const target = document.querySelector("#experience-apply-section");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
+  populateApplyBranchDropdown();
+  renderExperienceUI();
+}
+
+function renderExperienceUI() {
+  if (!experienceConfig) return;
+
+  const visible = experienceConfig.visible;
+
+  // 1. 노출 여부에 따른 메인 페이지 요소 제어
+  if (navExperienceApplyLink) {
+    navExperienceApplyLink.classList.toggle("hidden", !visible);
+  }
+  if (btnGoToApply) {
+    btnGoToApply.classList.toggle("hidden", !visible);
+  }
+  if (experienceApplySection) {
+    experienceApplySection.classList.toggle("hidden", !visible);
+  }
+
+  // 2. 신청 정보 텍스트 바인딩
+  if (applySectionTitle) applySectionTitle.textContent = `${experienceConfig.name} 신청`;
+  if (infoApplyPeriod) {
+    infoApplyPeriod.textContent = `${formatDateString(experienceConfig.applyStart)} ~ ${formatDateString(experienceConfig.applyEnd)}`;
+  }
+  if (infoRunPeriod) {
+    infoRunPeriod.textContent = `${formatDateString(experienceConfig.runStart)} ~ ${formatDateString(experienceConfig.runEnd)}`;
+  }
+  if (infoBillingMonthText) {
+    infoBillingMonthText.textContent = `${experienceConfig.billingMonth} 로열티 청구`;
+  }
+  if (calcBillingBasis) {
+    calcBillingBasis.textContent = `${experienceConfig.billingMonth} 로열티로 청구됩니다.`;
+  }
+  if (infoMaxQuota) {
+    infoMaxQuota.textContent = experienceConfig.maxQuota;
+  }
+
+  const totalApplied = experienceApplications.reduce((acc, cur) => acc + cur.count, 0);
+  if (currentApplyStatus) {
+    currentApplyStatus.textContent = `${totalApplied}/${experienceConfig.maxQuota}`;
+  }
+
+  // 실시간 계산기 값 초기화
+  const count = parseInt(applyCount.value, 10) || 3;
+  if (calcNum) calcNum.textContent = count;
+  if (calcPrice) calcPrice.textContent = (count * experienceConfig.feePerPerson).toLocaleString();
+
+  // 선착순 마감 또는 기간 마감에 따른 접수 버튼 처리
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const isExpired = todayStr > experienceConfig.applyEnd;
+  const isQuotaFull = totalApplied >= experienceConfig.maxQuota;
+
+  if (btnSubmitApply) {
+    if (isQuotaFull) {
+      btnSubmitApply.textContent = "선착순 마감되었습니다";
+      btnSubmitApply.disabled = true;
+    } else if (isExpired) {
+      btnSubmitApply.textContent = "신청 기간이 마감되었습니다";
+      btnSubmitApply.disabled = true;
+    } else {
+      btnSubmitApply.textContent = "신청 접수하기";
+      btnSubmitApply.disabled = false;
+    }
+  }
+
+  // 관리자 권한에 따른 비밀번호 필드 토글
+  if (applyBranchPasswordGroup) {
+    applyBranchPasswordGroup.style.display = isAdmin ? "none" : "flex";
+    if (isAdmin) {
+      applyBranchPassword.removeAttribute("required");
+    } else {
+      applyBranchPassword.setAttribute("required", "");
+    }
+  }
+
+  // 3. 관리자 모드 UI 렌더링
+  if (isAdmin) {
+    if (adminExperienceManagement) adminExperienceManagement.classList.remove("hidden");
+    
+    // 설정 폼 기본값 설정
+    if (configVisible) configVisible.checked = visible;
+    if (configName) configName.value = experienceConfig.name;
+    if (configApplyStart) configApplyStart.value = experienceConfig.applyStart;
+    if (configApplyEnd) configApplyEnd.value = experienceConfig.applyEnd;
+    if (configRunStart) configRunStart.value = experienceConfig.runStart;
+    if (configRunEnd) configRunEnd.value = experienceConfig.runEnd;
+    if (configMaxQuota) configMaxQuota.value = experienceConfig.maxQuota;
+    if (configBillingMonth) configBillingMonth.value = experienceConfig.billingMonth;
+
+    // 신청 현황 테이블 렌더링
+    if (adminExperienceTableBody) {
+      adminExperienceTableBody.innerHTML = "";
+      if (experienceApplications.length === 0) {
+        if (adminExperienceEmpty) adminExperienceEmpty.style.display = "block";
+      } else {
+        if (adminExperienceEmpty) adminExperienceEmpty.style.display = "none";
+        experienceApplications.forEach(app => {
+          const tr = document.createElement("tr");
+          tr.style.borderBottom = "1px solid rgba(255, 255, 255, 0.05)";
+
+          const tdBranch = document.createElement("td");
+          tdBranch.style.padding = "12px";
+          tdBranch.style.textAlign = "left";
+          tdBranch.textContent = `${app.branch}점`;
+
+          const tdCount = document.createElement("td");
+          tdCount.style.padding = "12px";
+          tdCount.style.textAlign = "center";
+          tdCount.textContent = `${app.count}명`;
+
+          const tdFee = document.createElement("td");
+          tdFee.style.padding = "12px";
+          tdFee.style.textAlign = "right";
+          tdFee.style.fontWeight = "700";
+          tdFee.style.color = "var(--accent)";
+          tdFee.textContent = `${(app.count * experienceConfig.feePerPerson).toLocaleString()}원`;
+
+          const tdDate = document.createElement("td");
+          tdDate.style.padding = "12px";
+          tdDate.style.textAlign = "center";
+          tdDate.style.fontSize = "0.85rem";
+          tdDate.style.color = "var(--muted)";
+          tdDate.textContent = new Date(app.appliedAt).toLocaleString();
+
+          const tdAction = document.createElement("td");
+          tdAction.style.padding = "12px";
+          tdAction.style.textAlign = "center";
+          
+          const deleteBtn = document.createElement("button");
+          deleteBtn.type = "button";
+          deleteBtn.textContent = "삭제";
+          deleteBtn.style.padding = "4px 8px";
+          deleteBtn.style.background = "#ef4444";
+          deleteBtn.style.color = "white";
+          deleteBtn.style.border = "none";
+          deleteBtn.style.borderRadius = "4px";
+          deleteBtn.style.cursor = "pointer";
+          deleteBtn.style.fontSize = "0.8rem";
+          deleteBtn.onclick = () => deleteApplication(app.branch);
+
+          tdAction.appendChild(deleteBtn);
+          tr.append(tdBranch, tdCount, tdFee, tdDate, tdAction);
+          adminExperienceTableBody.appendChild(tr);
+        });
+      }
+    }
+  } else {
+    if (adminExperienceManagement) adminExperienceManagement.classList.add("hidden");
+  }
+}
+
+async function handleApplySubmit(e) {
+  e.preventDefault();
+  applyErrorMessage.classList.add("hidden");
+  applySuccessMessage.classList.add("hidden");
+
+  const branch = applyBranchSelect.value;
+  const password = applyBranchPassword.value;
+  const count = parseInt(applyCount.value, 10);
+  const agree = applyAgree.checked;
+
+  if (!branch) {
+    showApplyError("지점을 선택해주세요.");
+    return;
+  }
+  if (!isAdmin && !password) {
+    showApplyError("지점 비밀번호를 입력해주세요.");
+    return;
+  }
+  if (isNaN(count) || count < 3) {
+    showApplyError("최소 신청 인원은 3명 이상입니다.");
+    return;
+  }
+  if (!agree) {
+    showApplyError("유의사항에 동의해주세요.");
+    return;
+  }
+
+  try {
+    const body = {
+      action: "apply",
+      branch,
+      count
+    };
+    if (isAdmin) {
+      body.adminPassword = adminSessionPassword;
+    } else {
+      body.password = password;
+    }
+
+    const response = await fetch("/api/experience", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "신청에 실패했습니다.");
+    }
+
+    experienceConfig = data.config;
+    experienceApplications = data.applications;
+    
+    localStorage.setItem("etoos247:experience-applications", JSON.stringify(experienceApplications));
+
+    showApplySuccess(`${branch}점의 체험단 신청(${count}명)이 완료되었습니다.`);
+    experienceApplyForm.reset();
+    applyCount.value = 3;
+    calcNum.textContent = 3;
+    calcPrice.textContent = (3 * experienceConfig.feePerPerson).toLocaleString();
+    
+    renderExperienceUI();
+  } catch (err) {
+    showApplyError(err.message);
+  }
+}
+
+async function handleSaveConfig(e) {
+  e.preventDefault();
+  adminConfigMessage.classList.add("hidden");
+  adminConfigMessage.className = "apply-success-message hidden"; // Reset to success styling
+
+  const config = {
+    visible: configVisible.checked,
+    name: configName.value,
+    applyStart: configApplyStart.value,
+    applyEnd: configApplyEnd.value,
+    runStart: configRunStart.value,
+    runEnd: configRunEnd.value,
+    maxQuota: parseInt(configMaxQuota.value, 10),
+    billingMonth: configBillingMonth.value
+  };
+
+  try {
+    const response = await fetch("/api/experience", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "saveConfig",
+        adminPassword: adminSessionPassword,
+        config
+      })
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "설정 저장에 실패했습니다.");
+    }
+
+    experienceConfig = data.config;
+    experienceApplications = data.applications;
+    
+    localStorage.setItem("etoos247:experience-config", JSON.stringify(experienceConfig));
+
+    showAdminConfigMessage("설정이 성공적으로 저장되었습니다.", "success");
+    renderExperienceUI();
+  } catch (err) {
+    showAdminConfigMessage(err.message, "error");
+  }
+}
+
+async function deleteApplication(branchName) {
+  if (!confirm(`${branchName}점의 신청 내역을 삭제하시겠습니까?`)) return;
+
+  try {
+    const response = await fetch("/api/experience", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "deleteApply",
+        adminPassword: adminSessionPassword,
+        branch: branchName
+      })
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "삭제에 실패했습니다.");
+    }
+
+    experienceConfig = data.config;
+    experienceApplications = data.applications;
+    localStorage.setItem("etoos247:experience-applications", JSON.stringify(experienceApplications));
+
+    renderExperienceUI();
+  } catch (err) {
+    alert(err.message);
+  }
+}
+
+function exportExperienceToExcel() {
+  if (experienceApplications.length === 0) {
+    alert("다운로드할 신청 내역이 없습니다.");
+    return;
+  }
+
+  const data = experienceApplications.map(app => ({
+    "지점명": `${app.branch}점`,
+    "신청 인원": app.count,
+    "청구 예정 비용 (VAT 포함)": app.count * (experienceConfig ? experienceConfig.feePerPerson : 44000),
+    "신청 일시": new Date(app.appliedAt).toLocaleString()
+  }));
+
+  const ws = XLSX.utils.json_to_sheet(data);
+  const wscols = [
+    { wch: 15 },
+    { wch: 12 },
+    { wch: 28 },
+    { wch: 25 }
+  ];
+  ws['!cols'] = wscols;
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "체험단 신청 현황");
+
+  const filename = `${experienceConfig ? experienceConfig.name : "체험단_신청_현황"}_${new Date().toISOString().slice(0, 10)}.xlsx`;
+  XLSX.writeFile(wb, filename);
+}
+
+function showApplyError(msg) {
+  if (applyErrorMessage) {
+    applyErrorMessage.textContent = msg;
+    applyErrorMessage.classList.remove("hidden");
+  }
+}
+
+// Ensure error class is correct
+function showApplySuccess(msg) {
+  if (applySuccessMessage) {
+    applySuccessMessage.textContent = msg;
+    applySuccessMessage.classList.remove("hidden");
+  }
+}
+
+function showAdminConfigMessage(msg, type) {
+  if (adminConfigMessage) {
+    adminConfigMessage.textContent = msg;
+    adminConfigMessage.className = type === "success" 
+      ? "apply-success-message" 
+      : "apply-error-message";
+    adminConfigMessage.classList.remove("hidden");
+    setTimeout(() => {
+      adminConfigMessage.classList.add("hidden");
+    }, 3000);
   }
 }

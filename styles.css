@@ -3062,3 +3062,318 @@ dd a:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* ──────────────────────────────────────────────────────────────
+   9. Experience Apply Section Styles
+   ────────────────────────────────────────────────────────────── */
+.experience-apply-section {
+  padding: 80px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--glass-border);
+}
+
+.apply-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 32px;
+}
+
+.apply-info-card, .apply-form-card {
+  background: var(--surface-solid);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.apply-info-card:hover, .apply-form-card:hover {
+  border-color: rgba(95, 25, 232, 0.2);
+}
+
+.apply-info-card h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-group {
+  margin-bottom: 24px;
+}
+
+.info-group ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.info-group li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.info-group li strong {
+  color: var(--ink);
+}
+
+.info-group .note-item {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.fee-example-box {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.fee-example-box p {
+  margin: 0 0 6px 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.fee-example-box p strong {
+  color: var(--accent);
+}
+
+.warning-list li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.warning-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* 실시간 비용 계산기 */
+.fee-calculator-box {
+  background: rgba(95, 25, 232, 0.05);
+  border: 1px dashed rgba(95, 25, 232, 0.3);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.fee-calculator-box h5 {
+  margin: 0 0 14px 0;
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 850;
+  letter-spacing: -0.01em;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.calc-row.divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+  margin-top: 12px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.calc-people strong {
+  color: var(--ink);
+}
+
+.calc-price strong {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.calc-billing-basis {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 8px 0 0 0;
+}
+
+/* 신청 폼 */
+.apply-form-card h3 {
+  font-size: 1.3rem;
+  font-weight: 850;
+  color: var(--ink);
+  margin: 0 0 24px 0;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apply-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apply-form .form-group label {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.apply-form .form-group select,
+.apply-form .form-group input {
+  padding: 12px 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.apply-form .form-group select option {
+  background: #1e1b4b; /* 어두운 드롭다운 배경 설정 */
+  color: var(--ink);
+}
+
+.apply-form .form-group select:focus,
+.apply-form .form-group input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(95, 25, 232, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.apply-form .form-help-text {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 2px 0 0 0;
+}
+
+.form-agreement {
+  margin: 8px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.apply-submit-btn {
+  padding: 16px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 850;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(95, 25, 232, 0.2);
+}
+
+.apply-submit-btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
+  box-shadow: 0 6px 20px rgba(95, 25, 232, 0.35);
+}
+
+.apply-submit-btn:disabled {
+  background: #475569;
+  color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.apply-error-message {
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.apply-success-message {
+  padding: 12px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Secondary CTA Button for Hero */
+.cta-button.cta-secondary {
+  background: transparent;
+  border: 2.2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.cta-button.cta-secondary:hover {
+  background: rgba(95, 25, 232, 0.08);
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
+  box-shadow: 0 8px 25px rgba(95, 25, 232, 0.15);
+}
+
+/* Admin Toggle Switch Styles */
+.toggle-switch-wrapper input[type="checkbox"]:checked + .toggle-switch {
+  background-color: var(--accent);
+}
+
+.toggle-switch-wrapper input[type="checkbox"]:checked + .toggle-switch:before {
+  transform: translateX(20px);
+}
+
+.toggle-switch:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .apply-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

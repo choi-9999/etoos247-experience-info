@@ -35,6 +35,7 @@
         <a class="nav-menu-link" href="#highlights">종합 성과</a>
         <a class="nav-menu-link" href="#hall-of-fame-marquee">명예의 전당</a>
         <a class="nav-menu-link" href="#branch-reports">지점 대시보드</a>
+        <a class="nav-menu-link hidden" id="navExperienceApplyLink" href="#experience-apply-section">체험단 신청</a>
         <a class="nav-menu-link hidden" id="navGlobalReportLink" href="#adminDashboardPanel">종합보고서</a>
       </div>
 
@@ -65,7 +66,10 @@
           <p class="section-eyebrow">ETOOS 247 Academy Blog Experience Team</p>
           <h1 class="hero-title">믿을 수 있는 학원 마케팅,<br>이투스247학원 체험단</h1>
           <p class="hero-desc">전국 지점의 체험단 마케팅 트래픽 지표와<br>체험단 인플루언서 상세 인적사항을 관리합니다.</p>
-          <button class="cta-button" id="btnGoToSearch" type="button">지점별 성과 조회하기</button>
+          <div class="hero-actions" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <button class="cta-button" id="btnGoToSearch" type="button">지점별 성과 조회하기</button>
+            <button class="cta-button cta-secondary hidden" id="btnGoToApply" type="button">체험단 신청하기</button>
+          </div>
         </div>
         
 
@@ -351,6 +355,98 @@
         </div>
       </section>
 
+      <!-- 7. Experience Apply Section -->
+      <section class="experience-apply-section hidden" id="experience-apply-section">
+        <div class="section-container">
+          <p class="section-eyebrow">APPLICATION FORM</p>
+          <h2 class="section-title" id="applySectionTitle">2027 반수성공반 블로그 체험단 신청</h2>
+          
+          <div class="apply-container">
+            <!-- Left: Notice Info Card -->
+            <div class="apply-info-card">
+              <div class="info-group">
+                <h4>📅 운영 일정</h4>
+                <ul>
+                  <li><strong>지점 신청 기간:</strong> <span id="infoApplyPeriod">4월 28일(화) ~ 5월 5일(화)</span></li>
+                  <li><strong>체험단 운영 기간:</strong> <span id="infoRunPeriod">5월 18일(월) ~ 5월 31일(일)</span></li>
+                  <li class="note-item">* 운영 일정은 상황에 따라 변동될 수 있습니다.</li>
+                </ul>
+              </div>
+              
+              <div class="info-group">
+                <h4>💳 운영 비용 (체험단&기자단)</h4>
+                <p><strong id="infoBillingMonthText">2026년 6월분(또는 7월분) 로열티 청구</strong></p>
+                <div class="fee-example-box">
+                  <p>블로그 체험단 3명 신청 시<br>
+                  체험단 활동비(44,000원 * 3명) = <strong>132,000원</strong>(VAT 포함) 로열티 청구</p>
+                  <p class="note-item">* 업체 운영비는 본사 부담</p>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <h4>⚠️ 유의사항</h4>
+                <ul class="warning-list">
+                  <li>반수성공반 블로그 체험단은 <strong>선착순 <span id="infoMaxQuota">70</span>명</strong>으로 진행됩니다. (현재 신청: <span id="currentApplyStatus">0/70</span>명)</li>
+                  <li>블로그 체험단은 <strong>최소 3명 이상</strong> 신청해야 합니다.</li>
+                  <li>체험단 운영 시 인플루언서와 방문 일정 조율 및 방문 시 간단한 지점 안내가 필요합니다.</li>
+                  <li>문의 사항: 교육팀 (070-7464-9770)</li>
+                </ul>
+              </div>
+
+              <!-- 실시간 비용 계산기 -->
+              <div class="fee-calculator-box">
+                <h5>실시간 비용 계산기</h5>
+                <div class="calc-row">
+                  <span>신청 인원:</span>
+                  <span class="calc-people"><strong id="calcNum">3</strong> 명</span>
+                </div>
+                <div class="calc-row divider">
+                  <span>예상 비용 (VAT 포함):</span>
+                  <span class="calc-price"><strong id="calcPrice">132,000</strong> 원</span>
+                </div>
+                <p class="calc-billing-basis" id="calcBillingBasis">2026년 6월분 로열티로 청구됩니다.</p>
+              </div>
+            </div>
+
+            <!-- Right: Application Form Card -->
+            <div class="apply-form-card">
+              <h3>체험단 신청하기</h3>
+              <form id="experienceApplyForm" class="apply-form">
+                <div class="form-group">
+                  <label for="applyBranchSelect">신청 지점</label>
+                  <select id="applyBranchSelect" required>
+                    <option value="">지점을 선택하세요</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="applyBranchPasswordGroup">
+                  <label for="applyBranchPassword">지점 비밀번호</label>
+                  <input type="password" id="applyBranchPassword" placeholder="비밀번호 4자리를 입력하세요" maxlength="4" autocomplete="current-password" required>
+                  <p class="form-help-text">지점 비밀번호는 알림톡(문자)에서 확인 가능합니다.</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="applyCount">신청 인원 (최소 3명)</label>
+                  <input type="number" id="applyCount" value="3" min="3" required>
+                </div>
+
+                <div class="form-agreement">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="applyAgree" required>
+                    <span>방문 일정 조율 및 지점 안내 필수 유의사항을 확인했으며, 이에 동의합니다. (필수)</span>
+                  </label>
+                </div>
+
+                <div id="applyErrorMessage" class="apply-error-message hidden"></div>
+                <div id="applySuccessMessage" class="apply-success-message hidden"></div>
+
+                <button type="submit" class="apply-submit-btn" id="btnSubmitApply">신청 접수하기</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
       <!-- 8. CTA Footer Section -->
@@ -452,6 +548,101 @@
           <div class="keyword-list" id="globalKeywordList">
             <!-- dynamically populated -->
           </div>
+        </div>
+      </div>
+
+      <!-- 3. 체험단 신청 관리 영역 -->
+      <div class="admin-grid-row" id="adminExperienceManagement" style="margin-top: 24px;">
+        <!-- 체험단 신청 현황 목록 -->
+        <div class="chart-card experience-status-card" style="flex: 1.5;">
+          <div class="experience-status-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h4 style="margin: 0;">체험단 신청 현황 목록</h4>
+            <div class="header-buttons" style="display: flex; gap: 8px;">
+              <button class="action-btn excel-btn" id="btnExportExperienceExcel" type="button" style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: #107c41; color: white; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; transition: var(--transition);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>엑셀 다운로드</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="table-card" style="overflow-x: auto;">
+            <table class="report-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="text-align: left; padding: 12px;">지점명</th>
+                  <th style="text-align: center; padding: 12px;">신청 인원</th>
+                  <th style="text-align: right; padding: 12px;">청구 예정 비용</th>
+                  <th style="text-align: center; padding: 12px;">신청 일시</th>
+                  <th style="text-align: center; padding: 12px;">관리</th>
+                </tr>
+              </thead>
+              <tbody id="adminExperienceTableBody">
+                <!-- dynamically populated -->
+              </tbody>
+            </table>
+            <div id="adminExperienceEmpty" class="empty-state" style="padding: 40px 0; text-align: center; color: var(--muted);">
+              <p>체험단 신청 내역이 없습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 체험단 설정 제어 -->
+        <div class="chart-card experience-config-card" style="flex: 1;">
+          <h4>체험단 설정 관리</h4>
+          <form id="adminExperienceConfigForm" class="admin-config-form">
+            <div class="form-group-row" style="margin-bottom: 20px;">
+              <label class="toggle-label" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-weight: 700;">
+                <span>신청 페이지 노출 여부</span>
+                <div class="toggle-switch-wrapper" style="position: relative; width: 44px; height: 24px;">
+                  <input type="checkbox" id="configVisible" style="opacity: 0; width: 0; height: 0;">
+                  <span class="toggle-switch"></span>
+                </div>
+              </label>
+              <p class="form-help-text" style="font-size: 0.8rem; color: var(--muted); margin: 6px 0 0;">이 설정을 끄면 메인 페이지의 모든 신청 UI 및 메뉴가 숨겨집니다.</p>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px;">
+              <label for="configName" style="font-weight: 700; font-size: 0.9rem;">체험단 타이틀</label>
+              <input type="text" id="configName" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+            </div>
+
+            <div class="form-group-half" style="display: flex; gap: 12px; margin-bottom: 14px;">
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configApplyStart" style="font-weight: 700; font-size: 0.9rem;">신청 시작일</label>
+                <input type="date" id="configApplyStart" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configApplyEnd" style="font-weight: 700; font-size: 0.9rem;">신청 종료일</label>
+                <input type="date" id="configApplyEnd" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+            </div>
+
+            <div class="form-group-half" style="display: flex; gap: 12px; margin-bottom: 14px;">
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configRunStart" style="font-weight: 700; font-size: 0.9rem;">운영 시작일</label>
+                <input type="date" id="configRunStart" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configRunEnd" style="font-weight: 700; font-size: 0.9rem;">운영 종료일</label>
+                <input type="date" id="configRunEnd" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+            </div>
+
+            <div class="form-group-half" style="display: flex; gap: 12px; margin-bottom: 18px;">
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configMaxQuota" style="font-weight: 700; font-size: 0.9rem;">선착순 정원 (명)</label>
+                <input type="number" id="configMaxQuota" min="1" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+              <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                <label for="configBillingMonth" style="font-weight: 700; font-size: 0.9rem;">청구 예정 월</label>
+                <input type="text" id="configBillingMonth" placeholder="예: 2026년 6월분" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+              </div>
+            </div>
+
+            <div id="adminConfigMessage" class="apply-success-message hidden" style="margin-bottom: 14px; padding: 10px; font-size: 0.85rem; border-radius: 6px; text-align: center;"></div>
+
+            <button type="submit" class="apply-submit-btn" id="btnSaveConfig" style="width: 100%; padding: 14px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 850; font-size: 1rem; cursor: pointer; transition: var(--transition);">설정 저장하기</button>
+          </form>
         </div>
       </div>
     </section>
