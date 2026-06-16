@@ -7,7 +7,11 @@ const DATA_KEY_BRANCHES = "etoos247:experience-branches";
 
 const { sampleBranches } = require("../branches-data");
 
-// 메모리 캐시 (Redis가 없는 로컬 개발/임시 환경용)
+// Supabase 접속 정보 환경변수 로드
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+
+// 메모리 캐시 (Redis 및 Supabase가 없는 로컬 개발/임시 환경용)
 let localMemoryConfig = null;
 let localMemoryApplications = [];
 
@@ -23,6 +27,48 @@ const DEFAULT_CONFIG = {
   maxQuota: 70
 };
 
+// Supabase 연동 가능 여부 판단
+function hasSupabaseEnv() {
+  return Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+}
+
+// Supabase REST API 통신 공통 함수
+async function supabaseRequest(path, method = "GET", body = null, extraHeaders = {}) {
+  const url = `${SUPABASE_URL}${path}`;
+  const headers = {
+    "apikey": SUPABASE_ANON_KEY,
+    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+    "Content-Type": "application/json",
+    ...extraHeaders
+  };
+  
+  const options = {
+    method,
+    headers
+  };
+  
+  if (body) {
+    options.body = JSON.stringify(body);
+  }
+  
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Supabase request failed: ${response.status} - ${errorText}`);
+  }
+  
+  const text = await response.text();
+  if (!text) {
+    return null;
+  }
+  
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error(`Failed to parse JSON response: ${text}`);
+  }
+}
+
 module.exports = async function handler(request, response) {
   response.setHeader("Cache-Control", "no-store");
 
@@ -33,7 +79,7 @@ module.exports = async function handler(request, response) {
       return response.status(200).json({
         config,
         applications,
-        source: hasRedisEnv() ? "redis" : "memory"
+        source: hasSupabaseEnv() ? "supabase" : (hasRedisEnv() ? "redis" : "memory")
       });
     }
 
@@ -79,7 +125,13 @@ module.exports = async function handler(request, response) {
           applications.push(newApp);
         }
 
-        if (hasRedisEnv()) {
+        if (hasSupabaseEnv()) {
+          await supabaseRequest("/rest/v1/experience_applications", "POST", {
+            branch: newApp.branch,
+            count: newApp.count,
+            applied_at: newApp.appliedAt
+          }, { "Prefer": "resolution=merge-duplicates" });
+        } else if (hasRedisEnv()) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(applications)]);
         } else {
           localMemoryApplications = applications;
@@ -113,7 +165,12 @@ module.exports = async function handler(request, response) {
           maxQuota: parseInt(config.maxQuota, 10) || DEFAULT_CONFIG.maxQuota
         };
 
-        if (hasRedisEnv()) {
+        if (hasSupabaseEnv()) {
+          await supabaseRequest("/rest/v1/experience_config", "POST", {
+            key: "config",
+            value: normalizedConfig
+          }, { "Prefer": "resolution=merge-duplicates" });
+        } else if (hasRedisEnv()) {
           await redisCommand(["SET", DATA_KEY_CONFIG, JSON.stringify(normalizedConfig)]);
         } else {
           localMemoryConfig = normalizedConfig;
@@ -137,7 +194,19 @@ module.exports = async function handler(request, response) {
           appliedAt: app.appliedAt || new Date().toISOString()
         })).filter(app => app.branch);
 
-        if (hasRedisEnv()) {
+        if (hasSupabaseEnv()) {
+          // 기존 데이터 전체 삭제
+          await supabaseRequest("/rest/v1/experience_applications?branch=not.is.null", "DELETE");
+          // 새로운 데이터 벌크 인서트
+          if (normalized.length > 0) {
+            const payload = normalized.map(app => ({
+              branch: app.branch,
+              count: app.count,
+              applied_at: app.appliedAt
+            }));
+            await supabaseRequest("/rest/v1/experience_applications", "POST", payload);
+          }
+        } else if (hasRedisEnv()) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(normalized)]);
         } else {
           localMemoryApplications = normalized;
@@ -158,7 +227,9 @@ module.exports = async function handler(request, response) {
         const applications = await getApplications();
         const filtered = applications.filter(a => a.branch !== branch);
 
-        if (hasRedisEnv()) {
+        if (hasSupabaseEnv()) {
+          await supabaseRequest(`/rest/v1/experience_applications?branch=eq.${encodeURIComponent(branch)}`, "DELETE");
+        } else if (hasRedisEnv()) {
           await redisCommand(["SET", DATA_KEY_APPLICATIONS, JSON.stringify(filtered)]);
         } else {
           localMemoryApplications = filtered;
@@ -179,6 +250,24 @@ module.exports = async function handler(request, response) {
 };
 
 async function getConfig() {
+  if (hasSupabaseEnv()) {
+    try {
+      const data = await supabaseRequest("/rest/v1/experience_config?key=eq.config", "GET");
+      if (data && data.length > 0) {
+        return data[0].value;
+      } else {
+        // 초기 데이터 적재
+        await supabaseRequest("/rest/v1/experience_config", "POST", {
+          key: "config",
+          value: DEFAULT_CONFIG
+        }, { "Prefer": "resolution=merge-duplicates" });
+        return DEFAULT_CONFIG;
+      }
+    } catch (e) {
+      console.error("Supabase getConfig error:", e);
+    }
+  }
+
   if (!hasRedisEnv()) {
     try {
       const filePath = getLocalConfigPath();
@@ -187,7 +276,7 @@ async function getConfig() {
         return JSON.parse(fileContent);
       }
     } catch (e) {
-      // ignore (Vercel read-only filesystem)
+      // ignore
     }
     return localMemoryConfig || DEFAULT_CONFIG;
   }
@@ -201,6 +290,19 @@ async function getConfig() {
 }
 
 async function getApplications() {
+  if (hasSupabaseEnv()) {
+    try {
+      const data = await supabaseRequest("/rest/v1/experience_applications?select=*", "GET");
+      return data.map(app => ({
+        branch: app.branch,
+        count: app.count,
+        appliedAt: app.applied_at
+      }));
+    } catch (e) {
+      console.error("Supabase getApplications error:", e);
+    }
+  }
+
   if (!hasRedisEnv()) {
     try {
       const filePath = getLocalAppsPath();
@@ -292,3 +394,4 @@ function saveLocalApps(apps) {
     // ignore
   }
 }
+

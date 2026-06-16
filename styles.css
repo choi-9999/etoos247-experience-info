@@ -3448,12 +3448,20 @@ dd a:hover {
 }
 
 .timer-colon {
+  -webkit-text-fill-color: rgba(236, 72, 153, 1);
+  color: #ec4899;
   animation: timerPulse 1s infinite;
 }
 
 @keyframes timerPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+  0%, 100% { 
+    -webkit-text-fill-color: rgba(236, 72, 153, 0.25); 
+    color: rgba(236, 72, 153, 0.25);
+  }
+  50% { 
+    -webkit-text-fill-color: rgba(236, 72, 153, 1); 
+    color: rgba(236, 72, 153, 1);
+  }
 }
 
 @media (max-width: 576px) {
