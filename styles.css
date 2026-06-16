@@ -41,6 +41,8 @@ body {
   font-family: 'Outfit', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Mesh Background Styling */
@@ -2929,8 +2931,18 @@ dd a:hover {
 
 @media (max-width: 640px) {
   .highlights-box {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .highlight-card {
+    padding: 16px !important;
+    gap: 12px !important;
+    border-radius: 12px !important;
+  }
+  
+  .highlight-card-value {
+    font-size: 1.6rem !important;
   }
   
   .benefits-grid {
@@ -3757,6 +3769,35 @@ dd a:hover {
   }
   .kpi-card {
     padding: 10px 12px !important;
+  }
+  
+  /* 모바일 명예의 전당 카드 크기 축소 */
+  .fame-card {
+    width: 270px !important;
+    padding: 16px !important;
+    gap: 10px !important;
+    border-radius: 12px !important;
+  }
+  .fame-card-content {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+  }
+  .fame-card-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+  }
+  .fame-card-name {
+    font-size: 0.85rem !important;
+  }
+  .fame-card-branch {
+    font-size: 0.75rem !important;
+  }
+  .fame-card-likes {
+    font-size: 0.75rem !important;
+  }
+  .fame-marquee-track {
+    gap: 12px !important;
   }
 }
 
