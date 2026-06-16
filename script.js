@@ -537,6 +537,7 @@ const globalKpiMobileRatio = document.querySelector("#globalKpiMobileRatio");
 // ── 체험단 신청 전역 변수 및 셀렉터 ──────────────────────────────
 let experienceConfig = null;
 let experienceApplications = [];
+let countdownInterval = null;
 
 const navExperienceApplyLink = document.querySelector("#navExperienceApplyLink");
 const btnGoToApply = document.querySelector("#btnGoToApply");
@@ -550,6 +551,15 @@ const currentApplyStatus = document.querySelector("#currentApplyStatus");
 const calcNum = document.querySelector("#calcNum");
 const calcPrice = document.querySelector("#calcPrice");
 const calcBillingBasis = document.querySelector("#calcBillingBasis");
+
+// D-Day Countdown Timer Elements
+const countdownTargetText = document.querySelector("#countdownTargetText");
+const countdownTitle = document.querySelector("#countdownTitle");
+const timerDays = document.querySelector("#timerDays");
+const timerHours = document.querySelector("#timerHours");
+const timerMinutes = document.querySelector("#timerMinutes");
+const timerSeconds = document.querySelector("#timerSeconds");
+const timerCentiseconds = document.querySelector("#timerCentiseconds");
 
 const experienceApplyForm = document.querySelector("#experienceApplyForm");
 const applyBranchSelect = document.querySelector("#applyBranchSelect");
@@ -2087,6 +2097,15 @@ async function initExperience() {
 
   populateApplyBranchDropdown();
   renderExperienceUI();
+  
+  startCountdown();
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (countdownInterval) clearInterval(countdownInterval);
+    } else {
+      startCountdown();
+    }
+  });
 }
 
 function renderExperienceUI() {
@@ -2103,6 +2122,11 @@ function renderExperienceUI() {
   }
   if (experienceApplySection) {
     experienceApplySection.classList.toggle("hidden", !visible);
+  }
+  
+  const applyCountdownCard = document.querySelector("#applyCountdownCard");
+  if (applyCountdownCard) {
+    applyCountdownCard.classList.toggle("hidden", !visible);
   }
 
   // 2. 신청 정보 텍스트 바인딩
@@ -2417,4 +2441,66 @@ function showAdminConfigMessage(msg, type) {
       adminConfigMessage.classList.add("hidden");
     }, 3000);
   }
+}
+
+function startCountdown() {
+  if (countdownInterval) {
+    clearInterval(countdownInterval);
+  }
+
+  countdownInterval = setInterval(() => {
+    if (!experienceConfig || !experienceConfig.applyEnd) return;
+
+    const parts = experienceConfig.applyEnd.split("-");
+    if (parts.length !== 3) return;
+    
+    // 마감일의 23시 59분 59초 999밀리초 설정
+    const targetDate = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 23, 59, 59, 999);
+    const now = new Date();
+
+    const diff = targetDate.getTime() - now.getTime();
+
+    // D-Day 일수 계산 (날짜 기준 정밀 계산)
+    const targetMidnight = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 0, 0, 0, 0).getTime();
+    const nowMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0).getTime();
+    const dDayDiff = targetMidnight - nowMidnight;
+    const dDayDays = Math.ceil(dDayDiff / (1000 * 60 * 60 * 24));
+    
+    let dDayText = "";
+    if (dDayDays > 0) {
+      dDayText = `D-${dDayDays}`;
+    } else if (dDayDays === 0) {
+      dDayText = "D-Day";
+    } else {
+      dDayText = "마감됨";
+    }
+
+    if (countdownTargetText) {
+      countdownTargetText.textContent = `${parts[0]}.${parts[1]}.${parts[2]} / ${dDayText}`;
+    }
+
+    if (diff <= 0) {
+      clearInterval(countdownInterval);
+      if (timerDays) timerDays.textContent = "00";
+      if (timerHours) timerHours.textContent = "00";
+      if (timerMinutes) timerMinutes.textContent = "00";
+      if (timerSeconds) timerSeconds.textContent = "00";
+      if (timerCentiseconds) timerCentiseconds.textContent = "00";
+      if (countdownTitle) countdownTitle.textContent = "체험단 신청이 마감되었습니다.";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    const centiseconds = Math.floor((diff % 1000) / 10);
+
+    if (timerDays) timerDays.textContent = String(days).padStart(2, "0");
+    if (timerHours) timerHours.textContent = String(hours).padStart(2, "0");
+    if (timerMinutes) timerMinutes.textContent = String(minutes).padStart(2, "0");
+    if (timerSeconds) timerSeconds.textContent = String(seconds).padStart(2, "0");
+    if (timerCentiseconds) timerCentiseconds.textContent = String(centiseconds).padStart(2, "0");
+    if (countdownTitle) countdownTitle.textContent = "체험단 신청 마감까지";
+  }, 10);
 }

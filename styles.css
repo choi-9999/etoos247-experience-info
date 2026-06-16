@@ -3389,3 +3389,78 @@ dd a:hover {
     gap: 30px;
   }
 }
+
+/* D-Day Countdown Timer Card */
+.apply-countdown-card {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  background: var(--surface-solid);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.apply-countdown-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(95, 25, 232, 0.15);
+}
+
+.countdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(15, 13, 54, 0.05); /* --ink color with low opacity */
+  padding-bottom: 10px;
+}
+
+.countdown-title {
+  font-size: 1.15rem;
+  font-weight: 850;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.countdown-target {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(2.5rem, 6vw, 3.8rem);
+  font-weight: 900;
+  font-family: 'Outfit', -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  background: linear-gradient(90deg, #ef4444 0%, #ec4899 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 0;
+}
+
+.timer-colon {
+  animation: timerPulse 1s infinite;
+}
+
+@keyframes timerPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 576px) {
+  .apply-countdown-card {
+    padding: 16px 20px;
+  }
+  .countdown-timer {
+    gap: 4px;
+  }
+}
