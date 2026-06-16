@@ -405,7 +405,7 @@
               <div class="info-group">
                 <h4>⚠️ 유의사항</h4>
                 <ul class="warning-list">
-                  <li>반수성공반 블로그 체험단은 <strong>선착순 <span id="infoMaxQuota">70</span>명</strong>으로 진행됩니다. (현재 신청: <span id="currentApplyStatus">0/70</span>명)</li>
+                  <li>반수성공반 블로그 체험단은 <strong>선착순 <span id="infoMaxQuota">70</span>명</strong>으로 진행됩니다.</li>
                   <li>블로그 체험단은 <strong>최소 3명 이상</strong> 신청해야 합니다.</li>
                   <li>체험단 운영 시 인플루언서와 방문 일정 조율 및 방문 시 간단한 지점 안내가 필요합니다.</li>
                   <li>문의 사항: 교육팀 (070-7464-9770)</li>
@@ -458,6 +458,18 @@
 
                 <button type="submit" class="apply-submit-btn" id="btnSubmitApply">신청 접수하기</button>
               </form>
+            </div>
+
+            <!-- Real-time Quota Progress Card -->
+            <div class="apply-quota-card" id="applyQuotaCard">
+              <div class="quota-header">
+                <span class="quota-title">실시간 선착순 신청 현황</span>
+                <span class="quota-status-text" id="quotaStatusText">0 / 70명</span>
+              </div>
+              <div class="quota-progress-container">
+                <div class="quota-progress-bar" id="quotaProgressBar" style="width: 0%;"></div>
+                <span class="quota-percent" id="quotaPercentText">0%</span>
+              </div>
             </div>
           </div>
         </div>

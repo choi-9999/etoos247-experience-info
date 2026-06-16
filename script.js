@@ -549,6 +549,10 @@ const infoRunPeriod = document.querySelector("#infoRunPeriod");
 const infoBillingMonthText = document.querySelector("#infoBillingMonthText");
 const infoMaxQuota = document.querySelector("#infoMaxQuota");
 const currentApplyStatus = document.querySelector("#currentApplyStatus");
+const applyQuotaCard = document.querySelector("#applyQuotaCard");
+const quotaStatusText = document.querySelector("#quotaStatusText");
+const quotaProgressBar = document.querySelector("#quotaProgressBar");
+const quotaPercentText = document.querySelector("#quotaPercentText");
 const calcNum = document.querySelector("#calcNum");
 const calcPrice = document.querySelector("#calcPrice");
 const calcBillingBasis = document.querySelector("#calcBillingBasis");
@@ -2225,6 +2229,22 @@ function renderExperienceUI() {
   const totalApplied = experienceApplications.reduce((acc, cur) => acc + cur.count, 0);
   if (currentApplyStatus) {
     currentApplyStatus.textContent = `${totalApplied}/${experienceConfig.maxQuota}`;
+  }
+
+  if (applyQuotaCard) {
+    applyQuotaCard.classList.toggle("hidden", !visible);
+  }
+  if (quotaStatusText) {
+    quotaStatusText.textContent = `${totalApplied} / ${experienceConfig.maxQuota}명`;
+  }
+  if (quotaProgressBar || quotaPercentText) {
+    const percent = experienceConfig.maxQuota > 0 ? Math.min(100, Math.round((totalApplied / experienceConfig.maxQuota) * 100)) : 0;
+    if (quotaProgressBar) {
+      quotaProgressBar.style.width = `${percent}%`;
+    }
+    if (quotaPercentText) {
+      quotaPercentText.textContent = `${percent}%`;
+    }
   }
 
   // 실시간 계산기 값 초기화
