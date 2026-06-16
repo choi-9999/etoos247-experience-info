@@ -562,8 +562,20 @@ const timerMinutes = document.querySelector("#timerMinutes");
 const timerSeconds = document.querySelector("#timerSeconds");
 const timerCentiseconds = document.querySelector("#timerCentiseconds");
 
+const ALL_BRANCH_NAMES = [
+  "대치", "강북", "노량진", "마포", "목동", "목동오목교", "서울강동", "서울강서", "서울광진", 
+  "서울대점", "서울도봉", "서울성동", "서울성북", "서울송파", "은평서대문", "광명", "다산", 
+  "김포", "동탄", "부천", "분당정자", "수원시청", "수원영통", "수원정자", "안산", "용인수지", 
+  "의정부", "일산동구", "일산서구", "파주", "평택", "하남", "인천부평", "인천송도", "인천인하대", 
+  "인천청라", "원주", "춘천", "대전둔산", "천안", "청주", "광주남구", "광주동구", "광주북구", 
+  "광주수완", "목포", "익산", "대구달서", "대구수성 1관", "대구수성 2관", "부산교대", "부산대", 
+  "부산북구", "부산서면", "부산해운대", "울산남구", "진주", "창원", "제주", "안성기숙", 
+  "이천기숙", "독학기숙"
+];
+
 const experienceApplyForm = document.querySelector("#experienceApplyForm");
-const applyBranchSelect = document.querySelector("#applyBranchSelect");
+const applyBranchInput = document.querySelector("#applyBranchInput");
+const applyBranchSuggestions = document.querySelector("#applyBranchSuggestions");
 const applyCount = document.querySelector("#applyCount");
 const applyAgree = document.querySelector("#applyAgree");
 const applyErrorMessage = document.querySelector("#applyErrorMessage");
@@ -634,9 +646,6 @@ async function fetchBranches() {
 
   clearSelectedBranch();
   renderBranches(branchSearch.value);
-  if (typeof populateApplyBranchDropdown === "function") {
-    populateApplyBranchDropdown();
-  }
 }
 
 async function verifyAdminPassword(password) {
@@ -2032,14 +2041,54 @@ function initNavScroll() {
 
 // ── 체험단 신청 비즈니스 로직 ──────────────────────────────────────
 
-function populateApplyBranchDropdown() {
-  if (!applyBranchSelect) return;
-  applyBranchSelect.innerHTML = '<option value="">지점을 선택하세요</option>';
-  branches.forEach(b => {
-    const opt = document.createElement("option");
-    opt.value = b.branch;
-    opt.textContent = `${b.branch}점`;
-    applyBranchSelect.appendChild(opt);
+function initApplyBranchAutocomplete() {
+  if (!applyBranchInput || !applyBranchSuggestions) return;
+
+  applyBranchInput.addEventListener("input", () => {
+    const value = applyBranchInput.value.trim();
+    if (!value) {
+      applyBranchSuggestions.style.display = "none";
+      applyBranchSuggestions.innerHTML = "";
+      return;
+    }
+
+    const matches = ALL_BRANCH_NAMES.filter(name => 
+      name.toLowerCase().includes(value.toLowerCase())
+    );
+
+    if (matches.length > 0) {
+      applyBranchSuggestions.innerHTML = matches
+        .map(name => `<div class="suggestion-item" data-value="${name}">${name}점</div>`)
+        .join("");
+      applyBranchSuggestions.style.display = "block";
+    } else {
+      applyBranchSuggestions.innerHTML = `<div class="suggestion-no-result">검색 결과가 없습니다</div>`;
+      applyBranchSuggestions.style.display = "block";
+    }
+  });
+
+  applyBranchSuggestions.addEventListener("click", (e) => {
+    const item = e.target.closest(".suggestion-item");
+    if (item) {
+      const selectedValue = item.getAttribute("data-value");
+      applyBranchInput.value = selectedValue;
+      applyBranchSuggestions.style.display = "none";
+      applyBranchSuggestions.innerHTML = "";
+    }
+  });
+
+  applyBranchInput.addEventListener("blur", () => {
+    setTimeout(() => {
+      applyBranchSuggestions.style.display = "none";
+      applyBranchSuggestions.innerHTML = "";
+    }, 200);
+  });
+
+  applyBranchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      applyBranchSuggestions.style.display = "none";
+      applyBranchSuggestions.innerHTML = "";
+    }
   });
 }
 
@@ -2118,8 +2167,7 @@ async function initExperience() {
       }
     });
   }
-
-  populateApplyBranchDropdown();
+  initApplyBranchAutocomplete();
   renderExperienceUI();
   
   startCountdown();
@@ -2290,12 +2338,17 @@ async function handleApplySubmit(e) {
   applyErrorMessage.classList.add("hidden");
   applySuccessMessage.classList.add("hidden");
 
-  const branch = applyBranchSelect.value;
+  const branch = applyBranchInput.value.trim();
   const count = parseInt(applyCount.value, 10);
   const agree = applyAgree.checked;
 
   if (!branch) {
-    showApplyError("지점을 선택해주세요.");
+    showApplyError("지점명을 입력해주세요.");
+    return;
+  }
+
+  if (!ALL_BRANCH_NAMES.includes(branch)) {
+    showApplyError("존재하지 않는 지점명입니다. 자동완성 추천 지점 중에서 올바르게 입력해주세요.");
     return;
   }
   if (isNaN(count) || count < 3) {

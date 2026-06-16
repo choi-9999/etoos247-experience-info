@@ -432,10 +432,11 @@
               <h3>체험단 신청하기</h3>
               <form id="experienceApplyForm" class="apply-form">
                 <div class="form-group">
-                  <label for="applyBranchSelect">신청 지점</label>
-                  <select id="applyBranchSelect" required>
-                    <option value="">지점을 선택하세요</option>
-                  </select>
+                  <label for="applyBranchInput">신청 지점</label>
+                  <div class="autocomplete-wrapper">
+                    <input type="text" id="applyBranchInput" placeholder="지점명을 입력하세요 (예: 대치, 목동)" required autocomplete="off">
+                    <div class="autocomplete-suggestions" id="applyBranchSuggestions" style="display: none;"></div>
+                  </div>
                 </div>
 
 
