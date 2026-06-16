@@ -40,7 +40,7 @@ module.exports = async function handler(request, response) {
 
       // 1. 지점 신청 접수
       if (action === "apply") {
-        const { branch, password, count } = request.body || {};
+        const { branch, count } = request.body || {};
         if (!branch || !count) {
           return response.status(400).json({ error: "지점명과 신청 인원은 필수입니다." });
         }
@@ -48,19 +48,6 @@ module.exports = async function handler(request, response) {
         const countNum = parseInt(count, 10);
         if (isNaN(countNum) || countNum < 3) {
           return response.status(400).json({ error: "체험단 신청은 최소 3명 이상부터 가능합니다." });
-        }
-
-        // 비밀번호 검증 (관리자 세션이 아닐 때만 검사)
-        const isAdminSession = adminPassword === getAdminPassword();
-        if (!isAdminSession) {
-          const branches = await getBranchesData();
-          const branchItem = branches.find(b => b.branch === branch);
-          if (!branchItem) {
-            return response.status(404).json({ error: "존재하지 않는 지점입니다." });
-          }
-          if (branchItem.password !== password) {
-            return response.status(401).json({ error: "지점 비밀번호가 일치하지 않습니다." });
-          }
         }
 
         const config = await getConfig();

@@ -3250,7 +3250,7 @@ dd a:hover {
 }
 
 .apply-form .form-group select option {
-  background: #1e1b4b; /* 어두운 드롭다운 배경 설정 */
+  background: var(--surface);
   color: var(--ink);
 }
 
@@ -3351,6 +3351,18 @@ dd a:hover {
 }
 
 /* Admin Toggle Switch Styles */
+.toggle-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: .3s;
+  border-radius: 24px;
+}
+
 .toggle-switch-wrapper input[type="checkbox"]:checked + .toggle-switch {
   background-color: var(--accent);
 }

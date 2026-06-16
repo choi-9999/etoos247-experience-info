@@ -553,8 +553,6 @@ const calcBillingBasis = document.querySelector("#calcBillingBasis");
 
 const experienceApplyForm = document.querySelector("#experienceApplyForm");
 const applyBranchSelect = document.querySelector("#applyBranchSelect");
-const applyBranchPasswordGroup = document.querySelector("#applyBranchPasswordGroup");
-const applyBranchPassword = document.querySelector("#applyBranchPassword");
 const applyCount = document.querySelector("#applyCount");
 const applyAgree = document.querySelector("#applyAgree");
 const applyErrorMessage = document.querySelector("#applyErrorMessage");
@@ -2153,15 +2151,7 @@ function renderExperienceUI() {
     }
   }
 
-  // 관리자 권한에 따른 비밀번호 필드 토글
-  if (applyBranchPasswordGroup) {
-    applyBranchPasswordGroup.style.display = isAdmin ? "none" : "flex";
-    if (isAdmin) {
-      applyBranchPassword.removeAttribute("required");
-    } else {
-      applyBranchPassword.setAttribute("required", "");
-    }
-  }
+
 
   // 3. 관리자 모드 UI 렌더링
   if (isAdmin) {
@@ -2245,16 +2235,11 @@ async function handleApplySubmit(e) {
   applySuccessMessage.classList.add("hidden");
 
   const branch = applyBranchSelect.value;
-  const password = applyBranchPassword.value;
   const count = parseInt(applyCount.value, 10);
   const agree = applyAgree.checked;
 
   if (!branch) {
     showApplyError("지점을 선택해주세요.");
-    return;
-  }
-  if (!isAdmin && !password) {
-    showApplyError("지점 비밀번호를 입력해주세요.");
     return;
   }
   if (isNaN(count) || count < 3) {
@@ -2274,8 +2259,6 @@ async function handleApplySubmit(e) {
     };
     if (isAdmin) {
       body.adminPassword = adminSessionPassword;
-    } else {
-      body.password = password;
     }
 
     const response = await fetch("/api/experience", {
