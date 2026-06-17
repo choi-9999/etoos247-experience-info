@@ -460,6 +460,25 @@ const sampleBranches = [
 
 const MASTER_BRANCH_PASSWORD = "etoos247!";
 
+// 2025년 (전년 동기) 블로그 체험단 실적 고정 데이터
+const LAST_YEAR_DATA = {
+  "대치": { contents: 5, views: 1785 },
+  "목동": { contents: 5, views: 7535 },
+  "목동오목교": { contents: 5, views: 13356 },
+  "서울강서": { contents: 5, views: 1221 },
+  "분당정자": { contents: 5, views: 1343 },
+  "수원시청": { contents: 5, views: 945 },
+  "인천송도": { contents: 5, views: 1431 },
+  "광주수완": { contents: 5, views: 3470 },
+  "광주북구": { contents: 5, views: 2164 },
+  "진주": { contents: 4, views: 2458 },
+  "이천기숙": { contents: 17, views: 3809 },
+  "독학기숙": { contents: 9, views: 5077 }
+};
+const LAST_YEAR_TOTAL_CONTENTS = 75;
+const LAST_YEAR_TOTAL_VIEWS = 44644;
+const LAST_YEAR_AVERAGE_VIEWS = 44644 / 75;
+
 let branches = normalizeBranches(sampleBranches);
 
 const branchList = document.querySelector("#branchList");
@@ -527,6 +546,15 @@ const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
 const globalKpiContents = document.querySelector("#globalKpiContents");
 const globalKpiViews = document.querySelector("#globalKpiViews");
 const globalKpiViewsAvg = document.querySelector("#globalKpiViewsAvg");
+
+// 비교 모드 셀렉터
+const compareModeToggle = document.querySelector("#compareModeToggle");
+const compareKpiContentsBadge = document.querySelector("#compareKpiContentsBadge");
+const compareKpiViewsBadge = document.querySelector("#compareKpiViewsBadge");
+const compareKpiViewsAvgBadge = document.querySelector("#compareKpiViewsAvgBadge");
+const compareChartCard = document.querySelector("#compareChartCard");
+
+let compareBarChart = null; // Chart.js 인스턴스 보관용
 
 // ── 체험단 신청 전역 변수 및 셀렉터 ──────────────────────────────
 let experienceConfig = null;
@@ -1663,6 +1691,13 @@ if (closeAdminDashboard) {
   });
 }
 
+// 전년 동기 비교 모드 토글 이벤트 등록
+if (compareModeToggle) {
+  compareModeToggle.addEventListener("change", () => {
+    renderGlobalDashboard();
+  });
+}
+
 // 종합보고서 네비게이션 링크: 클릭 시 종합보고서 뷰로 전환
 if (navGlobalReportLink) {
   navGlobalReportLink.addEventListener("click", (e) => {
@@ -1767,6 +1802,93 @@ function calculateGlobalMetrics() {
   };
 }
 
+// 전년 vs 올해 비교 멀티 바 차트 렌더링 함수
+function renderCompareBarChart(currentLeaderboard) {
+  const ctx = document.getElementById("compareBarChart");
+  if (!ctx) return;
+
+  if (compareBarChart) {
+    compareBarChart.destroy();
+  }
+
+  const branchesToCompare = Object.keys(LAST_YEAR_DATA);
+  
+  // 2025 전년 데이터
+  const lastYearViews = branchesToCompare.map(bName => LAST_YEAR_DATA[bName].views);
+
+  // 2026 올해 데이터 (X축 지점명에 매핑)
+  const thisYearViews = branchesToCompare.map(bName => {
+    const current = currentLeaderboard.find(item => item.name === bName);
+    return current ? current.totalViews : 0;
+  });
+
+  compareBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: branchesToCompare,
+      datasets: [
+        {
+          label: '2025년 (전년 동기)',
+          data: lastYearViews,
+          backgroundColor: 'rgba(100, 116, 139, 0.45)', // 차분한 그레이
+          borderColor: 'rgba(100, 116, 139, 0.7)',
+          borderWidth: 1,
+          borderRadius: 4
+        },
+        {
+          label: '2026년 (올해)',
+          data: thisYearViews,
+          backgroundColor: 'rgba(95, 25, 232, 0.85)', // var(--accent)
+          borderColor: 'rgba(95, 25, 232, 1)',
+          borderWidth: 1,
+          borderRadius: 4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: '#94a3b8',
+            font: { family: 'Outfit, Noto Sans KR', weight: '700' }
+          }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: 'rgba(15, 13, 45, 0.95)',
+          titleFont: { family: 'Outfit, Noto Sans KR', weight: '700' },
+          bodyFont: { family: 'Outfit, Noto Sans KR' },
+          callbacks: {
+            label: function(context) {
+              return `${context.dataset.label}: ${context.raw.toLocaleString()}회`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            color: '#94a3b8',
+            font: { family: 'Outfit, Noto Sans KR', size: 10, weight: '700' }
+          }
+        },
+        y: {
+          grid: { color: 'rgba(15, 23, 42, 0.05)' },
+          ticks: {
+            color: '#94a3b8',
+            font: { family: 'Outfit, Noto Sans KR', size: 10 }
+          }
+        }
+      }
+    }
+  });
+}
+
 function renderGlobalDashboard() {
   const metrics = calculateGlobalMetrics();
   if (!metrics) return;
@@ -1774,6 +1896,59 @@ function renderGlobalDashboard() {
   if (globalKpiContents) globalKpiContents.textContent = `${metrics.totalContents}개`;
   if (globalKpiViews) globalKpiViews.textContent = metrics.totalViews.toLocaleString();
   if (globalKpiViewsAvg) globalKpiViewsAvg.textContent = metrics.averageViews.toLocaleString();
+
+  // 비교 모드 동작 상태 취득
+  const showCompare = compareModeToggle && compareModeToggle.checked;
+  const compareCols = document.querySelectorAll(".compare-col");
+
+  if (showCompare) {
+    // 1. KPI 카드별 전년 동기 대비 증감률(%) 계산 및 배지 렌더링
+    // 콘텐츠 수
+    const contentsDiffPct = ((metrics.totalContents - LAST_YEAR_TOTAL_CONTENTS) / LAST_YEAR_TOTAL_CONTENTS) * 100;
+    if (compareKpiContentsBadge) {
+      compareKpiContentsBadge.textContent = contentsDiffPct >= 0 ? `▲${contentsDiffPct.toFixed(1)}%` : `▼${Math.abs(contentsDiffPct).toFixed(1)}%`;
+      compareKpiContentsBadge.className = "compare-badge " + (contentsDiffPct >= 0 ? "plus" : "minus");
+      compareKpiContentsBadge.classList.remove("hidden");
+    }
+    // 총 누적 조회수
+    const viewsDiffPct = ((metrics.totalViews - LAST_YEAR_TOTAL_VIEWS) / LAST_YEAR_TOTAL_VIEWS) * 100;
+    if (compareKpiViewsBadge) {
+      compareKpiViewsBadge.textContent = viewsDiffPct >= 0 ? `▲${viewsDiffPct.toFixed(1)}%` : `▼${Math.abs(viewsDiffPct).toFixed(1)}%`;
+      compareKpiViewsBadge.className = "compare-badge " + (viewsDiffPct >= 0 ? "plus" : "minus");
+      compareKpiViewsBadge.classList.remove("hidden");
+    }
+    // 평균 조회수
+    const avgViewsDiffPct = ((metrics.averageViews - LAST_YEAR_AVERAGE_VIEWS) / LAST_YEAR_AVERAGE_VIEWS) * 100;
+    if (compareKpiViewsAvgBadge) {
+      compareKpiViewsAvgBadge.textContent = avgViewsDiffPct >= 0 ? `▲${avgViewsDiffPct.toFixed(1)}%` : `▼${Math.abs(avgViewsDiffPct).toFixed(1)}%`;
+      compareKpiViewsAvgBadge.className = "compare-badge " + (avgViewsDiffPct >= 0 ? "plus" : "minus");
+      compareKpiViewsAvgBadge.classList.remove("hidden");
+    }
+
+    // 2. 리더보드 테이블 전년 대비 컬럼 헤더 노출
+    compareCols.forEach(el => el.classList.remove("hidden"));
+
+    // 3. 전년 vs 올해 성과 비교 차트 생성
+    if (compareChartCard) {
+      compareChartCard.classList.remove("hidden");
+      renderCompareBarChart(metrics.leaderboard);
+    }
+  } else {
+    // 비교 모드 비활성화(OFF) 시 리셋
+    if (compareKpiContentsBadge) compareKpiContentsBadge.classList.add("hidden");
+    if (compareKpiViewsBadge) compareKpiViewsBadge.classList.add("hidden");
+    if (compareKpiViewsAvgBadge) compareKpiViewsAvgBadge.classList.add("hidden");
+
+    compareCols.forEach(el => el.classList.add("hidden"));
+
+    if (compareChartCard) {
+      compareChartCard.classList.add("hidden");
+    }
+    if (compareBarChart) {
+      compareBarChart.destroy();
+      compareBarChart = null;
+    }
+  }
 
   if (leaderboardTableBody) {
     leaderboardTableBody.innerHTML = "";
@@ -1809,7 +1984,31 @@ function renderGlobalDashboard() {
       tdAvg.className = "col-avg";
       tdAvg.textContent = item.averageViews.toLocaleString();
 
-      tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg);
+      if (showCompare) {
+        const tdCompare = document.createElement("td");
+        tdCompare.className = "col-compare compare-col";
+        const lyBranch = LAST_YEAR_DATA[item.name];
+        if (lyBranch) {
+          const diff = item.totalViews - lyBranch.views;
+          if (diff > 0) {
+            tdCompare.textContent = `▲ ${diff.toLocaleString()}`;
+            tdCompare.className = "col-compare compare-col plus";
+          } else if (diff < 0) {
+            tdCompare.textContent = `▼ ${Math.abs(diff).toLocaleString()}`;
+            tdCompare.className = "col-compare compare-col minus";
+          } else {
+            tdCompare.textContent = "0";
+            tdCompare.className = "col-compare compare-col zero";
+          }
+        } else {
+          tdCompare.textContent = "New";
+          tdCompare.style.color = "var(--accent)";
+        }
+        tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg, tdCompare);
+      } else {
+        tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg);
+      }
+
       leaderboardTableBody.append(tr);
     });
   }
