@@ -1902,25 +1902,28 @@ function renderGlobalDashboard() {
   const compareCols = document.querySelectorAll(".compare-col");
 
   if (showCompare) {
-    // 1. KPI 카드별 전년 동기 대비 증감률(%) 계산 및 배지 렌더링
+    // 1. KPI 카드별 전년 동기 대비 증감률(%) 계산 및 배지 렌더링 (전년 실제 수치 기입)
     // 콘텐츠 수
     const contentsDiffPct = ((metrics.totalContents - LAST_YEAR_TOTAL_CONTENTS) / LAST_YEAR_TOTAL_CONTENTS) * 100;
     if (compareKpiContentsBadge) {
-      compareKpiContentsBadge.textContent = contentsDiffPct >= 0 ? `▲${contentsDiffPct.toFixed(1)}%` : `▼${Math.abs(contentsDiffPct).toFixed(1)}%`;
+      const dirText = contentsDiffPct >= 0 ? `▲${contentsDiffPct.toFixed(1)}%` : `▼${Math.abs(contentsDiffPct).toFixed(1)}%`;
+      compareKpiContentsBadge.textContent = `(전년: ${LAST_YEAR_TOTAL_CONTENTS}개 | ${dirText})`;
       compareKpiContentsBadge.className = "compare-badge " + (contentsDiffPct >= 0 ? "plus" : "minus");
       compareKpiContentsBadge.classList.remove("hidden");
     }
     // 총 누적 조회수
     const viewsDiffPct = ((metrics.totalViews - LAST_YEAR_TOTAL_VIEWS) / LAST_YEAR_TOTAL_VIEWS) * 100;
     if (compareKpiViewsBadge) {
-      compareKpiViewsBadge.textContent = viewsDiffPct >= 0 ? `▲${viewsDiffPct.toFixed(1)}%` : `▼${Math.abs(viewsDiffPct).toFixed(1)}%`;
+      const dirText = viewsDiffPct >= 0 ? `▲${viewsDiffPct.toFixed(1)}%` : `▼${Math.abs(viewsDiffPct).toFixed(1)}%`;
+      compareKpiViewsBadge.textContent = `(전년: ${LAST_YEAR_TOTAL_VIEWS.toLocaleString()}회 | ${dirText})`;
       compareKpiViewsBadge.className = "compare-badge " + (viewsDiffPct >= 0 ? "plus" : "minus");
       compareKpiViewsBadge.classList.remove("hidden");
     }
     // 평균 조회수
     const avgViewsDiffPct = ((metrics.averageViews - LAST_YEAR_AVERAGE_VIEWS) / LAST_YEAR_AVERAGE_VIEWS) * 100;
     if (compareKpiViewsAvgBadge) {
-      compareKpiViewsAvgBadge.textContent = avgViewsDiffPct >= 0 ? `▲${avgViewsDiffPct.toFixed(1)}%` : `▼${Math.abs(avgViewsDiffPct).toFixed(1)}%`;
+      const dirText = avgViewsDiffPct >= 0 ? `▲${avgViewsDiffPct.toFixed(1)}%` : `▼${Math.abs(avgViewsDiffPct).toFixed(1)}%`;
+      compareKpiViewsAvgBadge.textContent = `(전년: ${Math.round(LAST_YEAR_AVERAGE_VIEWS).toLocaleString()}회 | ${dirText})`;
       compareKpiViewsAvgBadge.className = "compare-badge " + (avgViewsDiffPct >= 0 ? "plus" : "minus");
       compareKpiViewsAvgBadge.classList.remove("hidden");
     }
@@ -1989,7 +1992,8 @@ function renderGlobalDashboard() {
         tdCompare.className = "col-compare compare-col";
         const lyBranch = LAST_YEAR_DATA[item.name];
         if (lyBranch) {
-          const diff = item.totalViews - lyBranch.views;
+          const lyAvg = lyBranch.views / lyBranch.contents;
+          const diff = Math.round(item.averageViews - lyAvg);
           if (diff > 0) {
             tdCompare.textContent = `▲ ${diff.toLocaleString()}`;
             tdCompare.className = "col-compare compare-col plus";
