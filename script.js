@@ -527,7 +527,6 @@ const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
 const globalKpiContents = document.querySelector("#globalKpiContents");
 const globalKpiViews = document.querySelector("#globalKpiViews");
 const globalKpiViewsAvg = document.querySelector("#globalKpiViewsAvg");
-const globalKpiMobileRatio = document.querySelector("#globalKpiMobileRatio");
 
 // ── 체험단 신청 전역 변수 및 셀렉터 ──────────────────────────────
 let experienceConfig = null;
@@ -1775,7 +1774,6 @@ function renderGlobalDashboard() {
   if (globalKpiContents) globalKpiContents.textContent = `${metrics.totalContents}개`;
   if (globalKpiViews) globalKpiViews.textContent = metrics.totalViews.toLocaleString();
   if (globalKpiViewsAvg) globalKpiViewsAvg.textContent = metrics.averageViews.toLocaleString();
-  if (globalKpiMobileRatio) globalKpiMobileRatio.textContent = `${metrics.globalMobileRatio}%`;
 
   if (leaderboardTableBody) {
     leaderboardTableBody.innerHTML = "";
@@ -1811,11 +1809,7 @@ function renderGlobalDashboard() {
       tdAvg.className = "col-avg";
       tdAvg.textContent = item.averageViews.toLocaleString();
 
-      const tdRatio = document.createElement("td");
-      tdRatio.className = "col-ratio";
-      tdRatio.textContent = `${item.mobileRatio}%`;
-
-      tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg, tdRatio);
+      tr.append(tdRank, tdBranch, tdViews, tdCount, tdAvg);
       leaderboardTableBody.append(tr);
     });
   }
