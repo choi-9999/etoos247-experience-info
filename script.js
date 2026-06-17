@@ -542,6 +542,7 @@ const adminDashboardPanel = document.querySelector("#adminDashboardPanel");
 const adminExperiencePanel = document.querySelector("#adminExperiencePanel");
 const workspace = document.querySelector(".workspace");
 const closeAdminDashboard = document.querySelector("#closeAdminDashboard");
+const btnDownloadReportPDF = document.querySelector("#btnDownloadReportPDF");
 const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
 
 const globalKpiBranches = document.querySelector("#globalKpiBranches");
@@ -1693,6 +1694,59 @@ if (mobileBranchSelect) {
 if (closeAdminDashboard) {
   closeAdminDashboard.addEventListener("click", () => {
     showLandingView();
+  });
+}
+
+// PDF 다운로드 버튼 이벤트 등록
+if (btnDownloadReportPDF) {
+  btnDownloadReportPDF.addEventListener("click", async () => {
+    const originalText = btnDownloadReportPDF.innerHTML;
+    btnDownloadReportPDF.disabled = true;
+    btnDownloadReportPDF.innerHTML = `
+      <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite;"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89H18"/></svg>
+      <span>PDF 생성 중...</span>
+    `;
+
+    try {
+      const element = document.querySelector("#adminDashboardPanel");
+      if (!element) return;
+
+      // html2canvas로 종합보고서 패널을 고해상도로 캡처
+      const canvas = await html2canvas(element, {
+        scale: 2, // 고해상도
+        useCORS: true,
+        backgroundColor: "#ffffff", // 배경을 흰색으로 지정
+        logging: false
+      });
+
+      const imgData = canvas.toDataURL("image/png");
+      const { jsPDF } = window.jspdf;
+
+      const doc = new jsPDF("p", "mm", "a4");
+      const pageWidth = 210;
+      const pageHeight = 297;
+
+      let printWidth = pageWidth;
+      let printHeight = (canvas.height * printWidth) / canvas.width;
+
+      if (printHeight > pageHeight) {
+        printHeight = pageHeight;
+        printWidth = (canvas.width * printHeight) / canvas.height;
+      }
+
+      // 가운데 정렬 여백 계산
+      const marginX = (pageWidth - printWidth) / 2;
+      const marginY = (pageHeight - printHeight) / 2;
+
+      doc.addImage(imgData, "PNG", marginX, marginY, printWidth, printHeight);
+      doc.save("전체지점_종합결과보고서.pdf");
+    } catch (error) {
+      console.error("PDF 생성 중 오류 발생:", error);
+      alert("PDF 생성 중 오류가 발생했습니다. 다시 시도해 주세요.");
+    } finally {
+      btnDownloadReportPDF.disabled = false;
+      btnDownloadReportPDF.innerHTML = originalText;
+    }
   });
 }
 
