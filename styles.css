@@ -1864,6 +1864,10 @@ dd a:hover {
   animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.admin-dashboard-panel .kpi-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .admin-dashboard-head {
   display: flex;
   justify-content: space-between;
