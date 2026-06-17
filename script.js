@@ -2057,9 +2057,17 @@ function renderGlobalDashboard() {
       tr.addEventListener("click", () => {
         const branchItem = branches.find(b => b.branch === item.name);
         if (branchItem) {
-          isAdmin = false;
-          updateAdminState();
+          // 관리자 모드를 유지하면서 종합보고서를 닫고 랜딩 뷰로 전환
+          showLandingView();
+          
+          // 해당 지점 대시보드 렌더링
           selectBranch(branchItem);
+          
+          // 지점 대시보드 영역으로 스크롤 이동
+          const target = document.querySelector("#branch-reports");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
         }
       });
 
@@ -2302,6 +2310,7 @@ function initNavScroll() {
   if (navLogo) {
     navLogo.style.cursor = "pointer";
     navLogo.addEventListener("click", () => {
+      showLandingView();
       const target = document.querySelector("#hero");
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
