@@ -447,12 +447,7 @@ const sampleBranches = [
         "blog": "https://blog.naver.com/happy0463",
         "note": "5.20 수요일 오후 5시 30분"
       },
-      {
-        "name": "김지애",
-        "phone": "010-7743-7469",
-        "blog": "https://blog.naver.com/shrdnjs7469?fromRss=true&trackingCode=rss",
-        "note": "6월2일 12시"
-      },
+
       {
         "name": "김수경",
         "phone": "010-9942-1004",
