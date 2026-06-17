@@ -3879,3 +3879,12 @@ dd a:hover {
   }
 }
 
+/* PDF 캡처 시 강제 선명도 유지용 헬퍼 클래스 */
+.html2canvas-capturing,
+.html2canvas-capturing * {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+

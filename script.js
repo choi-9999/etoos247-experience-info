@@ -1711,33 +1711,37 @@ if (btnDownloadReportPDF) {
       const element = document.querySelector("#adminDashboardPanel");
       if (!element) return;
 
-      // 임시로 애니메이션, 트랜지션, 트랜스폼, 오파시티 스타일을 고정하여 html2canvas 렌더링 붕괴(뿌옇게 옅어지는 현상) 방지
-      const originalTransition = element.style.transition;
-      const originalAnimation = element.style.animation;
-      const originalTransform = element.style.transform;
-      const originalOpacity = element.style.opacity;
-
-      element.style.transition = "none";
-      element.style.animation = "none";
-      element.style.transform = "none";
-      element.style.opacity = "1";
+      // 1. html2canvas-capturing 클래스를 부여하여 모든 하위 요소의 애니메이션/투명도를 강제로 불투명(opacity 1) 고정
+      element.classList.add("html2canvas-capturing");
 
       // html2canvas가 올바른 computedStyle을 수집하도록 강제 리플로우 유도
       void element.offsetWidth;
 
-      // html2canvas로 종합보고서 패널을 고해상도로 캡처
+      // 2. html2canvas로 종합보고서 패널을 고해상도로 캡처
       const canvas = await html2canvas(element, {
         scale: 2, // 고해상도
         useCORS: true,
         backgroundColor: "#ffffff", // 배경을 흰색으로 지정
-        logging: false
+        logging: false,
+        onclone: (clonedDoc) => {
+          // 복제된 문서 내부의 모든 canvas를 찾아 원본 canvas의 픽셀 데이터를 강제 복사하여
+          // Chart.js 등 캔버스 요소가 리사이즈/리렌더링으로 인해 뿌옇게(투명하게) 리셋되는 현상 방지
+          const originalCanvases = element.querySelectorAll("canvas");
+          const clonedCanvases = clonedDoc.querySelectorAll("canvas");
+          originalCanvases.forEach((origCanvas, index) => {
+            const clonedCanvas = clonedCanvases[index];
+            if (clonedCanvas) {
+              const ctx = clonedCanvas.getContext("2d");
+              clonedCanvas.width = origCanvas.width;
+              clonedCanvas.height = origCanvas.height;
+              ctx.drawImage(origCanvas, 0, 0);
+            }
+          });
+        }
       });
 
-      // 임시 적용한 스타일 복원
-      element.style.transition = originalTransition;
-      element.style.animation = originalAnimation;
-      element.style.transform = originalTransform;
-      element.style.opacity = originalOpacity;
+      // 3. 캡처 완료 후 클래스 제거
+      element.classList.remove("html2canvas-capturing");
 
       const imgData = canvas.toDataURL("image/png");
       const { jsPDF } = window.jspdf;
