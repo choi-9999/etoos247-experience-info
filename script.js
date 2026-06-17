@@ -543,12 +543,14 @@ const workspace = document.querySelector(".workspace");
 const closeAdminDashboard = document.querySelector("#closeAdminDashboard");
 const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
 
+const globalKpiBranches = document.querySelector("#globalKpiBranches");
 const globalKpiContents = document.querySelector("#globalKpiContents");
 const globalKpiViews = document.querySelector("#globalKpiViews");
 const globalKpiViewsAvg = document.querySelector("#globalKpiViewsAvg");
 
 // 비교 모드 셀렉터
 const compareModeToggle = document.querySelector("#compareModeToggle");
+const compareKpiBranchesBadge = document.querySelector("#compareKpiBranchesBadge");
 const compareKpiContentsBadge = document.querySelector("#compareKpiContentsBadge");
 const compareKpiViewsBadge = document.querySelector("#compareKpiViewsBadge");
 const compareKpiViewsAvgBadge = document.querySelector("#compareKpiViewsAvgBadge");
@@ -1811,7 +1813,10 @@ function renderCompareBarChart(currentLeaderboard) {
     compareBarChart.destroy();
   }
 
-  const branchesToCompare = Object.keys(LAST_YEAR_DATA);
+  // 작년과 올해 모두 체험단을 진행한(실적이 있는) 지점들만 필터링
+  const branchesToCompare = Object.keys(LAST_YEAR_DATA).filter(bName => {
+    return currentLeaderboard.some(item => item.name === bName && item.totalContents > 0);
+  });
   
   // 2025 전년 데이터
   const lastYearViews = branchesToCompare.map(bName => LAST_YEAR_DATA[bName].views);
@@ -1893,6 +1898,7 @@ function renderGlobalDashboard() {
   const metrics = calculateGlobalMetrics();
   if (!metrics) return;
 
+  if (globalKpiBranches) globalKpiBranches.textContent = `${metrics.leaderboard.length}개`;
   if (globalKpiContents) globalKpiContents.textContent = `${metrics.totalContents}개`;
   if (globalKpiViews) globalKpiViews.textContent = metrics.totalViews.toLocaleString();
   if (globalKpiViewsAvg) globalKpiViewsAvg.textContent = metrics.averageViews.toLocaleString();
@@ -1903,6 +1909,14 @@ function renderGlobalDashboard() {
 
   if (showCompare) {
     // 1. KPI 카드별 전년 동기 대비 증감률(%) 계산 및 배지 렌더링 (전년 실제 수치 기입)
+    // 참여 지점 수
+    const branchesDiffPct = ((metrics.leaderboard.length - 12) / 12) * 100;
+    if (compareKpiBranchesBadge) {
+      const dirText = branchesDiffPct >= 0 ? `▲${branchesDiffPct.toFixed(1)}%` : `▼${Math.abs(branchesDiffPct).toFixed(1)}%`;
+      compareKpiBranchesBadge.textContent = `(전년: 12개 | ${dirText})`;
+      compareKpiBranchesBadge.className = "compare-badge " + (branchesDiffPct >= 0 ? "plus" : "minus");
+      compareKpiBranchesBadge.classList.remove("hidden");
+    }
     // 콘텐츠 수
     const contentsDiffPct = ((metrics.totalContents - LAST_YEAR_TOTAL_CONTENTS) / LAST_YEAR_TOTAL_CONTENTS) * 100;
     if (compareKpiContentsBadge) {
@@ -1938,6 +1952,7 @@ function renderGlobalDashboard() {
     }
   } else {
     // 비교 모드 비활성화(OFF) 시 리셋
+    if (compareKpiBranchesBadge) compareKpiBranchesBadge.classList.add("hidden");
     if (compareKpiContentsBadge) compareKpiContentsBadge.classList.add("hidden");
     if (compareKpiViewsBadge) compareKpiViewsBadge.classList.add("hidden");
     if (compareKpiViewsAvgBadge) compareKpiViewsAvgBadge.classList.add("hidden");

@@ -1864,9 +1864,7 @@ dd a:hover {
   animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.admin-dashboard-panel .kpi-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
+
 
 .admin-dashboard-head {
   display: flex;
@@ -3818,3 +3816,66 @@ dd a:hover {
     white-space: nowrap !important;
   }
 }
+
+/* --- Year-over-Year Comparison Mode Styles --- */
+.compare-toggle-label:hover {
+  color: var(--accent) !important;
+}
+
+.compare-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.2;
+}
+
+.compare-badge.plus {
+  color: #10b981; /* Emerald green */
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.compare-badge.minus {
+  color: #ef4444; /* Tomato red */
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.compare-badge.zero {
+  color: var(--muted);
+  background: rgba(100, 116, 139, 0.08);
+}
+
+.compare-col {
+  transition: opacity 0.3s ease;
+}
+
+.report-table th.col-compare,
+.report-table td.col-compare {
+  padding: 16px 20px;
+  text-align: right;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+.report-table td.col-compare.plus {
+  color: #10b981;
+}
+
+.report-table td.col-compare.minus {
+  color: #ef4444;
+}
+
+.compare-chart-card {
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (max-width: 768px) {
+  .report-table th.col-compare,
+  .report-table td.col-compare {
+    padding: 12px 10px !important;
+  }
+}
+
