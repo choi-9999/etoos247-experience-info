@@ -1711,6 +1711,20 @@ if (btnDownloadReportPDF) {
       const element = document.querySelector("#adminDashboardPanel");
       if (!element) return;
 
+      // 임시로 애니메이션, 트랜지션, 트랜스폼, 오파시티 스타일을 고정하여 html2canvas 렌더링 붕괴(뿌옇게 옅어지는 현상) 방지
+      const originalTransition = element.style.transition;
+      const originalAnimation = element.style.animation;
+      const originalTransform = element.style.transform;
+      const originalOpacity = element.style.opacity;
+
+      element.style.transition = "none";
+      element.style.animation = "none";
+      element.style.transform = "none";
+      element.style.opacity = "1";
+
+      // html2canvas가 올바른 computedStyle을 수집하도록 강제 리플로우 유도
+      void element.offsetWidth;
+
       // html2canvas로 종합보고서 패널을 고해상도로 캡처
       const canvas = await html2canvas(element, {
         scale: 2, // 고해상도
@@ -1718,6 +1732,12 @@ if (btnDownloadReportPDF) {
         backgroundColor: "#ffffff", // 배경을 흰색으로 지정
         logging: false
       });
+
+      // 임시 적용한 스타일 복원
+      element.style.transition = originalTransition;
+      element.style.animation = originalAnimation;
+      element.style.transform = originalTransform;
+      element.style.opacity = originalOpacity;
 
       const imgData = canvas.toDataURL("image/png");
       const { jsPDF } = window.jspdf;
