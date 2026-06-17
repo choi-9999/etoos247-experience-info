@@ -539,6 +539,7 @@ let dailyLineChartInstance = null;
 
 // Admin Dashboard selectors
 const adminDashboardPanel = document.querySelector("#adminDashboardPanel");
+const adminExperiencePanel = document.querySelector("#adminExperiencePanel");
 const workspace = document.querySelector(".workspace");
 const closeAdminDashboard = document.querySelector("#closeAdminDashboard");
 const navGlobalReportLink = document.querySelector("#navGlobalReportLink");
@@ -1471,6 +1472,7 @@ function parseExcelRows(rows) {
 // 종합보고서 패널을 표시하고 일반 랜딩 콘텐츠를 숨깁니다.
 function showGlobalReportView() {
   if (adminDashboardPanel) adminDashboardPanel.classList.remove("hidden");
+  if (adminExperiencePanel) adminExperiencePanel.classList.remove("hidden");
   if (landingPageContent) landingPageContent.classList.add("hidden");
   renderGlobalDashboard();
 }
@@ -1478,6 +1480,7 @@ function showGlobalReportView() {
 // 일반 랜딩 콘텐츠를 표시하고 종합보고서 패널을 숨깁니다.
 function showLandingView() {
   if (adminDashboardPanel) adminDashboardPanel.classList.add("hidden");
+  if (adminExperiencePanel) adminExperiencePanel.classList.add("hidden");
   if (landingPageContent) landingPageContent.classList.remove("hidden");
 }
 // ──────────────────────────────────────────────────────────────
