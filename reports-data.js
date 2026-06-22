@@ -3,14 +3,14 @@ window.reportsData = {
   "광주북구": {
     "totalInfluencers": 2,
     "totalContents": 2,
-    "totalViews": 362,
-    "averageViews": 181,
-    "mobileViews": 42,
-    "pcViews": 320,
+    "totalViews": 553,
+    "averageViews": 277,
+    "mobileViews": 69,
+    "pcViews": 484,
     "mobileRatio": 12,
     "pcRatio": 88,
-    "averageMobileViews": 21,
-    "averagePcViews": 160,
+    "averageMobileViews": 35,
+    "averagePcViews": 242,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -130,6 +130,55 @@ window.reportsData = {
         "pc": 16,
         "mobile": 0,
         "total": 16
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 18,
+        "mobile": 0,
+        "total": 18
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 25,
+        "mobile": 3,
+        "total": 28
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 29,
+        "mobile": 4,
+        "total": 33
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 25,
+        "mobile": 7,
+        "total": 32
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 20,
+        "mobile": 2,
+        "total": 22
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 22,
+        "mobile": 5,
+        "total": 27
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 25,
+        "mobile": 6,
+        "total": 31
       }
     ],
     "contents": [
@@ -154,17 +203,27 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "광주 북구 재수",
-        "value": "33%"
+        "value": "20%"
       },
       {
         "rank": 2,
-        "keyword": "이투스 247 방",
-        "value": "33%"
+        "keyword": "광주 북구 재수생 관리 독서실",
+        "value": "20%"
       },
       {
         "rank": 3,
+        "keyword": "이투스 247 방",
+        "value": "20%"
+      },
+      {
+        "rank": 4,
+        "keyword": "이투스 247광주기숙",
+        "value": "20%"
+      },
+      {
+        "rank": 5,
         "keyword": "운암동 자습학원",
-        "value": "33%"
+        "value": "20%"
       }
     ],
     "exposedKeywords": [
@@ -183,14 +242,14 @@ window.reportsData = {
   "광주수완": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 192,
-    "averageViews": 64,
-    "mobileViews": 103,
-    "pcViews": 89,
-    "mobileRatio": 54,
-    "pcRatio": 46,
-    "averageMobileViews": 34,
-    "averagePcViews": 30,
+    "totalViews": 286,
+    "averageViews": 95,
+    "mobileViews": 151,
+    "pcViews": 135,
+    "mobileRatio": 53,
+    "pcRatio": 47,
+    "averageMobileViews": 50,
+    "averagePcViews": 45,
     "dailyData": [
       {
         "date": "2026-06-02",
@@ -282,6 +341,55 @@ window.reportsData = {
         "pc": 4,
         "mobile": 5,
         "total": 9
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 11,
+        "mobile": 9,
+        "total": 20
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 6,
+        "mobile": 6,
+        "total": 12
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 11,
+        "mobile": 10,
+        "total": 21
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 5,
+        "mobile": 4,
+        "total": 9
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 5,
+        "mobile": 5,
+        "total": 10
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 6,
+        "mobile": 7,
+        "total": 13
       }
     ],
     "contents": [
@@ -314,17 +422,37 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "광주독학재수학원",
-        "value": "33%"
+        "value": "14%"
       },
       {
         "rank": 2,
-        "keyword": "광주 이투스 수완 주차",
-        "value": "33%"
+        "keyword": "광주재수학원",
+        "value": "14%"
       },
       {
         "rank": 3,
+        "keyword": "광주광역시 이투스",
+        "value": "14%"
+      },
+      {
+        "rank": 4,
+        "keyword": "광주 이투스 수완 주차",
+        "value": "14%"
+      },
+      {
+        "rank": 5,
         "keyword": "광주독학재수학원 썸머스쿨",
-        "value": "33%"
+        "value": "14%"
+      },
+      {
+        "rank": 6,
+        "keyword": "수완지구 독학재수학원추천",
+        "value": "14%"
+      },
+      {
+        "rank": 7,
+        "keyword": "이투스 247 광주",
+        "value": "14%"
       }
     ],
     "exposedKeywords": [
@@ -348,14 +476,14 @@ window.reportsData = {
   "대치": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 144,
-    "averageViews": 48,
-    "mobileViews": 102,
-    "pcViews": 42,
-    "mobileRatio": 71,
-    "pcRatio": 29,
-    "averageMobileViews": 34,
-    "averagePcViews": 14,
+    "totalViews": 219,
+    "averageViews": 73,
+    "mobileViews": 160,
+    "pcViews": 59,
+    "mobileRatio": 73,
+    "pcRatio": 27,
+    "averageMobileViews": 53,
+    "averagePcViews": 20,
     "dailyData": [
       {
         "date": "2026-06-02",
@@ -447,17 +575,58 @@ window.reportsData = {
         "pc": 1,
         "mobile": 13,
         "total": 14
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 8,
+        "mobile": 13,
+        "total": 21
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 0,
+        "mobile": 12,
+        "total": 12
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 2,
+        "mobile": 8,
+        "total": 10
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 4,
+        "mobile": 7,
+        "total": 11
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
       }
     ],
     "contents": [
-      {
-        "title": "대치동 반수학원 독학재수 학원 찾는다면 이투스247학원 대치점",
-        "blogger": "항항잉",
-        "date": "2026-06-02",
-        "likes": 4,
-        "comments": 1,
-        "url": "https://blog.naver.com/poolmoon7/224304040075?fromRss=true&trackingCode=rss"
-      },
       {
         "title": "대치동 반수학원 재수관리 시설좋은 자기주도학습관 이투스247학원 대치점",
         "blogger": "TONGNECO",
@@ -465,6 +634,14 @@ window.reportsData = {
         "likes": 10,
         "comments": 1,
         "url": "https://blog.naver.com/be-focus/224304783676?fromRss=true&trackingCode=rss"
+      },
+      {
+        "title": "대치동 반수학원 독학재수 학원 찾는다면 이투스247학원 대치점",
+        "blogger": "항항잉",
+        "date": "2026-06-02",
+        "likes": 4,
+        "comments": 1,
+        "url": "https://blog.naver.com/poolmoon7/224304040075?fromRss=true&trackingCode=rss"
       },
       {
         "title": "대치동 반수학원 찾는다면? 이투스247학원 대치점 2027 반수성공반 후기",
@@ -479,37 +656,42 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "대치동 반수학원",
-        "value": "27%"
+        "value": "25%"
       },
       {
         "rank": 2,
         "keyword": "이투스247대치 급식",
-        "value": "27%"
+        "value": "25%"
       },
       {
         "rank": 3,
         "keyword": "대치동 재수학원",
-        "value": "9%"
+        "value": "8%"
       },
       {
         "rank": 4,
-        "keyword": "이투스대치독서실",
-        "value": "9%"
+        "keyword": "이투스247학원 시간표",
+        "value": "8%"
       },
       {
         "rank": 5,
-        "keyword": "이투스 247 대치 1층 2층",
-        "value": "9%"
+        "keyword": "이투스대치독서실",
+        "value": "8%"
       },
       {
         "rank": 6,
-        "keyword": "이투스247 대치 가격",
-        "value": "9%"
+        "keyword": "이투스 247 대치 1층 2층",
+        "value": "8%"
       },
       {
         "rank": 7,
+        "keyword": "이투스247 대치 가격",
+        "value": "8%"
+      },
+      {
+        "rank": 8,
         "keyword": "재수 대치 독재학원 추천",
-        "value": "9%"
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
@@ -533,14 +715,14 @@ window.reportsData = {
   "독학기숙": {
     "totalInfluencers": 4,
     "totalContents": 4,
-    "totalViews": 724,
-    "averageViews": 181,
-    "mobileViews": 505,
-    "pcViews": 219,
-    "mobileRatio": 70,
-    "pcRatio": 30,
-    "averageMobileViews": 126,
-    "averagePcViews": 55,
+    "totalViews": 944,
+    "averageViews": 236,
+    "mobileViews": 680,
+    "pcViews": 264,
+    "mobileRatio": 72,
+    "pcRatio": 28,
+    "averageMobileViews": 170,
+    "averagePcViews": 66,
     "dailyData": [
       {
         "date": "2026-05-23",
@@ -702,16 +884,65 @@ window.reportsData = {
         "pc": 7,
         "mobile": 32,
         "total": 39
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 10,
+        "mobile": 29,
+        "total": 39
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 15,
+        "mobile": 22,
+        "total": 37
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 1,
+        "mobile": 22,
+        "total": 23
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 1,
+        "mobile": 23,
+        "total": 24
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 6,
+        "mobile": 28,
+        "total": 34
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 5,
+        "mobile": 21,
+        "total": 26
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 7,
+        "mobile": 30,
+        "total": 37
       }
     ],
     "contents": [
       {
-        "title": "경기 광주 이투스247 독학기숙학원 하루루틴 | 반수성공반 14시간 순공 만드는 독학기숙 시스템",
-        "blogger": "호세아1",
-        "date": "2026-05-23",
-        "likes": 111,
-        "comments": 7,
-        "url": "https://blog.naver.com/hoshea1/224294340079"
+        "title": "이투스247 독학기숙학원 경기광주점 독학기숙의 몰입 환경이 인상적이었던 곳",
+        "blogger": "하준마마",
+        "date": "2026-06-03",
+        "likes": 11,
+        "comments": 4,
+        "url": "https://blog.naver.com/em2868/224304983862?fromRss=true&trackingCode=rss"
       },
       {
         "title": "이투스247 독학기숙학원 경기광주 직접 방문 후기 | 재수기숙학원 추천",
@@ -722,12 +953,12 @@ window.reportsData = {
         "url": "https://blog.naver.com/jwp3214/224303667337?fromRss=true&trackingCode=rss"
       },
       {
-        "title": "이투스247 독학기숙학원 경기광주점 독학기숙의 몰입 환경이 인상적이었던 곳",
-        "blogger": "하준마마",
-        "date": "2026-06-03",
-        "likes": 11,
-        "comments": 4,
-        "url": "https://blog.naver.com/em2868/224304983862?fromRss=true&trackingCode=rss"
+        "title": "경기 광주 이투스247 독학기숙학원 하루루틴 | 반수성공반 14시간 순공 만드는 독학기숙 시스템",
+        "blogger": "호세아1",
+        "date": "2026-05-23",
+        "likes": 111,
+        "comments": 7,
+        "url": "https://blog.naver.com/hoshea1/224294340079"
       },
       {
         "title": "재수기숙학원 추천 이투스247독학기숙학원 경기광주",
@@ -741,53 +972,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "이투스 247 기숙 광주",
-        "value": "17%"
+        "keyword": "이투스247독학기숙학원",
+        "value": "20%"
       },
       {
         "rank": 2,
-        "keyword": "이투스247독학기숙학원",
-        "value": "14%"
+        "keyword": "이투스 247 기숙 광주",
+        "value": "15%"
       },
       {
         "rank": 3,
-        "keyword": "경기 광주 이투스247 독학기숙학원",
-        "value": "11%"
+        "keyword": "광주 이투스 기숙학원",
+        "value": "12%"
       },
       {
         "rank": 4,
-        "keyword": "이투스기숙학원",
-        "value": "11%"
+        "keyword": "경기 광주 이투스247 독학기숙학원",
+        "value": "10%"
       },
       {
         "rank": 5,
-        "keyword": "이투스독학기숙",
-        "value": "11%"
+        "keyword": "이투스기숙학원",
+        "value": "10%"
       },
       {
         "rank": 6,
-        "keyword": "경기 광주 이투스247 독학기숙학원 하루루틴",
-        "value": "8%"
+        "keyword": "이투스독학기숙",
+        "value": "10%"
       },
       {
         "rank": 7,
-        "keyword": "광주 이투스 기숙학원",
-        "value": "8%"
+        "keyword": "경기 광주 이투스247 독학기숙학원 하루루틴",
+        "value": "7%"
       },
       {
         "rank": 8,
         "keyword": "이투스 247 독학재수기숙",
-        "value": "8%"
+        "value": "7%"
       },
       {
         "rank": 9,
         "keyword": "광주 이투스 247 기숙학원",
-        "value": "6%"
+        "value": "5%"
       },
       {
         "rank": 10,
-        "keyword": "기숙학원",
-        "value": "6%"
+        "keyword": "이투스 광주기숙학원 비용",
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -821,14 +1052,14 @@ window.reportsData = {
   "부산교대": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 1813,
-    "averageViews": 604,
-    "mobileViews": 131,
-    "pcViews": 1682,
+    "totalViews": 2696,
+    "averageViews": 899,
+    "mobileViews": 200,
+    "pcViews": 2496,
     "mobileRatio": 7,
     "pcRatio": 93,
-    "averageMobileViews": 44,
-    "averagePcViews": 561,
+    "averageMobileViews": 67,
+    "averagePcViews": 832,
     "dailyData": [
       {
         "date": "2026-05-31",
@@ -934,6 +1165,55 @@ window.reportsData = {
         "pc": 140,
         "mobile": 4,
         "total": 144
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 105,
+        "mobile": 9,
+        "total": 114
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 139,
+        "mobile": 9,
+        "total": 148
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 116,
+        "mobile": 7,
+        "total": 123
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 120,
+        "mobile": 7,
+        "total": 127
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 131,
+        "mobile": 8,
+        "total": 139
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 99,
+        "mobile": 13,
+        "total": 112
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 104,
+        "mobile": 16,
+        "total": 120
       }
     ],
     "contents": [
@@ -946,20 +1226,20 @@ window.reportsData = {
         "url": "https://blog.naver.com/wjdqls9796/224301828900?fromRss=true&trackingCode=rss"
       },
       {
-        "title": "부산 독학관리학원 이투스247학원 부산교대점 수험생관리 반수 재수학원",
-        "blogger": "뿌블",
-        "date": "2026-06-01",
-        "likes": 18,
-        "comments": 5,
-        "url": "https://blog.naver.com/jshee45/224302356037?fromRss=true&trackingCode=rss"
-      },
-      {
         "title": "이투스247학원 부산교대점 2027 반수성공반 직접 다녀온 후기",
         "blogger": "시간블로그",
         "date": "2026-06-03",
         "likes": 0,
         "comments": 2,
         "url": "https://blog.naver.com/thehyuntime/224305136185"
+      },
+      {
+        "title": "부산 독학관리학원 이투스247학원 부산교대점 수험생관리 반수 재수학원",
+        "blogger": "뿌블",
+        "date": "2026-06-01",
+        "likes": 18,
+        "comments": 5,
+        "url": "https://blog.naver.com/jshee45/224302356037?fromRss=true&trackingCode=rss"
       }
     ],
     "inflowKeywords": [
@@ -975,42 +1255,42 @@ window.reportsData = {
       },
       {
         "rank": 3,
-        "keyword": "부산 유명 수능학원",
+        "keyword": "부산 기숙 학원",
         "value": "9%"
       },
       {
         "rank": 4,
-        "keyword": "이투스247",
+        "keyword": "부산 독학기숙추천",
         "value": "9%"
       },
       {
         "rank": 5,
-        "keyword": "이투스247 부산교대점",
+        "keyword": "부산 유명 수능학원",
         "value": "9%"
       },
       {
         "rank": 6,
-        "keyword": "이투스부산교대",
+        "keyword": "이투스247",
         "value": "9%"
       },
       {
         "rank": 7,
-        "keyword": "부산 관리형 이투스",
+        "keyword": "이투스247 부산교대점",
         "value": "9%"
       },
       {
         "rank": 8,
-        "keyword": "부산 반수 학원",
+        "keyword": "이투스247 후기",
         "value": "9%"
       },
       {
         "rank": 9,
-        "keyword": "부산 재수학원",
+        "keyword": "이투스247학원 시간표",
         "value": "9%"
       },
       {
         "rank": 10,
-        "keyword": "부산교대 이투스학원",
+        "keyword": "이투스부산교대",
         "value": "9%"
       }
     ],
@@ -1040,14 +1320,14 @@ window.reportsData = {
   "분당정자": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 157,
-    "averageViews": 52,
-    "mobileViews": 84,
-    "pcViews": 73,
-    "mobileRatio": 54,
-    "pcRatio": 46,
-    "averageMobileViews": 28,
-    "averagePcViews": 24,
+    "totalViews": 190,
+    "averageViews": 63,
+    "mobileViews": 115,
+    "pcViews": 75,
+    "mobileRatio": 61,
+    "pcRatio": 39,
+    "averageMobileViews": 38,
+    "averagePcViews": 25,
     "dailyData": [
       {
         "date": "2026-05-30",
@@ -1160,6 +1440,55 @@ window.reportsData = {
         "pc": 2,
         "mobile": 3,
         "total": 5
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 12,
+        "total": 12
       }
     ],
     "contents": [
@@ -1172,62 +1501,67 @@ window.reportsData = {
         "url": "https://blog.naver.com/mdal2_700/224300732563?fromRss=true&trackingCode=rss"
       },
       {
-        "title": "정자역 재수학원 추천 분당 공부관리 잘하는 이투스247학원",
-        "blogger": "현성4231",
-        "date": "2026-06-03",
-        "likes": 0,
-        "comments": 1,
-        "url": "https://blog.naver.com/hyun_4231/224304784229"
-      },
-      {
         "title": "이투스247학원 분당정자점 정자역 반수 성공반 후기",
         "blogger": "썸머린",
         "date": "2026-06-03",
         "likes": 0,
         "comments": 0,
         "url": "https://blog.naver.com/rvd_romi/224304965239"
+      },
+      {
+        "title": "정자역 재수학원 추천 분당 공부관리 잘하는 이투스247학원",
+        "blogger": "현성4231",
+        "date": "2026-06-03",
+        "likes": 0,
+        "comments": 1,
+        "url": "https://blog.naver.com/hyun_4231/224304784229"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
         "keyword": "이투스247수원정자",
-        "value": "13%"
+        "value": "11%"
       },
       {
         "rank": 2,
         "keyword": "정자동 공부할만한",
-        "value": "13%"
+        "value": "11%"
       },
       {
         "rank": 3,
         "keyword": "관리형 독서실 이투스 정자",
-        "value": "13%"
+        "value": "11%"
       },
       {
         "rank": 4,
         "keyword": "분당 독학재수",
-        "value": "13%"
+        "value": "11%"
       },
       {
         "rank": 5,
-        "keyword": "이투스 247 독재 가격",
-        "value": "13%"
+        "keyword": "분당 독학재수학원",
+        "value": "11%"
       },
       {
         "rank": 6,
-        "keyword": "이투스 247 독학재수학원 가격",
-        "value": "13%"
+        "keyword": "이투스 247 독재 가격",
+        "value": "11%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 한수",
-        "value": "13%"
+        "keyword": "이투스 247 독학재수학원 가격",
+        "value": "11%"
       },
       {
         "rank": 8,
+        "keyword": "이투스 한수",
+        "value": "11%"
+      },
+      {
+        "rank": 9,
         "keyword": "이투스분당점",
-        "value": "13%"
+        "value": "11%"
       }
     ],
     "exposedKeywords": [
@@ -1251,14 +1585,14 @@ window.reportsData = {
   "서울광진": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 146,
-    "averageViews": 49,
-    "mobileViews": 64,
-    "pcViews": 82,
-    "mobileRatio": 44,
-    "pcRatio": 56,
-    "averageMobileViews": 21,
-    "averagePcViews": 27,
+    "totalViews": 193,
+    "averageViews": 64,
+    "mobileViews": 87,
+    "pcViews": 106,
+    "mobileRatio": 45,
+    "pcRatio": 55,
+    "averageMobileViews": 29,
+    "averagePcViews": 35,
     "dailyData": [
       {
         "date": "2026-06-01",
@@ -1357,6 +1691,55 @@ window.reportsData = {
         "pc": 2,
         "mobile": 2,
         "total": 4
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 5,
+        "mobile": 2,
+        "total": 7
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 5,
+        "mobile": 1,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 9,
+        "mobile": 3,
+        "total": 12
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 4,
+        "mobile": 4,
+        "total": 8
       }
     ],
     "contents": [
@@ -1388,8 +1771,18 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
+        "keyword": "광진구 독학재수학원",
+        "value": "33%"
+      },
+      {
+        "rank": 2,
+        "keyword": "이투스247",
+        "value": "33%"
+      },
+      {
+        "rank": 3,
         "keyword": "이투스247 광진",
-        "value": "100%"
+        "value": "33%"
       }
     ],
     "exposedKeywords": [
@@ -1413,14 +1806,14 @@ window.reportsData = {
   "수원시청": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 180,
-    "averageViews": 60,
-    "mobileViews": 141,
-    "pcViews": 39,
-    "mobileRatio": 78,
-    "pcRatio": 22,
-    "averageMobileViews": 47,
-    "averagePcViews": 13,
+    "totalViews": 242,
+    "averageViews": 81,
+    "mobileViews": 195,
+    "pcViews": 47,
+    "mobileRatio": 81,
+    "pcRatio": 19,
+    "averageMobileViews": 65,
+    "averagePcViews": 16,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -1540,17 +1933,58 @@ window.reportsData = {
         "pc": 0,
         "mobile": 7,
         "total": 7
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 2,
+        "mobile": 9,
+        "total": 11
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 2,
+        "mobile": 11,
+        "total": 13
       }
     ],
     "contents": [
-      {
-        "title": "독학재수학원 이투스247학원 수원시청점 가격 후기",
-        "blogger": "hapsong",
-        "date": "2026-06-03",
-        "likes": 0,
-        "comments": 0,
-        "url": "https://blog.naver.com/dakong0921/224304314828?fromRss=true&trackingCode=rss"
-      },
       {
         "title": "수원 재수추천 반수학원 이투스247학원 수원시청점",
         "blogger": "헤이쥬86",
@@ -1558,6 +1992,14 @@ window.reportsData = {
         "likes": 3,
         "comments": 0,
         "url": "https://blog.naver.com/eunjuyaaa/224299529609?fromRss=true&trackingCode=rss"
+      },
+      {
+        "title": "독학재수학원 이투스247학원 수원시청점 가격 후기",
+        "blogger": "hapsong",
+        "date": "2026-06-03",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://blog.naver.com/dakong0921/224304314828?fromRss=true&trackingCode=rss"
       },
       {
         "title": "이투스247학원 수원시청점 재수학원추천 이유 직접 확인한 후기",
@@ -1572,42 +2014,52 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "수원시청 이투스 247",
-        "value": "18%"
+        "value": "15%"
       },
       {
         "rank": 2,
         "keyword": "이투스247",
-        "value": "18%"
+        "value": "15%"
       },
       {
         "rank": 3,
         "keyword": "이투스 247 수원시청 가격",
-        "value": "18%"
+        "value": "15%"
       },
       {
         "rank": 4,
         "keyword": "반수학원 수원",
-        "value": "9%"
+        "value": "8%"
       },
       {
         "rank": 5,
         "keyword": "수원 반수학원",
-        "value": "9%"
+        "value": "8%"
       },
       {
         "rank": 6,
-        "keyword": "수원 재수생 독서실",
-        "value": "9%"
+        "keyword": "이투스247 수원정자",
+        "value": "8%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 247 독학재수",
-        "value": "9%"
+        "keyword": "수원 재수생 독서실",
+        "value": "8%"
       },
       {
         "rank": 8,
+        "keyword": "이투스 247 독학재수",
+        "value": "8%"
+      },
+      {
+        "rank": 9,
+        "keyword": "이투스 독학재수학원 내부",
+        "value": "8%"
+      },
+      {
+        "rank": 10,
         "keyword": "이투스247 학원비",
-        "value": "9%"
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
@@ -1641,14 +2093,14 @@ window.reportsData = {
   "안산": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 96,
-    "averageViews": 32,
-    "mobileViews": 70,
-    "pcViews": 26,
-    "mobileRatio": 73,
-    "pcRatio": 27,
-    "averageMobileViews": 23,
-    "averagePcViews": 9,
+    "totalViews": 130,
+    "averageViews": 43,
+    "mobileViews": 98,
+    "pcViews": 32,
+    "mobileRatio": 75,
+    "pcRatio": 25,
+    "averageMobileViews": 33,
+    "averagePcViews": 11,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -1768,6 +2220,55 @@ window.reportsData = {
         "pc": 0,
         "mobile": 8,
         "total": 8
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 2,
+        "mobile": 8,
+        "total": 10
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
       }
     ],
     "contents": [
@@ -1799,23 +2300,33 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "안산 독학재수",
-        "value": "25%"
+        "keyword": "이투스247",
+        "value": "17%"
       },
       {
         "rank": 2,
-        "keyword": "안산 재수학원",
-        "value": "25%"
+        "keyword": "안산 관리형 학원",
+        "value": "17%"
       },
       {
         "rank": 3,
-        "keyword": "안산재수",
-        "value": "25%"
+        "keyword": "안산 독학재수",
+        "value": "17%"
       },
       {
         "rank": 4,
+        "keyword": "안산 재수학원",
+        "value": "17%"
+      },
+      {
+        "rank": 5,
+        "keyword": "안산재수",
+        "value": "17%"
+      },
+      {
+        "rank": 6,
         "keyword": "이투스 독학재수 안산 급식",
-        "value": "25%"
+        "value": "17%"
       }
     ],
     "exposedKeywords": [
@@ -1844,14 +2355,14 @@ window.reportsData = {
   "의정부": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 435,
-    "averageViews": 145,
-    "mobileViews": 209,
-    "pcViews": 226,
-    "mobileRatio": 48,
-    "pcRatio": 52,
-    "averageMobileViews": 70,
-    "averagePcViews": 75,
+    "totalViews": 481,
+    "averageViews": 160,
+    "mobileViews": 249,
+    "pcViews": 232,
+    "mobileRatio": 52,
+    "pcRatio": 48,
+    "averageMobileViews": 83,
+    "averagePcViews": 77,
     "dailyData": [
       {
         "date": "2026-05-24",
@@ -2006,6 +2517,55 @@ window.reportsData = {
         "pc": 0,
         "mobile": 9,
         "total": 9
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 1,
+        "mobile": 10,
+        "total": 11
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
       }
     ],
     "contents": [
@@ -2057,32 +2617,32 @@ window.reportsData = {
       },
       {
         "rank": 5,
-        "keyword": "의정부 독학 재수",
+        "keyword": "독학재수학원 핸드폰 관리",
         "value": "7%"
       },
       {
         "rank": 6,
-        "keyword": "의정부 이투스247의정부학원",
+        "keyword": "의정부 독학 재수",
         "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "이투스경기북부",
+        "keyword": "의정부 이투스247의정부학원",
         "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "관리형 독서실 의정부",
+        "keyword": "이투스경기북부",
         "value": "7%"
       },
       {
         "rank": 9,
-        "keyword": "의정부 관리형 독서실 후기",
+        "keyword": "관리형 독서실 의정부",
         "value": "7%"
       },
       {
         "rank": 10,
-        "keyword": "이감 어플 접속",
+        "keyword": "의정부 관리형 독서실 후기",
         "value": "7%"
       }
     ],
@@ -2107,14 +2667,14 @@ window.reportsData = {
   "이천기숙": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 180,
-    "averageViews": 60,
-    "mobileViews": 103,
-    "pcViews": 77,
-    "mobileRatio": 57,
-    "pcRatio": 43,
-    "averageMobileViews": 34,
-    "averagePcViews": 26,
+    "totalViews": 239,
+    "averageViews": 80,
+    "mobileViews": 140,
+    "pcViews": 99,
+    "mobileRatio": 59,
+    "pcRatio": 41,
+    "averageMobileViews": 47,
+    "averagePcViews": 33,
     "dailyData": [
       {
         "date": "2026-05-28",
@@ -2241,6 +2801,55 @@ window.reportsData = {
         "pc": 1,
         "mobile": 1,
         "total": 2
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 5,
+        "mobile": 5,
+        "total": 10
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 5,
+        "mobile": 5,
+        "total": 10
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 1,
+        "mobile": 10,
+        "total": 11
       }
     ],
     "contents": [
@@ -2273,47 +2882,52 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "이천247 기숙",
-        "value": "25%"
+        "value": "21%"
       },
       {
         "rank": 2,
-        "keyword": "이투스기숙학원",
-        "value": "17%"
+        "keyword": "이천 이투스 247 기숙학원",
+        "value": "14%"
       },
       {
         "rank": 3,
-        "keyword": "수원 반수종합반",
-        "value": "8%"
+        "keyword": "이투스기숙학원",
+        "value": "14%"
       },
       {
         "rank": 4,
-        "keyword": "이천이투스기숙",
-        "value": "8%"
+        "keyword": "수원 반수종합반",
+        "value": "7%"
       },
       {
         "rank": 5,
-        "keyword": "이투스 247 이천 후기",
-        "value": "8%"
+        "keyword": "이천이투스기숙",
+        "value": "7%"
       },
       {
         "rank": 6,
-        "keyword": "이투스 이천 기숙사",
-        "value": "8%"
+        "keyword": "이투수 기숙학원",
+        "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 이천 독학",
-        "value": "8%"
+        "keyword": "이투스 247 이천 후기",
+        "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 이천기숙학원",
-        "value": "8%"
+        "keyword": "이투스 247광주기숙",
+        "value": "7%"
       },
       {
         "rank": 9,
         "keyword": "이투스 247 이천",
-        "value": "8%"
+        "value": "7%"
+      },
+      {
+        "rank": 10,
+        "keyword": "이투스 이천",
+        "value": "7%"
       }
     ],
     "exposedKeywords": [
@@ -2337,14 +2951,14 @@ window.reportsData = {
   "인천송도": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 1828,
-    "averageViews": 609,
-    "mobileViews": 84,
-    "pcViews": 1744,
+    "totalViews": 2011,
+    "averageViews": 670,
+    "mobileViews": 102,
+    "pcViews": 1909,
     "mobileRatio": 5,
     "pcRatio": 95,
-    "averageMobileViews": 28,
-    "averagePcViews": 581,
+    "averageMobileViews": 34,
+    "averagePcViews": 636,
     "dailyData": [
       {
         "date": "2026-05-28",
@@ -2471,6 +3085,55 @@ window.reportsData = {
         "pc": 175,
         "mobile": 2,
         "total": 177
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 159,
+        "mobile": 4,
+        "total": 163
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 4,
+        "mobile": 5,
+        "total": 9
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
       }
     ],
     "contents": [
@@ -2502,28 +3165,38 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "이투스247학원 인천송도점",
-        "value": "33%"
+        "keyword": "송도 재수학원",
+        "value": "22%"
       },
       {
         "rank": 2,
-        "keyword": "송도재수학원",
-        "value": "17%"
+        "keyword": "이투스247학원 인천송도점",
+        "value": "22%"
       },
       {
         "rank": 3,
-        "keyword": "인천 재수학원",
-        "value": "17%"
+        "keyword": "송도재수학원",
+        "value": "11%"
       },
       {
         "rank": 4,
-        "keyword": "인천송도독학재수학원",
-        "value": "17%"
+        "keyword": "인천 재수학원",
+        "value": "11%"
       },
       {
         "rank": 5,
+        "keyword": "인천송도독학재수학원",
+        "value": "11%"
+      },
+      {
+        "rank": 6,
+        "keyword": "인천 연수구 수능학원",
+        "value": "11%"
+      },
+      {
+        "rank": 7,
         "keyword": "송도 독학재수학원",
-        "value": "17%"
+        "value": "11%"
       }
     ],
     "exposedKeywords": [
@@ -2547,14 +3220,14 @@ window.reportsData = {
   "인하대": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 229,
-    "averageViews": 76,
-    "mobileViews": 115,
-    "pcViews": 114,
-    "mobileRatio": 50,
-    "pcRatio": 50,
-    "averageMobileViews": 38,
-    "averagePcViews": 38,
+    "totalViews": 290,
+    "averageViews": 97,
+    "mobileViews": 147,
+    "pcViews": 143,
+    "mobileRatio": 51,
+    "pcRatio": 49,
+    "averageMobileViews": 49,
+    "averagePcViews": 48,
     "dailyData": [
       {
         "date": "2026-05-22",
@@ -2723,6 +3396,55 @@ window.reportsData = {
         "pc": 6,
         "mobile": 8,
         "total": 14
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 5,
+        "mobile": 5,
+        "total": 10
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 4,
+        "mobile": 6,
+        "total": 10
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 8,
+        "mobile": 6,
+        "total": 14
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 8,
+        "mobile": 1,
+        "total": 9
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
       }
     ],
     "contents": [
@@ -2819,14 +3541,14 @@ window.reportsData = {
   "일산동구": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 152,
-    "averageViews": 51,
-    "mobileViews": 117,
-    "pcViews": 35,
+    "totalViews": 196,
+    "averageViews": 65,
+    "mobileViews": 151,
+    "pcViews": 45,
     "mobileRatio": 77,
     "pcRatio": 23,
-    "averageMobileViews": 39,
-    "averagePcViews": 12,
+    "averageMobileViews": 50,
+    "averagePcViews": 15,
     "dailyData": [
       {
         "date": "2026-05-30",
@@ -2939,6 +3661,55 @@ window.reportsData = {
         "pc": 0,
         "mobile": 5,
         "total": 5
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 4,
+        "mobile": 3,
+        "total": 7
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
       }
     ],
     "contents": [
@@ -2971,37 +3742,52 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "일산독학재수학원",
-        "value": "31%"
+        "value": "25%"
       },
       {
         "rank": 2,
         "keyword": "일산 독학재수학원",
-        "value": "23%"
+        "value": "19%"
       },
       {
         "rank": 3,
         "keyword": "이투스247일산",
-        "value": "15%"
+        "value": "13%"
       },
       {
         "rank": 4,
         "keyword": "백마 학원가 학원 운영",
-        "value": "8%"
+        "value": "6%"
       },
       {
         "rank": 5,
         "keyword": "백마학원가 이투스수학",
-        "value": "8%"
+        "value": "6%"
       },
       {
         "rank": 6,
-        "keyword": "일산 백마 독학재수",
-        "value": "8%"
+        "keyword": "이투스247학원 일산",
+        "value": "6%"
       },
       {
         "rank": 7,
+        "keyword": "일산 백마 독학재수",
+        "value": "6%"
+      },
+      {
+        "rank": 8,
+        "keyword": "이투스 247 서울대점",
+        "value": "6%"
+      },
+      {
+        "rank": 9,
         "keyword": "학원 휴대폰 벽 보관",
-        "value": "8%"
+        "value": "6%"
+      },
+      {
+        "rank": 10,
+        "keyword": "학원비데",
+        "value": "6%"
       }
     ],
     "exposedKeywords": [
@@ -3030,14 +3816,14 @@ window.reportsData = {
   "일산서구": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 337,
-    "averageViews": 112,
-    "mobileViews": 165,
-    "pcViews": 172,
+    "totalViews": 418,
+    "averageViews": 139,
+    "mobileViews": 203,
+    "pcViews": 215,
     "mobileRatio": 49,
     "pcRatio": 51,
-    "averageMobileViews": 55,
-    "averagePcViews": 57,
+    "averageMobileViews": 68,
+    "averagePcViews": 72,
     "dailyData": [
       {
         "date": "2026-06-03",
@@ -3122,6 +3908,55 @@ window.reportsData = {
         "pc": 7,
         "mobile": 5,
         "total": 12
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 6,
+        "mobile": 3,
+        "total": 9
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 9,
+        "mobile": 4,
+        "total": 13
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 7,
+        "mobile": 3,
+        "total": 10
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 6,
+        "mobile": 8,
+        "total": 14
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 4,
+        "mobile": 4,
+        "total": 8
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 5,
+        "mobile": 13,
+        "total": 18
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 6,
+        "mobile": 3,
+        "total": 9
       }
     ],
     "contents": [
@@ -3153,53 +3988,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "일산 기숙학원",
-        "value": "17%"
+        "keyword": "이투스247일산서구",
+        "value": "21%"
       },
       {
         "rank": 2,
-        "keyword": "일산독학재수학원",
-        "value": "17%"
+        "keyword": "일산 기숙학원",
+        "value": "14%"
       },
       {
         "rank": 3,
-        "keyword": "031-907-0247",
-        "value": "8%"
+        "keyword": "일산독학재수학원",
+        "value": "14%"
       },
       {
         "rank": 4,
-        "keyword": "이투스247일산",
-        "value": "8%"
+        "keyword": "031-907-0247",
+        "value": "7%"
       },
       {
         "rank": 5,
-        "keyword": "후곡 재수독학학원",
-        "value": "8%"
+        "keyword": "이투스247일산",
+        "value": "7%"
       },
       {
         "rank": 6,
-        "keyword": "화정 맛집",
-        "value": "8%"
+        "keyword": "후곡 재수독학학원",
+        "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "고등학생 관리형독서실",
-        "value": "8%"
+        "keyword": "화정 맛집",
+        "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "관리형 독서실 일산",
-        "value": "8%"
+        "keyword": "고등학생 관리형독서실",
+        "value": "7%"
       },
       {
         "rank": 9,
-        "keyword": "이투스 설명회 후기",
-        "value": "8%"
+        "keyword": "관리형 독서실 일산",
+        "value": "7%"
       },
       {
         "rank": 10,
-        "keyword": "이투스247 주엽점",
-        "value": "8%"
+        "keyword": "넓고 괘적한 관리형 독서실 일산",
+        "value": "7%"
       }
     ],
     "exposedKeywords": [
@@ -3228,14 +4063,14 @@ window.reportsData = {
   "진주": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 101,
-    "averageViews": 34,
-    "mobileViews": 74,
-    "pcViews": 27,
-    "mobileRatio": 73,
-    "pcRatio": 27,
-    "averageMobileViews": 25,
-    "averagePcViews": 9,
+    "totalViews": 155,
+    "averageViews": 52,
+    "mobileViews": 111,
+    "pcViews": 44,
+    "mobileRatio": 72,
+    "pcRatio": 28,
+    "averageMobileViews": 37,
+    "averagePcViews": 15,
     "dailyData": [
       {
         "date": "2026-05-22",
@@ -3404,6 +4239,55 @@ window.reportsData = {
         "pc": 0,
         "mobile": 1,
         "total": 1
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 5,
+        "mobile": 2,
+        "total": 7
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 3,
+        "mobile": 5,
+        "total": 8
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 4,
+        "mobile": 4,
+        "total": 8
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 4,
+        "mobile": 6,
+        "total": 10
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
       }
     ],
     "contents": [
@@ -3435,23 +4319,23 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "LMTI LMAT 이투스",
-        "value": "25%"
+        "keyword": "진주 이투스",
+        "value": "50%"
       },
       {
         "rank": 2,
-        "keyword": "진주이투스학원",
-        "value": "25%"
+        "keyword": "LMTI LMAT 이투스",
+        "value": "17%"
       },
       {
         "rank": 3,
-        "keyword": "재수학원 도시락",
-        "value": "25%"
+        "keyword": "진주이투스학원",
+        "value": "17%"
       },
       {
         "rank": 4,
-        "keyword": "진주 이투스",
-        "value": "25%"
+        "keyword": "재수학원 도시락",
+        "value": "17%"
       }
     ],
     "exposedKeywords": [
@@ -3470,14 +4354,14 @@ window.reportsData = {
   "천안": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 2556,
-    "averageViews": 852,
-    "mobileViews": 2518,
-    "pcViews": 38,
-    "mobileRatio": 99,
-    "pcRatio": 1,
-    "averageMobileViews": 839,
-    "averagePcViews": 13,
+    "totalViews": 3492,
+    "averageViews": 1164,
+    "mobileViews": 3438,
+    "pcViews": 54,
+    "mobileRatio": 98,
+    "pcRatio": 2,
+    "averageMobileViews": 1146,
+    "averagePcViews": 18,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -3597,6 +4481,55 @@ window.reportsData = {
         "pc": 0,
         "mobile": 4,
         "total": 4
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 1,
+        "mobile": 176,
+        "total": 177
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 3,
+        "mobile": 720,
+        "total": 723
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 3,
+        "mobile": 13,
+        "total": 16
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 6,
+        "mobile": 5,
+        "total": 11
       }
     ],
     "contents": [
@@ -3628,18 +4561,33 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "천안독학재수학원",
-        "value": "33%"
+        "keyword": "천안재수학원",
+        "value": "55%"
       },
       {
         "rank": 2,
-        "keyword": "천안 재수학원",
-        "value": "33%"
+        "keyword": "cjsdkswotngkrdnjs",
+        "value": "9%"
       },
       {
         "rank": 3,
-        "keyword": "천안재수학원",
-        "value": "33%"
+        "keyword": "이투스247 천안",
+        "value": "9%"
+      },
+      {
+        "rank": 4,
+        "keyword": "천안독학재수학원",
+        "value": "9%"
+      },
+      {
+        "rank": 5,
+        "keyword": "천안 논술전형 학원",
+        "value": "9%"
+      },
+      {
+        "rank": 6,
+        "keyword": "천안 재수학원",
+        "value": "9%"
       }
     ],
     "exposedKeywords": [
@@ -3658,14 +4606,14 @@ window.reportsData = {
   "춘천": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 394,
-    "averageViews": 131,
-    "mobileViews": 276,
-    "pcViews": 118,
-    "mobileRatio": 70,
-    "pcRatio": 30,
-    "averageMobileViews": 92,
-    "averagePcViews": 39,
+    "totalViews": 497,
+    "averageViews": 166,
+    "mobileViews": 359,
+    "pcViews": 138,
+    "mobileRatio": 72,
+    "pcRatio": 28,
+    "averageMobileViews": 120,
+    "averagePcViews": 46,
     "dailyData": [
       {
         "date": "2026-05-23",
@@ -3827,6 +4775,55 @@ window.reportsData = {
         "pc": 5,
         "mobile": 22,
         "total": 27
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 5,
+        "mobile": 9,
+        "total": 14
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 5,
+        "mobile": 15,
+        "total": 20
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 4,
+        "mobile": 10,
+        "total": 14
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 3,
+        "mobile": 22,
+        "total": 25
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 3,
+        "mobile": 14,
+        "total": 17
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
       }
     ],
     "contents": [
@@ -3858,23 +4855,33 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "독학재수학원",
-        "value": "25%"
+        "keyword": "춘천이투스 247학원 학원",
+        "value": "17%"
       },
       {
         "rank": 2,
-        "keyword": "춘천 1:1 재수학원",
-        "value": "25%"
+        "keyword": "독학재수학원",
+        "value": "17%"
       },
       {
         "rank": 3,
-        "keyword": "춘천 독학 독서실",
-        "value": "25%"
+        "keyword": "이투스 247은 뭔가요?",
+        "value": "17%"
       },
       {
         "rank": 4,
+        "keyword": "춘천 1:1 재수학원",
+        "value": "17%"
+      },
+      {
+        "rank": 5,
+        "keyword": "춘천 독학 독서실",
+        "value": "17%"
+      },
+      {
+        "rank": 6,
         "keyword": "춘천재수학원",
-        "value": "25%"
+        "value": "17%"
       }
     ],
     "exposedKeywords": [
@@ -3908,14 +4915,14 @@ window.reportsData = {
   "하남": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 337,
-    "averageViews": 112,
-    "mobileViews": 193,
-    "pcViews": 144,
-    "mobileRatio": 57,
-    "pcRatio": 43,
-    "averageMobileViews": 64,
-    "averagePcViews": 48,
+    "totalViews": 369,
+    "averageViews": 123,
+    "mobileViews": 220,
+    "pcViews": 149,
+    "mobileRatio": 60,
+    "pcRatio": 40,
+    "averageMobileViews": 73,
+    "averagePcViews": 50,
     "dailyData": [
       {
         "date": "2026-05-21",
@@ -4091,6 +5098,55 @@ window.reportsData = {
         "pc": 1,
         "mobile": 7,
         "total": 8
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
       }
     ],
     "contents": [
@@ -4123,32 +5179,37 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "이투스247",
-        "value": "29%"
+        "value": "25%"
       },
       {
         "rank": 2,
         "keyword": "하남재수학원",
-        "value": "14%"
+        "value": "13%"
       },
       {
         "rank": 3,
         "keyword": "미사 재수독학학원",
-        "value": "14%"
+        "value": "13%"
       },
       {
         "rank": 4,
         "keyword": "에코나우",
-        "value": "14%"
+        "value": "13%"
       },
       {
         "rank": 5,
         "keyword": "오다이바 하루 여행",
-        "value": "14%"
+        "value": "13%"
       },
       {
         "rank": 6,
+        "keyword": "이투스247 후기",
+        "value": "13%"
+      },
+      {
+        "rank": 7,
         "keyword": "하남 학원 오픈",
-        "value": "14%"
+        "value": "13%"
       }
     ],
     "exposedKeywords": [
