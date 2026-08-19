@@ -256,7 +256,7 @@ async function getConfig() {
     try {
       const data = await supabaseRequest("/rest/v1/experience_config?key=eq.config", "GET");
       if (data && data.length > 0) {
-        return data[0].value;
+        return { ...DEFAULT_CONFIG, ...data[0].value };
       } else {
         // 초기 데이터 적재
         await supabaseRequest("/rest/v1/experience_config", "POST", {
@@ -275,17 +275,18 @@ async function getConfig() {
       const filePath = getLocalConfigPath();
       if (fs.existsSync(filePath)) {
         const fileContent = fs.readFileSync(filePath, "utf8");
-        return JSON.parse(fileContent);
+        return { ...DEFAULT_CONFIG, ...JSON.parse(fileContent) };
       }
     } catch (e) {
       // ignore
     }
-    return localMemoryConfig || DEFAULT_CONFIG;
+    return localMemoryConfig ? { ...DEFAULT_CONFIG, ...localMemoryConfig } : DEFAULT_CONFIG;
   }
   try {
     const data = await redisCommand(["GET", DATA_KEY_CONFIG]);
     if (!data) return DEFAULT_CONFIG;
-    return typeof data === "string" ? JSON.parse(data) : data;
+    const parsed = typeof data === "string" ? JSON.parse(data) : data;
+    return { ...DEFAULT_CONFIG, ...parsed };
   } catch {
     return DEFAULT_CONFIG;
   }

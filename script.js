@@ -2405,30 +2405,32 @@ function formatDateString(dateStr) {
   return `${parseInt(parts[1], 10)}월 ${parseInt(parts[2], 10)}일(${weekdays[d.getDay()]})`;
 }
 
+const DEFAULT_EXPERIENCE_CONFIG = {
+  visible: true,
+  branchReportsVisible: true,
+  name: "2027 반수성공반 블로그 체험단",
+  applyStart: "2026-04-28",
+  applyEnd: "2026-05-05",
+  runStart: "2026-05-18",
+  runEnd: "2026-05-31",
+  feePerPerson: 44000,
+  billingMonth: "2026년 6월분",
+  maxQuota: 70
+};
+
 async function initExperience() {
   try {
     const response = await fetch("/api/experience", { cache: "no-store" });
     if (!response.ok) throw new Error("API load failed");
     const data = await response.json();
-    experienceConfig = data.config;
+    experienceConfig = { ...DEFAULT_EXPERIENCE_CONFIG, ...data.config };
     experienceApplications = data.applications || [];
   } catch (err) {
     // LocalStorage Fallback
     const localConfig = localStorage.getItem("etoos247:experience-config");
     const localApps = localStorage.getItem("etoos247:experience-applications");
     
-    experienceConfig = localConfig ? JSON.parse(localConfig) : {
-      visible: true,
-      branchReportsVisible: true,
-      name: "2027 반수성공반 블로그 체험단",
-      applyStart: "2026-04-28",
-      applyEnd: "2026-05-05",
-      runStart: "2026-05-18",
-      runEnd: "2026-05-31",
-      feePerPerson: 44000,
-      billingMonth: "2026년 6월분",
-      maxQuota: 70
-    };
+    experienceConfig = localConfig ? { ...DEFAULT_EXPERIENCE_CONFIG, ...JSON.parse(localConfig) } : { ...DEFAULT_EXPERIENCE_CONFIG };
     experienceApplications = localApps ? JSON.parse(localApps) : [];
   }
 
@@ -2447,6 +2449,25 @@ async function initExperience() {
 
   if (adminExperienceConfigForm) {
     adminExperienceConfigForm.addEventListener("submit", handleSaveConfig);
+  }
+
+  // 토글 스위치 즉시 반응 (체크박스 변경 시 즉시 UI 프리뷰 반영)
+  if (configVisible) {
+    configVisible.addEventListener("change", () => {
+      if (experienceConfig) {
+        experienceConfig.visible = configVisible.checked;
+        renderExperienceUI();
+      }
+    });
+  }
+
+  if (configBranchReportsVisible) {
+    configBranchReportsVisible.addEventListener("change", () => {
+      if (experienceConfig) {
+        experienceConfig.branchReportsVisible = configBranchReportsVisible.checked;
+        renderExperienceUI();
+      }
+    });
   }
 
   if (btnExportExperienceExcel) {
@@ -2768,15 +2789,19 @@ async function handleSaveConfig(e) {
       throw new Error(data.error || "설정 저장에 실패했습니다.");
     }
 
-    experienceConfig = data.config;
-    experienceApplications = data.applications;
+    experienceConfig = { ...DEFAULT_EXPERIENCE_CONFIG, ...data.config };
+    experienceApplications = data.applications || experienceApplications;
     
     localStorage.setItem("etoos247:experience-config", JSON.stringify(experienceConfig));
 
     showAdminConfigMessage("설정이 성공적으로 저장되었습니다.", "success");
     renderExperienceUI();
   } catch (err) {
-    showAdminConfigMessage(err.message, "error");
+    // API 통신 실패 시 로컬 스토리지에 우선 저장하여 오프라인/정적 환경에서도 동작 보장
+    experienceConfig = { ...DEFAULT_EXPERIENCE_CONFIG, ...config };
+    localStorage.setItem("etoos247:experience-config", JSON.stringify(experienceConfig));
+    renderExperienceUI();
+    showAdminConfigMessage("설정이 로컬에 저장되었습니다.", "success");
   }
 }
 
