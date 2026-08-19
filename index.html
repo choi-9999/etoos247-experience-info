@@ -417,7 +417,7 @@
                 <p><strong id="infoBillingMonthText">2026년 6월분(또는 7월분) 로열티 청구</strong></p>
                 <div class="fee-example-box">
                   <p>블로그 체험단 3명 신청 시<br>
-                  체험단 활동비(44,000원 * 3명) = <strong>132,000원</strong>(VAT 포함) 로열티 청구</p>
+                  체험단 활동비(<span id="infoFeePerPerson">44,000원</span> * 3명) = <strong id="infoTotalExampleFee">132,000원</strong>(VAT 포함) 로열티 청구</p>
                   <p class="note-item">* 업체 운영비는 본사 부담</p>
                 </div>
               </div>
@@ -720,15 +720,20 @@
               </div>
             </div>
 
-            <div class="form-group-half" style="display: flex; gap: 12px; margin-bottom: 18px;">
+            <div class="form-group-half" style="display: flex; gap: 12px; margin-bottom: 14px;">
               <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
                 <label for="configMaxQuota" style="font-weight: 700; font-size: 0.9rem;">선착순 정원 (명)</label>
                 <input type="number" id="configMaxQuota" min="1" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
               </div>
               <div class="form-group" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
-                <label for="configBillingMonth" style="font-weight: 700; font-size: 0.9rem;">청구 예정 월</label>
-                <input type="text" id="configBillingMonth" placeholder="예: 2026년 6월분" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
+                <label for="configFeePerPerson" style="font-weight: 700; font-size: 0.9rem;">1인당 활동비 (원, VAT 포함)</label>
+                <input type="number" id="configFeePerPerson" min="0" step="1000" placeholder="예: 44000" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
               </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;">
+              <label for="configBillingMonth" style="font-weight: 700; font-size: 0.9rem;">청구 예정 월</label>
+              <input type="text" id="configBillingMonth" placeholder="예: 2026년 8월분" required style="padding: 10px; border: 1px solid var(--glass-border); border-radius: 6px; background: rgba(255, 255, 255, 0.05); color: var(--ink); outline: none;">
             </div>
 
             <div id="adminConfigMessage" class="apply-success-message hidden" style="margin-bottom: 14px; padding: 10px; font-size: 0.85rem; border-radius: 6px; text-align: center;"></div>
@@ -842,7 +847,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="reports-data.js?v=20260819_1"></script>
-  <script src="script.js?v=20260819_1"></script>
+  <script src="reports-data.js?v=20260819_2"></script>
+  <script src="script.js?v=20260819_2"></script>
 </body>
 </html>

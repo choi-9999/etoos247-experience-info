@@ -573,6 +573,8 @@ const applySectionTitle = document.querySelector("#applySectionTitle");
 const infoApplyPeriod = document.querySelector("#infoApplyPeriod");
 const infoRunPeriod = document.querySelector("#infoRunPeriod");
 const infoBillingMonthText = document.querySelector("#infoBillingMonthText");
+const infoFeePerPerson = document.querySelector("#infoFeePerPerson");
+const infoTotalExampleFee = document.querySelector("#infoTotalExampleFee");
 const infoMaxQuota = document.querySelector("#infoMaxQuota");
 const currentApplyStatus = document.querySelector("#currentApplyStatus");
 const applyQuotaCard = document.querySelector("#applyQuotaCard");
@@ -626,6 +628,7 @@ const configApplyEnd = document.querySelector("#configApplyEnd");
 const configRunStart = document.querySelector("#configRunStart");
 const configRunEnd = document.querySelector("#configRunEnd");
 const configMaxQuota = document.querySelector("#configMaxQuota");
+const configFeePerPerson = document.querySelector("#configFeePerPerson");
 const configBillingMonth = document.querySelector("#configBillingMonth");
 const adminConfigMessage = document.querySelector("#adminConfigMessage");
 const btnExportExperienceExcel = document.querySelector("#btnExportExperienceExcel");
@@ -2556,6 +2559,12 @@ function renderExperienceUI() {
   if (infoBillingMonthText) {
     infoBillingMonthText.textContent = `${experienceConfig.billingMonth} 로열티 청구`;
   }
+  if (infoFeePerPerson) {
+    infoFeePerPerson.textContent = `${(experienceConfig.feePerPerson || 44000).toLocaleString()}원`;
+  }
+  if (infoTotalExampleFee) {
+    infoTotalExampleFee.textContent = `${((experienceConfig.feePerPerson || 44000) * 3).toLocaleString()}원`;
+  }
   if (calcBillingBasis) {
     calcBillingBasis.textContent = `${experienceConfig.billingMonth} 로열티로 청구됩니다.`;
   }
@@ -2622,6 +2631,7 @@ function renderExperienceUI() {
     if (configRunStart) configRunStart.value = experienceConfig.runStart;
     if (configRunEnd) configRunEnd.value = experienceConfig.runEnd;
     if (configMaxQuota) configMaxQuota.value = experienceConfig.maxQuota;
+    if (configFeePerPerson) configFeePerPerson.value = experienceConfig.feePerPerson || 44000;
     if (configBillingMonth) configBillingMonth.value = experienceConfig.billingMonth;
 
     // 신청 현황 테이블 렌더링
@@ -2770,6 +2780,7 @@ async function handleSaveConfig(e) {
     runStart: configRunStart.value,
     runEnd: configRunEnd.value,
     maxQuota: parseInt(configMaxQuota.value, 10),
+    feePerPerson: configFeePerPerson ? (parseInt(configFeePerPerson.value, 10) || 44000) : 44000,
     billingMonth: configBillingMonth.value
   };
 
