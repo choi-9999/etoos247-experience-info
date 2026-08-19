@@ -34,7 +34,7 @@
         <a class="nav-menu-link" href="#hero">체험단</a>
         <a class="nav-menu-link" href="#highlights">종합 성과</a>
         <a class="nav-menu-link" href="#hall-of-fame-marquee">명예의 전당</a>
-        <a class="nav-menu-link" href="#branch-reports">지점 대시보드</a>
+        <a class="nav-menu-link" id="navBranchReportsLink" href="#branch-reports">지점 대시보드</a>
         <a class="nav-menu-link hidden" id="navExperienceApplyLink" href="#experience-apply-section">체험단 신청</a>
         <a class="nav-menu-link hidden" id="navGlobalReportLink" href="#adminDashboardPanel">종합보고서</a>
       </div>
@@ -680,6 +680,17 @@
                 </div>
               </label>
               <p class="form-help-text" style="font-size: 0.8rem; color: var(--muted); margin: 6px 0 0;">이 설정을 끄면 메인 페이지의 모든 신청 UI 및 메뉴가 숨겨집니다.</p>
+            </div>
+
+            <div class="form-group-row" style="margin-bottom: 20px;">
+              <label class="toggle-label" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-weight: 700;">
+                <span>지점 대시보드 노출 여부</span>
+                <div class="toggle-switch-wrapper" style="position: relative; width: 44px; height: 24px;">
+                  <input type="checkbox" id="configBranchReportsVisible" style="opacity: 0; width: 0; height: 0;">
+                  <span class="toggle-switch"></span>
+                </div>
+              </label>
+              <p class="form-help-text" style="font-size: 0.8rem; color: var(--muted); margin: 6px 0 0;">이 설정을 끄면 메인 페이지의 지점 대시보드(성과 보고서) UI 및 메뉴가 숨겨집니다.</p>
             </div>
 
             <div class="form-group" style="margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px;">

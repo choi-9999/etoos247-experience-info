@@ -617,6 +617,9 @@ const adminExperienceTableBody = document.querySelector("#adminExperienceTableBo
 const adminExperienceEmpty = document.querySelector("#adminExperienceEmpty");
 const adminExperienceConfigForm = document.querySelector("#adminExperienceConfigForm");
 const configVisible = document.querySelector("#configVisible");
+const configBranchReportsVisible = document.querySelector("#configBranchReportsVisible");
+const navBranchReportsLink = document.querySelector("#navBranchReportsLink");
+const branchReportsSection = document.querySelector("#branch-reports");
 const configName = document.querySelector("#configName");
 const configApplyStart = document.querySelector("#configApplyStart");
 const configApplyEnd = document.querySelector("#configApplyEnd");
@@ -2416,6 +2419,7 @@ async function initExperience() {
     
     experienceConfig = localConfig ? JSON.parse(localConfig) : {
       visible: true,
+      branchReportsVisible: true,
       name: "2027 반수성공반 블로그 체험단",
       applyStart: "2026-04-28",
       applyEnd: "2026-05-05",
@@ -2485,6 +2489,7 @@ function renderExperienceUI() {
   if (!experienceConfig) return;
 
   const visible = experienceConfig.visible;
+  const branchReportsVisible = typeof experienceConfig.branchReportsVisible !== "undefined" ? experienceConfig.branchReportsVisible : true;
 
   // 1. 노출 여부에 따른 메인 페이지 요소 제어
   if (navExperienceApplyLink) {
@@ -2498,6 +2503,20 @@ function renderExperienceUI() {
   }
   if (experienceApplySection) {
     experienceApplySection.classList.toggle("hidden", !visible);
+  }
+
+  // 지점 대시보드 노출 여부 제어
+  if (navBranchReportsLink) {
+    navBranchReportsLink.classList.toggle("hidden", !branchReportsVisible);
+  }
+  if (branchReportsSection) {
+    branchReportsSection.classList.toggle("hidden", !branchReportsVisible);
+  }
+  if (btnGoToSearch) {
+    btnGoToSearch.classList.toggle("hidden", !branchReportsVisible);
+  }
+  if (btnGoToSearch2) {
+    btnGoToSearch2.classList.toggle("hidden", !branchReportsVisible);
   }
   
   const applyCountdownCard = document.querySelector("#applyCountdownCard");
@@ -2575,6 +2594,7 @@ function renderExperienceUI() {
     
     // 설정 폼 기본값 설정
     if (configVisible) configVisible.checked = visible;
+    if (configBranchReportsVisible) configBranchReportsVisible.checked = branchReportsVisible;
     if (configName) configName.value = experienceConfig.name;
     if (configApplyStart) configApplyStart.value = experienceConfig.applyStart;
     if (configApplyEnd) configApplyEnd.value = experienceConfig.applyEnd;
@@ -2722,6 +2742,7 @@ async function handleSaveConfig(e) {
 
   const config = {
     visible: configVisible.checked,
+    branchReportsVisible: configBranchReportsVisible ? configBranchReportsVisible.checked : true,
     name: configName.value,
     applyStart: configApplyStart.value,
     applyEnd: configApplyEnd.value,

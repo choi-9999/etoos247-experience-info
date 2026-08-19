@@ -17,6 +17,7 @@ let localMemoryApplications = [];
 
 const DEFAULT_CONFIG = {
   visible: true,
+  branchReportsVisible: true,
   name: "2027 반수성공반 블로그 체험단",
   applyStart: "2026-04-28",
   applyEnd: "2026-05-05",
@@ -155,6 +156,7 @@ module.exports = async function handler(request, response) {
 
         const normalizedConfig = {
           visible: Boolean(config.visible),
+          branchReportsVisible: typeof config.branchReportsVisible !== "undefined" ? Boolean(config.branchReportsVisible) : true,
           name: String(config.name || DEFAULT_CONFIG.name).trim(),
           applyStart: String(config.applyStart || DEFAULT_CONFIG.applyStart).trim(),
           applyEnd: String(config.applyEnd || DEFAULT_CONFIG.applyEnd).trim(),
