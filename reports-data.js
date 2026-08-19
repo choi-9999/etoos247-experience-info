@@ -3,14 +3,14 @@ window.reportsData = {
   "광주북구": {
     "totalInfluencers": 2,
     "totalContents": 2,
-    "totalViews": 553,
-    "averageViews": 277,
-    "mobileViews": 69,
-    "pcViews": 484,
-    "mobileRatio": 12,
-    "pcRatio": 88,
-    "averageMobileViews": 35,
-    "averagePcViews": 242,
+    "totalViews": 1736,
+    "averageViews": 868,
+    "mobileViews": 143,
+    "pcViews": 1593,
+    "mobileRatio": 8,
+    "pcRatio": 92,
+    "averageMobileViews": 72,
+    "averagePcViews": 797,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -179,6 +179,412 @@ window.reportsData = {
         "pc": 25,
         "mobile": 6,
         "total": 31
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 22,
+        "mobile": 5,
+        "total": 27
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 27,
+        "mobile": 4,
+        "total": 31
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 20,
+        "mobile": 0,
+        "total": 20
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 23,
+        "mobile": 0,
+        "total": 23
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 36,
+        "mobile": 1,
+        "total": 37
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 26,
+        "mobile": 1,
+        "total": 27
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 10,
+        "mobile": 0,
+        "total": 10
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 19,
+        "mobile": 2,
+        "total": 21
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 43,
+        "mobile": 8,
+        "total": 51
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 27,
+        "mobile": 4,
+        "total": 31
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 37,
+        "mobile": 1,
+        "total": 38
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 22,
+        "mobile": 2,
+        "total": 24
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 38,
+        "mobile": 2,
+        "total": 40
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 27,
+        "mobile": 1,
+        "total": 28
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 31,
+        "mobile": 1,
+        "total": 32
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 21,
+        "mobile": 1,
+        "total": 22
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 28,
+        "mobile": 1,
+        "total": 29
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 27,
+        "mobile": 3,
+        "total": 30
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 35,
+        "mobile": 1,
+        "total": 36
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 28,
+        "mobile": 0,
+        "total": 28
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 16,
+        "mobile": 2,
+        "total": 18
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 27,
+        "mobile": 1,
+        "total": 28
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 31,
+        "mobile": 8,
+        "total": 39
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 25,
+        "mobile": 5,
+        "total": 30
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 23,
+        "mobile": 0,
+        "total": 23
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 20,
+        "mobile": 1,
+        "total": 21
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 36,
+        "mobile": 0,
+        "total": 36
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 19,
+        "mobile": 2,
+        "total": 21
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 24,
+        "mobile": 0,
+        "total": 24
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 34,
+        "mobile": 0,
+        "total": 34
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 24,
+        "mobile": 0,
+        "total": 24
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 25,
+        "mobile": 0,
+        "total": 25
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 23,
+        "mobile": 1,
+        "total": 24
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 23,
+        "mobile": 1,
+        "total": 24
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 22,
+        "mobile": 0,
+        "total": 22
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 26,
+        "mobile": 1,
+        "total": 27
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 22,
+        "mobile": 0,
+        "total": 22
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 26,
+        "mobile": 0,
+        "total": 26
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 26,
+        "mobile": 0,
+        "total": 26
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 24,
+        "mobile": 1,
+        "total": 25
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 30,
+        "mobile": 0,
+        "total": 30
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 30,
+        "mobile": 2,
+        "total": 32
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 3,
+        "mobile": 2,
+        "total": 5
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -202,28 +608,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "광주 북구 재수",
-        "value": "20%"
+        "keyword": "광주 이투스 247 북구점",
+        "value": "17%"
       },
       {
         "rank": 2,
-        "keyword": "광주 북구 재수생 관리 독서실",
-        "value": "20%"
+        "keyword": "이투스247 광주",
+        "value": "17%"
       },
       {
         "rank": 3,
-        "keyword": "이투스 247 방",
-        "value": "20%"
+        "keyword": "광주 북구 이투스 247",
+        "value": "8%"
       },
       {
         "rank": 4,
-        "keyword": "이투스 247광주기숙",
-        "value": "20%"
+        "keyword": "광주 북구 재수",
+        "value": "8%"
       },
       {
         "rank": 5,
-        "keyword": "운암동 자습학원",
-        "value": "20%"
+        "keyword": "광주 북구 재수생 관리 독서실",
+        "value": "8%"
+      },
+      {
+        "rank": 6,
+        "keyword": "광주 재수학원",
+        "value": "8%"
+      },
+      {
+        "rank": 7,
+        "keyword": "북구 이투스 독서실",
+        "value": "8%"
+      },
+      {
+        "rank": 8,
+        "keyword": "운암동 이투스247",
+        "value": "8%"
+      },
+      {
+        "rank": 9,
+        "keyword": "이투스 247 방",
+        "value": "8%"
+      },
+      {
+        "rank": 10,
+        "keyword": "이투스 247광주기숙",
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
@@ -242,233 +673,756 @@ window.reportsData = {
   "광주수완": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 286,
-    "averageViews": 95,
-    "mobileViews": 151,
-    "pcViews": 135,
-    "mobileRatio": 53,
-    "pcRatio": 47,
-    "averageMobileViews": 50,
-    "averagePcViews": 45,
+    "totalViews": 338,
+    "averageViews": 113,
+    "mobileViews": 186,
+    "pcViews": 152,
+    "mobileRatio": 55,
+    "pcRatio": 45,
+    "averageMobileViews": 62,
+    "averagePcViews": 51,
     "dailyData": [
+      {
+        "date": "2026-05-22",
+        "day": "금",
+        "pc": 7,
+        "mobile": 2,
+        "total": 9
+      },
+      {
+        "date": "2026-05-23",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-05-24",
+        "day": "일",
+        "pc": 3,
+        "mobile": 0,
+        "total": 3
+      },
+      {
+        "date": "2026-05-25",
+        "day": "월",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-05-26",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-05-27",
+        "day": "수",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-05-28",
+        "day": "목",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-05-29",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-05-30",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-05-31",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-01",
+        "day": "월",
+        "pc": 10,
+        "mobile": 2,
+        "total": 12
+      },
       {
         "date": "2026-06-02",
         "day": "화",
-        "pc": 12,
-        "mobile": 8,
-        "total": 20
+        "pc": 13,
+        "mobile": 10,
+        "total": 23
       },
       {
         "date": "2026-06-03",
         "day": "수",
-        "pc": 9,
-        "mobile": 16,
-        "total": 25
+        "pc": 6,
+        "mobile": 14,
+        "total": 20
       },
       {
         "date": "2026-06-04",
         "day": "목",
-        "pc": 8,
-        "mobile": 8,
-        "total": 16
+        "pc": 14,
+        "mobile": 15,
+        "total": 29
       },
       {
         "date": "2026-06-05",
         "day": "금",
-        "pc": 10,
+        "pc": 8,
         "mobile": 5,
-        "total": 15
+        "total": 13
       },
       {
         "date": "2026-06-06",
         "day": "토",
-        "pc": 10,
-        "mobile": 5,
-        "total": 15
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
       },
       {
         "date": "2026-06-07",
         "day": "일",
         "pc": 7,
-        "mobile": 9,
-        "total": 16
+        "mobile": 2,
+        "total": 9
       },
       {
         "date": "2026-06-08",
         "day": "월",
-        "pc": 4,
+        "pc": 6,
         "mobile": 8,
-        "total": 12
+        "total": 14
       },
       {
         "date": "2026-06-09",
         "day": "화",
         "pc": 5,
-        "mobile": 2,
-        "total": 7
+        "mobile": 7,
+        "total": 12
       },
       {
         "date": "2026-06-10",
         "day": "수",
         "pc": 5,
-        "mobile": 5,
-        "total": 10
+        "mobile": 8,
+        "total": 13
       },
       {
         "date": "2026-06-11",
         "day": "목",
         "pc": 5,
-        "mobile": 8,
-        "total": 13
+        "mobile": 6,
+        "total": 11
       },
       {
         "date": "2026-06-12",
         "day": "금",
         "pc": 6,
-        "mobile": 12,
-        "total": 18
-      },
-      {
-        "date": "2026-06-13",
-        "day": "토",
-        "pc": 4,
-        "mobile": 12,
+        "mobile": 10,
         "total": 16
       },
       {
-        "date": "2026-06-14",
-        "day": "일",
-        "pc": 4,
-        "mobile": 5,
-        "total": 9
-      },
-      {
-        "date": "2026-06-15",
-        "day": "월",
-        "pc": 11,
-        "mobile": 9,
-        "total": 20
-      },
-      {
-        "date": "2026-06-16",
-        "day": "화",
-        "pc": 6,
-        "mobile": 6,
-        "total": 12
-      },
-      {
-        "date": "2026-06-17",
-        "day": "수",
-        "pc": 11,
-        "mobile": 10,
-        "total": 21
-      },
-      {
-        "date": "2026-06-18",
-        "day": "목",
-        "pc": 2,
-        "mobile": 7,
-        "total": 9
-      },
-      {
-        "date": "2026-06-19",
-        "day": "금",
-        "pc": 5,
-        "mobile": 4,
-        "total": 9
-      },
-      {
-        "date": "2026-06-20",
+        "date": "2026-06-13",
         "day": "토",
         "pc": 5,
         "mobile": 5,
         "total": 10
       },
       {
-        "date": "2026-06-21",
+        "date": "2026-06-14",
         "day": "일",
         "pc": 6,
-        "mobile": 7,
-        "total": 13
+        "mobile": 8,
+        "total": 14
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 5,
+        "mobile": 5,
+        "total": 10
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 4,
+        "mobile": 6,
+        "total": 10
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 8,
+        "mobile": 6,
+        "total": 14
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 8,
+        "mobile": 1,
+        "total": 9
+      },
+      {
+        "date": "2026-06-20",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-21",
+        "day": "일",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
       {
-        "title": "수완지구 이투스247학원 광주 독학관리 잘 하는 곳",
-        "blogger": "yyiyuhyun",
-        "date": "2026-06-02",
-        "likes": 3,
-        "comments": 1,
-        "url": "https://blog.naver.com/yyiyuhyun/224303573025"
-      },
-      {
-        "title": "광주 독학관리 반수학원 이투스247학원 광주수완점",
-        "blogger": "judy13",
+        "title": "이투스247학원 인하대점 미추홀구 독학재수학원으로 추천",
+        "blogger": "릴리쥬스",
         "date": "2026-06-02",
         "likes": 6,
         "comments": 0,
-        "url": "https://blog.naver.com/wings1324/224304113441"
+        "url": "https://blog.naver.com/silver_o0/224303642285"
       },
       {
-        "title": "이투스247학원 광주수완점 재수 반수 공부자극 확실한 독학관리",
-        "blogger": "하랑두랑",
-        "date": "2026-06-03",
-        "likes": 3,
-        "comments": 0,
-        "url": "https://blog.naver.com/ever9472/224304969446"
+        "title": "인하대 공부자극 독학재수학원 이투스247학원 인천인하대점 방문후기",
+        "blogger": "뚜미니뿌잉",
+        "date": "2026-06-01",
+        "likes": 2,
+        "comments": 1,
+        "url": "https://blog.naver.com/le4955/224302440503"
+      },
+      {
+        "title": "이투스247학원 인하대점, 재수생루틴 잡기 좋은 인천 독학재수학원",
+        "blogger": "진이어스세상",
+        "date": "2026-05-22",
+        "likes": 14,
+        "comments": 4,
+        "url": "https://blog.naver.com/jin2usblog/224293711283"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "광주독학재수학원",
-        "value": "14%"
+        "keyword": "인천독학재수학원추천",
+        "value": "18%"
       },
       {
         "rank": 2,
-        "keyword": "광주재수학원",
-        "value": "14%"
+        "keyword": "이투스 영어 미추홀",
+        "value": "9%"
       },
       {
         "rank": 3,
-        "keyword": "광주광역시 이투스",
-        "value": "14%"
+        "keyword": "이투스 인하대",
+        "value": "9%"
       },
       {
         "rank": 4,
-        "keyword": "광주 이투스 수완 주차",
-        "value": "14%"
+        "keyword": "인하대 피부관리",
+        "value": "9%"
       },
       {
         "rank": 5,
-        "keyword": "광주독학재수학원 썸머스쿨",
-        "value": "14%"
+        "keyword": "인하대역 관리형독서실",
+        "value": "9%"
       },
       {
         "rank": 6,
-        "keyword": "수완지구 독학재수학원추천",
-        "value": "14%"
+        "keyword": "갤럭시북4울트라",
+        "value": "9%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 247 광주",
-        "value": "14%"
+        "keyword": "이투스 인강 어때",
+        "value": "9%"
+      },
+      {
+        "rank": 8,
+        "keyword": "이투스 재수",
+        "value": "9%"
+      },
+      {
+        "rank": 9,
+        "keyword": "이투스247학원",
+        "value": "9%"
+      },
+      {
+        "rank": 10,
+        "keyword": "인하대 재수학원",
+        "value": "9%"
       }
     ],
     "exposedKeywords": [
       {
         "rank": 1,
-        "keyword": "수완지구 반수",
-        "value": "13건"
+        "keyword": "인하대역 재수",
+        "value": "25건"
       },
       {
         "rank": 2,
-        "keyword": "이투스247학원 광주수완점",
-        "value": "7건"
+        "keyword": "247공부환경",
+        "value": "8건"
       },
       {
         "rank": 3,
-        "keyword": "이투스247학원 후기",
+        "keyword": "독학재수",
+        "value": "3건"
+      },
+      {
+        "rank": 4,
+        "keyword": "독학재수학원",
+        "value": "2건"
+      },
+      {
+        "rank": 5,
+        "keyword": "재수",
+        "value": "2건"
+      },
+      {
+        "rank": 6,
+        "keyword": "재수학원추천",
+        "value": "1건"
+      },
+      {
+        "rank": 7,
+        "keyword": "이투스247학원 인하대점",
+        "value": "0건"
+      },
+      {
+        "rank": 8,
+        "keyword": "247시스템",
         "value": "0건"
       }
     ]
@@ -476,14 +1430,14 @@ window.reportsData = {
   "대치": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 219,
-    "averageViews": 73,
-    "mobileViews": 160,
-    "pcViews": 59,
+    "totalViews": 464,
+    "averageViews": 155,
+    "mobileViews": 339,
+    "pcViews": 125,
     "mobileRatio": 73,
     "pcRatio": 27,
-    "averageMobileViews": 53,
-    "averagePcViews": 20,
+    "averageMobileViews": 113,
+    "averagePcViews": 42,
     "dailyData": [
       {
         "date": "2026-06-02",
@@ -624,6 +1578,412 @@ window.reportsData = {
         "pc": 1,
         "mobile": 5,
         "total": 6
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 1,
+        "mobile": 8,
+        "total": 9
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 2,
+        "mobile": 9,
+        "total": 11
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 3,
+        "mobile": 6,
+        "total": 9
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 3,
+        "mobile": 14,
+        "total": 17
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 4,
+        "mobile": 1,
+        "total": 5
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 3,
+        "mobile": 0,
+        "total": 3
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 4,
+        "mobile": 1,
+        "total": 5
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -655,43 +2015,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "대치동 반수학원",
-        "value": "25%"
+        "keyword": "이투스247 대치",
+        "value": "22%"
       },
       {
         "rank": 2,
-        "keyword": "이투스247대치 급식",
-        "value": "25%"
+        "keyword": "대치동 반수학원",
+        "value": "13%"
       },
       {
         "rank": 3,
-        "keyword": "대치동 재수학원",
-        "value": "8%"
+        "keyword": "이투스247대치 급식",
+        "value": "13%"
       },
       {
         "rank": 4,
-        "keyword": "이투스247학원 시간표",
-        "value": "8%"
+        "keyword": "대치 이투스247",
+        "value": "9%"
       },
       {
         "rank": 5,
-        "keyword": "이투스대치독서실",
-        "value": "8%"
+        "keyword": "대치동 이투스247",
+        "value": "9%"
       },
       {
         "rank": 6,
-        "keyword": "이투스 247 대치 1층 2층",
-        "value": "8%"
+        "keyword": "이투스247학원 대치",
+        "value": "9%"
       },
       {
         "rank": 7,
-        "keyword": "이투스247 대치 가격",
-        "value": "8%"
+        "keyword": "이투스247 대치 메디컬존",
+        "value": "9%"
       },
       {
         "rank": 8,
-        "keyword": "재수 대치 독재학원 추천",
-        "value": "8%"
+        "keyword": "이투스247 대치 가격",
+        "value": "9%"
+      },
+      {
+        "rank": 9,
+        "keyword": "대치정수학원",
+        "value": "4%"
+      },
+      {
+        "rank": 10,
+        "keyword": "이투스 독학재수 가격",
+        "value": "4%"
       }
     ],
     "exposedKeywords": [
@@ -715,14 +2085,14 @@ window.reportsData = {
   "독학기숙": {
     "totalInfluencers": 4,
     "totalContents": 4,
-    "totalViews": 944,
-    "averageViews": 236,
-    "mobileViews": 680,
-    "pcViews": 264,
-    "mobileRatio": 72,
-    "pcRatio": 28,
-    "averageMobileViews": 170,
-    "averagePcViews": 66,
+    "totalViews": 1701,
+    "averageViews": 425,
+    "mobileViews": 1286,
+    "pcViews": 415,
+    "mobileRatio": 76,
+    "pcRatio": 24,
+    "averageMobileViews": 322,
+    "averagePcViews": 104,
     "dailyData": [
       {
         "date": "2026-05-23",
@@ -933,6 +2303,412 @@ window.reportsData = {
         "pc": 7,
         "mobile": 30,
         "total": 37
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 5,
+        "mobile": 22,
+        "total": 27
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 3,
+        "mobile": 22,
+        "total": 25
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 10,
+        "mobile": 28,
+        "total": 38
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 7,
+        "mobile": 14,
+        "total": 21
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 10,
+        "mobile": 16,
+        "total": 26
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 4,
+        "mobile": 30,
+        "total": 34
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 1,
+        "mobile": 39,
+        "total": 40
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 5,
+        "mobile": 49,
+        "total": 54
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 11,
+        "mobile": 11,
+        "total": 22
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 5,
+        "mobile": 31,
+        "total": 36
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 1,
+        "mobile": 21,
+        "total": 22
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 3,
+        "mobile": 16,
+        "total": 19
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 6,
+        "mobile": 24,
+        "total": 30
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 7,
+        "mobile": 14,
+        "total": 21
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 2,
+        "mobile": 8,
+        "total": 10
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 4,
+        "mobile": 10,
+        "total": 14
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 7,
+        "mobile": 13,
+        "total": 20
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 4,
+        "mobile": 8,
+        "total": 12
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 1,
+        "mobile": 12,
+        "total": 13
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 8,
+        "mobile": 8,
+        "total": 16
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 1,
+        "mobile": 14,
+        "total": 15
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 4,
+        "mobile": 3,
+        "total": 7
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 3,
+        "mobile": 13,
+        "total": 16
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 3,
+        "mobile": 6,
+        "total": 9
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 2,
+        "mobile": 10,
+        "total": 12
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 12,
+        "total": 12
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 2,
+        "mobile": 8,
+        "total": 10
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 3,
+        "mobile": 8,
+        "total": 11
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 6,
+        "mobile": 4,
+        "total": 10
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
       }
     ],
     "contents": [
@@ -978,46 +2754,46 @@ window.reportsData = {
       {
         "rank": 2,
         "keyword": "이투스 247 기숙 광주",
-        "value": "15%"
+        "value": "18%"
       },
       {
         "rank": 3,
-        "keyword": "광주 이투스 기숙학원",
-        "value": "12%"
+        "keyword": "이투스 독학기숙학원 광주",
+        "value": "11%"
       },
       {
         "rank": 4,
-        "keyword": "경기 광주 이투스247 독학기숙학원",
-        "value": "10%"
+        "keyword": "광주 이투스 기숙학원",
+        "value": "11%"
       },
       {
         "rank": 5,
-        "keyword": "이투스기숙학원",
-        "value": "10%"
+        "keyword": "이투스독학기숙",
+        "value": "9%"
       },
       {
         "rank": 6,
-        "keyword": "이투스독학기숙",
-        "value": "10%"
+        "keyword": "이투스 광주",
+        "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "경기 광주 이투스247 독학기숙학원 하루루틴",
+        "keyword": "경기 광주 이투스247 독학기숙학원",
         "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 247 독학재수기숙",
+        "keyword": "이투스기숙학원",
         "value": "7%"
       },
       {
         "rank": 9,
-        "keyword": "광주 이투스 247 기숙학원",
+        "keyword": "이투스 247 독학재수기숙",
         "value": "5%"
       },
       {
         "rank": 10,
-        "keyword": "이투스 광주기숙학원 비용",
+        "keyword": "광주기숙학원",
         "value": "5%"
       }
     ],
@@ -1052,14 +2828,14 @@ window.reportsData = {
   "부산교대": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 2696,
-    "averageViews": 899,
-    "mobileViews": 200,
-    "pcViews": 2496,
-    "mobileRatio": 7,
-    "pcRatio": 93,
-    "averageMobileViews": 67,
-    "averagePcViews": 832,
+    "totalViews": 6913,
+    "averageViews": 2304,
+    "mobileViews": 330,
+    "pcViews": 6583,
+    "mobileRatio": 5,
+    "pcRatio": 95,
+    "averageMobileViews": 110,
+    "averagePcViews": 2194,
     "dailyData": [
       {
         "date": "2026-05-31",
@@ -1214,6 +2990,412 @@ window.reportsData = {
         "pc": 104,
         "mobile": 16,
         "total": 120
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 121,
+        "mobile": 14,
+        "total": 135
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 112,
+        "mobile": 17,
+        "total": 129
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 163,
+        "mobile": 9,
+        "total": 172
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 124,
+        "mobile": 6,
+        "total": 130
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 112,
+        "mobile": 1,
+        "total": 113
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 111,
+        "mobile": 6,
+        "total": 117
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 139,
+        "mobile": 5,
+        "total": 144
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 124,
+        "mobile": 3,
+        "total": 127
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 114,
+        "mobile": 7,
+        "total": 121
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 125,
+        "mobile": 3,
+        "total": 128
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 111,
+        "mobile": 0,
+        "total": 111
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 112,
+        "mobile": 1,
+        "total": 113
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 131,
+        "mobile": 0,
+        "total": 131
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 96,
+        "mobile": 5,
+        "total": 101
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 137,
+        "mobile": 3,
+        "total": 140
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 98,
+        "mobile": 3,
+        "total": 101
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 139,
+        "mobile": 4,
+        "total": 143
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 122,
+        "mobile": 1,
+        "total": 123
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 93,
+        "mobile": 2,
+        "total": 95
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 107,
+        "mobile": 1,
+        "total": 108
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 120,
+        "mobile": 2,
+        "total": 122
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 133,
+        "mobile": 2,
+        "total": 135
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 119,
+        "mobile": 1,
+        "total": 120
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 104,
+        "mobile": 1,
+        "total": 105
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 122,
+        "mobile": 4,
+        "total": 126
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 96,
+        "mobile": 4,
+        "total": 100
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 134,
+        "mobile": 1,
+        "total": 135
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 135,
+        "mobile": 2,
+        "total": 137
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 113,
+        "mobile": 2,
+        "total": 115
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 114,
+        "mobile": 1,
+        "total": 115
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 127,
+        "mobile": 0,
+        "total": 127
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 109,
+        "mobile": 0,
+        "total": 109
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 142,
+        "mobile": 2,
+        "total": 144
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 113,
+        "mobile": 0,
+        "total": 113
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 3,
+        "mobile": 2,
+        "total": 5
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
       }
     ],
     "contents": [
@@ -1226,72 +3408,72 @@ window.reportsData = {
         "url": "https://blog.naver.com/wjdqls9796/224301828900?fromRss=true&trackingCode=rss"
       },
       {
-        "title": "이투스247학원 부산교대점 2027 반수성공반 직접 다녀온 후기",
-        "blogger": "시간블로그",
-        "date": "2026-06-03",
-        "likes": 0,
-        "comments": 2,
-        "url": "https://blog.naver.com/thehyuntime/224305136185"
-      },
-      {
         "title": "부산 독학관리학원 이투스247학원 부산교대점 수험생관리 반수 재수학원",
         "blogger": "뿌블",
         "date": "2026-06-01",
         "likes": 18,
         "comments": 5,
         "url": "https://blog.naver.com/jshee45/224302356037?fromRss=true&trackingCode=rss"
+      },
+      {
+        "title": "이투스247학원 부산교대점 2027 반수성공반 직접 다녀온 후기",
+        "blogger": "시간블로그",
+        "date": "2026-06-03",
+        "likes": 0,
+        "comments": 2,
+        "url": "https://blog.naver.com/thehyuntime/224305136185"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "부산 반수학원",
-        "value": "18%"
+        "keyword": "이투스247 부산교대",
+        "value": "20%"
       },
       {
         "rank": 2,
-        "keyword": "반수학원",
-        "value": "9%"
+        "keyword": "부산 반수학원",
+        "value": "13%"
       },
       {
         "rank": 3,
-        "keyword": "부산 기숙 학원",
-        "value": "9%"
+        "keyword": "이투스247 부산교대점",
+        "value": "13%"
       },
       {
         "rank": 4,
-        "keyword": "부산 독학기숙추천",
-        "value": "9%"
+        "keyword": "부산 독학재수학원",
+        "value": "13%"
       },
       {
         "rank": 5,
-        "keyword": "부산 유명 수능학원",
-        "value": "9%"
+        "keyword": "반수학원",
+        "value": "7%"
       },
       {
         "rank": 6,
-        "keyword": "이투스247",
-        "value": "9%"
+        "keyword": "부산 기숙 학원",
+        "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "이투스247 부산교대점",
-        "value": "9%"
+        "keyword": "부산 독학기숙추천",
+        "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "이투스247 후기",
-        "value": "9%"
+        "keyword": "부산 독학재수학원 247",
+        "value": "7%"
       },
       {
         "rank": 9,
-        "keyword": "이투스247학원 시간표",
-        "value": "9%"
+        "keyword": "부산 유명 수능학원",
+        "value": "7%"
       },
       {
         "rank": 10,
-        "keyword": "이투스부산교대",
-        "value": "9%"
+        "keyword": "이투스 기숙학원 부산",
+        "value": "7%"
       }
     ],
     "exposedKeywords": [
@@ -1320,14 +3502,14 @@ window.reportsData = {
   "분당정자": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 190,
-    "averageViews": 63,
-    "mobileViews": 115,
-    "pcViews": 75,
-    "mobileRatio": 61,
-    "pcRatio": 39,
-    "averageMobileViews": 38,
-    "averagePcViews": 25,
+    "totalViews": 358,
+    "averageViews": 119,
+    "mobileViews": 241,
+    "pcViews": 117,
+    "mobileRatio": 67,
+    "pcRatio": 33,
+    "averageMobileViews": 80,
+    "averagePcViews": 39,
     "dailyData": [
       {
         "date": "2026-05-30",
@@ -1489,17 +3671,415 @@ window.reportsData = {
         "pc": 0,
         "mobile": 12,
         "total": 12
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 7,
+        "mobile": 6,
+        "total": 13
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
-      {
-        "title": "분당 독학재수학원 이투스247학원 분당정자점 공부관리 환경 반수 추천",
-        "blogger": "문달쓰",
-        "date": "2026-05-30",
-        "likes": 0,
-        "comments": 5,
-        "url": "https://blog.naver.com/mdal2_700/224300732563?fromRss=true&trackingCode=rss"
-      },
       {
         "title": "이투스247학원 분당정자점 정자역 반수 성공반 후기",
         "blogger": "썸머린",
@@ -1507,6 +4087,14 @@ window.reportsData = {
         "likes": 0,
         "comments": 0,
         "url": "https://blog.naver.com/rvd_romi/224304965239"
+      },
+      {
+        "title": "분당 독학재수학원 이투스247학원 분당정자점 공부관리 환경 반수 추천",
+        "blogger": "문달쓰",
+        "date": "2026-05-30",
+        "likes": 0,
+        "comments": 5,
+        "url": "https://blog.naver.com/mdal2_700/224300732563?fromRss=true&trackingCode=rss"
       },
       {
         "title": "정자역 재수학원 추천 분당 공부관리 잘하는 이투스247학원",
@@ -1520,48 +4108,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "이투스247수원정자",
-        "value": "11%"
+        "keyword": "분당 이투스247",
+        "value": "21%"
       },
       {
         "rank": 2,
-        "keyword": "정자동 공부할만한",
-        "value": "11%"
+        "keyword": "정자역근처 독재재수이투스학원",
+        "value": "14%"
       },
       {
         "rank": 3,
-        "keyword": "관리형 독서실 이투스 정자",
-        "value": "11%"
+        "keyword": "이투스247 분당정자",
+        "value": "14%"
       },
       {
         "rank": 4,
-        "keyword": "분당 독학재수",
-        "value": "11%"
+        "keyword": "수원 정자 이투스247 75만원",
+        "value": "7%"
       },
       {
         "rank": 5,
-        "keyword": "분당 독학재수학원",
-        "value": "11%"
+        "keyword": "이투스 247 정자",
+        "value": "7%"
       },
       {
         "rank": 6,
-        "keyword": "이투스 247 독재 가격",
-        "value": "11%"
+        "keyword": "이투스247수원정자",
+        "value": "7%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 247 독학재수학원 가격",
-        "value": "11%"
+        "keyword": "정자동 공부할만한",
+        "value": "7%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 한수",
-        "value": "11%"
+        "keyword": "관리형 독서실 이투스 정자",
+        "value": "7%"
       },
       {
         "rank": 9,
-        "keyword": "이투스분당점",
-        "value": "11%"
+        "keyword": "분당 독학재수",
+        "value": "7%"
+      },
+      {
+        "rank": 10,
+        "keyword": "분당 독학재수학원",
+        "value": "7%"
       }
     ],
     "exposedKeywords": [
@@ -1585,14 +4178,14 @@ window.reportsData = {
   "서울광진": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 193,
-    "averageViews": 64,
-    "mobileViews": 87,
-    "pcViews": 106,
-    "mobileRatio": 45,
-    "pcRatio": 55,
-    "averageMobileViews": 29,
-    "averagePcViews": 35,
+    "totalViews": 312,
+    "averageViews": 104,
+    "mobileViews": 173,
+    "pcViews": 139,
+    "mobileRatio": 55,
+    "pcRatio": 45,
+    "averageMobileViews": 58,
+    "averagePcViews": 46,
     "dailyData": [
       {
         "date": "2026-06-01",
@@ -1740,6 +4333,412 @@ window.reportsData = {
         "pc": 4,
         "mobile": 4,
         "total": 8
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 6,
+        "mobile": 13,
+        "total": 19
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 2,
+        "mobile": 8,
+        "total": 10
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 3,
+        "mobile": 8,
+        "total": 11
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 6,
+        "mobile": 0,
+        "total": 6
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
       }
     ],
     "contents": [
@@ -1771,18 +4770,48 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "광진구 독학재수학원",
-        "value": "33%"
+        "keyword": "건대 수능폰",
+        "value": "17%"
       },
       {
         "rank": 2,
         "keyword": "이투스247",
-        "value": "33%"
+        "value": "17%"
       },
       {
         "rank": 3,
+        "keyword": "건대입구 재수학원",
+        "value": "17%"
+      },
+      {
+        "rank": 4,
+        "keyword": "광진구 독학재수학원",
+        "value": "8%"
+      },
+      {
+        "rank": 5,
+        "keyword": "스터디 플래너",
+        "value": "8%"
+      },
+      {
+        "rank": 6,
+        "keyword": "스터디플래너",
+        "value": "8%"
+      },
+      {
+        "rank": 7,
+        "keyword": "이투스 247 독학재수학원",
+        "value": "8%"
+      },
+      {
+        "rank": 8,
+        "keyword": "이투스 구의",
+        "value": "8%"
+      },
+      {
+        "rank": 9,
         "keyword": "이투스247 광진",
-        "value": "33%"
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
@@ -1806,14 +4835,14 @@ window.reportsData = {
   "수원시청": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 242,
-    "averageViews": 81,
-    "mobileViews": 195,
-    "pcViews": 47,
+    "totalViews": 499,
+    "averageViews": 166,
+    "mobileViews": 403,
+    "pcViews": 96,
     "mobileRatio": 81,
     "pcRatio": 19,
-    "averageMobileViews": 65,
-    "averagePcViews": 16,
+    "averageMobileViews": 134,
+    "averagePcViews": 32,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -1982,17 +5011,415 @@ window.reportsData = {
         "pc": 2,
         "mobile": 11,
         "total": 13
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 6,
+        "mobile": 9,
+        "total": 15
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 2,
+        "mobile": 13,
+        "total": 15
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 6,
+        "mobile": 25,
+        "total": 31
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 8,
+        "mobile": 12,
+        "total": 20
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 3,
+        "mobile": 6,
+        "total": 9
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
       }
     ],
     "contents": [
-      {
-        "title": "수원 재수추천 반수학원 이투스247학원 수원시청점",
-        "blogger": "헤이쥬86",
-        "date": "2026-05-29",
-        "likes": 3,
-        "comments": 0,
-        "url": "https://blog.naver.com/eunjuyaaa/224299529609?fromRss=true&trackingCode=rss"
-      },
       {
         "title": "독학재수학원 이투스247학원 수원시청점 가격 후기",
         "blogger": "hapsong",
@@ -2000,6 +5427,14 @@ window.reportsData = {
         "likes": 0,
         "comments": 0,
         "url": "https://blog.naver.com/dakong0921/224304314828?fromRss=true&trackingCode=rss"
+      },
+      {
+        "title": "수원 재수추천 반수학원 이투스247학원 수원시청점",
+        "blogger": "헤이쥬86",
+        "date": "2026-05-29",
+        "likes": 3,
+        "comments": 0,
+        "url": "https://blog.naver.com/eunjuyaaa/224299529609?fromRss=true&trackingCode=rss"
       },
       {
         "title": "이투스247학원 수원시청점 재수학원추천 이유 직접 확인한 후기",
@@ -2013,53 +5448,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "수원시청 이투스 247",
-        "value": "15%"
+        "keyword": "이투스 수원시청점",
+        "value": "18%"
       },
       {
         "rank": 2,
         "keyword": "이투스247",
-        "value": "15%"
+        "value": "18%"
       },
       {
         "rank": 3,
-        "keyword": "이투스 247 수원시청 가격",
-        "value": "15%"
+        "keyword": "수원시청 이투스 247",
+        "value": "12%"
       },
       {
         "rank": 4,
-        "keyword": "반수학원 수원",
-        "value": "8%"
+        "keyword": "이투스 247 수원시청 가격",
+        "value": "12%"
       },
       {
         "rank": 5,
-        "keyword": "수원 반수학원",
-        "value": "8%"
+        "keyword": "수원 재수학원",
+        "value": "12%"
       },
       {
         "rank": 6,
-        "keyword": "이투스247 수원정자",
-        "value": "8%"
+        "keyword": "반수학원 수원",
+        "value": "6%"
       },
       {
         "rank": 7,
-        "keyword": "수원 재수생 독서실",
-        "value": "8%"
+        "keyword": "수원 반수학원",
+        "value": "6%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 247 독학재수",
-        "value": "8%"
+        "keyword": "이투스247 수원정자",
+        "value": "6%"
       },
       {
         "rank": 9,
-        "keyword": "이투스 독학재수학원 내부",
-        "value": "8%"
+        "keyword": "독학재수 1인실",
+        "value": "6%"
       },
       {
         "rank": 10,
-        "keyword": "이투스247 학원비",
-        "value": "8%"
+        "keyword": "독학형 기숙 재수학원 수원",
+        "value": "6%"
       }
     ],
     "exposedKeywords": [
@@ -2093,14 +5528,14 @@ window.reportsData = {
   "안산": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 130,
-    "averageViews": 43,
-    "mobileViews": 98,
-    "pcViews": 32,
-    "mobileRatio": 75,
-    "pcRatio": 25,
-    "averageMobileViews": 33,
-    "averagePcViews": 11,
+    "totalViews": 295,
+    "averageViews": 98,
+    "mobileViews": 223,
+    "pcViews": 72,
+    "mobileRatio": 76,
+    "pcRatio": 24,
+    "averageMobileViews": 74,
+    "averagePcViews": 24,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -2269,17 +5704,415 @@ window.reportsData = {
         "pc": 0,
         "mobile": 8,
         "total": 8
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 3,
+        "mobile": 6,
+        "total": 9
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 3,
+        "mobile": 5,
+        "total": 8
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 3,
+        "mobile": 0,
+        "total": 3
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
       }
     ],
     "contents": [
-      {
-        "title": "안산 재수 이투스247학원 안산점 2027 반수성공반 독학재수학원 추천",
-        "blogger": "헤이쭈링",
-        "date": "2026-05-29",
-        "likes": 0,
-        "comments": 1,
-        "url": "https://blog.naver.com/hhjjoo_/224300402378"
-      },
       {
         "title": "안산 독학학원 : 이투스247학원 안산점 공부하기 좋은 환경이네요.",
         "blogger": "톨토라",
@@ -2287,6 +6120,14 @@ window.reportsData = {
         "likes": 7,
         "comments": 0,
         "url": "https://blog.naver.com/yhj88/224309603265"
+      },
+      {
+        "title": "안산 재수 이투스247학원 안산점 2027 반수성공반 독학재수학원 추천",
+        "blogger": "헤이쭈링",
+        "date": "2026-05-29",
+        "likes": 0,
+        "comments": 1,
+        "url": "https://blog.naver.com/hhjjoo_/224300402378"
       },
       {
         "title": "이투스247학원 안산점 재수관리, 중앙역 재수학원 안산 반수추천(안산 독학학원)",
@@ -2300,33 +6141,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "이투스247",
-        "value": "17%"
+        "keyword": "안산 재수학원",
+        "value": "25%"
       },
       {
         "rank": 2,
-        "keyword": "안산 관리형 학원",
-        "value": "17%"
+        "keyword": "안산 이투스",
+        "value": "8%"
       },
       {
         "rank": 3,
-        "keyword": "안산 독학재수",
-        "value": "17%"
+        "keyword": "안산미디어라이브러리 의자",
+        "value": "8%"
       },
       {
         "rank": 4,
-        "keyword": "안산 재수학원",
-        "value": "17%"
+        "keyword": "이투스247",
+        "value": "8%"
       },
       {
         "rank": 5,
-        "keyword": "안산재수",
-        "value": "17%"
+        "keyword": "안산 관리형 재수학원",
+        "value": "8%"
       },
       {
         "rank": 6,
-        "keyword": "이투스 독학재수 안산 급식",
-        "value": "17%"
+        "keyword": "안산 관리형 학원",
+        "value": "8%"
+      },
+      {
+        "rank": 7,
+        "keyword": "안산 독학재수",
+        "value": "8%"
+      },
+      {
+        "rank": 8,
+        "keyword": "안산 재수",
+        "value": "8%"
+      },
+      {
+        "rank": 9,
+        "keyword": "안산 학원자리",
+        "value": "8%"
+      },
+      {
+        "rank": 10,
+        "keyword": "안산재수",
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
@@ -2355,14 +6216,14 @@ window.reportsData = {
   "의정부": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 481,
-    "averageViews": 160,
-    "mobileViews": 249,
-    "pcViews": 232,
-    "mobileRatio": 52,
-    "pcRatio": 48,
-    "averageMobileViews": 83,
-    "averagePcViews": 77,
+    "totalViews": 762,
+    "averageViews": 254,
+    "mobileViews": 457,
+    "pcViews": 305,
+    "mobileRatio": 60,
+    "pcRatio": 40,
+    "averageMobileViews": 152,
+    "averagePcViews": 102,
     "dailyData": [
       {
         "date": "2026-05-24",
@@ -2566,6 +6427,412 @@ window.reportsData = {
         "pc": 0,
         "mobile": 7,
         "total": 7
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 9,
+        "total": 10
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 1,
+        "mobile": 20,
+        "total": 21
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 3,
+        "mobile": 16,
+        "total": 19
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 3,
+        "mobile": 6,
+        "total": 9
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 10,
+        "total": 10
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 1,
+        "mobile": 10,
+        "total": 11
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 8,
+        "mobile": 5,
+        "total": 13
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 6,
+        "mobile": 2,
+        "total": 8
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 1,
+        "mobile": 8,
+        "total": 9
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
       }
     ],
     "contents": [
@@ -2578,72 +6845,72 @@ window.reportsData = {
         "url": "https://blog.naver.com/siroo2016/224294999719"
       },
       {
-        "title": "의정부 독학재수학원, 공부 분위기부터 다른 이투스247학원 의정부점",
-        "blogger": "ilreen",
-        "date": "2026-05-26",
-        "likes": 0,
-        "comments": 8,
-        "url": "https://blog.naver.com/e-ryang/224296464621?fromRss=true&trackingCode=rss"
-      },
-      {
         "title": "이투스 247학원 의정부점 상담 후기 의정부 재수추천 반수학원",
         "blogger": "예남매",
         "date": "2026-06-02",
         "likes": 21,
         "comments": 1,
         "url": "https://blog.naver.com/eunpiri715/224303507482?fromRss=true&trackingCode=rss"
+      },
+      {
+        "title": "의정부 독학재수학원, 공부 분위기부터 다른 이투스247학원 의정부점",
+        "blogger": "ilreen",
+        "date": "2026-05-26",
+        "likes": 0,
+        "comments": 8,
+        "url": "https://blog.naver.com/e-ryang/224296464621?fromRss=true&trackingCode=rss"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
         "keyword": "의정부 이투스 247",
-        "value": "21%"
+        "value": "26%"
       },
       {
         "rank": 2,
-        "keyword": "이투스의정부점 후기",
-        "value": "14%"
+        "keyword": "의정부 재수학원",
+        "value": "11%"
       },
       {
         "rank": 3,
-        "keyword": "의정부 관리형 독서실 추천",
-        "value": "14%"
+        "keyword": "의정부 학원",
+        "value": "11%"
       },
       {
         "rank": 4,
-        "keyword": "의정부 반수 설명회",
-        "value": "7%"
+        "keyword": "이투스의정부점 후기",
+        "value": "11%"
       },
       {
         "rank": 5,
-        "keyword": "독학재수학원 핸드폰 관리",
-        "value": "7%"
+        "keyword": "의정부 관리형 독서실 추천",
+        "value": "11%"
       },
       {
         "rank": 6,
-        "keyword": "의정부 독학 재수",
-        "value": "7%"
+        "keyword": "의정부 관리형 독서실",
+        "value": "11%"
       },
       {
         "rank": 7,
-        "keyword": "의정부 이투스247의정부학원",
-        "value": "7%"
+        "keyword": "의정부 반수 설명회",
+        "value": "5%"
       },
       {
         "rank": 8,
-        "keyword": "이투스경기북부",
-        "value": "7%"
+        "keyword": "이투스247 의정부",
+        "value": "5%"
       },
       {
         "rank": 9,
-        "keyword": "관리형 독서실 의정부",
-        "value": "7%"
+        "keyword": "회룡역 관리형 독서실",
+        "value": "5%"
       },
       {
         "rank": 10,
-        "keyword": "의정부 관리형 독서실 후기",
-        "value": "7%"
+        "keyword": "재수학원 수능선배",
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -2667,14 +6934,14 @@ window.reportsData = {
   "이천기숙": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 239,
-    "averageViews": 80,
-    "mobileViews": 140,
-    "pcViews": 99,
-    "mobileRatio": 59,
-    "pcRatio": 41,
-    "averageMobileViews": 47,
-    "averagePcViews": 33,
+    "totalViews": 411,
+    "averageViews": 137,
+    "mobileViews": 266,
+    "pcViews": 145,
+    "mobileRatio": 65,
+    "pcRatio": 35,
+    "averageMobileViews": 89,
+    "averagePcViews": 48,
     "dailyData": [
       {
         "date": "2026-05-28",
@@ -2850,6 +7117,412 @@ window.reportsData = {
         "pc": 1,
         "mobile": 10,
         "total": 11
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 1,
+        "mobile": 8,
+        "total": 9
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 3,
+        "mobile": 8,
+        "total": 11
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 4,
+        "mobile": 4,
+        "total": 8
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 1,
+        "mobile": 8,
+        "total": 9
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
       }
     ],
     "contents": [
@@ -2882,7 +7555,7 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "이천247 기숙",
-        "value": "21%"
+        "value": "19%"
       },
       {
         "rank": 2,
@@ -2891,43 +7564,43 @@ window.reportsData = {
       },
       {
         "rank": 3,
-        "keyword": "이투스기숙학원",
+        "keyword": "이투스 이천",
         "value": "14%"
       },
       {
         "rank": 4,
-        "keyword": "수원 반수종합반",
-        "value": "7%"
+        "keyword": "이천 이투스 기숙사",
+        "value": "10%"
       },
       {
         "rank": 5,
-        "keyword": "이천이투스기숙",
-        "value": "7%"
+        "keyword": "이천이투스 247",
+        "value": "10%"
       },
       {
         "rank": 6,
-        "keyword": "이투수 기숙학원",
-        "value": "7%"
+        "keyword": "이투스이천",
+        "value": "10%"
       },
       {
         "rank": 7,
-        "keyword": "이투스 247 이천 후기",
-        "value": "7%"
+        "keyword": "이투스기숙학원",
+        "value": "10%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 247광주기숙",
-        "value": "7%"
+        "keyword": "수원 반수종합반",
+        "value": "5%"
       },
       {
         "rank": 9,
-        "keyword": "이투스 247 이천",
-        "value": "7%"
+        "keyword": "이천 기숙사형 학원",
+        "value": "5%"
       },
       {
         "rank": 10,
-        "keyword": "이투스 이천",
-        "value": "7%"
+        "keyword": "이투수 기숙학원",
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -2951,14 +7624,14 @@ window.reportsData = {
   "인천송도": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 2011,
-    "averageViews": 670,
-    "mobileViews": 102,
-    "pcViews": 1909,
-    "mobileRatio": 5,
-    "pcRatio": 95,
-    "averageMobileViews": 34,
-    "averagePcViews": 636,
+    "totalViews": 2119,
+    "averageViews": 706,
+    "mobileViews": 181,
+    "pcViews": 1938,
+    "mobileRatio": 9,
+    "pcRatio": 91,
+    "averageMobileViews": 60,
+    "averagePcViews": 646,
     "dailyData": [
       {
         "date": "2026-05-28",
@@ -3134,6 +7807,412 @@ window.reportsData = {
         "pc": 0,
         "mobile": 1,
         "total": 1
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -3165,38 +8244,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "송도 재수학원",
-        "value": "22%"
+        "keyword": "독학재수학원 이투스247학원 인천송도",
+        "value": "16%"
       },
       {
         "rank": 2,
-        "keyword": "이투스247학원 인천송도점",
-        "value": "22%"
+        "keyword": "송도 이투스 학원",
+        "value": "16%"
       },
       {
         "rank": 3,
-        "keyword": "송도재수학원",
-        "value": "11%"
+        "keyword": "송도 재수학원",
+        "value": "16%"
       },
       {
         "rank": 4,
-        "keyword": "인천 재수학원",
+        "keyword": "송도 이투스 247학원",
         "value": "11%"
       },
       {
         "rank": 5,
-        "keyword": "인천송도독학재수학원",
+        "keyword": "송도 독학재수학원",
         "value": "11%"
       },
       {
         "rank": 6,
-        "keyword": "인천 연수구 수능학원",
+        "keyword": "이투스247학원 인천송도점",
         "value": "11%"
       },
       {
         "rank": 7,
-        "keyword": "송도 독학재수학원",
-        "value": "11%"
+        "keyword": "송도이투스 컨설팅",
+        "value": "5%"
+      },
+      {
+        "rank": 8,
+        "keyword": "송도재수학원",
+        "value": "5%"
+      },
+      {
+        "rank": 9,
+        "keyword": "인천 재수학원",
+        "value": "5%"
+      },
+      {
+        "rank": 10,
+        "keyword": "인천송도독학재수학원",
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -3220,320 +8314,654 @@ window.reportsData = {
   "인하대": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 290,
-    "averageViews": 97,
-    "mobileViews": 147,
-    "pcViews": 143,
-    "mobileRatio": 51,
-    "pcRatio": 49,
-    "averageMobileViews": 49,
-    "averagePcViews": 48,
+    "totalViews": 625,
+    "averageViews": 208,
+    "mobileViews": 424,
+    "pcViews": 201,
+    "mobileRatio": 68,
+    "pcRatio": 32,
+    "averageMobileViews": 141,
+    "averagePcViews": 67,
     "dailyData": [
-      {
-        "date": "2026-05-22",
-        "day": "금",
-        "pc": 7,
-        "mobile": 2,
-        "total": 9
-      },
-      {
-        "date": "2026-05-23",
-        "day": "토",
-        "pc": 0,
-        "mobile": 2,
-        "total": 2
-      },
-      {
-        "date": "2026-05-24",
-        "day": "일",
-        "pc": 3,
-        "mobile": 0,
-        "total": 3
-      },
-      {
-        "date": "2026-05-25",
-        "day": "월",
-        "pc": 1,
-        "mobile": 1,
-        "total": 2
-      },
-      {
-        "date": "2026-05-26",
-        "day": "화",
-        "pc": 1,
-        "mobile": 1,
-        "total": 2
-      },
-      {
-        "date": "2026-05-27",
-        "day": "수",
-        "pc": 2,
-        "mobile": 1,
-        "total": 3
-      },
-      {
-        "date": "2026-05-28",
-        "day": "목",
-        "pc": 2,
-        "mobile": 0,
-        "total": 2
-      },
-      {
-        "date": "2026-05-29",
-        "day": "금",
-        "pc": 0,
-        "mobile": 2,
-        "total": 2
-      },
-      {
-        "date": "2026-05-30",
-        "day": "토",
-        "pc": 0,
-        "mobile": 1,
-        "total": 1
-      },
-      {
-        "date": "2026-05-31",
-        "day": "일",
-        "pc": 0,
-        "mobile": 1,
-        "total": 1
-      },
-      {
-        "date": "2026-06-01",
-        "day": "월",
-        "pc": 10,
-        "mobile": 2,
-        "total": 12
-      },
       {
         "date": "2026-06-02",
         "day": "화",
-        "pc": 13,
-        "mobile": 10,
-        "total": 23
+        "pc": 12,
+        "mobile": 8,
+        "total": 20
       },
       {
         "date": "2026-06-03",
         "day": "수",
-        "pc": 6,
-        "mobile": 14,
-        "total": 20
+        "pc": 9,
+        "mobile": 16,
+        "total": 25
       },
       {
         "date": "2026-06-04",
         "day": "목",
-        "pc": 14,
-        "mobile": 15,
-        "total": 29
+        "pc": 8,
+        "mobile": 8,
+        "total": 16
       },
       {
         "date": "2026-06-05",
         "day": "금",
-        "pc": 8,
+        "pc": 10,
         "mobile": 5,
-        "total": 13
+        "total": 15
       },
       {
         "date": "2026-06-06",
         "day": "토",
-        "pc": 2,
-        "mobile": 4,
-        "total": 6
+        "pc": 10,
+        "mobile": 5,
+        "total": 15
       },
       {
         "date": "2026-06-07",
         "day": "일",
         "pc": 7,
-        "mobile": 2,
-        "total": 9
+        "mobile": 9,
+        "total": 16
       },
       {
         "date": "2026-06-08",
         "day": "월",
-        "pc": 6,
+        "pc": 4,
         "mobile": 8,
-        "total": 14
+        "total": 12
       },
       {
         "date": "2026-06-09",
         "day": "화",
         "pc": 5,
-        "mobile": 7,
-        "total": 12
+        "mobile": 2,
+        "total": 7
       },
       {
         "date": "2026-06-10",
         "day": "수",
         "pc": 5,
-        "mobile": 8,
-        "total": 13
+        "mobile": 5,
+        "total": 10
       },
       {
         "date": "2026-06-11",
         "day": "목",
         "pc": 5,
-        "mobile": 6,
-        "total": 11
+        "mobile": 8,
+        "total": 13
       },
       {
         "date": "2026-06-12",
         "day": "금",
         "pc": 6,
-        "mobile": 10,
-        "total": 16
+        "mobile": 12,
+        "total": 18
       },
       {
         "date": "2026-06-13",
+        "day": "토",
+        "pc": 4,
+        "mobile": 12,
+        "total": 16
+      },
+      {
+        "date": "2026-06-14",
+        "day": "일",
+        "pc": 4,
+        "mobile": 5,
+        "total": 9
+      },
+      {
+        "date": "2026-06-15",
+        "day": "월",
+        "pc": 11,
+        "mobile": 9,
+        "total": 20
+      },
+      {
+        "date": "2026-06-16",
+        "day": "화",
+        "pc": 6,
+        "mobile": 6,
+        "total": 12
+      },
+      {
+        "date": "2026-06-17",
+        "day": "수",
+        "pc": 11,
+        "mobile": 10,
+        "total": 21
+      },
+      {
+        "date": "2026-06-18",
+        "day": "목",
+        "pc": 2,
+        "mobile": 7,
+        "total": 9
+      },
+      {
+        "date": "2026-06-19",
+        "day": "금",
+        "pc": 5,
+        "mobile": 4,
+        "total": 9
+      },
+      {
+        "date": "2026-06-20",
         "day": "토",
         "pc": 5,
         "mobile": 5,
         "total": 10
       },
       {
-        "date": "2026-06-14",
+        "date": "2026-06-21",
         "day": "일",
         "pc": 6,
+        "mobile": 7,
+        "total": 13
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 10,
+        "mobile": 7,
+        "total": 17
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 8,
+        "mobile": 11,
+        "total": 19
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 8,
         "mobile": 8,
+        "total": 16
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 1,
+        "mobile": 12,
+        "total": 13
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 14,
         "total": 14
       },
       {
-        "date": "2026-06-15",
+        "date": "2026-06-29",
         "day": "월",
-        "pc": 5,
-        "mobile": 5,
+        "pc": 3,
+        "mobile": 20,
+        "total": 23
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 12,
+        "total": 12
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 0,
+        "mobile": 10,
         "total": 10
       },
       {
-        "date": "2026-06-16",
-        "day": "화",
-        "pc": 4,
-        "mobile": 2,
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 1,
+        "mobile": 5,
         "total": 6
       },
       {
-        "date": "2026-06-17",
-        "day": "수",
-        "pc": 4,
-        "mobile": 6,
-        "total": 10
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
       },
       {
-        "date": "2026-06-18",
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-09",
         "day": "목",
-        "pc": 8,
-        "mobile": 6,
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 5,
+        "mobile": 9,
         "total": 14
       },
       {
-        "date": "2026-06-19",
-        "day": "금",
-        "pc": 8,
-        "mobile": 1,
-        "total": 9
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 4,
+        "mobile": 10,
+        "total": 14
       },
       {
-        "date": "2026-06-20",
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-25",
         "day": "토",
         "pc": 0,
         "mobile": 2,
         "total": 2
       },
       {
-        "date": "2026-06-21",
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
+      },
+      {
+        "date": "2026-08-02",
         "day": "일",
         "pc": 0,
-        "mobile": 10,
-        "total": 10
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 4,
+        "mobile": 9,
+        "total": 13
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 4,
+        "mobile": 8,
+        "total": 12
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
       }
     ],
     "contents": [
       {
-        "title": "이투스247학원 인하대점 미추홀구 독학재수학원으로 추천",
-        "blogger": "릴리쥬스",
+        "title": "광주 독학관리 반수학원 이투스247학원 광주수완점",
+        "blogger": "judy13",
         "date": "2026-06-02",
         "likes": 6,
         "comments": 0,
-        "url": "https://blog.naver.com/silver_o0/224303642285"
+        "url": "https://blog.naver.com/wings1324/224304113441"
       },
       {
-        "title": "인하대 공부자극 독학재수학원 이투스247학원 인천인하대점 방문후기",
-        "blogger": "뚜미니뿌잉",
-        "date": "2026-06-01",
-        "likes": 2,
+        "title": "수완지구 이투스247학원 광주 독학관리 잘 하는 곳",
+        "blogger": "yyiyuhyun",
+        "date": "2026-06-02",
+        "likes": 3,
         "comments": 1,
-        "url": "https://blog.naver.com/le4955/224302440503"
+        "url": "https://blog.naver.com/yyiyuhyun/224303573025"
       },
       {
-        "title": "이투스247학원 인하대점, 재수생루틴 잡기 좋은 인천 독학재수학원",
-        "blogger": "진이어스세상",
-        "date": "2026-05-22",
-        "likes": 14,
-        "comments": 4,
-        "url": "https://blog.naver.com/jin2usblog/224293711283"
+        "title": "이투스247학원 광주수완점 재수 반수 공부자극 확실한 독학관리",
+        "blogger": "하랑두랑",
+        "date": "2026-06-03",
+        "likes": 3,
+        "comments": 0,
+        "url": "https://blog.naver.com/ever9472/224304969446"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "갤럭시북4울트라",
-        "value": "25%"
+        "keyword": "광주광역시 이투스",
+        "value": "31%"
       },
       {
         "rank": 2,
-        "keyword": "이투스 인강 어때",
-        "value": "25%"
+        "keyword": "광주독학재수학원",
+        "value": "8%"
       },
       {
         "rank": 3,
-        "keyword": "이투스 재수",
-        "value": "25%"
+        "keyword": "광주재수학원",
+        "value": "8%"
       },
       {
         "rank": 4,
-        "keyword": "인하대 재수학원",
-        "value": "25%"
+        "keyword": "수완동 스터디카페",
+        "value": "8%"
+      },
+      {
+        "rank": 5,
+        "keyword": "이투스247수완점",
+        "value": "8%"
+      },
+      {
+        "rank": 6,
+        "keyword": "수완지구 독재학원",
+        "value": "8%"
+      },
+      {
+        "rank": 7,
+        "keyword": "이투스 광주수완",
+        "value": "8%"
+      },
+      {
+        "rank": 8,
+        "keyword": "광주 광산구 관리형 독학학원",
+        "value": "8%"
+      },
+      {
+        "rank": 9,
+        "keyword": "광주 이투스 독재",
+        "value": "8%"
+      },
+      {
+        "rank": 10,
+        "keyword": "광주 이투스 수완 주차",
+        "value": "8%"
       }
     ],
     "exposedKeywords": [
       {
         "rank": 1,
-        "keyword": "인하대역 재수",
-        "value": "25건"
+        "keyword": "수완지구 반수",
+        "value": "13건"
       },
       {
         "rank": 2,
-        "keyword": "247공부환경",
-        "value": "8건"
+        "keyword": "이투스247학원 광주수완점",
+        "value": "7건"
       },
       {
         "rank": 3,
-        "keyword": "독학재수",
-        "value": "3건"
-      },
-      {
-        "rank": 4,
-        "keyword": "독학재수학원",
-        "value": "2건"
-      },
-      {
-        "rank": 5,
-        "keyword": "재수",
-        "value": "2건"
-      },
-      {
-        "rank": 6,
-        "keyword": "재수학원추천",
-        "value": "1건"
-      },
-      {
-        "rank": 7,
-        "keyword": "이투스247학원 인하대점",
-        "value": "0건"
-      },
-      {
-        "rank": 8,
-        "keyword": "247시스템",
+        "keyword": "이투스247학원 후기",
         "value": "0건"
       }
     ]
@@ -3541,14 +8969,14 @@ window.reportsData = {
   "일산동구": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 196,
-    "averageViews": 65,
-    "mobileViews": 151,
-    "pcViews": 45,
-    "mobileRatio": 77,
-    "pcRatio": 23,
-    "averageMobileViews": 50,
-    "averagePcViews": 15,
+    "totalViews": 315,
+    "averageViews": 105,
+    "mobileViews": 238,
+    "pcViews": 77,
+    "mobileRatio": 76,
+    "pcRatio": 24,
+    "averageMobileViews": 79,
+    "averagePcViews": 26,
     "dailyData": [
       {
         "date": "2026-05-30",
@@ -3710,6 +9138,412 @@ window.reportsData = {
         "pc": 1,
         "mobile": 7,
         "total": 8
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -3742,51 +9576,51 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "일산독학재수학원",
-        "value": "25%"
+        "value": "24%"
       },
       {
         "rank": 2,
         "keyword": "일산 독학재수학원",
-        "value": "19%"
+        "value": "18%"
       },
       {
         "rank": 3,
         "keyword": "이투스247일산",
-        "value": "13%"
+        "value": "12%"
       },
       {
         "rank": 4,
-        "keyword": "백마 학원가 학원 운영",
-        "value": "6%"
+        "keyword": "학원비데",
+        "value": "12%"
       },
       {
         "rank": 5,
-        "keyword": "백마학원가 이투스수학",
+        "keyword": "백마 이투스 운영시간",
         "value": "6%"
       },
       {
         "rank": 6,
-        "keyword": "이투스247학원 일산",
+        "keyword": "백마 학원가 학원 운영",
         "value": "6%"
       },
       {
         "rank": 7,
-        "keyword": "일산 백마 독학재수",
+        "keyword": "백마학원가 이투스수학",
         "value": "6%"
       },
       {
         "rank": 8,
-        "keyword": "이투스 247 서울대점",
+        "keyword": "백마학원가 재수학원",
         "value": "6%"
       },
       {
         "rank": 9,
-        "keyword": "학원 휴대폰 벽 보관",
+        "keyword": "이투스247 일산동구",
         "value": "6%"
       },
       {
         "rank": 10,
-        "keyword": "학원비데",
+        "keyword": "이투스247학원 일산동구",
         "value": "6%"
       }
     ],
@@ -3816,14 +9650,14 @@ window.reportsData = {
   "일산서구": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 418,
-    "averageViews": 139,
-    "mobileViews": 203,
-    "pcViews": 215,
-    "mobileRatio": 49,
-    "pcRatio": 51,
-    "averageMobileViews": 68,
-    "averagePcViews": 72,
+    "totalViews": 712,
+    "averageViews": 237,
+    "mobileViews": 366,
+    "pcViews": 346,
+    "mobileRatio": 51,
+    "pcRatio": 49,
+    "averageMobileViews": 122,
+    "averagePcViews": 115,
     "dailyData": [
       {
         "date": "2026-06-03",
@@ -3957,6 +9791,412 @@ window.reportsData = {
         "pc": 6,
         "mobile": 3,
         "total": 9
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 11,
+        "mobile": 7,
+        "total": 18
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 7,
+        "mobile": 10,
+        "total": 17
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 3,
+        "mobile": 9,
+        "total": 12
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 5,
+        "mobile": 9,
+        "total": 14
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 7,
+        "mobile": 0,
+        "total": 7
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 7,
+        "mobile": 3,
+        "total": 10
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 7,
+        "mobile": 5,
+        "total": 12
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 3,
+        "mobile": 2,
+        "total": 5
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 5,
+        "mobile": 4,
+        "total": 9
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 4,
+        "mobile": 10,
+        "total": 14
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 2,
+        "mobile": 5,
+        "total": 7
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 3,
+        "mobile": 5,
+        "total": 8
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 8,
+        "mobile": 8,
+        "total": 16
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 1,
+        "mobile": 5,
+        "total": 6
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 7,
+        "mobile": 2,
+        "total": 9
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 4,
+        "mobile": 1,
+        "total": 5
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 3,
+        "mobile": 8,
+        "total": 11
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 4,
+        "mobile": 1,
+        "total": 5
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 4,
+        "mobile": 5,
+        "total": 9
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 4,
+        "mobile": 2,
+        "total": 6
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 6,
+        "mobile": 4,
+        "total": 10
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 4,
+        "mobile": 3,
+        "total": 7
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 5,
+        "mobile": 1,
+        "total": 6
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
       }
     ],
     "contents": [
@@ -3988,53 +10228,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "이투스247일산서구",
-        "value": "21%"
+        "keyword": "이투스247 일산서구",
+        "value": "26%"
       },
       {
         "rank": 2,
-        "keyword": "일산 기숙학원",
-        "value": "14%"
+        "keyword": "이투스247일산서구",
+        "value": "16%"
       },
       {
         "rank": 3,
-        "keyword": "일산독학재수학원",
-        "value": "14%"
+        "keyword": "일산 기숙학원",
+        "value": "11%"
       },
       {
         "rank": 4,
-        "keyword": "031-907-0247",
-        "value": "7%"
+        "keyword": "일산독학재수학원",
+        "value": "11%"
       },
       {
         "rank": 5,
-        "keyword": "이투스247일산",
-        "value": "7%"
+        "keyword": "관리형 독서실 일산",
+        "value": "11%"
       },
       {
         "rank": 6,
-        "keyword": "후곡 재수독학학원",
-        "value": "7%"
+        "keyword": "031-907-0247",
+        "value": "5%"
       },
       {
         "rank": 7,
-        "keyword": "화정 맛집",
-        "value": "7%"
+        "keyword": "이투스247일산",
+        "value": "5%"
       },
       {
         "rank": 8,
-        "keyword": "고등학생 관리형독서실",
-        "value": "7%"
+        "keyword": "일산 이투스재수학원",
+        "value": "5%"
       },
       {
         "rank": 9,
-        "keyword": "관리형 독서실 일산",
-        "value": "7%"
+        "keyword": "후곡 재수독학학원",
+        "value": "5%"
       },
       {
         "rank": 10,
-        "keyword": "넓고 괘적한 관리형 독서실 일산",
-        "value": "7%"
+        "keyword": "일산독학재수",
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -4063,14 +10303,14 @@ window.reportsData = {
   "진주": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 155,
-    "averageViews": 52,
-    "mobileViews": 111,
-    "pcViews": 44,
-    "mobileRatio": 72,
-    "pcRatio": 28,
-    "averageMobileViews": 37,
-    "averagePcViews": 15,
+    "totalViews": 344,
+    "averageViews": 115,
+    "mobileViews": 229,
+    "pcViews": 115,
+    "mobileRatio": 67,
+    "pcRatio": 33,
+    "averageMobileViews": 76,
+    "averagePcViews": 38,
     "dailyData": [
       {
         "date": "2026-05-22",
@@ -4288,9 +10528,423 @@ window.reportsData = {
         "pc": 0,
         "mobile": 7,
         "total": 7
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 6,
+        "mobile": 7,
+        "total": 13
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 4,
+        "mobile": 1,
+        "total": 5
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 7,
+        "mobile": 1,
+        "total": 8
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 3,
+        "mobile": 0,
+        "total": 3
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 3,
+        "mobile": 2,
+        "total": 5
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 9,
+        "total": 9
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 3,
+        "mobile": 1,
+        "total": 4
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 3,
+        "mobile": 0,
+        "total": 3
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
+      {
+        "title": "진주재수학원 추천 이투스247학원 진주점 관리형 재수학원",
+        "blogger": "술탱크언니",
+        "date": "2026-06-02",
+        "likes": 5,
+        "comments": 0,
+        "url": "https://blog.naver.com/gmldo111/224303685456?fromRss=true&trackingCode=rss"
+      },
       {
         "title": "[진주 재수추천]2027반수성공 이투스247학원 진주점 방문후기",
         "blogger": "세서맘",
@@ -4306,36 +10960,58 @@ window.reportsData = {
         "likes": 41,
         "comments": 2,
         "url": "https://blog.naver.com/gemma0125/224296767307"
-      },
-      {
-        "title": "진주재수학원 추천 이투스247학원 진주점 관리형 재수학원",
-        "blogger": "술탱크언니",
-        "date": "2026-06-02",
-        "likes": 5,
-        "comments": 0,
-        "url": "https://blog.naver.com/gmldo111/224303685456?fromRss=true&trackingCode=rss"
       }
     ],
     "inflowKeywords": [
       {
         "rank": 1,
         "keyword": "진주 이투스",
-        "value": "50%"
+        "value": "35%"
       },
       {
         "rank": 2,
-        "keyword": "LMTI LMAT 이투스",
-        "value": "17%"
+        "keyword": "이투스247 진주",
+        "value": "12%"
       },
       {
         "rank": 3,
-        "keyword": "진주이투스학원",
-        "value": "17%"
+        "keyword": "진주 이투스247",
+        "value": "12%"
       },
       {
         "rank": 4,
-        "keyword": "재수학원 도시락",
-        "value": "17%"
+        "keyword": "LMTI LMAT 이투스",
+        "value": "6%"
+      },
+      {
+        "rank": 5,
+        "keyword": "진주 이투스247 가격",
+        "value": "6%"
+      },
+      {
+        "rank": 6,
+        "keyword": "진주시 칠암동 재수학원",
+        "value": "6%"
+      },
+      {
+        "rank": 7,
+        "keyword": "진주이투스학원",
+        "value": "6%"
+      },
+      {
+        "rank": 8,
+        "keyword": "진주재수학원",
+        "value": "6%"
+      },
+      {
+        "rank": 9,
+        "keyword": "칠암동 이투스",
+        "value": "6%"
+      },
+      {
+        "rank": 10,
+        "keyword": "이투스247 SS",
+        "value": "6%"
       }
     ],
     "exposedKeywords": [
@@ -4354,14 +11030,14 @@ window.reportsData = {
   "천안": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 3492,
-    "averageViews": 1164,
-    "mobileViews": 3438,
-    "pcViews": 54,
-    "mobileRatio": 98,
-    "pcRatio": 2,
-    "averageMobileViews": 1146,
-    "averagePcViews": 18,
+    "totalViews": 17822,
+    "averageViews": 5941,
+    "mobileViews": 17723,
+    "pcViews": 99,
+    "mobileRatio": 99,
+    "pcRatio": 1,
+    "averageMobileViews": 5908,
+    "averagePcViews": 33,
     "dailyData": [
       {
         "date": "2026-05-29",
@@ -4530,6 +11206,412 @@ window.reportsData = {
         "pc": 6,
         "mobile": 5,
         "total": 11
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 1,
+        "mobile": 14,
+        "total": 15
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 1,
+        "mobile": 6,
+        "total": 7
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 551,
+        "total": 551
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 115,
+        "total": 115
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 74,
+        "total": 74
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 11,
+        "mobile": 1013,
+        "total": 1024
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 3,
+        "mobile": 1555,
+        "total": 1558
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 0,
+        "mobile": 8,
+        "total": 8
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 2,
+        "mobile": 2,
+        "total": 4
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 451,
+        "total": 451
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 373,
+        "total": 373
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 292,
+        "total": 292
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 1,
+        "mobile": 139,
+        "total": 140
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 1,
+        "mobile": 499,
+        "total": 500
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 2,
+        "mobile": 949,
+        "total": 951
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 2,
+        "mobile": 537,
+        "total": 539
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 1,
+        "mobile": 808,
+        "total": 809
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 513,
+        "total": 513
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 2,
+        "mobile": 558,
+        "total": 560
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 756,
+        "total": 756
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 3,
+        "mobile": 435,
+        "total": 438
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 0,
+        "mobile": 649,
+        "total": 649
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 263,
+        "total": 263
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 1,
+        "mobile": 530,
+        "total": 531
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 430,
+        "total": 430
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 931,
+        "total": 931
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 1,
+        "mobile": 262,
+        "total": 263
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 1,
+        "mobile": 890,
+        "total": 891
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 2,
+        "mobile": 635,
+        "total": 637
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 3,
+        "mobile": 4,
+        "total": 7
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
       }
     ],
     "contents": [
@@ -4562,32 +11644,52 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "천안재수학원",
-        "value": "55%"
+        "value": "52%"
       },
       {
         "rank": 2,
-        "keyword": "cjsdkswotngkrdnjs",
-        "value": "9%"
+        "keyword": "불당동이투스247학원",
+        "value": "10%"
       },
       {
         "rank": 3,
-        "keyword": "이투스247 천안",
-        "value": "9%"
+        "keyword": "cjsdkswotngkrdnjs",
+        "value": "5%"
       },
       {
         "rank": 4,
-        "keyword": "천안독학재수학원",
-        "value": "9%"
+        "keyword": "이투스 247 불당점",
+        "value": "5%"
       },
       {
         "rank": 5,
-        "keyword": "천안 논술전형 학원",
-        "value": "9%"
+        "keyword": "이투스247 천안",
+        "value": "5%"
       },
       {
         "rank": 6,
+        "keyword": "천안독학재수학원",
+        "value": "5%"
+      },
+      {
+        "rank": 7,
+        "keyword": "불당동 이투스",
+        "value": "5%"
+      },
+      {
+        "rank": 8,
+        "keyword": "천안 논술전형 학원",
+        "value": "5%"
+      },
+      {
+        "rank": 9,
+        "keyword": "천안 재수 학원",
+        "value": "5%"
+      },
+      {
+        "rank": 10,
         "keyword": "천안 재수학원",
-        "value": "9%"
+        "value": "5%"
       }
     ],
     "exposedKeywords": [
@@ -4606,14 +11708,14 @@ window.reportsData = {
   "춘천": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 497,
-    "averageViews": 166,
-    "mobileViews": 359,
-    "pcViews": 138,
+    "totalViews": 594,
+    "averageViews": 198,
+    "mobileViews": 429,
+    "pcViews": 165,
     "mobileRatio": 72,
     "pcRatio": 28,
-    "averageMobileViews": 120,
-    "averagePcViews": 46,
+    "averageMobileViews": 143,
+    "averagePcViews": 55,
     "dailyData": [
       {
         "date": "2026-05-23",
@@ -4824,6 +11926,412 @@ window.reportsData = {
         "pc": 0,
         "mobile": 10,
         "total": 10
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 5,
+        "mobile": 4,
+        "total": 9
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 3,
+        "mobile": 2,
+        "total": 5
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 4,
+        "mobile": 0,
+        "total": 4
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 2,
+        "mobile": 4,
+        "total": 6
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 0,
+        "mobile": 5,
+        "total": 5
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 1,
+        "mobile": 2,
+        "total": 3
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 2,
+        "mobile": 0,
+        "total": 2
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 1,
+        "mobile": 7,
+        "total": 8
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 7,
+        "total": 7
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -4855,33 +12363,53 @@ window.reportsData = {
     "inflowKeywords": [
       {
         "rank": 1,
-        "keyword": "춘천이투스 247학원 학원",
-        "value": "17%"
+        "keyword": "독학재수학원 이투스247 춘천",
+        "value": "18%"
       },
       {
         "rank": 2,
-        "keyword": "독학재수학원",
-        "value": "17%"
+        "keyword": "춘천 독학재수학원",
+        "value": "9%"
       },
       {
         "rank": 3,
-        "keyword": "이투스 247은 뭔가요?",
-        "value": "17%"
+        "keyword": "춘천 이투스",
+        "value": "9%"
       },
       {
         "rank": 4,
-        "keyword": "춘천 1:1 재수학원",
-        "value": "17%"
+        "keyword": "춘천 학원 운영시간",
+        "value": "9%"
       },
       {
         "rank": 5,
-        "keyword": "춘천 독학 독서실",
-        "value": "17%"
+        "keyword": "춘천이투스 247학원 학원",
+        "value": "9%"
       },
       {
         "rank": 6,
+        "keyword": "독학재수학원",
+        "value": "9%"
+      },
+      {
+        "rank": 7,
+        "keyword": "이투스 247은 뭔가요?",
+        "value": "9%"
+      },
+      {
+        "rank": 8,
+        "keyword": "춘천 1:1 재수학원",
+        "value": "9%"
+      },
+      {
+        "rank": 9,
+        "keyword": "춘천 독학 독서실",
+        "value": "9%"
+      },
+      {
+        "rank": 10,
         "keyword": "춘천재수학원",
-        "value": "17%"
+        "value": "9%"
       }
     ],
     "exposedKeywords": [
@@ -4915,14 +12443,14 @@ window.reportsData = {
   "하남": {
     "totalInfluencers": 3,
     "totalContents": 3,
-    "totalViews": 369,
-    "averageViews": 123,
-    "mobileViews": 220,
-    "pcViews": 149,
-    "mobileRatio": 60,
-    "pcRatio": 40,
-    "averageMobileViews": 73,
-    "averagePcViews": 50,
+    "totalViews": 472,
+    "averageViews": 157,
+    "mobileViews": 300,
+    "pcViews": 172,
+    "mobileRatio": 64,
+    "pcRatio": 36,
+    "averageMobileViews": 100,
+    "averagePcViews": 57,
     "dailyData": [
       {
         "date": "2026-05-21",
@@ -5147,6 +12675,412 @@ window.reportsData = {
         "pc": 0,
         "mobile": 5,
         "total": 5
+      },
+      {
+        "date": "2026-06-22",
+        "day": "월",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-06-23",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-06-24",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-06-25",
+        "day": "목",
+        "pc": 2,
+        "mobile": 3,
+        "total": 5
+      },
+      {
+        "date": "2026-06-26",
+        "day": "금",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-06-27",
+        "day": "토",
+        "pc": 1,
+        "mobile": 4,
+        "total": 5
+      },
+      {
+        "date": "2026-06-28",
+        "day": "일",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-06-29",
+        "day": "월",
+        "pc": 3,
+        "mobile": 3,
+        "total": 6
+      },
+      {
+        "date": "2026-06-30",
+        "day": "화",
+        "pc": 0,
+        "mobile": 6,
+        "total": 6
+      },
+      {
+        "date": "2026-07-01",
+        "day": "수",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-02",
+        "day": "목",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-03",
+        "day": "금",
+        "pc": 0,
+        "mobile": 3,
+        "total": 3
+      },
+      {
+        "date": "2026-07-04",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-05",
+        "day": "일",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-06",
+        "day": "월",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-07",
+        "day": "화",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-08",
+        "day": "수",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-09",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-10",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-11",
+        "day": "토",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-12",
+        "day": "일",
+        "pc": 1,
+        "mobile": 3,
+        "total": 4
+      },
+      {
+        "date": "2026-07-13",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-14",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-15",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-16",
+        "day": "목",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-17",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-07-18",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-19",
+        "day": "일",
+        "pc": 1,
+        "mobile": 1,
+        "total": 2
+      },
+      {
+        "date": "2026-07-20",
+        "day": "월",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-07-21",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-22",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-23",
+        "day": "목",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-24",
+        "day": "금",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-25",
+        "day": "토",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-26",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-07-27",
+        "day": "월",
+        "pc": 0,
+        "mobile": 4,
+        "total": 4
+      },
+      {
+        "date": "2026-07-28",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-29",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-07-30",
+        "day": "목",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-07-31",
+        "day": "금",
+        "pc": 0,
+        "mobile": 2,
+        "total": 2
+      },
+      {
+        "date": "2026-08-01",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-02",
+        "day": "일",
+        "pc": 2,
+        "mobile": 1,
+        "total": 3
+      },
+      {
+        "date": "2026-08-03",
+        "day": "월",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-04",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-05",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-06",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "금",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-08",
+        "day": "토",
+        "pc": 1,
+        "mobile": 0,
+        "total": 1
+      },
+      {
+        "date": "2026-08-09",
+        "day": "일",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-10",
+        "day": "월",
+        "pc": 2,
+        "mobile": 6,
+        "total": 8
+      },
+      {
+        "date": "2026-08-11",
+        "day": "화",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-12",
+        "day": "수",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-13",
+        "day": "목",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-14",
+        "day": "금",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-15",
+        "day": "토",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-16",
+        "day": "일",
+        "pc": 0,
+        "mobile": 1,
+        "total": 1
+      },
+      {
+        "date": "2026-08-17",
+        "day": "월",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
+      },
+      {
+        "date": "2026-08-18",
+        "day": "화",
+        "pc": 0,
+        "mobile": 0,
+        "total": 0
       }
     ],
     "contents": [
@@ -5179,37 +13113,52 @@ window.reportsData = {
       {
         "rank": 1,
         "keyword": "이투스247",
-        "value": "25%"
+        "value": "18%"
       },
       {
         "rank": 2,
-        "keyword": "하남재수학원",
-        "value": "13%"
+        "keyword": "하남미사 대입학원",
+        "value": "9%"
       },
       {
         "rank": 3,
-        "keyword": "미사 재수독학학원",
-        "value": "13%"
+        "keyword": "하남재수학원",
+        "value": "9%"
       },
       {
         "rank": 4,
-        "keyword": "에코나우",
-        "value": "13%"
+        "keyword": "미사 재수독학학원",
+        "value": "9%"
       },
       {
         "rank": 5,
-        "keyword": "오다이바 하루 여행",
-        "value": "13%"
+        "keyword": "하남이투스블로그",
+        "value": "9%"
       },
       {
         "rank": 6,
-        "keyword": "이투스247 후기",
-        "value": "13%"
+        "keyword": "에코나우",
+        "value": "9%"
       },
       {
         "rank": 7,
+        "keyword": "오다이바 하루 여행",
+        "value": "9%"
+      },
+      {
+        "rank": 8,
+        "keyword": "이투스247 후기",
+        "value": "9%"
+      },
+      {
+        "rank": 9,
+        "keyword": "이투스247학원",
+        "value": "9%"
+      },
+      {
+        "rank": 10,
         "keyword": "하남 학원 오픈",
-        "value": "13%"
+        "value": "9%"
       }
     ],
     "exposedKeywords": [
