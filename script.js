@@ -2176,7 +2176,7 @@ if (typeof initExperience === "function") {
 
 function initGlobalHeroStats() {
   if (heroTotalContents) heroTotalContents.textContent = "668";
-  if (heroTotalViews) heroTotalViews.textContent = "876.4K";
+  if (heroTotalViews) heroTotalViews.textContent = "905.7K";
   if (heroTotalLikes) heroTotalLikes.textContent = "8.6K";
   if (heroTotalComments) heroTotalComments.textContent = "1.4K";
 
@@ -2193,7 +2193,7 @@ function initGlobalHeroStats() {
     });
   };
 
-  setupHoverDetail(heroTotalViews, "876.4K", "876,433");
+  setupHoverDetail(heroTotalViews, "905.7K", "905,736");
   setupHoverDetail(heroTotalLikes, "8.6K", "8,634");
   setupHoverDetail(heroTotalComments, "1.4K", "1,433");
 }
