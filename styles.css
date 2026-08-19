@@ -3898,7 +3898,7 @@ dd a:hover {
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  background: var(--accent-gradient);
   color: #ffffff;
   font-family: inherit;
   font-size: 0.95rem;
@@ -3906,7 +3906,7 @@ dd a:hover {
   letter-spacing: -0.01em;
   border: none;
   border-radius: 9999px;
-  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4), 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(95, 25, 232, 0.35), 0 2px 6px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
   user-select: none;
@@ -3915,13 +3915,13 @@ dd a:hover {
 
 .floating-contact-btn:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 14px 30px rgba(255, 107, 53, 0.55), 0 4px 10px rgba(0, 0, 0, 0.12);
-  background: linear-gradient(135deg, #ff5c20 0%, #ff7d30 100%);
+  box-shadow: 0 14px 30px rgba(95, 25, 232, 0.5), 0 4px 10px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #5112cc 0%, #7c3aed 50%, #4f46e5 100%);
 }
 
 .floating-contact-btn:active {
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.35);
+  box-shadow: 0 6px 16px rgba(95, 25, 232, 0.3);
 }
 
 .floating-contact-btn svg {
@@ -3932,11 +3932,11 @@ dd a:hover {
 .contact-dialog {
   width: min(380px, calc(100% - 32px));
   padding: 0;
-  border: 1px solid rgba(255, 107, 53, 0.2);
+  border: 1px solid rgba(95, 25, 232, 0.15);
   border-radius: 24px;
   background: #ffffff;
   color: var(--ink);
-  box-shadow: 0 24px 60px rgba(15, 13, 54, 0.2), 0 10px 24px rgba(255, 107, 53, 0.1);
+  box-shadow: 0 24px 60px rgba(15, 13, 54, 0.18), 0 10px 24px rgba(95, 25, 232, 0.08);
   overflow: hidden;
   animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
@@ -3991,9 +3991,9 @@ dd a:hover {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 140, 66, 0.25) 0%, rgba(255, 107, 53, 0.1) 70%, transparent 100%);
-  border: 1.5px solid rgba(255, 107, 53, 0.35);
-  color: #ff6b35;
+  background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.22) 0%, rgba(95, 25, 232, 0.08) 70%, transparent 100%);
+  border: 1.5px solid rgba(95, 25, 232, 0.25);
+  color: var(--accent);
 }
 
 .contact-header-text {
@@ -4004,7 +4004,7 @@ dd a:hover {
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #ff6b35;
+  color: var(--accent);
   letter-spacing: -0.01em;
 }
 
@@ -4039,8 +4039,8 @@ dd a:hover {
 
 .contact-item:hover {
   background: #ffffff;
-  border-color: rgba(255, 107, 53, 0.4);
-  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.12);
+  border-color: rgba(95, 25, 232, 0.4);
+  box-shadow: 0 4px 14px rgba(95, 25, 232, 0.1);
   transform: translateY(-1px);
 }
 
@@ -4051,8 +4051,8 @@ dd a:hover {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(255, 107, 53, 0.12);
-  color: #ff6b35;
+  background: rgba(95, 25, 232, 0.08);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -4074,21 +4074,21 @@ dd a:hover {
 .btn-contact-confirm {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  background: var(--accent-gradient);
   color: #ffffff;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 850;
   border: none;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 6px 18px rgba(95, 25, 232, 0.3);
   cursor: pointer;
   transition: var(--transition);
 }
 
 .btn-contact-confirm:hover {
-  background: linear-gradient(135deg, #ff5c20 0%, #ff7d30 100%);
-  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.45);
+  background: linear-gradient(135deg, #5112cc 0%, #7c3aed 50%, #4f46e5 100%);
+  box-shadow: 0 8px 24px rgba(95, 25, 232, 0.45);
   transform: translateY(-2px);
 }
 
