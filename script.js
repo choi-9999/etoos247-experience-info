@@ -2198,8 +2198,52 @@ initGlobalHeroStats();
 initFameMarquee();
 initCtaButtons();
 initNavScroll();
+initContactModal();
 if (typeof initExperience === "function") {
   initExperience();
+}
+
+function initContactModal() {
+  const floatingContactBtn = document.querySelector("#floatingContactBtn");
+  const contactModalDialog = document.querySelector("#contactModalDialog");
+  const closeContactModal = document.querySelector("#closeContactModal");
+  const btnContactConfirm = document.querySelector("#btnContactConfirm");
+  const btnContactCancel = document.querySelector("#btnContactCancel");
+
+  if (!floatingContactBtn || !contactModalDialog) return;
+
+  const openModal = () => {
+    if (typeof contactModalDialog.showModal === "function") {
+      contactModalDialog.showModal();
+    } else {
+      contactModalDialog.setAttribute("open", "true");
+    }
+  };
+
+  const closeModal = () => {
+    if (contactModalDialog.open) {
+      contactModalDialog.close();
+    } else {
+      contactModalDialog.removeAttribute("open");
+    }
+  };
+
+  floatingContactBtn.addEventListener("click", openModal);
+  if (closeContactModal) closeContactModal.addEventListener("click", closeModal);
+  if (btnContactConfirm) btnContactConfirm.addEventListener("click", closeModal);
+  if (btnContactCancel) btnContactCancel.addEventListener("click", closeModal);
+
+  contactModalDialog.addEventListener("click", (e) => {
+    const rect = contactModalDialog.getBoundingClientRect();
+    if (
+      e.clientX < rect.left ||
+      e.clientX > rect.right ||
+      e.clientY < rect.top ||
+      e.clientY > rect.bottom
+    ) {
+      closeModal();
+    }
+  });
 }
 
 function initGlobalHeroStats() {
