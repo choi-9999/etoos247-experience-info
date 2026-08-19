@@ -789,10 +789,11 @@
             
             <!-- Family Sites Dropdown -->
             <div class="family-site-wrapper">
-              <select class="family-site-select" onchange="if(this.value) window.open(this.value, '_blank')">
+              <select class="family-site-select" onchange="if(this.value) { window.open(this.value, '_blank'); this.value = ''; }">
                 <option value="">패밀리 사이트</option>
-                <option value="https://www.etoos.com">이투스 온라인</option>
-                <option value="https://247.etoos.com">이투스247학원</option>
+                <option value="https://247.etoos.com/index.do">이투스247학원</option>
+                <option value="https://intelligent-salk.vercel.app/">247 기사송출</option>
+                <option value="https://admit-collector.vercel.app/">합격자 취합</option>
               </select>
             </div>
             
@@ -847,7 +848,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="reports-data.js?v=20260819_2"></script>
-  <script src="script.js?v=20260819_2"></script>
+  <script src="reports-data.js?v=20260819_3"></script>
+  <script src="script.js?v=20260819_3"></script>
 </body>
 </html>

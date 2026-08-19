@@ -1606,6 +1606,7 @@ adminToggle.addEventListener("click", () => {
   if (isAdmin) {
     isAdmin = false;
     adminSessionPassword = "";
+    localStorage.removeItem("etoos247:admin-session");
     updateAdminState();
     return;
   }
@@ -1621,6 +1622,11 @@ adminLogin.addEventListener("submit", (event) => {
     .then(() => {
       isAdmin = true;
       adminSessionPassword = password;
+      localStorage.setItem("etoos247:admin-session", JSON.stringify({
+        isAdmin: true,
+        password: password,
+        timestamp: Date.now()
+      }));
       closeAdminPasswordDialog();
       updateAdminState();
     })
@@ -2170,6 +2176,22 @@ function renderGlobalDashboard() {
   }
 }
 
+function restoreAdminSession() {
+  try {
+    const saved = localStorage.getItem("etoos247:admin-session");
+    if (saved) {
+      const session = JSON.parse(saved);
+      if (session && session.isAdmin && session.password) {
+        isAdmin = true;
+        adminSessionPassword = session.password;
+      }
+    }
+  } catch (e) {
+    console.warn("Failed to restore admin session:", e);
+  }
+}
+
+restoreAdminSession();
 updateAdminState();
 loadBranches();
 initGlobalHeroStats();
